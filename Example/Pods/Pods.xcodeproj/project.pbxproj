@@ -16,6 +16,7 @@
 			dependencies = (
 			);
 			name = CFNetworkSDK;
+			productName = CFNetworkSDK;
 		};
 		49274DFBB344E7C19D408A86745C5224 /* CashfreePG */ = {
 			isa = PBXAggregateTarget;
@@ -27,6 +28,7 @@
 				4550D9C3FAD7F9A462A2C4AAF111402C /* PBXTargetDependency */,
 			);
 			name = CashfreePG;
+			productName = CashfreePG;
 		};
 		4AF633B23960BBF278E08C0652E9465B /* CashfreePGCoreSDK */ = {
 			isa = PBXAggregateTarget;
@@ -38,6 +40,7 @@
 				DDB5E87F64C40F7CCD3924AC97404F3E /* PBXTargetDependency */,
 			);
 			name = CashfreePGCoreSDK;
+			productName = CashfreePGCoreSDK;
 		};
 		60A83753E34FBEF1058D609F911A047F /* Easebuzz */ = {
 			isa = PBXAggregateTarget;
@@ -48,6 +51,7 @@
 			dependencies = (
 			);
 			name = Easebuzz;
+			productName = Easebuzz;
 		};
 		684F3DFABF8D283354B97A5625178BA8 /* CashfreeAnalyticsSDK */ = {
 			isa = PBXAggregateTarget;
@@ -59,6 +63,7 @@
 				EA468BFBF4B09A52D5E43466C675D307 /* PBXTargetDependency */,
 			);
 			name = CashfreeAnalyticsSDK;
+			productName = CashfreeAnalyticsSDK;
 		};
 		7EA69CDA8EB50641DFFEC1D930A028D6 /* CashfreePGUISDK */ = {
 			isa = PBXAggregateTarget;
@@ -70,6 +75,7 @@
 				56F899E43B689F526ED4959CCD7B899F /* PBXTargetDependency */,
 			);
 			name = CashfreePGUISDK;
+			productName = CashfreePGUISDK;
 		};
 		84CA3424E172CD651235AF0783D01D39 /* razorpay-pod */ = {
 			isa = PBXAggregateTarget;
@@ -80,6 +86,7 @@
 			dependencies = (
 			);
 			name = "razorpay-pod";
+			productName = "razorpay-pod";
 		};
 /* End PBXAggregateTarget section */
 
@@ -89,6 +96,44 @@
 		2947F6F83CE72BE92E9098F885335FF5 /* ReplaceMe.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFFC409FDC4FBE1E7C156CAB1CB03677 /* ReplaceMe.swift */; };
 		4FAE9866DD6423AD49AF060F86E0D5A0 /* Pods-GQPaymentIOSSDKNative_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C18B0A71FF4558AD82808E83D35FA54 /* Pods-GQPaymentIOSSDKNative_Tests-dummy.m */; };
 		A0886555ED8693BEC301BF9D205D82BD /* GQPaymentIOSSDKNative-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 90B9A9F1D43B63240391142DE0C8AC72 /* GQPaymentIOSSDKNative-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A3A60F942B838026001A5FC9 /* GQBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3A60F932B838026001A5FC9 /* GQBaseViewController.swift */; };
+		A3A60FC02B838036001A5FC9 /* UIView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3A60F962B838036001A5FC9 /* UIView+Ext.swift */; };
+		A3A60FC12B838036001A5FC9 /* GQEMIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3A60F992B838036001A5FC9 /* GQEMIViewController.swift */; };
+		A3A60FC22B838036001A5FC9 /* GQEMIViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3A60F9A2B838036001A5FC9 /* GQEMIViewModel.swift */; };
+		A3A60FC32B838036001A5FC9 /* GQEMIViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A3A60F9B2B838036001A5FC9 /* GQEMIViewController.xib */; };
+		A3A60FC42B838036001A5FC9 /* EMIApplicationCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3A60F9D2B838036001A5FC9 /* EMIApplicationCollectionViewCell.swift */; };
+		A3A60FC52B838036001A5FC9 /* EMIApplicationCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A3A60F9E2B838036001A5FC9 /* EMIApplicationCollectionViewCell.xib */; };
+		A3A60FC62B838036001A5FC9 /* GQTagView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3A60FA12B838036001A5FC9 /* GQTagView.swift */; };
+		A3A60FC72B838036001A5FC9 /* GQTagView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A3A60FA22B838036001A5FC9 /* GQTagView.xib */; };
+		A3A60FC82B838036001A5FC9 /* GQNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3A60FA42B838036001A5FC9 /* GQNavigationBar.swift */; };
+		A3A60FC92B838036001A5FC9 /* GQNavigationBar.xib in Resources */ = {isa = PBXBuildFile; fileRef = A3A60FA52B838036001A5FC9 /* GQNavigationBar.xib */; };
+		A3A60FCA2B838036001A5FC9 /* MobileOTPView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3A60FA72B838036001A5FC9 /* MobileOTPView.swift */; };
+		A3A60FCB2B838036001A5FC9 /* MobileOTPView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A3A60FA82B838036001A5FC9 /* MobileOTPView.xib */; };
+		A3A60FCC2B838036001A5FC9 /* PaymentMethodsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A3A60FAA2B838036001A5FC9 /* PaymentMethodsViewController.xib */; };
+		A3A60FCD2B838036001A5FC9 /* PaymentMethodsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3A60FAB2B838036001A5FC9 /* PaymentMethodsViewModel.swift */; };
+		A3A60FCE2B838036001A5FC9 /* PaymentMethodsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3A60FAC2B838036001A5FC9 /* PaymentMethodsViewController.swift */; };
+		A3A60FCF2B838036001A5FC9 /* PaymentMethodsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3A60FAF2B838036001A5FC9 /* PaymentMethodsCollectionViewCell.swift */; };
+		A3A60FD02B838036001A5FC9 /* PaymentMethodsCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A3A60FB02B838036001A5FC9 /* PaymentMethodsCollectionViewCell.xib */; };
+		A3A60FD12B838036001A5FC9 /* ProceedButtonCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3A60FB12B838036001A5FC9 /* ProceedButtonCollectionReusableView.swift */; };
+		A3A60FD22B838036001A5FC9 /* ProceedButtonCollectionReusableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A3A60FB22B838036001A5FC9 /* ProceedButtonCollectionReusableView.xib */; };
+		A3A60FD32B838036001A5FC9 /* PaymentTagCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3A60FB32B838036001A5FC9 /* PaymentTagCollectionViewCell.swift */; };
+		A3A60FD42B838036001A5FC9 /* PaymentTagCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A3A60FB42B838036001A5FC9 /* PaymentTagCollectionViewCell.xib */; };
+		A3A60FD52B838036001A5FC9 /* VerifyOTPViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3A60FB62B838036001A5FC9 /* VerifyOTPViewController.swift */; };
+		A3A60FD62B838036001A5FC9 /* VerifyOTPViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3A60FB72B838036001A5FC9 /* VerifyOTPViewModel.swift */; };
+		A3A60FD72B838036001A5FC9 /* VerifyOTPViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A3A60FB82B838036001A5FC9 /* VerifyOTPViewController.xib */; };
+		A3A60FD82B838036001A5FC9 /* EnterMobileNumberViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A3A60FBA2B838036001A5FC9 /* EnterMobileNumberViewController.xib */; };
+		A3A60FD92B838036001A5FC9 /* EnterMobileNumberViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3A60FBB2B838036001A5FC9 /* EnterMobileNumberViewModel.swift */; };
+		A3A60FDA2B838036001A5FC9 /* EnterMobileNumberViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3A60FBC2B838036001A5FC9 /* EnterMobileNumberViewController.swift */; };
+		A3A60FDB2B838036001A5FC9 /* GQPayment.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3A60FBE2B838036001A5FC9 /* GQPayment.swift */; };
+		A3A60FDC2B838036001A5FC9 /* GQPaymentDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3A60FBF2B838036001A5FC9 /* GQPaymentDelegate.swift */; };
+		A3A60FE62B838042001A5FC9 /* NetworkType.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3A60FDE2B838042001A5FC9 /* NetworkType.swift */; };
+		A3A60FE72B838042001A5FC9 /* Decoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3A60FDF2B838042001A5FC9 /* Decoder.swift */; };
+		A3A60FE82B838042001A5FC9 /* NetworkEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3A60FE02B838042001A5FC9 /* NetworkEnvironment.swift */; };
+		A3A60FE92B838042001A5FC9 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3A60FE12B838042001A5FC9 /* Model.swift */; };
+		A3A60FEA2B838042001A5FC9 /* Encoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3A60FE22B838042001A5FC9 /* Encoder.swift */; };
+		A3A60FEB2B838042001A5FC9 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3A60FE32B838042001A5FC9 /* NetworkService.swift */; };
+		A3A60FEC2B838042001A5FC9 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3A60FE42B838042001A5FC9 /* HTTPMethod.swift */; };
+		A3A60FED2B838042001A5FC9 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3A60FE52B838042001A5FC9 /* NetworkError.swift */; };
 		A9CEDFFF45ED3146A7C1FF49FBAEF964 /* Pods-GQPaymentIOSSDKNative_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 7B9D5435220E6B3A6AD2F5DC7EF14B6B /* Pods-GQPaymentIOSSDKNative_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CF1AA221776AED06C9D071034B646716 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
 		E7AF93923207952F9DD6BE8CC4B24F3C /* Pods-GQPaymentIOSSDKNative_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F33A82E6D0982A4603FC992BE39A4F47 /* Pods-GQPaymentIOSSDKNative_Example-dummy.m */; };
@@ -212,23 +257,23 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		00879B11B77777CCA3001DF4A66AFDE2 /* CashfreePG.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; path = CashfreePG.xcframework; sourceTree = "<group>"; };
+		00879B11B77777CCA3001DF4A66AFDE2 /* CashfreePG.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = wrapper.xcframework; path = CashfreePG.xcframework; sourceTree = "<group>"; };
 		0D6C19D0A5F16BA04CEF751056DD0DA7 /* Pods-GQPaymentIOSSDKNative_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-GQPaymentIOSSDKNative_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		122AFC80BD35AD2E8375955C9EA1E8E0 /* GQPaymentIOSSDKNative-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "GQPaymentIOSSDKNative-prefix.pch"; sourceTree = "<group>"; };
 		1B2F612ED465C0D58B8A6880A1382EFE /* CashfreePG-xcframeworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "CashfreePG-xcframeworks.sh"; sourceTree = "<group>"; };
 		1C84586F49FB6236F58EC486010AEFA4 /* GQPaymentIOSSDKNative */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = GQPaymentIOSSDKNative; path = GQPaymentIOSSDKNative.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1C9C8AD5552F729C36AB47FE3C97AFD1 /* GQPaymentIOSSDKNative.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = GQPaymentIOSSDKNative.debug.xcconfig; sourceTree = "<group>"; };
-		2DE9F824F5E1C50D51D1B31D343F1E7A /* Easebuzz.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; path = Easebuzz.xcframework; sourceTree = "<group>"; };
+		2DE9F824F5E1C50D51D1B31D343F1E7A /* Easebuzz.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = wrapper.xcframework; path = Easebuzz.xcframework; sourceTree = "<group>"; };
 		2EEE0ADE1295D3797564FD086C15E2F4 /* Pods-GQPaymentIOSSDKNative_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-GQPaymentIOSSDKNative_Example-umbrella.h"; sourceTree = "<group>"; };
-		302F12B76FCFC1F9AD8C8659C254B6D2 /* CashfreePGUISDK.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; path = CashfreePGUISDK.xcframework; sourceTree = "<group>"; };
-		349EC153FFBC9C0AB23A968600066071 /* GQPaymentIOSSDKNative.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = GQPaymentIOSSDKNative.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		302F12B76FCFC1F9AD8C8659C254B6D2 /* CashfreePGUISDK.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = wrapper.xcframework; path = CashfreePGUISDK.xcframework; sourceTree = "<group>"; };
+		349EC153FFBC9C0AB23A968600066071 /* GQPaymentIOSSDKNative.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = GQPaymentIOSSDKNative.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		3550F168270EEA4B11125468CE212BB3 /* Pods-GQPaymentIOSSDKNative_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-GQPaymentIOSSDKNative_Example-Info.plist"; sourceTree = "<group>"; };
 		3654A0805FEB7AE464B6416D7F4A59CF /* Pods-GQPaymentIOSSDKNative_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-GQPaymentIOSSDKNative_Example-acknowledgements.plist"; sourceTree = "<group>"; };
 		37015A902A9501735AF8660449AF5CC5 /* Pods-GQPaymentIOSSDKNative_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-GQPaymentIOSSDKNative_Example.release.xcconfig"; sourceTree = "<group>"; };
 		38656C35B39DE8DBF0A1CD7B1B2D410F /* razorpay-pod.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "razorpay-pod.debug.xcconfig"; sourceTree = "<group>"; };
 		3C187D80814B2ED29FD414EDF2F079AA /* Pods-GQPaymentIOSSDKNative_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-GQPaymentIOSSDKNative_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		3D539B5650852B0EA7ED00CF362BC779 /* Pods-GQPaymentIOSSDKNative_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-GQPaymentIOSSDKNative_Example.modulemap"; sourceTree = "<group>"; };
-		3DF237C2687D640DB24BCE882AF0B536 /* CFNetworkSDK.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; path = CFNetworkSDK.xcframework; sourceTree = "<group>"; };
+		3DF237C2687D640DB24BCE882AF0B536 /* CFNetworkSDK.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = wrapper.xcframework; path = CFNetworkSDK.xcframework; sourceTree = "<group>"; };
 		42D6499B9E466C69BD9B74651F64E0AB /* Easebuzz.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Easebuzz.debug.xcconfig; sourceTree = "<group>"; };
 		4AFACCC757980BB78F838C5E95468B9A /* Pods-GQPaymentIOSSDKNative_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-GQPaymentIOSSDKNative_Tests.modulemap"; sourceTree = "<group>"; };
 		4FFF674EBB832B713AB8B2284FF95602 /* CashfreeAnalyticsSDK-xcframeworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "CashfreeAnalyticsSDK-xcframeworks.sh"; sourceTree = "<group>"; };
@@ -236,9 +281,9 @@
 		572661BBA4ADD44260CD26042530153F /* Pods-GQPaymentIOSSDKNative_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-GQPaymentIOSSDKNative_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		58E569A27486999355EACBB3D053E6B0 /* GQPaymentIOSSDKNative-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "GQPaymentIOSSDKNative-Info.plist"; sourceTree = "<group>"; };
 		5956A5D224CA2EE1BDFE17818528471E /* Pods-GQPaymentIOSSDKNative_Example */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-GQPaymentIOSSDKNative_Example"; path = Pods_GQPaymentIOSSDKNative_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		5F0F3048A7F77A62B99EB8CFAAF50876 /* CashfreeAnalyticsSDK.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; path = CashfreeAnalyticsSDK.xcframework; sourceTree = "<group>"; };
+		5F0F3048A7F77A62B99EB8CFAAF50876 /* CashfreeAnalyticsSDK.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = wrapper.xcframework; path = CashfreeAnalyticsSDK.xcframework; sourceTree = "<group>"; };
 		5F6523BA0B5A23A25DB88ECCF65E7E0F /* GQPaymentIOSSDKNative.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = GQPaymentIOSSDKNative.modulemap; sourceTree = "<group>"; };
-		610870829F5742CC325AC225F6B66F9E /* CashfreePGCoreSDK.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; path = CashfreePGCoreSDK.xcframework; sourceTree = "<group>"; };
+		610870829F5742CC325AC225F6B66F9E /* CashfreePGCoreSDK.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = wrapper.xcframework; path = CashfreePGCoreSDK.xcframework; sourceTree = "<group>"; };
 		6A067A221D31BEE945A111440B3965FB /* Pods-GQPaymentIOSSDKNative_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-GQPaymentIOSSDKNative_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
 		6A2B101DFBB028F72328EFE719A27DCC /* CashfreePGUISDK-xcframeworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "CashfreePGUISDK-xcframeworks.sh"; sourceTree = "<group>"; };
 		73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
@@ -247,19 +292,57 @@
 		79732590BEA3E17DB52E2F5EF255B3B3 /* CashfreePGCoreSDK.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CashfreePGCoreSDK.release.xcconfig; sourceTree = "<group>"; };
 		7B9D5435220E6B3A6AD2F5DC7EF14B6B /* Pods-GQPaymentIOSSDKNative_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-GQPaymentIOSSDKNative_Tests-umbrella.h"; sourceTree = "<group>"; };
 		7F45FC354E1F4D41FD9CAA037131E2C0 /* GQPaymentIOSSDKNative.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = GQPaymentIOSSDKNative.release.xcconfig; sourceTree = "<group>"; };
-		822152333975DD410D9921EC221848E0 /* Razorpay.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; name = Razorpay.xcframework; path = Pod/Razorpay.xcframework; sourceTree = "<group>"; };
+		822152333975DD410D9921EC221848E0 /* Razorpay.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = wrapper.xcframework; name = Razorpay.xcframework; path = Pod/Razorpay.xcframework; sourceTree = "<group>"; };
 		8A3A8E91ADC622F0EBE11DF0EC074127 /* CFNetworkSDK.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CFNetworkSDK.release.xcconfig; sourceTree = "<group>"; };
 		8C18B0A71FF4558AD82808E83D35FA54 /* Pods-GQPaymentIOSSDKNative_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-GQPaymentIOSSDKNative_Tests-dummy.m"; sourceTree = "<group>"; };
 		8CC2B1A7588A071991C190DA2CECF82D /* CashfreePGCoreSDK-xcframeworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "CashfreePGCoreSDK-xcframeworks.sh"; sourceTree = "<group>"; };
 		90B9A9F1D43B63240391142DE0C8AC72 /* GQPaymentIOSSDKNative-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "GQPaymentIOSSDKNative-umbrella.h"; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		A3A60F932B838026001A5FC9 /* GQBaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GQBaseViewController.swift; sourceTree = "<group>"; };
+		A3A60F962B838036001A5FC9 /* UIView+Ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Ext.swift"; sourceTree = "<group>"; };
+		A3A60F992B838036001A5FC9 /* GQEMIViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GQEMIViewController.swift; sourceTree = "<group>"; };
+		A3A60F9A2B838036001A5FC9 /* GQEMIViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GQEMIViewModel.swift; sourceTree = "<group>"; };
+		A3A60F9B2B838036001A5FC9 /* GQEMIViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GQEMIViewController.xib; sourceTree = "<group>"; };
+		A3A60F9D2B838036001A5FC9 /* EMIApplicationCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EMIApplicationCollectionViewCell.swift; sourceTree = "<group>"; };
+		A3A60F9E2B838036001A5FC9 /* EMIApplicationCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EMIApplicationCollectionViewCell.xib; sourceTree = "<group>"; };
+		A3A60FA12B838036001A5FC9 /* GQTagView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GQTagView.swift; sourceTree = "<group>"; };
+		A3A60FA22B838036001A5FC9 /* GQTagView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GQTagView.xib; sourceTree = "<group>"; };
+		A3A60FA42B838036001A5FC9 /* GQNavigationBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GQNavigationBar.swift; sourceTree = "<group>"; };
+		A3A60FA52B838036001A5FC9 /* GQNavigationBar.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GQNavigationBar.xib; sourceTree = "<group>"; };
+		A3A60FA72B838036001A5FC9 /* MobileOTPView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MobileOTPView.swift; sourceTree = "<group>"; };
+		A3A60FA82B838036001A5FC9 /* MobileOTPView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MobileOTPView.xib; sourceTree = "<group>"; };
+		A3A60FAA2B838036001A5FC9 /* PaymentMethodsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PaymentMethodsViewController.xib; sourceTree = "<group>"; };
+		A3A60FAB2B838036001A5FC9 /* PaymentMethodsViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaymentMethodsViewModel.swift; sourceTree = "<group>"; };
+		A3A60FAC2B838036001A5FC9 /* PaymentMethodsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaymentMethodsViewController.swift; sourceTree = "<group>"; };
+		A3A60FAF2B838036001A5FC9 /* PaymentMethodsCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaymentMethodsCollectionViewCell.swift; sourceTree = "<group>"; };
+		A3A60FB02B838036001A5FC9 /* PaymentMethodsCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PaymentMethodsCollectionViewCell.xib; sourceTree = "<group>"; };
+		A3A60FB12B838036001A5FC9 /* ProceedButtonCollectionReusableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProceedButtonCollectionReusableView.swift; sourceTree = "<group>"; };
+		A3A60FB22B838036001A5FC9 /* ProceedButtonCollectionReusableView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProceedButtonCollectionReusableView.xib; sourceTree = "<group>"; };
+		A3A60FB32B838036001A5FC9 /* PaymentTagCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaymentTagCollectionViewCell.swift; sourceTree = "<group>"; };
+		A3A60FB42B838036001A5FC9 /* PaymentTagCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PaymentTagCollectionViewCell.xib; sourceTree = "<group>"; };
+		A3A60FB62B838036001A5FC9 /* VerifyOTPViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VerifyOTPViewController.swift; sourceTree = "<group>"; };
+		A3A60FB72B838036001A5FC9 /* VerifyOTPViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VerifyOTPViewModel.swift; sourceTree = "<group>"; };
+		A3A60FB82B838036001A5FC9 /* VerifyOTPViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VerifyOTPViewController.xib; sourceTree = "<group>"; };
+		A3A60FBA2B838036001A5FC9 /* EnterMobileNumberViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EnterMobileNumberViewController.xib; sourceTree = "<group>"; };
+		A3A60FBB2B838036001A5FC9 /* EnterMobileNumberViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnterMobileNumberViewModel.swift; sourceTree = "<group>"; };
+		A3A60FBC2B838036001A5FC9 /* EnterMobileNumberViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnterMobileNumberViewController.swift; sourceTree = "<group>"; };
+		A3A60FBE2B838036001A5FC9 /* GQPayment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GQPayment.swift; sourceTree = "<group>"; };
+		A3A60FBF2B838036001A5FC9 /* GQPaymentDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GQPaymentDelegate.swift; sourceTree = "<group>"; };
+		A3A60FDE2B838042001A5FC9 /* NetworkType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkType.swift; sourceTree = "<group>"; };
+		A3A60FDF2B838042001A5FC9 /* Decoder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Decoder.swift; sourceTree = "<group>"; };
+		A3A60FE02B838042001A5FC9 /* NetworkEnvironment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkEnvironment.swift; sourceTree = "<group>"; };
+		A3A60FE12B838042001A5FC9 /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		A3A60FE22B838042001A5FC9 /* Encoder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Encoder.swift; sourceTree = "<group>"; };
+		A3A60FE32B838042001A5FC9 /* NetworkService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		A3A60FE42B838042001A5FC9 /* HTTPMethod.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
+		A3A60FE52B838042001A5FC9 /* NetworkError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		A719508C6E19E20D9A13C80B98477DCE /* Pods-GQPaymentIOSSDKNative_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-GQPaymentIOSSDKNative_Example-frameworks.sh"; sourceTree = "<group>"; };
 		A7FBB2F070181FA6927DDFF4B16E0F38 /* CashfreePG.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CashfreePG.debug.xcconfig; sourceTree = "<group>"; };
 		AE3C4DC2AE607DCA00B7BE0DA9310205 /* Easebuzz-xcframeworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Easebuzz-xcframeworks.sh"; sourceTree = "<group>"; };
 		B2370A6F53CD1A720160087DA30719D3 /* CFNetworkSDK-xcframeworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "CFNetworkSDK-xcframeworks.sh"; sourceTree = "<group>"; };
 		B4847B178D58000EDBBFDD6192AA3163 /* razorpay-pod-xcframeworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "razorpay-pod-xcframeworks.sh"; sourceTree = "<group>"; };
 		B6CCF9D3E993DD4F562831F7613EE8EF /* Pods-GQPaymentIOSSDKNative_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-GQPaymentIOSSDKNative_Tests-Info.plist"; sourceTree = "<group>"; };
-		C13B0893FE1F4E19AF47F86C2A33604E /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		C13B0893FE1F4E19AF47F86C2A33604E /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		C29DDDDDAC9D888CFA61DAC569A366BB /* GQPaymentIOSSDKNative-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "GQPaymentIOSSDKNative-dummy.m"; sourceTree = "<group>"; };
 		C57E3584278260C6162DEBF63C18268E /* CashfreeAnalyticsSDK.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CashfreeAnalyticsSDK.release.xcconfig; sourceTree = "<group>"; };
 		D0B7F240F8BA83A09CD94D2FDC4D2897 /* CashfreePGUISDK.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CashfreePGUISDK.release.xcconfig; sourceTree = "<group>"; };
@@ -267,7 +350,7 @@
 		DFFC409FDC4FBE1E7C156CAB1CB03677 /* ReplaceMe.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ReplaceMe.swift; path = GQPaymentIOSSDKNative/Classes/ReplaceMe.swift; sourceTree = "<group>"; };
 		E2ED473B2C1AEFE1221CE746F537F3A6 /* razorpay-pod.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "razorpay-pod.release.xcconfig"; sourceTree = "<group>"; };
 		E392DE7A759C20E8D4A554A853B631AF /* CashfreePGUISDK.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CashfreePGUISDK.debug.xcconfig; sourceTree = "<group>"; };
-		EE789E44DE9953F203553D2F98220223 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		EE789E44DE9953F203553D2F98220223 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		F0541088E724C55AFB5ADEA543BCD8A0 /* CashfreePG.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CashfreePG.release.xcconfig; sourceTree = "<group>"; };
 		F1724F1A1C95CCA0EA521514773D7102 /* Pods-GQPaymentIOSSDKNative_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-GQPaymentIOSSDKNative_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		F33A82E6D0982A4603FC992BE39A4F47 /* Pods-GQPaymentIOSSDKNative_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-GQPaymentIOSSDKNative_Example-dummy.m"; sourceTree = "<group>"; };
@@ -317,13 +400,17 @@
 				0930164E76664D59E00918A95EBE760F /* Frameworks */,
 				BE50BA98D373945857F7701AC5EED316 /* Support Files */,
 			);
-			name = CashfreePG;
 			path = CashfreePG;
 			sourceTree = "<group>";
 		};
 		155688F3A1E68A116B12FA033130668A /* GQPaymentIOSSDKNative */ = {
 			isa = PBXGroup;
 			children = (
+				A3A60FDD2B838042001A5FC9 /* Services */,
+				A3A60F952B838036001A5FC9 /* Extensions */,
+				A3A60FBD2B838036001A5FC9 /* GQPayment */,
+				A3A60F972B838036001A5FC9 /* Modules */,
+				A3A60F922B838026001A5FC9 /* Base Classes */,
 				DFFC409FDC4FBE1E7C156CAB1CB03677 /* ReplaceMe.swift */,
 				AA2F286313F70C6DCD5A57BFAF2F86A6 /* Pod */,
 				54304253E8A08404FE0B75C053E5FE1F /* Support Files */,
@@ -347,7 +434,6 @@
 				F3EF6F657B5B3F445BF61488ACF49800 /* Frameworks */,
 				870D8A449C484EC84E7CC91C5FA1663C /* Support Files */,
 			);
-			name = "razorpay-pod";
 			path = "razorpay-pod";
 			sourceTree = "<group>";
 		};
@@ -521,8 +607,173 @@
 				39EC40D272135359C534E4CC565C5F6B /* Frameworks */,
 				87480A099F961E01C0245363CDB0EABC /* Support Files */,
 			);
-			name = CashfreePGCoreSDK;
 			path = CashfreePGCoreSDK;
+			sourceTree = "<group>";
+		};
+		A3A60F922B838026001A5FC9 /* Base Classes */ = {
+			isa = PBXGroup;
+			children = (
+				A3A60F932B838026001A5FC9 /* GQBaseViewController.swift */,
+			);
+			name = "Base Classes";
+			path = "GQPaymentIOSSDKNative/Classes/Base Classes";
+			sourceTree = "<group>";
+		};
+		A3A60F952B838036001A5FC9 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				A3A60F962B838036001A5FC9 /* UIView+Ext.swift */,
+			);
+			name = Extensions;
+			path = GQPaymentIOSSDKNative/Classes/Extensions;
+			sourceTree = "<group>";
+		};
+		A3A60F972B838036001A5FC9 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				A3A60F982B838036001A5FC9 /* GQEMI */,
+				A3A60F9F2B838036001A5FC9 /* CommonViews */,
+				A3A60FA92B838036001A5FC9 /* PaymentMethods */,
+				A3A60FB52B838036001A5FC9 /* VerifyOTPViewController */,
+				A3A60FB92B838036001A5FC9 /* EnterMobileNumber */,
+			);
+			name = Modules;
+			path = GQPaymentIOSSDKNative/Classes/Modules;
+			sourceTree = "<group>";
+		};
+		A3A60F982B838036001A5FC9 /* GQEMI */ = {
+			isa = PBXGroup;
+			children = (
+				A3A60F992B838036001A5FC9 /* GQEMIViewController.swift */,
+				A3A60F9A2B838036001A5FC9 /* GQEMIViewModel.swift */,
+				A3A60F9B2B838036001A5FC9 /* GQEMIViewController.xib */,
+				A3A60F9C2B838036001A5FC9 /* Views */,
+			);
+			path = GQEMI;
+			sourceTree = "<group>";
+		};
+		A3A60F9C2B838036001A5FC9 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A3A60F9D2B838036001A5FC9 /* EMIApplicationCollectionViewCell.swift */,
+				A3A60F9E2B838036001A5FC9 /* EMIApplicationCollectionViewCell.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		A3A60F9F2B838036001A5FC9 /* CommonViews */ = {
+			isa = PBXGroup;
+			children = (
+				A3A60FA02B838036001A5FC9 /* GQTagView */,
+				A3A60FA32B838036001A5FC9 /* GQNavigationBar */,
+				A3A60FA62B838036001A5FC9 /* MobileOTPView */,
+			);
+			path = CommonViews;
+			sourceTree = "<group>";
+		};
+		A3A60FA02B838036001A5FC9 /* GQTagView */ = {
+			isa = PBXGroup;
+			children = (
+				A3A60FA12B838036001A5FC9 /* GQTagView.swift */,
+				A3A60FA22B838036001A5FC9 /* GQTagView.xib */,
+			);
+			path = GQTagView;
+			sourceTree = "<group>";
+		};
+		A3A60FA32B838036001A5FC9 /* GQNavigationBar */ = {
+			isa = PBXGroup;
+			children = (
+				A3A60FA42B838036001A5FC9 /* GQNavigationBar.swift */,
+				A3A60FA52B838036001A5FC9 /* GQNavigationBar.xib */,
+			);
+			path = GQNavigationBar;
+			sourceTree = "<group>";
+		};
+		A3A60FA62B838036001A5FC9 /* MobileOTPView */ = {
+			isa = PBXGroup;
+			children = (
+				A3A60FA72B838036001A5FC9 /* MobileOTPView.swift */,
+				A3A60FA82B838036001A5FC9 /* MobileOTPView.xib */,
+			);
+			path = MobileOTPView;
+			sourceTree = "<group>";
+		};
+		A3A60FA92B838036001A5FC9 /* PaymentMethods */ = {
+			isa = PBXGroup;
+			children = (
+				A3A60FAA2B838036001A5FC9 /* PaymentMethodsViewController.xib */,
+				A3A60FAB2B838036001A5FC9 /* PaymentMethodsViewModel.swift */,
+				A3A60FAC2B838036001A5FC9 /* PaymentMethodsViewController.swift */,
+				A3A60FAD2B838036001A5FC9 /* Views */,
+			);
+			path = PaymentMethods;
+			sourceTree = "<group>";
+		};
+		A3A60FAD2B838036001A5FC9 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A3A60FAE2B838036001A5FC9 /* CollectionViewCells */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		A3A60FAE2B838036001A5FC9 /* CollectionViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				A3A60FAF2B838036001A5FC9 /* PaymentMethodsCollectionViewCell.swift */,
+				A3A60FB02B838036001A5FC9 /* PaymentMethodsCollectionViewCell.xib */,
+				A3A60FB12B838036001A5FC9 /* ProceedButtonCollectionReusableView.swift */,
+				A3A60FB22B838036001A5FC9 /* ProceedButtonCollectionReusableView.xib */,
+				A3A60FB32B838036001A5FC9 /* PaymentTagCollectionViewCell.swift */,
+				A3A60FB42B838036001A5FC9 /* PaymentTagCollectionViewCell.xib */,
+			);
+			path = CollectionViewCells;
+			sourceTree = "<group>";
+		};
+		A3A60FB52B838036001A5FC9 /* VerifyOTPViewController */ = {
+			isa = PBXGroup;
+			children = (
+				A3A60FB62B838036001A5FC9 /* VerifyOTPViewController.swift */,
+				A3A60FB72B838036001A5FC9 /* VerifyOTPViewModel.swift */,
+				A3A60FB82B838036001A5FC9 /* VerifyOTPViewController.xib */,
+			);
+			path = VerifyOTPViewController;
+			sourceTree = "<group>";
+		};
+		A3A60FB92B838036001A5FC9 /* EnterMobileNumber */ = {
+			isa = PBXGroup;
+			children = (
+				A3A60FBA2B838036001A5FC9 /* EnterMobileNumberViewController.xib */,
+				A3A60FBB2B838036001A5FC9 /* EnterMobileNumberViewModel.swift */,
+				A3A60FBC2B838036001A5FC9 /* EnterMobileNumberViewController.swift */,
+			);
+			path = EnterMobileNumber;
+			sourceTree = "<group>";
+		};
+		A3A60FBD2B838036001A5FC9 /* GQPayment */ = {
+			isa = PBXGroup;
+			children = (
+				A3A60FBE2B838036001A5FC9 /* GQPayment.swift */,
+				A3A60FBF2B838036001A5FC9 /* GQPaymentDelegate.swift */,
+			);
+			name = GQPayment;
+			path = GQPaymentIOSSDKNative/Classes/GQPayment;
+			sourceTree = "<group>";
+		};
+		A3A60FDD2B838042001A5FC9 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				A3A60FDE2B838042001A5FC9 /* NetworkType.swift */,
+				A3A60FDF2B838042001A5FC9 /* Decoder.swift */,
+				A3A60FE02B838042001A5FC9 /* NetworkEnvironment.swift */,
+				A3A60FE12B838042001A5FC9 /* Model.swift */,
+				A3A60FE22B838042001A5FC9 /* Encoder.swift */,
+				A3A60FE32B838042001A5FC9 /* NetworkService.swift */,
+				A3A60FE42B838042001A5FC9 /* HTTPMethod.swift */,
+				A3A60FE52B838042001A5FC9 /* NetworkError.swift */,
+			);
+			name = Services;
+			path = GQPaymentIOSSDKNative/Classes/Services;
 			sourceTree = "<group>";
 		};
 		AA2F286313F70C6DCD5A57BFAF2F86A6 /* Pod */ = {
@@ -555,7 +806,6 @@
 				BCF2853193E708B83C982E4F12F61445 /* Frameworks */,
 				20D7A215EAE489F8C90FDD42DBD6432B /* Support Files */,
 			);
-			name = CFNetworkSDK;
 			path = CFNetworkSDK;
 			sourceTree = "<group>";
 		};
@@ -565,7 +815,6 @@
 				3577B49DF5E4FD4E661FB75BD301671B /* Frameworks */,
 				23F68F8077EAA48A73412580626DDD72 /* Support Files */,
 			);
-			name = CashfreeAnalyticsSDK;
 			path = CashfreeAnalyticsSDK;
 			sourceTree = "<group>";
 		};
@@ -630,7 +879,6 @@
 				89DEE46A3EB1BC9ADFB8A9961C6DE400 /* Frameworks */,
 				786FAB3182260794FF854B65A2B95347 /* Support Files */,
 			);
-			name = Easebuzz;
 			path = Easebuzz;
 			sourceTree = "<group>";
 		};
@@ -640,7 +888,6 @@
 				52A1F06C7A7540F3EAB42D29E47A0FCC /* Frameworks */,
 				85858794EF3D7F0F06B3D076EF26BA00 /* Support Files */,
 			);
-			name = CashfreePGUISDK;
 			path = CashfreePGUISDK;
 			sourceTree = "<group>";
 		};
@@ -788,6 +1035,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A3A60FD22B838036001A5FC9 /* ProceedButtonCollectionReusableView.xib in Resources */,
+				A3A60FC32B838036001A5FC9 /* GQEMIViewController.xib in Resources */,
+				A3A60FC92B838036001A5FC9 /* GQNavigationBar.xib in Resources */,
+				A3A60FCC2B838036001A5FC9 /* PaymentMethodsViewController.xib in Resources */,
+				A3A60FC72B838036001A5FC9 /* GQTagView.xib in Resources */,
+				A3A60FD42B838036001A5FC9 /* PaymentTagCollectionViewCell.xib in Resources */,
+				A3A60FCB2B838036001A5FC9 /* MobileOTPView.xib in Resources */,
+				A3A60FD82B838036001A5FC9 /* EnterMobileNumberViewController.xib in Resources */,
+				A3A60FD72B838036001A5FC9 /* VerifyOTPViewController.xib in Resources */,
+				A3A60FD02B838036001A5FC9 /* PaymentMethodsCollectionViewCell.xib in Resources */,
+				A3A60FC52B838036001A5FC9 /* EMIApplicationCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -942,8 +1200,35 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A3A60FC02B838036001A5FC9 /* UIView+Ext.swift in Sources */,
+				A3A60FED2B838042001A5FC9 /* NetworkError.swift in Sources */,
+				A3A60FC62B838036001A5FC9 /* GQTagView.swift in Sources */,
+				A3A60FD32B838036001A5FC9 /* PaymentTagCollectionViewCell.swift in Sources */,
+				A3A60FC42B838036001A5FC9 /* EMIApplicationCollectionViewCell.swift in Sources */,
+				A3A60FEA2B838042001A5FC9 /* Encoder.swift in Sources */,
+				A3A60FDB2B838036001A5FC9 /* GQPayment.swift in Sources */,
+				A3A60FC12B838036001A5FC9 /* GQEMIViewController.swift in Sources */,
+				A3A60FE62B838042001A5FC9 /* NetworkType.swift in Sources */,
 				EA08B68A6C6A27729D5D790D6EF5BDEA /* GQPaymentIOSSDKNative-dummy.m in Sources */,
 				2947F6F83CE72BE92E9098F885335FF5 /* ReplaceMe.swift in Sources */,
+				A3A60FC22B838036001A5FC9 /* GQEMIViewModel.swift in Sources */,
+				A3A60FE92B838042001A5FC9 /* Model.swift in Sources */,
+				A3A60FE82B838042001A5FC9 /* NetworkEnvironment.swift in Sources */,
+				A3A60FEB2B838042001A5FC9 /* NetworkService.swift in Sources */,
+				A3A60FD92B838036001A5FC9 /* EnterMobileNumberViewModel.swift in Sources */,
+				A3A60FCF2B838036001A5FC9 /* PaymentMethodsCollectionViewCell.swift in Sources */,
+				A3A60FEC2B838042001A5FC9 /* HTTPMethod.swift in Sources */,
+				A3A60F942B838026001A5FC9 /* GQBaseViewController.swift in Sources */,
+				A3A60FCA2B838036001A5FC9 /* MobileOTPView.swift in Sources */,
+				A3A60FE72B838042001A5FC9 /* Decoder.swift in Sources */,
+				A3A60FCD2B838036001A5FC9 /* PaymentMethodsViewModel.swift in Sources */,
+				A3A60FDC2B838036001A5FC9 /* GQPaymentDelegate.swift in Sources */,
+				A3A60FD62B838036001A5FC9 /* VerifyOTPViewModel.swift in Sources */,
+				A3A60FCE2B838036001A5FC9 /* PaymentMethodsViewController.swift in Sources */,
+				A3A60FD12B838036001A5FC9 /* ProceedButtonCollectionReusableView.swift in Sources */,
+				A3A60FC82B838036001A5FC9 /* GQNavigationBar.swift in Sources */,
+				A3A60FD52B838036001A5FC9 /* VerifyOTPViewController.swift in Sources */,
+				A3A60FDA2B838036001A5FC9 /* EnterMobileNumberViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1327,8 +1612,7 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 5.0;
 				SYMROOT = "${SRCROOT}/../build";
 			};
