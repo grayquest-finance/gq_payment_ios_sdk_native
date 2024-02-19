@@ -17,6 +17,9 @@ xcuserdata/
 DerivedData
 *.hmap
 *.ipa
+*.lock
+*.DS_Store
+*.xcodeproj/project.xcworkspace
 
 # Bundler
 .bundle
