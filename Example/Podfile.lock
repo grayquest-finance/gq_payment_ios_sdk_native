@@ -1,0 +1,50 @@
+PODS:
+  - CashfreeAnalyticsSDK (2.0.5):
+    - CFNetworkSDK (~> 2.0.5)
+  - CashfreePG (2.0.9):
+    - CashfreePGUISDK (~> 2.0.8)
+  - CashfreePGCoreSDK (2.0.8):
+    - CashfreeAnalyticsSDK (~> 2.0.5)
+  - CashfreePGUISDK (2.0.8):
+    - CashfreePGCoreSDK (~> 2.0.8)
+  - CFNetworkSDK (2.0.5)
+  - Easebuzz (1.1.0)
+  - GQPaymentIOSSDKNative (0.1.0):
+    - CashfreePG (~> 2.0.3)
+    - Easebuzz (~> 1.1)
+    - razorpay-pod (= 1.2.5)
+  - razorpay-pod (1.2.5)
+
+DEPENDENCIES:
+  - CashfreePG (~> 2.0.3)
+  - Easebuzz (~> 1.1)
+  - GQPaymentIOSSDKNative (from `../`)
+  - razorpay-pod (= 1.2.5)
+
+SPEC REPOS:
+  trunk:
+    - CashfreeAnalyticsSDK
+    - CashfreePG
+    - CashfreePGCoreSDK
+    - CashfreePGUISDK
+    - CFNetworkSDK
+    - Easebuzz
+    - razorpay-pod
+
+EXTERNAL SOURCES:
+  GQPaymentIOSSDKNative:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  CashfreeAnalyticsSDK: 6d3825916b1f37e38e26cc3b825eef31c9a8b4b9
+  CashfreePG: 857dffd7e7ecec2b3efc572d3ff0ebf5f59dc342
+  CashfreePGCoreSDK: 8ad9ae1bc97668d5399e936e2de00d6d103a7bfb
+  CashfreePGUISDK: 891276c947bc2aea7f3990bb60c19cd62c631313
+  CFNetworkSDK: 02adc1210041ce65a6653049c730c9db2f73451a
+  Easebuzz: c56d85094e10bf19938efd9b9972ff4c5a674cb5
+  GQPaymentIOSSDKNative: ac35d38d9b68a129bad49b940e7ea333a4d3837b
+  razorpay-pod: aa2df076ea44baab6cc8296c1ccc715fe2ca818c
+
+PODFILE CHECKSUM: 987dd287325ec6953dd6aa66a42a7c3e7078a84b
+
+COCOAPODS: 1.14.3
