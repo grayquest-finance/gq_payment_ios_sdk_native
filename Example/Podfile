@@ -1,0 +1,13 @@
+use_frameworks!
+
+platform :ios, '10.0'
+
+target 'GQPaymentIOSSDKNative_Example' do
+  pod 'GQPaymentIOSSDKNative', :path => '../'
+
+  target 'GQPaymentIOSSDKNative_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
