@@ -51,8 +51,8 @@ class PaymentMethodsViewController: GQBaseViewController {
     
     private func setupScrollButton() {
         scrollButton.set(cornerRadius: 0.5)
-        scrollButton.backgroundColor = .systemBlue.withAlphaComponent(0.4)
-        scrollButton.tintColor = .black.withAlphaComponent(0.5)
+        scrollButton.backgroundColor = GQPayment.themeColor.withAlphaComponent(0.5)
+        scrollButton.tintColor = .darkGray.withAlphaComponent(0.5)
         
         scrollButton.setImage(UIImage(systemName: "arrowshape.down.fill"), for: .normal)
         scrollButton.setImage(UIImage(systemName: "arrowshape.up.fill"), for: .selected)
@@ -65,10 +65,10 @@ class PaymentMethodsViewController: GQBaseViewController {
         collectionView.delegate = self
         collectionView.allowsMultipleSelection = false
         
-        let paymentMethodsNib = UINib(nibName: "PaymentMethodsCollectionViewCell", bundle: nil)
+        let paymentMethodsNib = UINib(nibName: "PaymentMethodsCollectionViewCell", bundle: Bundle(for: type(of: self)))
         collectionView.register(paymentMethodsNib, forCellWithReuseIdentifier: "PaymentMethodsCollectionViewCell")
         
-        let footerNib = UINib(nibName: "ProceedButtonCollectionReusableView", bundle: nil)
+        let footerNib = UINib(nibName: "ProceedButtonCollectionReusableView", bundle: Bundle(for: type(of: self)))
         collectionView.register(footerNib, forSupplementaryViewOfKind: UICollectionView.elementKindSectionFooter, withReuseIdentifier: "ProceedButtonCollectionReusableView")
         
         if let flowLayout = collectionView.collectionViewLayout as? UICollectionViewFlowLayout {
@@ -81,7 +81,7 @@ class PaymentMethodsViewController: GQBaseViewController {
     @IBAction func clickedScrollButton(_ sender: UIButton) {
         scrollButton.isSelected.toggle()
         
-        DispatchQueue.main.async {
+        Task { @MainActor in
             if self.scrollButton.isSelected, let items = self.viewModel?.lastIndex {
                 self.collectionView.scrollToItem(at: IndexPath(item: items, section: 0), at: .bottom, animated: true)
             } else {
@@ -108,7 +108,7 @@ extension PaymentMethodsViewController: UICollectionViewDataSource, UICollection
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if let index = viewModel?.selectedIndex {
-            DispatchQueue.main.async {
+            Task { @MainActor in
             let deselectIndexPath = IndexPath(item: index, section: .zero)
                 if let cell = collectionView.cellForItem(at: deselectIndexPath) as? PaymentMethodsCollectionViewCell {
                     cell.deselected()
@@ -116,7 +116,7 @@ extension PaymentMethodsViewController: UICollectionViewDataSource, UICollection
             }
         }
         viewModel?.selectedIndex = indexPath.item
-        DispatchQueue.main.async {
+        Task { @MainActor in
             if let cell = collectionView.cellForItem(at: indexPath) as? PaymentMethodsCollectionViewCell {
                 cell.selected()
             }
@@ -153,9 +153,11 @@ extension PaymentMethodsViewController: UICollectionViewDataSource, UICollection
 extension PaymentMethodsViewController: ProceedButtonDelegate {
     func didTapProceed() {
         // ONLY EMI FLOW FOR NOW
-        let emiViewModel = GQEMIViewModel()
-        let emiViewController = GQEMIViewController(viewModel: emiViewModel)
-        self.navigationController?.pushViewController(emiViewController, animated: true)
+        Task { @MainActor in
+            let emiViewModel = GQEMIViewModel()
+            let emiViewController = GQEMIViewController(viewModel: emiViewModel)
+            self.navigationController?.pushViewController(emiViewController, animated: true)
+        }
     }
     
     

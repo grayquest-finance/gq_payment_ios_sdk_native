@@ -24,7 +24,7 @@ class ProceedButtonCollectionReusableView: UICollectionReusableView {
     }
     
     private func setupUI() {
-        proceedButton.backgroundColor = .systemBlue
+        proceedButton.backgroundColor = GQPayment.themeColor
         proceedButton.tintColor = .white
         proceedButton.set(cornerRadius: 0.2)
 //        proceedButton.isEnabled = false

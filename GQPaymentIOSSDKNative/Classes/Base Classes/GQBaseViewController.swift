@@ -63,19 +63,23 @@ extension GQBaseViewController {
         guard let scrollView = self.scrollViewToAdjust else { return }
         guard let keyboardValue = notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue else { return }
 
-        let keyboardScreenEndFrame = keyboardValue.cgRectValue
-        let keyboardViewEndFrame = view.convert(keyboardScreenEndFrame, from: view.window)
+        Task { @MainActor in
+            let keyboardScreenEndFrame = keyboardValue.cgRectValue
+            let keyboardViewEndFrame = view.convert(keyboardScreenEndFrame, from: view.window)
 
-        let contentInset = UIEdgeInsets(top: 0, left: 0, bottom: keyboardViewEndFrame.height - view.safeAreaInsets.bottom, right: 0)
+            let contentInset = UIEdgeInsets(top: 0, left: 0, bottom: keyboardViewEndFrame.height - view.safeAreaInsets.bottom, right: 0)
 
-        scrollView.contentInset = contentInset
-        scrollView.scrollIndicatorInsets = contentInset
+            scrollView.contentInset = contentInset
+            scrollView.scrollIndicatorInsets = contentInset
+        }
     }
     
     @objc func adjustForHideKeyboard(notification: Notification) {
         guard let scrollView = self.scrollViewToAdjust else { return }
         
-        scrollView.contentInset = .zero
-        scrollView.scrollIndicatorInsets = .zero
+        Task { @MainActor in
+            scrollView.contentInset = .zero
+            scrollView.scrollIndicatorInsets = .zero
+        }
     }
 }

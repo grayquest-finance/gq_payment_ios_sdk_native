@@ -37,7 +37,7 @@ class PaymentTagCollectionViewCell: UICollectionViewCell {
     
     public func configure(with data: String?) {
         guard let data else { return }
-        DispatchQueue.main.async {
+        Task { @MainActor in
             self.tagName.text = data
         }
     }

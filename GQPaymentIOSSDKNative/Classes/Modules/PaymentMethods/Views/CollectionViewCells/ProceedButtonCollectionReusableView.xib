@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -10,12 +11,12 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <collectionReusableView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ProceedButtonCollectionReusableView" id="U6b-Vx-4bR" customClass="ProceedButtonCollectionReusableView" customModule="TestCases_Example" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="415" height="87"/>
+        <collectionReusableView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ProceedButtonCollectionReusableView" id="U6b-Vx-4bR" customClass="ProceedButtonCollectionReusableView" customModule="GQPaymentIOSSDKNative" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="419" height="116"/>
             <autoresizingMask key="autoresizingMask"/>
             <subviews>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HQG-i0-cif">
-                    <rect key="frame" x="62.333333333333343" y="21.333333333333336" width="290.33333333333326" height="69.333333333333314"/>
+                    <rect key="frame" x="63" y="24" width="293" height="93"/>
                     <color key="backgroundColor" systemColor="systemBlueColor"/>
                     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
@@ -35,12 +36,12 @@
             <connections>
                 <outlet property="proceedButton" destination="HQG-i0-cif" id="PLe-Q4-Pyq"/>
             </connections>
-            <point key="canvasLocation" x="129.00763358778624" y="32.74647887323944"/>
+            <point key="canvasLocation" x="132.06106870229007" y="42.95774647887324"/>
         </collectionReusableView>
     </objects>
     <resources>
         <systemColor name="systemBlueColor">
-            <color red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

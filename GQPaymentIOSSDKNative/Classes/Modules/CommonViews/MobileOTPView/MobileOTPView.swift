@@ -14,7 +14,7 @@ class MobileOTPView: UIView {
     
     @IBOutlet weak var stackView: UIStackView!
     
-    @IBOutlet var textfields: [UITextField]!
+    @IBOutlet var textfields: [OTPTextField]!
     
     //MARK: Variables
     var isCompleted: Bool {
@@ -43,7 +43,6 @@ class MobileOTPView: UIView {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-//        setupUI()
     }
     
     private func setupUI() {
@@ -55,64 +54,42 @@ class MobileOTPView: UIView {
         
         contentView.backgroundColor = .white
         
-        var count = 1
+        var prev: OTPTextField?
         textfields.forEach {
-            $0.borderStyle = .none
-            $0.textAlignment = .center
-            $0.textColor = .black
             $0.font = .systemFont(ofSize: self.bounds.height * 0.6, weight: .medium)
-            $0.set(cornerRadius:  0.05, borderWidth: 1, borderColor: .black)
-            $0.keyboardType = .numberPad
             $0.delegate = self
-            $0.tag = count
-            count += 1
+            
+            $0.previousTextField = prev
+            prev?.nextTextField = $0
+            prev = $0
         }
     }
-    
-    
-    
 
 }
 
-// MARK: 
+// MARK: Handling Traversing to Next TextField for OTPs
 extension MobileOTPView: UITextFieldDelegate {
     
-    private func goToNextTextField(textField: UITextField) {
-        guard textField.tag < textfields.endIndex else { return }
-        
-        let next = textfields[textField.tag]
-        Task { @MainActor in
-            next.becomeFirstResponder()
-        }
-
-    }
-    
-    private func goToPreviousTextField(textField: UITextField) {
-        guard textField.text?.isEmpty ?? true else { return }
-        guard textField.tag - 1 >= textfields.startIndex else { return }
-        
-        let previous = textfields[textField.tag - 1]
-        Task { @MainActor in
-            previous.becomeFirstResponder()
-        }
-    }
-    
-    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-        
-        if string.isEmpty {
-            defer {
-                goToPreviousTextField(textField: textField)
-            }
-            return true
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range:NSRange,
+                   replacementString string: String) -> Bool {
+        guard let textField = textField as? OTPTextField else { return true }
+        if string.count > 1 {
+//            textField.resignFirstResponder()
+//            autoFillTextField(with: string)
+            return false
         } else {
-            guard let _ = Int(string) else { return false }
-            defer {
-                goToNextTextField(textField: textField)
+            if (range.length == 0){
+                if textField.nextTextField == nil {
+                    textField.text? = string
+                    textField.resignFirstResponder()
+                }else{
+                    textField.text? = string
+                    textField.nextTextField?.becomeFirstResponder()
+                }
+                return false
             }
-            guard textField.text?.count ?? 0 == 0 else { return false }
             return true
         }
-    
     }
 
 }

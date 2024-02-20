@@ -101,8 +101,20 @@ class VerifyOTPViewController: GQBaseViewController {
     }
     
     @IBAction func clickedVerifyOTPButton(_ sender: UIButton) {
-        print(mobileOTPView.isCompleted)
-        print(mobileOTPView.getOTP ?? "")
+        
+        if mobileOTPView.isCompleted {
+            print(mobileOTPView.getOTP ?? "No OTP")
+            
+            Task { @MainActor in
+                let paymentMethodsVM = PaymentMethodsViewModel()
+                let paymentMethodsVC = PaymentMethodsViewController(viewModel: paymentMethodsVM)
+                self.navigationController?.pushViewController(paymentMethodsVC, animated: true)
+            }
+            
+        } else {
+            print("Please complete OTP incorret or Invalid!!!")
+        }
+        
     }
     
 }

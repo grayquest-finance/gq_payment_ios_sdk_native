@@ -44,7 +44,7 @@ class GQEMIViewController: GQBaseViewController {
         collectionView.dataSource = self
         collectionView.delegate = self
         
-        let emiCell = UINib(nibName: "EMIApplicationCollectionViewCell", bundle: nil)
+        let emiCell = UINib(nibName: "EMIApplicationCollectionViewCell", bundle: Bundle(for: type(of: self)))
         collectionView.register(emiCell, forCellWithReuseIdentifier: "EMIApplicationCollectionViewCell")
         
         if let flowLayout = collectionView.collectionViewLayout as? UICollectionViewFlowLayout {

@@ -19,9 +19,11 @@ class ViewController: UIViewController {
     }
     
     @IBAction func clickedOpenSDKButton(_ sender: UIButton) {
-//MARK: Created Instance of GQPayment class and called open function.
-        let gqPayment = GQPayment(delegate: self)
-        gqPayment.open(on: self)
+//      MARK: Created Instance of GQPayment class and called open function.
+        DispatchQueue.main.async {
+            let gqPayment = GQPayment(delegate: self)
+            gqPayment.open(on: self)
+        }
     }
     
 

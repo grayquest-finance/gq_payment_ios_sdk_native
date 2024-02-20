@@ -74,7 +74,7 @@ class PaymentMethodsCollectionViewCell: UICollectionViewCell {
         tagsCollectionView.delegate = self
         
         tagsCollectionView.isScrollEnabled = false
-        let nib = UINib(nibName: "PaymentTagCollectionViewCell", bundle: nil)
+        let nib = UINib(nibName: "PaymentTagCollectionViewCell", bundle: Bundle(for: type(of: self)))
         tagsCollectionView.register(nib, forCellWithReuseIdentifier: "PaymentTagCollectionViewCell")
         
         if let flowLayout = tagsCollectionView.collectionViewLayout as? UICollectionViewFlowLayout {
@@ -86,14 +86,14 @@ class PaymentMethodsCollectionViewCell: UICollectionViewCell {
     }
     
     private func setupPaymentPriceView() {
-        DispatchQueue.main.async {
+        Task { @MainActor in
             self.paymentPriceView.backgroundColor = .lightGray.withAlphaComponent(0.2)
             self.paymentPriceView.set(cornerRadius: 0.08, borderWidth: 1, borderColor: .lightGray)
         }
     }
     
     private func setupOptionLabel() {
-        DispatchQueue.main.async {
+        Task { @MainActor in
             self.optionNumber.backgroundColor = UIColor.systemGreen.withAlphaComponent(0.9)
             self.optionNumber.set(cornerRadius: 0.2)
         }
@@ -102,7 +102,7 @@ class PaymentMethodsCollectionViewCell: UICollectionViewCell {
     
     public func configure(with data: String?, isSelected: Bool) {
         guard let data else { return }
-        DispatchQueue.main.async {
+        Task { @MainActor in
             self.tagsCollectionView.reloadData()
             self.optionNumber.text = "Option \(data)"
         }
@@ -114,14 +114,14 @@ class PaymentMethodsCollectionViewCell: UICollectionViewCell {
     }
     
     public func selected() {
-        DispatchQueue.main.async {
+        Task { @MainActor in
             self.innerView.backgroundColor = .systemBlue.withAlphaComponent(0.1)
             self.innerView.layer.borderColor = UIColor.systemBlue.cgColor
         }
     }
     
     public func deselected() {
-        DispatchQueue.main.async {
+        Task { @MainActor in
             self.innerView.backgroundColor = .white
             self.innerView.layer.borderColor = UIColor.lightGray.cgColor
         }
