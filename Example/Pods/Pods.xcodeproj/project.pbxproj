@@ -121,7 +121,13 @@
 		90B101077A4DAD851B14037C73BB5D6D /* GQNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A2A49893C460E7CD662AABE497BAD5F /* GQNavigationBar.swift */; };
 		9160AB9DB01CAA3ADC6D9222B255C528 /* VerifyOTPViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ACC3F7867BA851540FACD142192C824 /* VerifyOTPViewModel.swift */; };
 		93CE112DE920A4330BA8E498943A5AA4 /* GQEMIViewController.xib in Sources */ = {isa = PBXBuildFile; fileRef = E2E680D3A02FBA156994C642873E3FA4 /* GQEMIViewController.xib */; };
+		A321B77B2B84D0860016FCC6 /* GQSupportFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A321B77A2B84D0860016FCC6 /* GQSupportFooterView.swift */; };
+		A321B77D2B84D09D0016FCC6 /* GQSupportFooterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A321B77C2B84D09D0016FCC6 /* GQSupportFooterView.xib */; };
+		A321B77F2B84DB880016FCC6 /* UIColor+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = A321B77E2B84DB880016FCC6 /* UIColor+Ext.swift */; };
 		A36D9D042B8482B1003F2647 /* OTPTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36D9D032B8482B1003F2647 /* OTPTextField.swift */; };
+		A36D9D062B84A7CA003F2647 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A36D9D052B84A7CA003F2647 /* Assets.xcassets */; };
+		A36D9D092B84AC19003F2647 /* GQGILEView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36D9D082B84AC19003F2647 /* GQGILEView.swift */; };
+		A36D9D0B2B84AC67003F2647 /* GQGILEView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A36D9D0A2B84AC67003F2647 /* GQGILEView.xib */; };
 		A9CEDFFF45ED3146A7C1FF49FBAEF964 /* Pods-GQPaymentIOSSDKNative_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 7B9D5435220E6B3A6AD2F5DC7EF14B6B /* Pods-GQPaymentIOSSDKNative_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		ABC9B1A0D9526F9AB12508F8CD29D401 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A3DA4245ECA7F69246855402F09CE7B /* NetworkError.swift */; };
 		B49D211CE8A969932886E43BC5917282 /* MobileOTPView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33E22A13EEE507CB9CC48AE8CB35B914 /* MobileOTPView.swift */; };
@@ -326,7 +332,13 @@
 		8E3A48ADA08273BE207D7EF92DDC5B53 /* EMIApplicationCollectionViewCell.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; path = EMIApplicationCollectionViewCell.xib; sourceTree = "<group>"; };
 		90D9C7F37C67CE5FB4CD27E4C4C6718F /* PaymentTagCollectionViewCell.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; path = PaymentTagCollectionViewCell.xib; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		A321B77A2B84D0860016FCC6 /* GQSupportFooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GQSupportFooterView.swift; sourceTree = "<group>"; };
+		A321B77C2B84D09D0016FCC6 /* GQSupportFooterView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GQSupportFooterView.xib; sourceTree = "<group>"; };
+		A321B77E2B84DB880016FCC6 /* UIColor+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Ext.swift"; sourceTree = "<group>"; };
 		A36D9D032B8482B1003F2647 /* OTPTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPTextField.swift; sourceTree = "<group>"; };
+		A36D9D052B84A7CA003F2647 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = GQPaymentIOSSDKNative/Assets/Assets.xcassets; sourceTree = "<group>"; };
+		A36D9D082B84AC19003F2647 /* GQGILEView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GQGILEView.swift; sourceTree = "<group>"; };
+		A36D9D0A2B84AC67003F2647 /* GQGILEView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GQGILEView.xib; sourceTree = "<group>"; };
 		A719508C6E19E20D9A13C80B98477DCE /* Pods-GQPaymentIOSSDKNative_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-GQPaymentIOSSDKNative_Example-frameworks.sh"; sourceTree = "<group>"; };
 		A7C1B8DCB7BD43337435472628AD73B1 /* EnterMobileNumberViewModel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = EnterMobileNumberViewModel.swift; sourceTree = "<group>"; };
 		A7FBB2F070181FA6927DDFF4B16E0F38 /* CashfreePG.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CashfreePG.debug.xcconfig; sourceTree = "<group>"; };
@@ -418,6 +430,7 @@
 				34519E91C38CA61092B076290551B759 /* Pod */,
 				BFDAA08AB90A23FB6038BDD97686CA39 /* Services */,
 				3072EAF93A7D18FD57E64EFFA9E67D0F /* Support Files */,
+				A36D9D052B84A7CA003F2647 /* Assets.xcassets */,
 			);
 			name = GQPaymentIOSSDKNative;
 			path = ../..;
@@ -572,6 +585,7 @@
 			isa = PBXGroup;
 			children = (
 				6441487ED84FDBFBCACF934066EDE4BE /* UIView+Ext.swift */,
+				A321B77E2B84DB880016FCC6 /* UIColor+Ext.swift */,
 			);
 			name = Extensions;
 			path = GQPaymentIOSSDKNative/Classes/Extensions;
@@ -632,6 +646,8 @@
 		838A58FED24819939025C5B48DC29E52 /* CommonViews */ = {
 			isa = PBXGroup;
 			children = (
+				A321B7792B84D0540016FCC6 /* GQIssueFooterView */,
+				A36D9D072B84ABEE003F2647 /* GQGILEView */,
 				A36D9D022B84828B003F2647 /* OTPTextField */,
 				4C73AA1D8E68F7C6F133B9954C76381E /* GQNavigationBar */,
 				D63077E20092465AAD31E24FFCB15E6C /* GQTagView */,
@@ -718,12 +734,30 @@
 			path = "GQPaymentIOSSDKNative/Classes/Base Classes";
 			sourceTree = "<group>";
 		};
+		A321B7792B84D0540016FCC6 /* GQIssueFooterView */ = {
+			isa = PBXGroup;
+			children = (
+				A321B77A2B84D0860016FCC6 /* GQSupportFooterView.swift */,
+				A321B77C2B84D09D0016FCC6 /* GQSupportFooterView.xib */,
+			);
+			path = GQIssueFooterView;
+			sourceTree = "<group>";
+		};
 		A36D9D022B84828B003F2647 /* OTPTextField */ = {
 			isa = PBXGroup;
 			children = (
 				A36D9D032B8482B1003F2647 /* OTPTextField.swift */,
 			);
 			path = OTPTextField;
+			sourceTree = "<group>";
+		};
+		A36D9D072B84ABEE003F2647 /* GQGILEView */ = {
+			isa = PBXGroup;
+			children = (
+				A36D9D082B84AC19003F2647 /* GQGILEView.swift */,
+				A36D9D0A2B84AC67003F2647 /* GQGILEView.xib */,
+			);
+			path = GQGILEView;
 			sourceTree = "<group>";
 		};
 		B2B68073FB6AF7786900F3542CDD2880 /* Pods */ = {
@@ -1046,6 +1080,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A36D9D062B84A7CA003F2647 /* Assets.xcassets in Resources */,
+				A36D9D0B2B84AC67003F2647 /* GQGILEView.xib in Resources */,
+				A321B77D2B84D09D0016FCC6 /* GQSupportFooterView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1200,6 +1237,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A321B77B2B84D0860016FCC6 /* GQSupportFooterView.swift in Sources */,
 				7F0F099FD484BBE5B9DA817E8259ECDD /* Decoder.swift in Sources */,
 				82C9A4A8E3C3301D0FB5955B5B4BA6D0 /* EMIApplicationCollectionViewCell.swift in Sources */,
 				634B822FDB2C2B51D717134C5CB5179E /* EMIApplicationCollectionViewCell.xib in Sources */,
@@ -1219,6 +1257,7 @@
 				DD9ADD805766929625092E4A0F83B341 /* GQTagView.swift in Sources */,
 				EDC556A7C7A5349A5B38FACA540D1E64 /* GQTagView.xib in Sources */,
 				A36D9D042B8482B1003F2647 /* OTPTextField.swift in Sources */,
+				A36D9D092B84AC19003F2647 /* GQGILEView.swift in Sources */,
 				1D7C6B105315F29F157C6B744F1418BF /* HTTPMethod.swift in Sources */,
 				B49D211CE8A969932886E43BC5917282 /* MobileOTPView.swift in Sources */,
 				FE23F3001149B746FD1460F97BE5E8E6 /* MobileOTPView.xib in Sources */,
@@ -1235,6 +1274,7 @@
 				6DEF44998B7A16446180FDBF1A3854D3 /* PaymentTagCollectionViewCell.swift in Sources */,
 				50C0DAB4D0F3D529808F9E45F9F79E55 /* PaymentTagCollectionViewCell.xib in Sources */,
 				8AE2051451A9EFB21967DD9D9223D30E /* ProceedButtonCollectionReusableView.swift in Sources */,
+				A321B77F2B84DB880016FCC6 /* UIColor+Ext.swift in Sources */,
 				35BF447D7A6542CBBB5CBDD876052C74 /* ProceedButtonCollectionReusableView.xib in Sources */,
 				1E70B6653523EE91927F50978BF85E5B /* ReplaceMe.swift in Sources */,
 				C9A5862D8906F2F74F73D46F364BE122 /* UIView+Ext.swift in Sources */,

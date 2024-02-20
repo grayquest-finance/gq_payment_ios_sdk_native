@@ -32,7 +32,7 @@ class GQBaseViewController: UIViewController {
     }
     
     func setupCloseAction() {
-        let closeButton = UIBarButtonItem(image: UIImage(systemName: "xmark"), style: .done, target: self, action: #selector(closeButtonAction))
+        let closeButton = UIBarButtonItem(image: UIImage(named: "closeIcon"), style: .done, target: self, action: #selector(closeButtonAction))
         closeButton.tintColor = .white
         self.navigationItem.rightBarButtonItem = closeButton
     }

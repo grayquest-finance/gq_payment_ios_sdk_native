@@ -9,23 +9,23 @@ import UIKit
 
 extension UIView {
     
-    public func set(cornerRadius: CGFloat) {
+    func set(cornerRadius: CGFloat) {
         self.layer.cornerRadius = self.frame.height * cornerRadius
 //        self.clipsToBounds = true
     }
     
-    public func set(cornerRadius: CGFloat, borderWidth: CGFloat = 2, borderColor: UIColor) {
+    func set(cornerRadius: CGFloat, borderWidth: CGFloat = 2, borderColor: UIColor) {
         self.set(cornerRadius: cornerRadius)
         self.layer.borderColor = borderColor.cgColor
         self.layer.borderWidth = borderWidth
     }
     
-//    public func addContentViewAsOwner() {
+//    func connect(with view: UIView) {
 //        let name = String(describing: self)
-//        UINib(nibName: name, bundle: nil).instantiate(withOwner: self)
-//        self.addSubview(view)
-//        view.frame = self.bounds
-//        view.autoresizingMask = [.flexibleHeight, .flexibleWidth]
+//        _ = UINib(nibName: name, bundle: Bundle(for: type(of: self))).instantiate(withOwner: self)
+//        view.addSubview(self)
+//        self.frame = view.bounds
+//        self.autoresizingMask = [.flexibleHeight, .flexibleWidth]
 //    }
     
 }
