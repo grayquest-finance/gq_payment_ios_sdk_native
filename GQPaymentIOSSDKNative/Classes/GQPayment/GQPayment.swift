@@ -11,7 +11,18 @@ public final class GQPayment {
     
     public static var themeColor: UIColor = .systemIndigo
     
-    public init(delegate: some GQPaymentDelegate) { }
+    internal static var bundle: Bundle {
+        return Bundle(for: Self.self)
+    }
+    
+    public init(delegate: some GQPaymentDelegate) {
+        Self.loadDependencies()
+        
+    }
+    
+    private static func loadDependencies() {
+        UIFont.loadFonts()
+    }
     
 //    public func open(on viewController: UIViewController) {
 //        Task { @MainActor in
@@ -30,6 +41,8 @@ public final class GQPayment {
             
 //        MARK: For Using Inbuilt Navigation BAR
             let navigationController = UINavigationController(rootViewController: mobileNumberViewcontroller)
+//            navigationController.modalPresentationStyle = .overCurrentContext
+//            navigationController.modalTransitionStyle = .crossDissolve
             
 //        MARK: For Using Custom Navigation BAR
 //            let navigationController = UINavigationController(navigationBarClass: GQNavigationBar.self, toolbarClass: nil)

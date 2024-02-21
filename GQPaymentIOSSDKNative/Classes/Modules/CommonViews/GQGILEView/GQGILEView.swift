@@ -24,7 +24,7 @@ class GQGILEView: UIView {
     }
     
     private func setupView() {
-        _ = UINib(nibName: "GQGILEView", bundle: Bundle(for: type(of: self))).instantiate(withOwner: self)
+        _ = UINib(nibName: "GQGILEView", bundle: GQPayment.bundle).instantiate(withOwner: self)
         self.addSubview(contentView)
         self.contentView.frame = self.bounds
         self.contentView.autoresizingMask = [.flexibleHeight, .flexibleWidth]
@@ -41,7 +41,7 @@ class GQGILEView: UIView {
         contentView.backgroundColor = .red991F2C
         
         gileTitleLabel.textColor = .white
-        gileTitleLabel.font = .systemFont(ofSize: 18, weight: .medium)
+        gileTitleLabel.font = .customFont(.DMSansMedium, size: 18)
         gileTitleLabel.numberOfLines = 0
         gileTitleLabel.lineBreakMode = .byWordWrapping
         gileTitleLabel.textAlignment = .left

@@ -124,10 +124,23 @@
 		A321B77B2B84D0860016FCC6 /* GQSupportFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A321B77A2B84D0860016FCC6 /* GQSupportFooterView.swift */; };
 		A321B77D2B84D09D0016FCC6 /* GQSupportFooterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A321B77C2B84D09D0016FCC6 /* GQSupportFooterView.xib */; };
 		A321B77F2B84DB880016FCC6 /* UIColor+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = A321B77E2B84DB880016FCC6 /* UIColor+Ext.swift */; };
+		A3477FAC2B85C4DA00377D38 /* GQMobileTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3477FAB2B85C4DA00377D38 /* GQMobileTextField.swift */; };
+		A3477FAE2B85C4EC00377D38 /* GQMobileTextField.xib in Resources */ = {isa = PBXBuildFile; fileRef = A3477FAD2B85C4EC00377D38 /* GQMobileTextField.xib */; };
 		A36D9D042B8482B1003F2647 /* OTPTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36D9D032B8482B1003F2647 /* OTPTextField.swift */; };
-		A36D9D062B84A7CA003F2647 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A36D9D052B84A7CA003F2647 /* Assets.xcassets */; };
 		A36D9D092B84AC19003F2647 /* GQGILEView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36D9D082B84AC19003F2647 /* GQGILEView.swift */; };
 		A36D9D0B2B84AC67003F2647 /* GQGILEView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A36D9D0A2B84AC67003F2647 /* GQGILEView.xib */; };
+		A375C2422B861C7C0015B72D /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = A375C2362B861C7C0015B72D /* .gitkeep */; };
+		A375C2442B861C7C0015B72D /* DMSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A375C2392B861C7C0015B72D /* DMSans-Regular.ttf */; };
+		A375C2452B861C7C0015B72D /* DMSans-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A375C23A2B861C7C0015B72D /* DMSans-Medium.ttf */; };
+		A375C2462B861C7C0015B72D /* DMSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A375C23B2B861C7C0015B72D /* DMSans-Bold.ttf */; };
+		A375C2472B861C7C0015B72D /* DMSans-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A375C23C2B861C7C0015B72D /* DMSans-Thin.ttf */; };
+		A375C2482B861C7C0015B72D /* DMSans-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A375C23D2B861C7C0015B72D /* DMSans-Light.ttf */; };
+		A375C2492B861C7C0015B72D /* DMSans-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A375C23E2B861C7C0015B72D /* DMSans-ExtraLight.ttf */; };
+		A375C24A2B861C7C0015B72D /* DMSans-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A375C23F2B861C7C0015B72D /* DMSans-SemiBold.ttf */; };
+		A375C24B2B861C7C0015B72D /* DMSans-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A375C2402B861C7C0015B72D /* DMSans-ExtraBold.ttf */; };
+		A375C24C2B861C7C0015B72D /* DMSans-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A375C2412B861C7C0015B72D /* DMSans-Black.ttf */; };
+		A375C24E2B861CCA0015B72D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A375C24D2B861CCA0015B72D /* Assets.xcassets */; };
+		A375C2502B8622520015B72D /* UIFont+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = A375C24F2B8622520015B72D /* UIFont+Ext.swift */; };
 		A9CEDFFF45ED3146A7C1FF49FBAEF964 /* Pods-GQPaymentIOSSDKNative_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 7B9D5435220E6B3A6AD2F5DC7EF14B6B /* Pods-GQPaymentIOSSDKNative_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		ABC9B1A0D9526F9AB12508F8CD29D401 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A3DA4245ECA7F69246855402F09CE7B /* NetworkError.swift */; };
 		B49D211CE8A969932886E43BC5917282 /* MobileOTPView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33E22A13EEE507CB9CC48AE8CB35B914 /* MobileOTPView.swift */; };
@@ -335,10 +348,23 @@
 		A321B77A2B84D0860016FCC6 /* GQSupportFooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GQSupportFooterView.swift; sourceTree = "<group>"; };
 		A321B77C2B84D09D0016FCC6 /* GQSupportFooterView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GQSupportFooterView.xib; sourceTree = "<group>"; };
 		A321B77E2B84DB880016FCC6 /* UIColor+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Ext.swift"; sourceTree = "<group>"; };
+		A3477FAB2B85C4DA00377D38 /* GQMobileTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GQMobileTextField.swift; sourceTree = "<group>"; };
+		A3477FAD2B85C4EC00377D38 /* GQMobileTextField.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GQMobileTextField.xib; sourceTree = "<group>"; };
 		A36D9D032B8482B1003F2647 /* OTPTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPTextField.swift; sourceTree = "<group>"; };
-		A36D9D052B84A7CA003F2647 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = GQPaymentIOSSDKNative/Assets/Assets.xcassets; sourceTree = "<group>"; };
 		A36D9D082B84AC19003F2647 /* GQGILEView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GQGILEView.swift; sourceTree = "<group>"; };
 		A36D9D0A2B84AC67003F2647 /* GQGILEView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GQGILEView.xib; sourceTree = "<group>"; };
+		A375C2362B861C7C0015B72D /* .gitkeep */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
+		A375C2392B861C7C0015B72D /* DMSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DMSans-Regular.ttf"; sourceTree = "<group>"; };
+		A375C23A2B861C7C0015B72D /* DMSans-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DMSans-Medium.ttf"; sourceTree = "<group>"; };
+		A375C23B2B861C7C0015B72D /* DMSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DMSans-Bold.ttf"; sourceTree = "<group>"; };
+		A375C23C2B861C7C0015B72D /* DMSans-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DMSans-Thin.ttf"; sourceTree = "<group>"; };
+		A375C23D2B861C7C0015B72D /* DMSans-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DMSans-Light.ttf"; sourceTree = "<group>"; };
+		A375C23E2B861C7C0015B72D /* DMSans-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DMSans-ExtraLight.ttf"; sourceTree = "<group>"; };
+		A375C23F2B861C7C0015B72D /* DMSans-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DMSans-SemiBold.ttf"; sourceTree = "<group>"; };
+		A375C2402B861C7C0015B72D /* DMSans-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DMSans-ExtraBold.ttf"; sourceTree = "<group>"; };
+		A375C2412B861C7C0015B72D /* DMSans-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DMSans-Black.ttf"; sourceTree = "<group>"; };
+		A375C24D2B861CCA0015B72D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A375C24F2B8622520015B72D /* UIFont+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Ext.swift"; sourceTree = "<group>"; };
 		A719508C6E19E20D9A13C80B98477DCE /* Pods-GQPaymentIOSSDKNative_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-GQPaymentIOSSDKNative_Example-frameworks.sh"; sourceTree = "<group>"; };
 		A7C1B8DCB7BD43337435472628AD73B1 /* EnterMobileNumberViewModel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = EnterMobileNumberViewModel.swift; sourceTree = "<group>"; };
 		A7FBB2F070181FA6927DDFF4B16E0F38 /* CashfreePG.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CashfreePG.debug.xcconfig; sourceTree = "<group>"; };
@@ -430,7 +456,7 @@
 				34519E91C38CA61092B076290551B759 /* Pod */,
 				BFDAA08AB90A23FB6038BDD97686CA39 /* Services */,
 				3072EAF93A7D18FD57E64EFFA9E67D0F /* Support Files */,
-				A36D9D052B84A7CA003F2647 /* Assets.xcassets */,
+				A375C2352B861C7C0015B72D /* Assets */,
 			);
 			name = GQPaymentIOSSDKNative;
 			path = ../..;
@@ -586,6 +612,7 @@
 			children = (
 				6441487ED84FDBFBCACF934066EDE4BE /* UIView+Ext.swift */,
 				A321B77E2B84DB880016FCC6 /* UIColor+Ext.swift */,
+				A375C24F2B8622520015B72D /* UIFont+Ext.swift */,
 			);
 			name = Extensions;
 			path = GQPaymentIOSSDKNative/Classes/Extensions;
@@ -646,12 +673,12 @@
 		838A58FED24819939025C5B48DC29E52 /* CommonViews */ = {
 			isa = PBXGroup;
 			children = (
-				A321B7792B84D0540016FCC6 /* GQIssueFooterView */,
+				A3477FAA2B85C44800377D38 /* GQMobileTextField */,
+				A3477FA92B85BD5900377D38 /* OLD Views */,
+				A321B7792B84D0540016FCC6 /* GQSupportFooterView */,
 				A36D9D072B84ABEE003F2647 /* GQGILEView */,
-				A36D9D022B84828B003F2647 /* OTPTextField */,
 				4C73AA1D8E68F7C6F133B9954C76381E /* GQNavigationBar */,
 				D63077E20092465AAD31E24FFCB15E6C /* GQTagView */,
-				88C9A78C9C2F2B101276AECC34806927 /* MobileOTPView */,
 			);
 			path = CommonViews;
 			sourceTree = "<group>";
@@ -734,13 +761,31 @@
 			path = "GQPaymentIOSSDKNative/Classes/Base Classes";
 			sourceTree = "<group>";
 		};
-		A321B7792B84D0540016FCC6 /* GQIssueFooterView */ = {
+		A321B7792B84D0540016FCC6 /* GQSupportFooterView */ = {
 			isa = PBXGroup;
 			children = (
 				A321B77A2B84D0860016FCC6 /* GQSupportFooterView.swift */,
 				A321B77C2B84D09D0016FCC6 /* GQSupportFooterView.xib */,
 			);
-			path = GQIssueFooterView;
+			path = GQSupportFooterView;
+			sourceTree = "<group>";
+		};
+		A3477FA92B85BD5900377D38 /* OLD Views */ = {
+			isa = PBXGroup;
+			children = (
+				88C9A78C9C2F2B101276AECC34806927 /* MobileOTPView */,
+				A36D9D022B84828B003F2647 /* OTPTextField */,
+			);
+			path = "OLD Views";
+			sourceTree = "<group>";
+		};
+		A3477FAA2B85C44800377D38 /* GQMobileTextField */ = {
+			isa = PBXGroup;
+			children = (
+				A3477FAB2B85C4DA00377D38 /* GQMobileTextField.swift */,
+				A3477FAD2B85C4EC00377D38 /* GQMobileTextField.xib */,
+			);
+			path = GQMobileTextField;
 			sourceTree = "<group>";
 		};
 		A36D9D022B84828B003F2647 /* OTPTextField */ = {
@@ -758,6 +803,33 @@
 				A36D9D0A2B84AC67003F2647 /* GQGILEView.xib */,
 			);
 			path = GQGILEView;
+			sourceTree = "<group>";
+		};
+		A375C2352B861C7C0015B72D /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				A375C2362B861C7C0015B72D /* .gitkeep */,
+				A375C2382B861C7C0015B72D /* Fonts */,
+				A375C24D2B861CCA0015B72D /* Assets.xcassets */,
+			);
+			name = Assets;
+			path = GQPaymentIOSSDKNative/Assets;
+			sourceTree = "<group>";
+		};
+		A375C2382B861C7C0015B72D /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				A375C2392B861C7C0015B72D /* DMSans-Regular.ttf */,
+				A375C23A2B861C7C0015B72D /* DMSans-Medium.ttf */,
+				A375C23B2B861C7C0015B72D /* DMSans-Bold.ttf */,
+				A375C23C2B861C7C0015B72D /* DMSans-Thin.ttf */,
+				A375C23D2B861C7C0015B72D /* DMSans-Light.ttf */,
+				A375C23E2B861C7C0015B72D /* DMSans-ExtraLight.ttf */,
+				A375C23F2B861C7C0015B72D /* DMSans-SemiBold.ttf */,
+				A375C2402B861C7C0015B72D /* DMSans-ExtraBold.ttf */,
+				A375C2412B861C7C0015B72D /* DMSans-Black.ttf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 		B2B68073FB6AF7786900F3542CDD2880 /* Pods */ = {
@@ -1080,9 +1152,20 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A36D9D062B84A7CA003F2647 /* Assets.xcassets in Resources */,
+				A375C2462B861C7C0015B72D /* DMSans-Bold.ttf in Resources */,
+				A375C2452B861C7C0015B72D /* DMSans-Medium.ttf in Resources */,
+				A375C2442B861C7C0015B72D /* DMSans-Regular.ttf in Resources */,
+				A375C24A2B861C7C0015B72D /* DMSans-SemiBold.ttf in Resources */,
+				A375C24E2B861CCA0015B72D /* Assets.xcassets in Resources */,
 				A36D9D0B2B84AC67003F2647 /* GQGILEView.xib in Resources */,
+				A375C2422B861C7C0015B72D /* .gitkeep in Resources */,
 				A321B77D2B84D09D0016FCC6 /* GQSupportFooterView.xib in Resources */,
+				A375C2472B861C7C0015B72D /* DMSans-Thin.ttf in Resources */,
+				A375C2492B861C7C0015B72D /* DMSans-ExtraLight.ttf in Resources */,
+				A375C24C2B861C7C0015B72D /* DMSans-Black.ttf in Resources */,
+				A375C2482B861C7C0015B72D /* DMSans-Light.ttf in Resources */,
+				A375C24B2B861C7C0015B72D /* DMSans-ExtraBold.ttf in Resources */,
+				A3477FAE2B85C4EC00377D38 /* GQMobileTextField.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1250,12 +1333,14 @@
 				93CE112DE920A4330BA8E498943A5AA4 /* GQEMIViewController.xib in Sources */,
 				29D04D816B69C6F00EA69AF201F1961D /* GQEMIViewModel.swift in Sources */,
 				90B101077A4DAD851B14037C73BB5D6D /* GQNavigationBar.swift in Sources */,
+				A3477FAC2B85C4DA00377D38 /* GQMobileTextField.swift in Sources */,
 				D8119A2A69D06240CC1FD0F644C155C4 /* GQNavigationBar.xib in Sources */,
 				58D6EEFDBE71509B344A29178DF7A117 /* GQPayment.swift in Sources */,
 				B70497951CAB2D615B0906D14ACCFFD7 /* GQPaymentDelegate.swift in Sources */,
 				E064840DFFC8A2EED64B6E137FFE5D7C /* GQPaymentIOSSDKNative-dummy.m in Sources */,
 				DD9ADD805766929625092E4A0F83B341 /* GQTagView.swift in Sources */,
 				EDC556A7C7A5349A5B38FACA540D1E64 /* GQTagView.xib in Sources */,
+				A375C2502B8622520015B72D /* UIFont+Ext.swift in Sources */,
 				A36D9D042B8482B1003F2647 /* OTPTextField.swift in Sources */,
 				A36D9D092B84AC19003F2647 /* GQGILEView.swift in Sources */,
 				1D7C6B105315F29F157C6B744F1418BF /* HTTPMethod.swift in Sources */,
