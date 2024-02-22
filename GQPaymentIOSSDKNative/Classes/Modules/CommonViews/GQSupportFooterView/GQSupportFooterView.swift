@@ -40,7 +40,7 @@ class GQSupportFooterView: UIView {
     }
     
     private func setupUI() {
-        self.contentView.backgroundColor = .lightGray
+        self.contentView.backgroundColor = .whiteF5F5F5
         
         titleLabel.textColor = .gray807E8D
         titleLabel.font = .customFont(.poppins, weight: .medium, size: 20)

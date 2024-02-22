@@ -68,6 +68,13 @@ class EnterMobileNumberViewController: GQBaseViewController {
         noteLabel.textAlignment = .left
         
         titleLabel.text = "Enter your Mobile Number"
-        noteLabel.text = "NOTE: Please enter the mobile number which you generally use for your banking purposes."
+        
+        let noteTitle = NSAttributedString(string: "NOTE: ",
+                                      font: .customFont(.dmSans, weight: .bold, size: 14),
+                                      color: .green40850A)
+        let noteDescription = NSAttributedString(string: "Please enter the mobile number which you generally use for your banking purposes.",
+                                                 font: .customFont(.dmSans, weight: .regular, size: 14),
+                                                 color: .gray4D4B5A)
+        noteLabel.attributedText = noteTitle.addAttributedString(noteDescription)
     }
 }

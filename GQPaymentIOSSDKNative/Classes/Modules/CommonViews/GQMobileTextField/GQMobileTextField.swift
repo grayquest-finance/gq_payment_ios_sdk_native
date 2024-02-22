@@ -53,15 +53,17 @@ class GQMobileTextField: UIView {
     }
     
     private func setupUI() {
-        self.contentView.backgroundColor = .white
-        self.contentView.set(cornerRadius: 0.1, borderWidth: 1, borderColor: .black)
+        self.contentView.backgroundColor = .whiteFAFCFD
         
-        self.textFieldButton.set(cornerRadius: 0.2)
+        let cornerRadius: CGFloat = 0.12
+        self.contentView.set(cornerRadius: cornerRadius, borderWidth: 1, borderColor: .grayBFBFC6)
+        self.textFieldButton.set(cornerRadius: cornerRadius)
+        
         setupStaticText()
     }
     
     private func setupStaticText() {
-        textFieldCode.textColor = .black
+        textFieldCode.textColor = .gray4D4B5A
         textFieldCode.font = .customFont(.dmSans, weight: .regular, size: 14)
         textFieldCode.numberOfLines = 0
         textFieldCode.lineBreakMode = .byWordWrapping
@@ -72,10 +74,14 @@ class GQMobileTextField: UIView {
         textField.textAlignment = .left
         
         textFieldButton.titleLabel?.font = .customFont(.dmSans, weight: .bold, size: 14)
+        textFieldButton.setTitleColor(.gray807E8D, for: .disabled)
         inactiveOTPState()
         
+        textField.attributedPlaceholder = NSAttributedString(string: "Enter mobile number",
+                                    font: .customFont(.dmSans, weight: .regular, size: 14),
+                                                             color: .gray4D4B5A)
+        
         textFieldCode.text = "+91 -"
-        textField.placeholder = "Enter mobile number"
         textFieldButton.setTitle("Send OTP", for: .normal)
     }
     
@@ -96,5 +102,3 @@ class GQMobileTextField: UIView {
     }
     
 }
-
-

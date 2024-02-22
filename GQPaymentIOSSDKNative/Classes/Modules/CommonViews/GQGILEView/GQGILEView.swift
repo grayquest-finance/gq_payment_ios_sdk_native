@@ -41,7 +41,7 @@ class GQGILEView: UIView {
         contentView.backgroundColor = .red991F2C
         
         gileTitleLabel.textColor = .white
-        gileTitleLabel.font = .customFont(.dmSans, weight: .medium, size: 18)
+        gileTitleLabel.font = .customFont(.dmSans, weight: .regular, size: 16)
         gileTitleLabel.numberOfLines = 0
         gileTitleLabel.lineBreakMode = .byWordWrapping
         gileTitleLabel.textAlignment = .left
