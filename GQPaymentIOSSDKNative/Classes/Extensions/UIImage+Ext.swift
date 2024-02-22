@@ -10,6 +10,7 @@ import UIKit
 extension UIImage {
     
     enum GQImageIcons: String {
+        case grayQuestIcon
         case closeIcon
         case backIcon
         case phoneIcon
@@ -19,8 +20,8 @@ extension UIImage {
         }
     }
     
-    @nonobjc static func getImage(icon: GQImageIcons) -> UIImage? {
-        return UIImage(resource: ImageResource(name: icon.name, bundle: GQPayment.bundle))
+    @nonobjc static func getImage(icon: GQImageIcons, renderingMode: RenderingMode = .automatic) -> UIImage? {
+        return UIImage(resource: ImageResource(name: icon.name, bundle: GQPayment.bundle)).withRenderingMode(renderingMode)
     }
     
     

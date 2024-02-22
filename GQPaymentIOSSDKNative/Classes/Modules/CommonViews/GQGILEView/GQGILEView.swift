@@ -37,7 +37,7 @@ class GQGILEView: UIView {
     
     private func setupUI() {
         self.backgroundColor = .clear
-        contentView.set(cornerRadius: 0.07)
+        contentView.set(cornerRadius: 0.06)
         contentView.backgroundColor = .red991F2C
         
         gileTitleLabel.textColor = .white
@@ -45,11 +45,15 @@ class GQGILEView: UIView {
         gileTitleLabel.numberOfLines = 0
         gileTitleLabel.lineBreakMode = .byWordWrapping
         gileTitleLabel.textAlignment = .left
+        
+        gileImageView.image = .getImage(icon: .grayQuestIcon)
+        gileImageView.contentMode = .scaleAspectFit
+        gileImageView.set(cornerRadius: 0.1)
     }
     
     @MainActor public func configure(with data: String?) async {
         guard let data else { return }
-//        gileImageView.image = UIImage(named: "closeIcon")
+        gileImageView.image = .getImage(icon: .grayQuestIcon)
         gileTitleLabel.text = "GITAM Institute of Management, Mumbai, CBSE"
     }
     

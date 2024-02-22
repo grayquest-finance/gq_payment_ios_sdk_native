@@ -20,10 +20,8 @@ class GQBaseViewController: UIViewController {
         guard let navigationController = self.navigationController else { return }
         
         let navBarAppearrance = UINavigationBarAppearance()
-        navBarAppearrance.backgroundColor = GQPayment.themeColor
-        
-        navigationController.navigationBar.barTintColor = .white
-        
+        navBarAppearrance.backgroundColor = .white
+//        navigationController.navigationBar.tintColor = .green40850A
         navigationController.navigationBar.standardAppearance = navBarAppearrance
         navigationController.navigationBar.scrollEdgeAppearance = navBarAppearrance
         
@@ -32,8 +30,12 @@ class GQBaseViewController: UIViewController {
     }
     
     func setupCloseAction() {
-        let closeButton = UIBarButtonItem(image: .getImage(icon: .closeIcon), style: .done, target: self, action: #selector(closeButtonAction))
-        closeButton.tintColor = .white
+        let closeButton = UIBarButtonItem(image: .getImage(icon: .closeIcon, renderingMode: .alwaysOriginal),
+                                          style: .done,
+                                          target: self,
+                                          action: #selector(closeButtonAction)
+        )
+        closeButton.tintColor = .clear
         self.navigationItem.rightBarButtonItem = closeButton
     }
     
