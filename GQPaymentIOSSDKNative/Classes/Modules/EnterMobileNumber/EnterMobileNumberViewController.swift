@@ -56,7 +56,7 @@ class EnterMobileNumberViewController: GQBaseViewController {
     
     private func setupLabels() {
         titleLabel.textColor = .black
-        titleLabel.font = .customFont(.dmSans, weight: .medium, size: 18)
+        titleLabel.font = .customFont(.poppins, weight: .regular, size: 18)
         titleLabel.numberOfLines = 0
         titleLabel.lineBreakMode = .byWordWrapping
         titleLabel.textAlignment = .left

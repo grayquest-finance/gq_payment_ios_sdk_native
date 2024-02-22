@@ -126,6 +126,9 @@
 		A321B77F2B84DB880016FCC6 /* UIColor+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = A321B77E2B84DB880016FCC6 /* UIColor+Ext.swift */; };
 		A3477FAC2B85C4DA00377D38 /* GQMobileTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3477FAB2B85C4DA00377D38 /* GQMobileTextField.swift */; };
 		A3477FAE2B85C4EC00377D38 /* GQMobileTextField.xib in Resources */ = {isa = PBXBuildFile; fileRef = A3477FAD2B85C4EC00377D38 /* GQMobileTextField.xib */; };
+		A3539A962B872B15001146C8 /* Poppins-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A3539A942B8728A3001146C8 /* Poppins-Medium.ttf */; };
+		A3539A972B872B18001146C8 /* Poppins-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A3539A932B87288F001146C8 /* Poppins-Regular.ttf */; };
+		A3539A982B872B1B001146C8 /* Poppins-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A3539A952B8728AE001146C8 /* Poppins-Bold.ttf */; };
 		A36D9D042B8482B1003F2647 /* OTPTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36D9D032B8482B1003F2647 /* OTPTextField.swift */; };
 		A36D9D092B84AC19003F2647 /* GQGILEView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36D9D082B84AC19003F2647 /* GQGILEView.swift */; };
 		A36D9D0B2B84AC67003F2647 /* GQGILEView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A36D9D0A2B84AC67003F2647 /* GQGILEView.xib */; };
@@ -1162,8 +1165,11 @@
 				A375C24E2B861CCA0015B72D /* Assets.xcassets in Resources */,
 				A36D9D0B2B84AC67003F2647 /* GQGILEView.xib in Resources */,
 				A375C2422B861C7C0015B72D /* .gitkeep in Resources */,
+				A3539A962B872B15001146C8 /* Poppins-Medium.ttf in Resources */,
+				A3539A982B872B1B001146C8 /* Poppins-Bold.ttf in Resources */,
 				A321B77D2B84D09D0016FCC6 /* GQSupportFooterView.xib in Resources */,
 				A3477FAE2B85C4EC00377D38 /* GQMobileTextField.xib in Resources */,
+				A3539A972B872B18001146C8 /* Poppins-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -7,12 +7,13 @@
 
 import UIKit
 
+//MARK: Function to register custom fonts in the SDK.
 extension UIFont {
     
     static func registerFont(fileName: String, bundle: Bundle) {
         
         guard let pathForResourceString = bundle.path(forResource: fileName, ofType: nil) else {
-            print("UIFont+:  Failed to register font - path for resource not found.")
+            print("UIFont+:  Failed to register font: \(fileName) - for resource not found.")
             return
         }
         
@@ -38,6 +39,7 @@ extension UIFont {
     }
     
     static func loadFonts() {
+        guard !GQFonts.isLoaded else { return }
         
         let fonts = GQFonts.allCases
         
@@ -46,44 +48,18 @@ extension UIFont {
                 registerFont(fileName: fileName, bundle: GQPayment.bundle)
             }
         }
+        
+        GQFonts.isLoaded = true
     }
 }
 
-//extension UIFont {
-//    
-//    enum GQFonts: CaseIterable {
-////    MARK: DMSans Fonts
-//        case DMSansRegular
-//        case DMSansMedium
-//        case DMSansBold
-//        
-//        var name: String {
-//            switch self {
-//                case .DMSansRegular:
-//                    return "DMSans-Regular"
-//                case .DMSansMedium:
-//                    return "DMSans-Medium"
-//                case .DMSansBold:
-//                    return "DMSans-Bold"
-//            }
-//        }
-//        
-//        var fileName: String {
-//            return self.name + ".ttf"
-//        }
-//    }
-//    
-//    static func customFont(_ font: GQFonts, size: CGFloat) -> UIFont? {
-//        return UIFont(name: font.name, size: size)
-//    }
-//    
-//}
-
+//MARK: Function to manage custom fonts and use them within the SDK.
 extension UIFont {
     
     enum GQFonts: CaseIterable {
         
         static var fileExtension: String = ".ttf"
+        static var isLoaded: Bool = false
         
         case dmSans
         case poppins
