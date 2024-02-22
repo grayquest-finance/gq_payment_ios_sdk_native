@@ -71,18 +71,29 @@ class GQMobileTextField: UIView {
         textField.font = .customFont(.dmSans, weight: .bold, size: 14)
         textField.textAlignment = .left
         
-        textFieldButton.backgroundColor = .darkGray
         textFieldButton.titleLabel?.font = .customFont(.dmSans, weight: .bold, size: 14)
-        textFieldButton.tintColor = .black.withAlphaComponent(0.6)
+        inactiveOTPState()
         
         textFieldCode.text = "+91 -"
         textField.placeholder = "Enter mobile number"
         textFieldButton.setTitle("Send OTP", for: .normal)
     }
     
-//    public func configure() {
-//
-//    }
+    func inactiveOTPState() {
+        Task { @MainActor in
+            self.textFieldButton.backgroundColor = .grayBFBFC6
+            self.textFieldButton.tintColor = .gray807E8D
+            self.textFieldButton.isEnabled = false
+        }
+    }
+    
+    func activeOTPState() {
+        Task { @MainActor in
+            self.textFieldButton.backgroundColor = .grayBFBFC6
+            self.textFieldButton.tintColor = .gray807E8D
+            self.textFieldButton.isEnabled = true
+        }
+    }
     
 }
 

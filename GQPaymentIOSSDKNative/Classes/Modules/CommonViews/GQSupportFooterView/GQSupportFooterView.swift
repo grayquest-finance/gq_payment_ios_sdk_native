@@ -27,10 +27,11 @@ class GQSupportFooterView: UIView {
     }
     
     private func setupView() {
-        _ = UINib(nibName: "GQSupportFooterView", bundle: Bundle(for: type(of: self))).instantiate(withOwner: self)
+        _ = UINib(nibName: "GQSupportFooterView", bundle: GQPayment.bundle).instantiate(withOwner: self)
         self.addSubview(contentView)
         self.contentView.frame = self.bounds
         self.contentView.autoresizingMask = [.flexibleHeight, .flexibleWidth]
+        self.backgroundColor = .clear
     }
     
     override func awakeFromNib() {
@@ -39,21 +40,21 @@ class GQSupportFooterView: UIView {
     }
     
     private func setupUI() {
-        self.backgroundColor = .gray807E8D.withAlphaComponent(0.4)
+        self.contentView.backgroundColor = .lightGray
         
         titleLabel.textColor = .gray807E8D
-        titleLabel.font = .systemFont(ofSize: 18, weight: .medium)
+        titleLabel.font = .customFont(.poppins, weight: .medium, size: 20)
         titleLabel.numberOfLines = 0
         titleLabel.lineBreakMode = .byWordWrapping
         titleLabel.textAlignment = .left
         
         descriptionLabel.textColor = .gray807E8D
-        descriptionLabel.font = .systemFont(ofSize: 18, weight: .regular)
+        descriptionLabel.font = .customFont(.dmSans, weight: .regular, size: 14)
         descriptionLabel.numberOfLines = 0
         descriptionLabel.lineBreakMode = .byWordWrapping
         descriptionLabel.textAlignment = .left
         
-        actionButton.titleLabel?.font = .systemFont(ofSize: 16, weight: .bold)
+        actionButton.titleLabel?.font = .customFont(.dmSans, weight: .bold, size: 14)
         actionButton.backgroundColor = .clear
         actionButton.contentMode = .left
         actionButton.titleLabel?.textAlignment = .left
