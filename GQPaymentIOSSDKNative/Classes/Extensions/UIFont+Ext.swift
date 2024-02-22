@@ -38,39 +38,87 @@ extension UIFont {
     }
     
     static func loadFonts() {
+        
         let fonts = GQFonts.allCases
-        fonts.forEach {
-            registerFont(fileName: $0.fileName, bundle: GQPayment.bundle)
+        
+        fonts.forEach { font in
+            font.fileNames.forEach { fileName in
+                registerFont(fileName: fileName, bundle: GQPayment.bundle)
+            }
         }
     }
 }
 
+//extension UIFont {
+//    
+//    enum GQFonts: CaseIterable {
+////    MARK: DMSans Fonts
+//        case DMSansRegular
+//        case DMSansMedium
+//        case DMSansBold
+//        
+//        var name: String {
+//            switch self {
+//                case .DMSansRegular:
+//                    return "DMSans-Regular"
+//                case .DMSansMedium:
+//                    return "DMSans-Medium"
+//                case .DMSansBold:
+//                    return "DMSans-Bold"
+//            }
+//        }
+//        
+//        var fileName: String {
+//            return self.name + ".ttf"
+//        }
+//    }
+//    
+//    static func customFont(_ font: GQFonts, size: CGFloat) -> UIFont? {
+//        return UIFont(name: font.name, size: size)
+//    }
+//    
+//}
+
 extension UIFont {
     
     enum GQFonts: CaseIterable {
-//    MARK: DMSans Fonts
-        case DMSansRegular
-        case DMSansMedium
-        case DMSansBold
+        
+        static var fileExtension: String = ".ttf"
+        
+        case dmSans
+        case poppins
         
         var name: String {
             switch self {
-                case .DMSansRegular:
-                    return "DMSans-Regular"
-                case .DMSansMedium:
-                    return "DMSans-Medium"
-                case .DMSansBold:
-                    return "DMSans-Bold"
+            case .dmSans:
+                return "DMSans"
+            case .poppins:
+                return "Poppins"
             }
         }
         
-        var fileName: String {
-            return self.name + ".ttf"
+        var fileNames: [String] {
+            let fontWeights = GQFontWeights.allCases
+            return fontWeights.compactMap{ self.name + "-" + $0.name + Self.fileExtension }
+        }
+        
+        func getFontName(with weight: GQFontWeights) -> String {
+            return self.name + "-" + weight.name
         }
     }
     
-    static func customFont(_ font: GQFonts, size: CGFloat) -> UIFont? {
-        return UIFont(name: font.name, size: size)
+    enum GQFontWeights: String, CaseIterable {
+        case regular
+        case medium
+        case bold
+        
+        var name: String {
+            return self.rawValue.capitalized
+        }
+    }
+    
+    static func customFont(_ font: GQFonts, weight: GQFontWeights, size: CGFloat) -> UIFont? {
+        return UIFont(name: font.getFontName(with: weight), size: size)
     }
     
 }

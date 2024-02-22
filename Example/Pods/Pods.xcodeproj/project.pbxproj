@@ -133,12 +133,6 @@
 		A375C2442B861C7C0015B72D /* DMSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A375C2392B861C7C0015B72D /* DMSans-Regular.ttf */; };
 		A375C2452B861C7C0015B72D /* DMSans-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A375C23A2B861C7C0015B72D /* DMSans-Medium.ttf */; };
 		A375C2462B861C7C0015B72D /* DMSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A375C23B2B861C7C0015B72D /* DMSans-Bold.ttf */; };
-		A375C2472B861C7C0015B72D /* DMSans-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A375C23C2B861C7C0015B72D /* DMSans-Thin.ttf */; };
-		A375C2482B861C7C0015B72D /* DMSans-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A375C23D2B861C7C0015B72D /* DMSans-Light.ttf */; };
-		A375C2492B861C7C0015B72D /* DMSans-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A375C23E2B861C7C0015B72D /* DMSans-ExtraLight.ttf */; };
-		A375C24A2B861C7C0015B72D /* DMSans-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A375C23F2B861C7C0015B72D /* DMSans-SemiBold.ttf */; };
-		A375C24B2B861C7C0015B72D /* DMSans-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A375C2402B861C7C0015B72D /* DMSans-ExtraBold.ttf */; };
-		A375C24C2B861C7C0015B72D /* DMSans-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A375C2412B861C7C0015B72D /* DMSans-Black.ttf */; };
 		A375C24E2B861CCA0015B72D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A375C24D2B861CCA0015B72D /* Assets.xcassets */; };
 		A375C2502B8622520015B72D /* UIFont+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = A375C24F2B8622520015B72D /* UIFont+Ext.swift */; };
 		A9CEDFFF45ED3146A7C1FF49FBAEF964 /* Pods-GQPaymentIOSSDKNative_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 7B9D5435220E6B3A6AD2F5DC7EF14B6B /* Pods-GQPaymentIOSSDKNative_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -357,12 +351,6 @@
 		A375C2392B861C7C0015B72D /* DMSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DMSans-Regular.ttf"; sourceTree = "<group>"; };
 		A375C23A2B861C7C0015B72D /* DMSans-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DMSans-Medium.ttf"; sourceTree = "<group>"; };
 		A375C23B2B861C7C0015B72D /* DMSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DMSans-Bold.ttf"; sourceTree = "<group>"; };
-		A375C23C2B861C7C0015B72D /* DMSans-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DMSans-Thin.ttf"; sourceTree = "<group>"; };
-		A375C23D2B861C7C0015B72D /* DMSans-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DMSans-Light.ttf"; sourceTree = "<group>"; };
-		A375C23E2B861C7C0015B72D /* DMSans-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DMSans-ExtraLight.ttf"; sourceTree = "<group>"; };
-		A375C23F2B861C7C0015B72D /* DMSans-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DMSans-SemiBold.ttf"; sourceTree = "<group>"; };
-		A375C2402B861C7C0015B72D /* DMSans-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DMSans-ExtraBold.ttf"; sourceTree = "<group>"; };
-		A375C2412B861C7C0015B72D /* DMSans-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DMSans-Black.ttf"; sourceTree = "<group>"; };
 		A375C24D2B861CCA0015B72D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A375C24F2B8622520015B72D /* UIFont+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Ext.swift"; sourceTree = "<group>"; };
 		A719508C6E19E20D9A13C80B98477DCE /* Pods-GQPaymentIOSSDKNative_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-GQPaymentIOSSDKNative_Example-frameworks.sh"; sourceTree = "<group>"; };
@@ -788,6 +776,16 @@
 			path = GQMobileTextField;
 			sourceTree = "<group>";
 		};
+		A3539A8B2B87266A001146C8 /* DMSans */ = {
+			isa = PBXGroup;
+			children = (
+				A375C2392B861C7C0015B72D /* DMSans-Regular.ttf */,
+				A375C23A2B861C7C0015B72D /* DMSans-Medium.ttf */,
+				A375C23B2B861C7C0015B72D /* DMSans-Bold.ttf */,
+			);
+			path = DMSans;
+			sourceTree = "<group>";
+		};
 		A36D9D022B84828B003F2647 /* OTPTextField */ = {
 			isa = PBXGroup;
 			children = (
@@ -819,15 +817,7 @@
 		A375C2382B861C7C0015B72D /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
-				A375C2392B861C7C0015B72D /* DMSans-Regular.ttf */,
-				A375C23A2B861C7C0015B72D /* DMSans-Medium.ttf */,
-				A375C23B2B861C7C0015B72D /* DMSans-Bold.ttf */,
-				A375C23C2B861C7C0015B72D /* DMSans-Thin.ttf */,
-				A375C23D2B861C7C0015B72D /* DMSans-Light.ttf */,
-				A375C23E2B861C7C0015B72D /* DMSans-ExtraLight.ttf */,
-				A375C23F2B861C7C0015B72D /* DMSans-SemiBold.ttf */,
-				A375C2402B861C7C0015B72D /* DMSans-ExtraBold.ttf */,
-				A375C2412B861C7C0015B72D /* DMSans-Black.ttf */,
+				A3539A8B2B87266A001146C8 /* DMSans */,
 			);
 			path = Fonts;
 			sourceTree = "<group>";
@@ -1155,16 +1145,10 @@
 				A375C2462B861C7C0015B72D /* DMSans-Bold.ttf in Resources */,
 				A375C2452B861C7C0015B72D /* DMSans-Medium.ttf in Resources */,
 				A375C2442B861C7C0015B72D /* DMSans-Regular.ttf in Resources */,
-				A375C24A2B861C7C0015B72D /* DMSans-SemiBold.ttf in Resources */,
 				A375C24E2B861CCA0015B72D /* Assets.xcassets in Resources */,
 				A36D9D0B2B84AC67003F2647 /* GQGILEView.xib in Resources */,
 				A375C2422B861C7C0015B72D /* .gitkeep in Resources */,
 				A321B77D2B84D09D0016FCC6 /* GQSupportFooterView.xib in Resources */,
-				A375C2472B861C7C0015B72D /* DMSans-Thin.ttf in Resources */,
-				A375C2492B861C7C0015B72D /* DMSans-ExtraLight.ttf in Resources */,
-				A375C24C2B861C7C0015B72D /* DMSans-Black.ttf in Resources */,
-				A375C2482B861C7C0015B72D /* DMSans-Light.ttf in Resources */,
-				A375C24B2B861C7C0015B72D /* DMSans-ExtraBold.ttf in Resources */,
 				A3477FAE2B85C4EC00377D38 /* GQMobileTextField.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

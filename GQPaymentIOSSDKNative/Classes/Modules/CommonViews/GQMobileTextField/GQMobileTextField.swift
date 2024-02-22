@@ -62,17 +62,17 @@ class GQMobileTextField: UIView {
     
     private func setupStaticText() {
         textFieldCode.textColor = .black
-        textFieldCode.font = .customFont(.DMSansRegular, size: 14)
+        textFieldCode.font = .customFont(.dmSans, weight: .regular, size: 14)
         textFieldCode.numberOfLines = 0
         textFieldCode.lineBreakMode = .byWordWrapping
         textFieldCode.textAlignment = .left
         
         textField.textColor = .black
-        textField.font = .customFont(.DMSansBold, size: 14)
+        textField.font = .customFont(.dmSans, weight: .bold, size: 14)
         textField.textAlignment = .left
         
         textFieldButton.backgroundColor = .darkGray
-        textFieldButton.titleLabel?.font = .customFont(.DMSansBold, size: 14)
+        textFieldButton.titleLabel?.font = .customFont(.dmSans, weight: .bold, size: 14)
         textFieldButton.tintColor = .black.withAlphaComponent(0.6)
         
         textFieldCode.text = "+91 -"
