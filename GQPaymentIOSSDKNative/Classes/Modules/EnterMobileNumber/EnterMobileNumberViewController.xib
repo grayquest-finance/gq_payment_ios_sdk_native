@@ -28,20 +28,20 @@
                     <rect key="frame" x="0.0" y="59" width="393" height="1007"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hLL-WD-6ib" userLabel="contentView">
-                            <rect key="frame" x="0.0" y="0.0" width="393.33333333333331" height="961"/>
+                            <rect key="frame" x="0.0" y="0.0" width="393.33333333333331" height="928"/>
                             <subviews>
                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="5YO-dU-TxX">
-                                    <rect key="frame" x="0.0" y="16" width="393.33333333333331" height="945"/>
+                                    <rect key="frame" x="0.0" y="16" width="393.33333333333331" height="912"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="73O-t4-tZh" userLabel="GILE View" customClass="GQGILEView" customModule="GQPaymentIOSSDKNative" customModuleProvider="target">
                                             <rect key="frame" x="19.666666666666657" y="0.0" width="354" height="170"/>
                                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         </view>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HHi-jB-CiY">
-                                            <rect key="frame" x="19.666666666666657" y="180" width="354" height="583"/>
+                                            <rect key="frame" x="19.666666666666657" y="180" width="354" height="550"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="42z-QX-QDe">
-                                                    <rect key="frame" x="0.0" y="223.33333333333331" width="354" height="136.66666666666669"/>
+                                                    <rect key="frame" x="0.0" y="206.66666666666669" width="354" height="136.66666666666669"/>
                                                     <subviews>
                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="fNo-BZ-HsM">
                                                             <rect key="frame" x="0.0" y="0.0" width="354" height="92.333333333333329"/>
@@ -72,14 +72,13 @@
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <constraints>
-                                                <constraint firstItem="42z-QX-QDe" firstAttribute="height" relation="lessThanOrEqual" secondItem="HHi-jB-CiY" secondAttribute="height" id="COz-a1-3cO"/>
                                                 <constraint firstItem="42z-QX-QDe" firstAttribute="leading" secondItem="HHi-jB-CiY" secondAttribute="leading" id="GpQ-Fq-Hf9"/>
                                                 <constraint firstItem="42z-QX-QDe" firstAttribute="centerY" secondItem="HHi-jB-CiY" secondAttribute="centerY" id="Jl1-qT-8qg"/>
                                                 <constraint firstAttribute="trailing" secondItem="42z-QX-QDe" secondAttribute="trailing" id="LTj-st-TjM"/>
                                             </constraints>
                                         </view>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ofi-BW-sSX" customClass="GQSupportFooterView" customModule="GQPaymentIOSSDKNative" customModuleProvider="target">
-                                            <rect key="frame" x="0.0" y="773" width="393.33333333333331" height="172"/>
+                                            <rect key="frame" x="0.0" y="740" width="393.33333333333331" height="172"/>
                                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="172" id="BEG-N0-zpD"/>
@@ -116,7 +115,7 @@
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstItem="oh5-lt-UC4" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="78c-Ep-BK2"/>
-                <constraint firstItem="HHi-jB-CiY" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.53" id="K7y-10-iTH"/>
+                <constraint firstItem="HHi-jB-CiY" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.5" id="K7y-10-iTH"/>
                 <constraint firstItem="oh5-lt-UC4" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="KRV-th-Gam"/>
                 <constraint firstItem="oh5-lt-UC4" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="tx6-bM-lgd"/>
                 <constraint firstItem="oh5-lt-UC4" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="uTg-pq-njl"/>
