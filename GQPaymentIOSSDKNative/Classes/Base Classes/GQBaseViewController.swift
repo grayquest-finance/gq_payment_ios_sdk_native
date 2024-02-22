@@ -21,7 +21,6 @@ class GQBaseViewController: UIViewController {
         
         let navBarAppearrance = UINavigationBarAppearance()
         navBarAppearrance.backgroundColor = .white
-//        navigationController.navigationBar.tintColor = .green40850A
         navigationController.navigationBar.standardAppearance = navBarAppearrance
         navigationController.navigationBar.scrollEdgeAppearance = navBarAppearrance
         
@@ -30,7 +29,8 @@ class GQBaseViewController: UIViewController {
     }
     
     func setupCloseAction() {
-        let closeButton = UIBarButtonItem(image: .getImage(icon: .closeIcon, renderingMode: .alwaysOriginal),
+        let closeButton = UIBarButtonItem(image: .getImage(icon: .closeIcon,
+                                                           renderingMode: .alwaysOriginal),
                                           style: .done,
                                           target: self,
                                           action: #selector(closeButtonAction)
