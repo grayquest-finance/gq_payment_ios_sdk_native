@@ -344,6 +344,9 @@
 		A321B77E2B84DB880016FCC6 /* UIColor+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Ext.swift"; sourceTree = "<group>"; };
 		A3477FAB2B85C4DA00377D38 /* GQMobileTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GQMobileTextField.swift; sourceTree = "<group>"; };
 		A3477FAD2B85C4EC00377D38 /* GQMobileTextField.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GQMobileTextField.xib; sourceTree = "<group>"; };
+		A3539A932B87288F001146C8 /* Poppins-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Regular.ttf"; sourceTree = "<group>"; };
+		A3539A942B8728A3001146C8 /* Poppins-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Medium.ttf"; sourceTree = "<group>"; };
+		A3539A952B8728AE001146C8 /* Poppins-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Bold.ttf"; sourceTree = "<group>"; };
 		A36D9D032B8482B1003F2647 /* OTPTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPTextField.swift; sourceTree = "<group>"; };
 		A36D9D082B84AC19003F2647 /* GQGILEView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GQGILEView.swift; sourceTree = "<group>"; };
 		A36D9D0A2B84AC67003F2647 /* GQGILEView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GQGILEView.xib; sourceTree = "<group>"; };
@@ -786,6 +789,16 @@
 			path = DMSans;
 			sourceTree = "<group>";
 		};
+		A3539A8C2B8727C6001146C8 /* Poppins */ = {
+			isa = PBXGroup;
+			children = (
+				A3539A932B87288F001146C8 /* Poppins-Regular.ttf */,
+				A3539A942B8728A3001146C8 /* Poppins-Medium.ttf */,
+				A3539A952B8728AE001146C8 /* Poppins-Bold.ttf */,
+			);
+			path = Poppins;
+			sourceTree = "<group>";
+		};
 		A36D9D022B84828B003F2647 /* OTPTextField */ = {
 			isa = PBXGroup;
 			children = (
@@ -817,6 +830,7 @@
 		A375C2382B861C7C0015B72D /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
+				A3539A8C2B8727C6001146C8 /* Poppins */,
 				A3539A8B2B87266A001146C8 /* DMSans */,
 			);
 			path = Fonts;
