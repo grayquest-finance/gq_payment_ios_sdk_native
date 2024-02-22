@@ -59,6 +59,7 @@ class GQMobileTextField: UIView {
         self.contentView.set(cornerRadius: cornerRadius, borderWidth: 1, borderColor: .grayBFBFC6)
         self.textFieldButton.set(cornerRadius: cornerRadius)
         
+        self.textFieldIcon.image = .getImage(icon: .phoneIcon)
         setupStaticText()
     }
     

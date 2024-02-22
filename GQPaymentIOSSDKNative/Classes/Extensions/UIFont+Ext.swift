@@ -38,7 +38,7 @@ extension UIFont {
         }
     }
     
-    static func loadFonts() {
+    @nonobjc static func loadFonts() {
         guard !GQFonts.isLoaded else { return }
         
         let fonts = GQFonts.allCases
@@ -93,7 +93,7 @@ extension UIFont {
         }
     }
     
-    static func customFont(_ font: GQFonts, weight: GQFontWeights, size: CGFloat) -> UIFont? {
+    @nonobjc static func customFont(_ font: GQFonts, weight: GQFontWeights, size: CGFloat) -> UIFont? {
         return UIFont(name: font.getFontName(with: weight), size: size)
     }
     

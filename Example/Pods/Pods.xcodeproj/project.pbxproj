@@ -122,6 +122,7 @@
 		9160AB9DB01CAA3ADC6D9222B255C528 /* VerifyOTPViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ACC3F7867BA851540FACD142192C824 /* VerifyOTPViewModel.swift */; };
 		93CE112DE920A4330BA8E498943A5AA4 /* GQEMIViewController.xib in Sources */ = {isa = PBXBuildFile; fileRef = E2E680D3A02FBA156994C642873E3FA4 /* GQEMIViewController.xib */; };
 		A30023DF2B8751E1008C059F /* NSAttributedString+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30023DE2B8751E1008C059F /* NSAttributedString+Ext.swift */; };
+		A30023E12B875A41008C059F /* UIImage+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30023E02B875A41008C059F /* UIImage+Ext.swift */; };
 		A321B77B2B84D0860016FCC6 /* GQSupportFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A321B77A2B84D0860016FCC6 /* GQSupportFooterView.swift */; };
 		A321B77D2B84D09D0016FCC6 /* GQSupportFooterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A321B77C2B84D09D0016FCC6 /* GQSupportFooterView.xib */; };
 		A321B77F2B84DB880016FCC6 /* UIColor+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = A321B77E2B84DB880016FCC6 /* UIColor+Ext.swift */; };
@@ -344,6 +345,7 @@
 		90D9C7F37C67CE5FB4CD27E4C4C6718F /* PaymentTagCollectionViewCell.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; path = PaymentTagCollectionViewCell.xib; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		A30023DE2B8751E1008C059F /* NSAttributedString+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSAttributedString+Ext.swift"; sourceTree = "<group>"; };
+		A30023E02B875A41008C059F /* UIImage+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Ext.swift"; sourceTree = "<group>"; };
 		A321B77A2B84D0860016FCC6 /* GQSupportFooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GQSupportFooterView.swift; sourceTree = "<group>"; };
 		A321B77C2B84D09D0016FCC6 /* GQSupportFooterView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GQSupportFooterView.xib; sourceTree = "<group>"; };
 		A321B77E2B84DB880016FCC6 /* UIColor+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Ext.swift"; sourceTree = "<group>"; };
@@ -610,6 +612,7 @@
 				A321B77E2B84DB880016FCC6 /* UIColor+Ext.swift */,
 				A375C24F2B8622520015B72D /* UIFont+Ext.swift */,
 				A30023DE2B8751E1008C059F /* NSAttributedString+Ext.swift */,
+				A30023E02B875A41008C059F /* UIImage+Ext.swift */,
 			);
 			name = Extensions;
 			path = GQPaymentIOSSDKNative/Classes/Extensions;
@@ -1336,6 +1339,7 @@
 				DB539FFE07356CAC3BA1837776F6AD77 /* EnterMobileNumberViewController.swift in Sources */,
 				595382AD940364D5BC5F0CFCB346673C /* EnterMobileNumberViewController.xib in Sources */,
 				DF38D9C834473C8FE4BC6EDC0E434101 /* EnterMobileNumberViewModel.swift in Sources */,
+				A30023E12B875A41008C059F /* UIImage+Ext.swift in Sources */,
 				15F8E348F7E3E9BCF661F6B61C39A4D1 /* GQBaseViewController.swift in Sources */,
 				260667726C77E79A70D51942C12780D8 /* GQEMIViewController.swift in Sources */,
 				93CE112DE920A4330BA8E498943A5AA4 /* GQEMIViewController.xib in Sources */,
