@@ -50,7 +50,7 @@ final class NetworkService {
         }
         
         do {
-            let (data, response) = try await URLSession.shared.data(for: request)
+            let (data, _) = try await URLSession.shared.data(for: request)
             let model = try Decoder.shared.decode(data: data, type: T.self)
             return model
         } catch (let error) {

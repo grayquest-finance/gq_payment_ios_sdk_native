@@ -90,7 +90,7 @@ class EMIApplicationCollectionViewCell: UICollectionViewCell {
     }
     
     public func configure(with data: String?, delegate: some EMIApplicationButtonDelegate) {
-        guard let data else { return }
+//        guard let data else { return }
         self.delegate = delegate
         
         applicationIDValueLabel.text = "344586"

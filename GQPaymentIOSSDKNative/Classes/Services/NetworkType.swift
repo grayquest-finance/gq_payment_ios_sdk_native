@@ -28,8 +28,6 @@ extension NetworkType {
             return .get
         case .detail:
             return .post
-        default:
-            return .get
         }
     }
     
@@ -50,8 +48,6 @@ extension NetworkType {
         switch self {
         case .home(let parameter), .more(let parameter), .listing(let parameter), .detail(let parameter):
             return parameter
-        default:
-            return nil
         }
     }
     
