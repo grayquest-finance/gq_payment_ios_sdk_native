@@ -8,11 +8,26 @@
 import UIKit
 
 @MainActor protocol GQMobileTextFieldDelegate {
-    func textField(_ textField: GQMobileTextField, didChange text: String?)
-    func textField(_ textField: GQMobileTextField, didClick button: UIButton)
+    func textFieldDidClickSendOTP(_ textField: GQMobileTextField)
+    func textFieldDidClickChange(_ textField: GQMobileTextField)
 }
 
 class GQMobileTextField: UIView {
+    
+    enum State {
+        case inactive
+        case active
+        case completed
+        
+        var title: String {
+            switch self {
+                case .inactive, .active:
+                    return "Send OTP"
+                case .completed:
+                    return "Change"
+            }
+        }
+    }
 
     @IBOutlet var contentView: UIView!
     
@@ -29,6 +44,12 @@ class GQMobileTextField: UIView {
     }
     
     public var delegate: (any GQMobileTextFieldDelegate)?
+    
+    private var state: State = .inactive {
+        didSet {
+            self.textFieldButton.setTitle(self.state.title, for: .normal)
+        }
+    }
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -53,15 +74,15 @@ class GQMobileTextField: UIView {
     }
     
     private func setupUI() {
-        self.contentView.backgroundColor = .whiteFAFCFD
-        
-        textfieldInactiveState()
         self.textFieldButton.set(cornerRadius: cornerRadius)
         
         self.textField.delegate = self
         self.textFieldIcon.image = .getImage(icon: .phoneIcon)
         
         setupStaticText()
+        
+        textfieldInactiveState()
+        inactiveOTPState()
     }
     
     private func setupStaticText() {
@@ -78,17 +99,12 @@ class GQMobileTextField: UIView {
         textFieldButton.titleLabel?.font = .customFont(.dmSans, weight: .bold, size: 14)
         textFieldButton.setTitleColor(.gray807E8D, for: .disabled)
         textFieldButton.setTitleColor(.white, for: .normal)
-        inactiveOTPState()
         
         textField.attributedPlaceholder = NSAttributedString(string: "Enter mobile number",
                                     font: .customFont(.dmSans, weight: .regular, size: 14),
                                                              color: .gray4D4B5A)
         
         textFieldCode.text = "+91 -"
-        textFieldButton.setTitle("Send OTP", for: .normal)
-        
-        let textTrait = textField.text
-        
     }
     
     private func inactiveOTPState() {
@@ -109,25 +125,47 @@ class GQMobileTextField: UIView {
     
     private func textfieldInactiveState() {
         Task { @MainActor in
+            self.contentView.backgroundColor = .whiteFAFCFD
+//            self.textField.isEnabled = true
             self.contentView.set(cornerRadius: cornerRadius, borderWidth: 1, borderColor: .grayBFBFC6)
+            self.state = .inactive
         }
     }
     
     private func textfieldActiveState() {
         Task { @MainActor in
+            self.contentView.backgroundColor = .whiteFAFCFD
+            self.textField.isEnabled = true
             self.contentView.set(cornerRadius: cornerRadius, borderWidth: 2, borderColor: .blue4029CC)
+            self.state = .active
         }
     }
     
-    @IBAction func clickedSendOTPButton(_ sender: UIButton) {
-        delegate?.textField(self, didClick: sender)
+    private func textFieldCompletedState() {
+        Task { @MainActor in
+            self.contentView.backgroundColor = .grayDFDFE3
+            self.textField.isEnabled = false
+            self.contentView.set(cornerRadius: cornerRadius, borderWidth: 2, borderColor: .grayBFBFC6)
+            self.state = .completed
+        }
+    }
+    
+    @IBAction func clickedActionButton(_ sender: UIButton) {
+        self.textField.endEditing(true)
+        
+        switch self.state {
+            case .inactive:
+                textfieldInactiveState()
+            case .active:
+                delegate?.textFieldDidClickSendOTP(self)
+                textFieldCompletedState()
+            case .completed:
+                delegate?.textFieldDidClickChange(self)
+                textfieldActiveState()
+        }
     }
     
     @IBAction func textfieldTextChanged(_ sender: UITextField) {
-        defer {
-            delegate?.textField(self, didChange: self.text)
-        }
-        
         if GQValidationService.validate(mobileNumber: self.textField.text) {
             activeOTPState()
         } else {

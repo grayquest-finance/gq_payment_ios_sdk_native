@@ -83,11 +83,11 @@ class EnterMobileNumberViewController: GQBaseViewController {
 
 extension EnterMobileNumberViewController: GQMobileTextFieldDelegate {
     
-    func textField(_ textField: GQMobileTextField, didChange text: String?) {
+    func textFieldDidClickSendOTP(_ textField: GQMobileTextField) {
         print(textField.text ?? "No Mobile Number")
     }
     
-    func textField(_ textField: GQMobileTextField, didClick button: UIButton) {
+    func textFieldDidClickChange(_ textField: GQMobileTextField) {
         print(textField.text ?? "No Mobile Number")
     }
     
