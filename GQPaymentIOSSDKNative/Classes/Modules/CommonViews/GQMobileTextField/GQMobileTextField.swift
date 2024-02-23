@@ -45,11 +45,7 @@ class GQMobileTextField: UIView {
     
     public var delegate: (any GQMobileTextFieldDelegate)?
     
-    private var state: State = .inactive {
-        didSet {
-            self.textFieldButton.setTitle(self.state.title, for: .normal)
-        }
-    }
+    private var state: State = .inactive
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -97,8 +93,6 @@ class GQMobileTextField: UIView {
         textField.textAlignment = .left
         
         textFieldButton.titleLabel?.font = .customFont(.dmSans, weight: .bold, size: 14)
-        textFieldButton.setTitleColor(.gray807E8D, for: .disabled)
-        textFieldButton.setTitleColor(.white, for: .normal)
         
         textField.attributedPlaceholder = NSAttributedString(string: "Enter mobile number",
                                     font: .customFont(.dmSans, weight: .regular, size: 14),
@@ -125,8 +119,9 @@ class GQMobileTextField: UIView {
     
     private func textfieldInactiveState() {
         Task { @MainActor in
+            self.textField.resignFirstResponder()
             self.contentView.backgroundColor = .whiteFAFCFD
-//            self.textField.isEnabled = true
+            self.textField.isEnabled = true
             self.contentView.set(cornerRadius: cornerRadius, borderWidth: 1, borderColor: .grayBFBFC6)
             self.state = .inactive
         }
@@ -137,36 +132,38 @@ class GQMobileTextField: UIView {
             self.contentView.backgroundColor = .whiteFAFCFD
             self.textField.isEnabled = true
             self.contentView.set(cornerRadius: cornerRadius, borderWidth: 2, borderColor: .blue4029CC)
+            self.textFieldButton.setTitle(State.active.title, for: .normal)
+            self.textField.becomeFirstResponder()
             self.state = .active
         }
     }
     
     private func textFieldCompletedState() {
         Task { @MainActor in
+            self.state = .completed
+            self.textField.resignFirstResponder()
             self.contentView.backgroundColor = .grayDFDFE3
             self.textField.isEnabled = false
             self.contentView.set(cornerRadius: cornerRadius, borderWidth: 2, borderColor: .grayBFBFC6)
-            self.state = .completed
+            self.textFieldButton.setTitle(State.completed.title, for: .normal)
         }
     }
     
     @IBAction func clickedActionButton(_ sender: UIButton) {
-        self.textField.endEditing(true)
-        
-        switch self.state {
+        switch state {
             case .inactive:
-                textfieldInactiveState()
+                self.textFieldCompletedState()
             case .active:
-                delegate?.textFieldDidClickSendOTP(self)
-                textFieldCompletedState()
+                self.textFieldCompletedState()
+                self.delegate?.textFieldDidClickSendOTP(self)
             case .completed:
-                delegate?.textFieldDidClickChange(self)
-                textfieldActiveState()
+                self.delegate?.textFieldDidClickChange(self)
+                self.textfieldActiveState()
         }
     }
     
     @IBAction func textfieldTextChanged(_ sender: UITextField) {
-        if GQValidationService.validate(mobileNumber: self.textField.text) {
+        if GQValidationService.validate(mobileNumber: sender.text) {
             activeOTPState()
         } else {
             inactiveOTPState()
@@ -182,6 +179,7 @@ extension GQMobileTextField: UITextFieldDelegate {
     }
     
     func textFieldDidEndEditing(_ textField: UITextField) {
+        guard state != .completed else { return } //Danger: Please do not remove this condition
         textfieldInactiveState()
     }
     
