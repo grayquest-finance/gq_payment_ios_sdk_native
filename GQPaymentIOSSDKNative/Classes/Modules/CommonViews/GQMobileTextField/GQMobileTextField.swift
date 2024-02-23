@@ -7,6 +7,11 @@
 
 import UIKit
 
+@MainActor protocol GQMobileTextFieldDelegate {
+    func textField(_ textField: GQMobileTextField, didChange text: String?)
+    func textField(_ textField: GQMobileTextField, didClick button: UIButton)
+}
+
 class GQMobileTextField: UIView {
 
     @IBOutlet var contentView: UIView!
@@ -16,19 +21,14 @@ class GQMobileTextField: UIView {
     @IBOutlet weak var textFieldCode: UILabel!
     @IBOutlet weak var textFieldButton: UIButton!
     
+    private var cornerRadius: CGFloat = 0.12
+    
     public var text: String? {
+        // Need to check format of Mobile Number
         return  (textFieldCode.text ?? "") + (textField.text ?? "")
     }
     
-    public var delegate: UITextFieldDelegate? {
-        get {
-            return textField.delegate
-        }
-        
-        set {
-            textField.delegate = newValue
-        }
-    }
+    public var delegate: (any GQMobileTextFieldDelegate)?
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -55,11 +55,12 @@ class GQMobileTextField: UIView {
     private func setupUI() {
         self.contentView.backgroundColor = .whiteFAFCFD
         
-        let cornerRadius: CGFloat = 0.12
-        self.contentView.set(cornerRadius: cornerRadius, borderWidth: 1, borderColor: .grayBFBFC6)
+        textfieldInactiveState()
         self.textFieldButton.set(cornerRadius: cornerRadius)
         
+        self.textField.delegate = self
         self.textFieldIcon.image = .getImage(icon: .phoneIcon)
+        
         setupStaticText()
     }
     
@@ -76,6 +77,7 @@ class GQMobileTextField: UIView {
         
         textFieldButton.titleLabel?.font = .customFont(.dmSans, weight: .bold, size: 14)
         textFieldButton.setTitleColor(.gray807E8D, for: .disabled)
+        textFieldButton.setTitleColor(.white, for: .normal)
         inactiveOTPState()
         
         textField.attributedPlaceholder = NSAttributedString(string: "Enter mobile number",
@@ -84,9 +86,12 @@ class GQMobileTextField: UIView {
         
         textFieldCode.text = "+91 -"
         textFieldButton.setTitle("Send OTP", for: .normal)
+        
+        let textTrait = textField.text
+        
     }
     
-    func inactiveOTPState() {
+    private func inactiveOTPState() {
         Task { @MainActor in
             self.textFieldButton.backgroundColor = .grayBFBFC6
             self.textFieldButton.tintColor = .gray807E8D
@@ -94,12 +99,52 @@ class GQMobileTextField: UIView {
         }
     }
     
-    func activeOTPState() {
+    private func activeOTPState() {
         Task { @MainActor in
-            self.textFieldButton.backgroundColor = .grayBFBFC6
-            self.textFieldButton.tintColor = .gray807E8D
+            self.textFieldButton.backgroundColor = .purple63499D
+            self.textFieldButton.tintColor = .white
             self.textFieldButton.isEnabled = true
         }
+    }
+    
+    private func textfieldInactiveState() {
+        Task { @MainActor in
+            self.contentView.set(cornerRadius: cornerRadius, borderWidth: 1, borderColor: .grayBFBFC6)
+        }
+    }
+    
+    private func textfieldActiveState() {
+        Task { @MainActor in
+            self.contentView.set(cornerRadius: cornerRadius, borderWidth: 2, borderColor: .blue4029CC)
+        }
+    }
+    
+    @IBAction func clickedSendOTPButton(_ sender: UIButton) {
+        delegate?.textField(self, didClick: sender)
+    }
+    
+    @IBAction func textfieldTextChanged(_ sender: UITextField) {
+        defer {
+            delegate?.textField(self, didChange: self.text)
+        }
+        
+        if GQValidationService.validate(mobileNumber: self.textField.text) {
+            activeOTPState()
+        } else {
+            inactiveOTPState()
+        }
+    }
+    
+}
+
+extension GQMobileTextField: UITextFieldDelegate {
+    
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        textfieldActiveState()
+    }
+    
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        textfieldInactiveState()
     }
     
 }

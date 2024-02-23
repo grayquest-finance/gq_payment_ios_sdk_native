@@ -14,6 +14,7 @@ class GQBaseViewController: UIViewController {
     public override func viewDidLoad() {
         super.viewDidLoad()
         setupNavigationBar()
+        setupResignResponderTapGesture()
     }
     
     func setupNavigationBar() {
@@ -83,5 +84,18 @@ extension GQBaseViewController {
             scrollView.contentInset = .zero
             scrollView.scrollIndicatorInsets = .zero
         }
+    }
+}
+
+extension GQBaseViewController {
+    
+    private func setupResignResponderTapGesture() {
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(didTapMainView))
+        self.view.addGestureRecognizer(tapGesture)
+    }
+    
+    @objc func didTapMainView(_ gesture: UITapGestureRecognizer) {
+        // Check if first responder is a textfield
+        self.view.endEditing(true)
     }
 }

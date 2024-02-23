@@ -54,7 +54,7 @@ class GQGILEView: UIView {
     @MainActor public func configure(with data: String?) async {
         guard let data else { return }
         gileImageView.image = .getImage(icon: .grayQuestIcon)
-        gileTitleLabel.text = "GITAM Institute of Management, Mumbai, CBSE"
+        gileTitleLabel.text = data
     }
     
 }

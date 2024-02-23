@@ -12,8 +12,9 @@ class EnterMobileNumberViewController: GQBaseViewController {
 //   MARK: IBOutlets
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var gileView: GQGILEView!
-
     @IBOutlet weak var supportFooterView: GQSupportFooterView!
+    
+    @IBOutlet weak var mobileTextField: GQMobileTextField!
     
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var noteLabel: UILabel!
@@ -23,7 +24,7 @@ class EnterMobileNumberViewController: GQBaseViewController {
     private var viewModel: (any EnterMobileNumberViewModelType)?
     
     init(viewModel: some EnterMobileNumberViewModelType) {
-        super.init(nibName: "EnterMobileNumberViewController", bundle: Bundle(for: type(of: self)))
+        super.init(nibName: "EnterMobileNumberViewController", bundle: GQPayment.bundle)
         self.viewModel = viewModel
     }
     
@@ -44,7 +45,7 @@ class EnterMobileNumberViewController: GQBaseViewController {
     
     public func configureUI() {
         Task {
-            await gileView.configure(with: "")
+            await gileView.configure(with: viewModel?.gile)
         }
     }
 
@@ -52,6 +53,7 @@ class EnterMobileNumberViewController: GQBaseViewController {
         overrideUserInterfaceStyle = .light
         
         setupLabels()
+        mobileTextField.delegate = self
     }
     
     private func setupLabels() {
@@ -77,4 +79,16 @@ class EnterMobileNumberViewController: GQBaseViewController {
                                                  color: .gray4D4B5A)
         noteLabel.attributedText = noteTitle.addAttributedString(noteDescription)
     }
+}
+
+extension EnterMobileNumberViewController: GQMobileTextFieldDelegate {
+    
+    func textField(_ textField: GQMobileTextField, didChange text: String?) {
+        print(textField.text ?? "No Mobile Number")
+    }
+    
+    func textField(_ textField: GQMobileTextField, didClick button: UIButton) {
+        print(textField.text ?? "No Mobile Number")
+    }
+    
 }

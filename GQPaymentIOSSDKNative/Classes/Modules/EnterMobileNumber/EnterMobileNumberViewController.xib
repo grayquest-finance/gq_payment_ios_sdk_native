@@ -12,6 +12,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="EnterMobileNumberViewController" customModule="GQPaymentIOSSDKNative" customModuleProvider="target">
             <connections>
                 <outlet property="gileView" destination="73O-t4-tZh" id="8fN-FM-UeJ"/>
+                <outlet property="mobileTextField" destination="lm0-cc-PKa" id="0Ry-uh-Br5"/>
                 <outlet property="noteLabel" destination="HUp-Et-piq" id="5hs-A9-zjE"/>
                 <outlet property="scrollView" destination="oh5-lt-UC4" id="afx-fA-fMr"/>
                 <outlet property="supportFooterView" destination="ofi-BW-sSX" id="lqX-pa-H8q"/>

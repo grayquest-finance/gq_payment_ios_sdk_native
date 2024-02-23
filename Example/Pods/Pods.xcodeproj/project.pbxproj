@@ -140,6 +140,7 @@
 		A375C2462B861C7C0015B72D /* DMSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A375C23B2B861C7C0015B72D /* DMSans-Bold.ttf */; };
 		A375C24E2B861CCA0015B72D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A375C24D2B861CCA0015B72D /* Assets.xcassets */; };
 		A375C2502B8622520015B72D /* UIFont+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = A375C24F2B8622520015B72D /* UIFont+Ext.swift */; };
+		A384AFF72B87822E00F92589 /* GQValidationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A384AFF62B87822E00F92589 /* GQValidationService.swift */; };
 		A9CEDFFF45ED3146A7C1FF49FBAEF964 /* Pods-GQPaymentIOSSDKNative_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 7B9D5435220E6B3A6AD2F5DC7EF14B6B /* Pods-GQPaymentIOSSDKNative_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		ABC9B1A0D9526F9AB12508F8CD29D401 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A3DA4245ECA7F69246855402F09CE7B /* NetworkError.swift */; };
 		B49D211CE8A969932886E43BC5917282 /* MobileOTPView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33E22A13EEE507CB9CC48AE8CB35B914 /* MobileOTPView.swift */; };
@@ -363,6 +364,7 @@
 		A375C23B2B861C7C0015B72D /* DMSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DMSans-Bold.ttf"; sourceTree = "<group>"; };
 		A375C24D2B861CCA0015B72D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A375C24F2B8622520015B72D /* UIFont+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Ext.swift"; sourceTree = "<group>"; };
+		A384AFF62B87822E00F92589 /* GQValidationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GQValidationService.swift; sourceTree = "<group>"; };
 		A719508C6E19E20D9A13C80B98477DCE /* Pods-GQPaymentIOSSDKNative_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-GQPaymentIOSSDKNative_Example-frameworks.sh"; sourceTree = "<group>"; };
 		A7C1B8DCB7BD43337435472628AD73B1 /* EnterMobileNumberViewModel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = EnterMobileNumberViewModel.swift; sourceTree = "<group>"; };
 		A7FBB2F070181FA6927DDFF4B16E0F38 /* CashfreePG.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CashfreePG.debug.xcconfig; sourceTree = "<group>"; };
@@ -907,6 +909,7 @@
 				0A3DA4245ECA7F69246855402F09CE7B /* NetworkError.swift */,
 				2DB1420688D3F858E4B78B3271229B0D /* NetworkService.swift */,
 				30BCD4E1B76ABE3E0C5C7B60F5607F97 /* NetworkType.swift */,
+				A384AFF62B87822E00F92589 /* GQValidationService.swift */,
 			);
 			name = Services;
 			path = GQPaymentIOSSDKNative/Classes/Services;
@@ -1359,6 +1362,7 @@
 				B49D211CE8A969932886E43BC5917282 /* MobileOTPView.swift in Sources */,
 				FE23F3001149B746FD1460F97BE5E8E6 /* MobileOTPView.xib in Sources */,
 				7049C064B3D8170EA6392BA58EFDFDB3 /* Model.swift in Sources */,
+				A384AFF72B87822E00F92589 /* GQValidationService.swift in Sources */,
 				FDFCB7394877AD3AB50FFE07EDA9A618 /* NetworkEnvironment.swift in Sources */,
 				ABC9B1A0D9526F9AB12508F8CD29D401 /* NetworkError.swift in Sources */,
 				CDB8D7D48CAD4997DCB4ED40B950F852 /* NetworkService.swift in Sources */,

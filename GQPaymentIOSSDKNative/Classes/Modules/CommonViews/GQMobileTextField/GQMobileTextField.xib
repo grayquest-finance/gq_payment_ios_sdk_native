@@ -49,6 +49,9 @@
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <textInputTraits key="textInputTraits"/>
+                            <connections>
+                                <action selector="textfieldTextChanged:" destination="-1" eventType="editingChanged" id="RHf-2y-mee"/>
+                            </connections>
                         </textField>
                         <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2RG-4m-9Pg">
                             <rect key="frame" x="488" y="2.6666666666666679" width="90" height="34.333333333333329"/>
@@ -59,6 +62,9 @@
                             <fontDescription key="fontDescription" name="DMSans-Bold" family="DM Sans" pointSize="14"/>
                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                             <state key="normal" title="Send OTP"/>
+                            <connections>
+                                <action selector="clickedSendOTPButton:" destination="-1" eventType="touchUpInside" id="4uc-VH-wcN"/>
+                            </connections>
                         </button>
                     </subviews>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
