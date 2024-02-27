@@ -7,14 +7,22 @@
 
 import UIKit
 
+protocol GQSupportFooterViewDelegate {
+    func footerViewDidClickOpenWindow(_ footerView: GQSupportFooterView)
+}
+
 class GQSupportFooterView: UIView {
     
     @IBOutlet var contentView: UIView!
     
+    @IBOutlet weak var supportImageview: UIImageView!
+    
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
     
-    @IBOutlet weak var actionButton: UIButton!
+    @IBOutlet weak var openWindowButton: UIButton!
+    
+    public var delegate: (any GQSupportFooterViewDelegate)?
 
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -42,27 +50,34 @@ class GQSupportFooterView: UIView {
     private func setupUI() {
         self.contentView.backgroundColor = .whiteF5F5F5
         
-        titleLabel.textColor = .gray807E8D
-        titleLabel.font = .customFont(.poppins, weight: .medium, size: 20)
+        titleLabel.textColor = .purple63499D
+        titleLabel.font = .customFont(.poppins, weight: .medium, size: 18)
         titleLabel.numberOfLines = 0
         titleLabel.lineBreakMode = .byWordWrapping
         titleLabel.textAlignment = .left
         
-        descriptionLabel.textColor = .gray807E8D
+        descriptionLabel.textColor = .gray4D4B5A
         descriptionLabel.font = .customFont(.dmSans, weight: .regular, size: 14)
         descriptionLabel.numberOfLines = 0
         descriptionLabel.lineBreakMode = .byWordWrapping
         descriptionLabel.textAlignment = .left
         
-        actionButton.titleLabel?.font = .customFont(.dmSans, weight: .bold, size: 14)
-        actionButton.backgroundColor = .clear
-        actionButton.contentMode = .left
-        actionButton.titleLabel?.textAlignment = .left
-        actionButton.tintColor = .blue4029CC
+        setupIcons()
         
-        titleLabel.text = "Facing issues?"
-        descriptionLabel.text = "Our customer support team is here to help you. In case you have any query"
-        actionButton.setTitle("CONTACT US >>>", for: .normal)
+        titleLabel.text = "Facing issues here?"
+        descriptionLabel.text = "Please contact our support team by clicking here"
     }
-
+    
+    private func setupIcons() {
+        supportImageview.image = .getImage(icon: .supportIcon)
+        supportImageview.contentMode = .scaleAspectFit
+        
+        openWindowButton.setImage(.getImage(icon: .newWindowIcon), for: .normal)
+        openWindowButton.contentMode = .scaleAspectFit
+    }
+    
+    @IBAction func clickedOpenWindowAction(_ sender: UIButton) {
+        delegate?.footerViewDidClickOpenWindow(self)
+    }
+    
 }
