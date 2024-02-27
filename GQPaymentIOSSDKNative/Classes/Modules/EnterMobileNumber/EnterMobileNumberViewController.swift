@@ -15,6 +15,7 @@ class EnterMobileNumberViewController: GQBaseViewController {
     @IBOutlet weak var supportFooterView: GQSupportFooterView!
     
     @IBOutlet weak var mobileTextField: GQMobileTextField!
+    @IBOutlet weak var otpTextField: GQTextField!
     
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var noteLabel: UILabel!
@@ -54,6 +55,9 @@ class EnterMobileNumberViewController: GQBaseViewController {
         
         setupLabels()
         mobileTextField.delegate = self
+        
+        otpTextField.configureForOTP()
+        inActiveOTPState()
     }
     
     private func setupLabels() {
@@ -70,24 +74,58 @@ class EnterMobileNumberViewController: GQBaseViewController {
         noteLabel.textAlignment = .left
         
         titleLabel.text = "Enter your Mobile Number"
-        
-        let noteTitle = NSAttributedString(string: "NOTE: ",
-                                      font: .customFont(.dmSans, weight: .bold, size: 14),
-                                      color: .green40850A)
-        let noteDescription = NSAttributedString(string: "Please enter the mobile number which you generally use for your banking purposes.",
-                                                 font: .customFont(.dmSans, weight: .regular, size: 14),
-                                                 color: .gray4D4B5A)
-        noteLabel.attributedText = noteTitle.addAttributedString(noteDescription)
+//        setupInitialStateForNoteLabel()
+    }
+    
+    private func setupInitialStateForNoteLabel() {
+        Task { @MainActor in
+            let noteTitle = NSAttributedString(string: "NOTE: ",
+                                          font: .customFont(.dmSans, weight: .bold, size: 14),
+                                          color: .green40850A)
+            let noteDescription = NSAttributedString(string: "Please enter the mobile number which you generally use for your banking purposes.",
+                                                     font: .customFont(.dmSans, weight: .regular, size: 14),
+                                                     color: .gray4D4B5A)
+            self.noteLabel.attributedText = noteTitle.addAttributedString(noteDescription)
+            self.noteLabel.textAlignment = .left
+        }
+    }
+    
+    private func setupOTPStateForNoteLabel() {
+        Task { @MainActor in
+            let noteTitle = NSAttributedString(string: "We have sent a 4-digit OTP on your mobile number ",
+                                          font: .customFont(.dmSans, weight: .regular, size: 14),
+                                          color: .black4D4B5A)
+            let noteDescription = NSAttributedString(string: self.mobileTextField.text ?? "N/A",
+                                                     font: .customFont(.dmSans, weight: .bold, size: 14),
+                                                     color: .black4D4B5A)
+            self.noteLabel.attributedText = noteTitle.addAttributedString(noteDescription)
+            self.noteLabel.textAlignment = .center
+        }
+    }
+    
+    private func inActiveOTPState() {
+        Task { @MainActor in
+            self.otpTextField.isHidden = true
+            self.setupInitialStateForNoteLabel()
+        }
+    }
+    
+    private func activeOTPState() {
+        Task { @MainActor in
+            self.otpTextField.isHidden = false
+            self.setupOTPStateForNoteLabel()
+        }
     }
 }
 
 extension EnterMobileNumberViewController: GQMobileTextFieldDelegate {
     
     func textFieldDidClickSendOTP(_ textField: GQMobileTextField) {
-        print(textField.text ?? "No Mobile Number")
+        self.activeOTPState()
     }
     
     func textFieldDidClickChange(_ textField: GQMobileTextField) {
+        // Onclick of change maybe revert back to inactive OTP State.
         print(textField.text ?? "No Mobile Number")
     }
     

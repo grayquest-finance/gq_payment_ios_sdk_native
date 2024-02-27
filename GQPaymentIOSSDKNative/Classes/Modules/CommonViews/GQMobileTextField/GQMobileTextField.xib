@@ -24,28 +24,28 @@
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB">
-            <rect key="frame" x="0.0" y="0.0" width="598" height="57"/>
+            <rect key="frame" x="0.0" y="0.0" width="598" height="56"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="t7r-ka-Kt2">
-                    <rect key="frame" x="10" y="8.6666666666666679" width="578" height="39.666666666666657"/>
+                    <rect key="frame" x="10" y="8.3333333333333321" width="578" height="39.333333333333343"/>
                     <subviews>
-                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="phone.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="P3w-tV-LZ1">
-                            <rect key="frame" x="0.0" y="9.6666666666666679" width="24" height="21"/>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="phoneIcon" translatesAutoresizingMaskIntoConstraints="NO" id="P3w-tV-LZ1">
+                            <rect key="frame" x="0.0" y="7.9999999999999982" width="23.666666666666668" height="23.333333333333329"/>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
                                 <constraint firstAttribute="width" secondItem="P3w-tV-LZ1" secondAttribute="height" multiplier="1:1" id="rRn-P1-EeD"/>
                             </constraints>
                         </imageView>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="+91 -" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pbp-Cd-z2l">
-                            <rect key="frame" x="36" y="9.6666666666666661" width="40.333333333333343" height="20.333333333333336"/>
+                            <rect key="frame" x="35.666666666666657" y="9.6666666666666661" width="40.333333333333343" height="20.333333333333336"/>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter mobile number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9ST-63-1K1">
-                            <rect key="frame" x="88.333333333333343" y="0.0" width="387.66666666666663" height="39.666666666666664"/>
+                            <rect key="frame" x="88" y="0.0" width="388" height="39.333333333333336"/>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <textInputTraits key="textInputTraits"/>
@@ -54,7 +54,7 @@
                             </connections>
                         </textField>
                         <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2RG-4m-9Pg">
-                            <rect key="frame" x="488" y="2.6666666666666679" width="90" height="34.333333333333329"/>
+                            <rect key="frame" x="488" y="3" width="90" height="33.333333333333336"/>
                             <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="90" id="yR8-Ii-Q6h"/>
@@ -85,7 +85,7 @@
         </view>
     </objects>
     <resources>
-        <image name="phone.fill" catalog="system" width="128" height="114"/>
+        <image name="phoneIcon" width="24" height="24"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

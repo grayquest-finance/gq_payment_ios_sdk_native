@@ -41,4 +41,8 @@ extension UIColor {
     @nonobjc static let whiteF5F5F5: UIColor = UIColor(red: 245, green: 245, blue: 245)
     @nonobjc static let whiteFAFCFD: UIColor = UIColor(red: 250, green: 252, blue: 253)
     
+    
+//  MARK: Black Shades
+    @nonobjc static let black4D4B5A: UIColor = UIColor(red: 77, green: 75, blue: 90)
+    
 }

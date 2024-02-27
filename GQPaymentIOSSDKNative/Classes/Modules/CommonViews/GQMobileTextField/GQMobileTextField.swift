@@ -131,7 +131,7 @@ class GQMobileTextField: UIView {
         Task { @MainActor in
             self.contentView.backgroundColor = .whiteFAFCFD
             self.textField.isEnabled = true
-            self.contentView.set(cornerRadius: cornerRadius, borderWidth: 2, borderColor: .blue4029CC)
+            self.contentView.set(cornerRadius: cornerRadius, borderWidth: 1, borderColor: .blue4029CC)
             self.textFieldButton.setTitle(State.active.title, for: .normal)
             self.textField.becomeFirstResponder()
             self.state = .active

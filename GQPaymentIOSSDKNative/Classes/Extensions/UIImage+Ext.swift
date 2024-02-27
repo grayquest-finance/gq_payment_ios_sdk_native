@@ -14,6 +14,7 @@ extension UIImage {
         case closeIcon
         case backIcon
         case phoneIcon
+        case otpIcon
         
         var name: String {
             return self.rawValue

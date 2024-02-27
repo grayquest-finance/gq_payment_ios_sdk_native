@@ -131,6 +131,8 @@
 		A3539A962B872B15001146C8 /* Poppins-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A3539A942B8728A3001146C8 /* Poppins-Medium.ttf */; };
 		A3539A972B872B18001146C8 /* Poppins-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A3539A932B87288F001146C8 /* Poppins-Regular.ttf */; };
 		A3539A982B872B1B001146C8 /* Poppins-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A3539A952B8728AE001146C8 /* Poppins-Bold.ttf */; };
+		A36D8AFF2B8DBDF6001F095F /* GQTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36D8AFE2B8DBDF6001F095F /* GQTextField.swift */; };
+		A36D8B012B8DBE04001F095F /* GQTextField.xib in Resources */ = {isa = PBXBuildFile; fileRef = A36D8B002B8DBE04001F095F /* GQTextField.xib */; };
 		A36D9D042B8482B1003F2647 /* OTPTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36D9D032B8482B1003F2647 /* OTPTextField.swift */; };
 		A36D9D092B84AC19003F2647 /* GQGILEView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36D9D082B84AC19003F2647 /* GQGILEView.swift */; };
 		A36D9D0B2B84AC67003F2647 /* GQGILEView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A36D9D0A2B84AC67003F2647 /* GQGILEView.xib */; };
@@ -355,6 +357,8 @@
 		A3539A932B87288F001146C8 /* Poppins-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Regular.ttf"; sourceTree = "<group>"; };
 		A3539A942B8728A3001146C8 /* Poppins-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Medium.ttf"; sourceTree = "<group>"; };
 		A3539A952B8728AE001146C8 /* Poppins-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Bold.ttf"; sourceTree = "<group>"; };
+		A36D8AFE2B8DBDF6001F095F /* GQTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GQTextField.swift; sourceTree = "<group>"; };
+		A36D8B002B8DBE04001F095F /* GQTextField.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GQTextField.xib; sourceTree = "<group>"; };
 		A36D9D032B8482B1003F2647 /* OTPTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPTextField.swift; sourceTree = "<group>"; };
 		A36D9D082B84AC19003F2647 /* GQGILEView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GQGILEView.swift; sourceTree = "<group>"; };
 		A36D9D0A2B84AC67003F2647 /* GQGILEView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GQGILEView.xib; sourceTree = "<group>"; };
@@ -675,6 +679,7 @@
 		838A58FED24819939025C5B48DC29E52 /* CommonViews */ = {
 			isa = PBXGroup;
 			children = (
+				A36D8AFD2B8DBDE2001F095F /* GQTextField */,
 				A3477FAA2B85C44800377D38 /* GQMobileTextField */,
 				A3477FA92B85BD5900377D38 /* OLD Views */,
 				A321B7792B84D0540016FCC6 /* GQSupportFooterView */,
@@ -808,6 +813,15 @@
 				A3539A952B8728AE001146C8 /* Poppins-Bold.ttf */,
 			);
 			path = Poppins;
+			sourceTree = "<group>";
+		};
+		A36D8AFD2B8DBDE2001F095F /* GQTextField */ = {
+			isa = PBXGroup;
+			children = (
+				A36D8AFE2B8DBDF6001F095F /* GQTextField.swift */,
+				A36D8B002B8DBE04001F095F /* GQTextField.xib */,
+			);
+			path = GQTextField;
 			sourceTree = "<group>";
 		};
 		A36D9D022B84828B003F2647 /* OTPTextField */ = {
@@ -1169,6 +1183,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A375C2462B861C7C0015B72D /* DMSans-Bold.ttf in Resources */,
+				A36D8B012B8DBE04001F095F /* GQTextField.xib in Resources */,
 				A375C2452B861C7C0015B72D /* DMSans-Medium.ttf in Resources */,
 				A375C2442B861C7C0015B72D /* DMSans-Regular.ttf in Resources */,
 				A375C24E2B861CCA0015B72D /* Assets.xcassets in Resources */,
@@ -1348,6 +1363,7 @@
 				93CE112DE920A4330BA8E498943A5AA4 /* GQEMIViewController.xib in Sources */,
 				29D04D816B69C6F00EA69AF201F1961D /* GQEMIViewModel.swift in Sources */,
 				90B101077A4DAD851B14037C73BB5D6D /* GQNavigationBar.swift in Sources */,
+				A36D8AFF2B8DBDF6001F095F /* GQTextField.swift in Sources */,
 				A3477FAC2B85C4DA00377D38 /* GQMobileTextField.swift in Sources */,
 				D8119A2A69D06240CC1FD0F644C155C4 /* GQNavigationBar.xib in Sources */,
 				58D6EEFDBE71509B344A29178DF7A117 /* GQPayment.swift in Sources */,
