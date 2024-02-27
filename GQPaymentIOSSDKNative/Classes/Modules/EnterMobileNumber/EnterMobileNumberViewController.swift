@@ -13,7 +13,7 @@ class EnterMobileNumberViewController: GQBaseViewController {
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var gileView: GQGILEView!
     @IBOutlet weak var supportFooterView: GQSupportFooterView!
-    
+        
     @IBOutlet weak var mobileTextField: GQMobileTextField!
     @IBOutlet weak var otpTextField: GQTextField!
     
@@ -45,6 +45,7 @@ class EnterMobileNumberViewController: GQBaseViewController {
     }
     
     public func configureUI() {
+        //Needs to be called after API call.
         Task {
             await gileView.configure(with: viewModel?.gile)
         }
@@ -56,7 +57,8 @@ class EnterMobileNumberViewController: GQBaseViewController {
         setupLabels()
         mobileTextField.delegate = self
         
-        otpTextField.configureForOTP()
+        otpTextField.delegate = self
+        otpTextField.isTitleEnabled = false
         inActiveOTPState()
     }
     
@@ -72,9 +74,9 @@ class EnterMobileNumberViewController: GQBaseViewController {
         noteLabel.numberOfLines = 0
         noteLabel.lineBreakMode = .byWordWrapping
         noteLabel.textAlignment = .left
-        
+                
         titleLabel.text = "Enter your Mobile Number"
-//        setupInitialStateForNoteLabel()
+        otpTextField.title = "Enter OTP"
     }
     
     private func setupInitialStateForNoteLabel() {
@@ -105,14 +107,12 @@ class EnterMobileNumberViewController: GQBaseViewController {
     
     private func inActiveOTPState() {
         Task { @MainActor in
-            self.otpTextField.isHidden = true
             self.setupInitialStateForNoteLabel()
         }
     }
     
     private func activeOTPState() {
         Task { @MainActor in
-            self.otpTextField.isHidden = false
             self.setupOTPStateForNoteLabel()
         }
     }
@@ -127,6 +127,18 @@ extension EnterMobileNumberViewController: GQMobileTextFieldDelegate {
     func textFieldDidClickChange(_ textField: GQMobileTextField) {
         // Onclick of change maybe revert back to inactive OTP State.
         print(textField.text ?? "No Mobile Number")
+    }
+    
+}
+
+extension EnterMobileNumberViewController: GQTextFieldDelegate {
+    
+    func textField(_ textField: GQTextField, didChange text: String?) {
+        if (text?.count ?? 0) == 4 {
+            textField.resignErrorState()
+        } else {
+            textField.assignErrorState(message: "Incorrect OTP")
+        }
     }
     
 }

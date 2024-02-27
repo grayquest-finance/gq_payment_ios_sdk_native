@@ -123,6 +123,7 @@
 		93CE112DE920A4330BA8E498943A5AA4 /* GQEMIViewController.xib in Sources */ = {isa = PBXBuildFile; fileRef = E2E680D3A02FBA156994C642873E3FA4 /* GQEMIViewController.xib */; };
 		A30023DF2B8751E1008C059F /* NSAttributedString+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30023DE2B8751E1008C059F /* NSAttributedString+Ext.swift */; };
 		A30023E12B875A41008C059F /* UIImage+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30023E02B875A41008C059F /* UIImage+Ext.swift */; };
+		A314DD8C2B8DE9370013AFA9 /* GQTextFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A314DD8B2B8DE9370013AFA9 /* GQTextFieldDelegate.swift */; };
 		A321B77B2B84D0860016FCC6 /* GQSupportFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A321B77A2B84D0860016FCC6 /* GQSupportFooterView.swift */; };
 		A321B77D2B84D09D0016FCC6 /* GQSupportFooterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A321B77C2B84D09D0016FCC6 /* GQSupportFooterView.xib */; };
 		A321B77F2B84DB880016FCC6 /* UIColor+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = A321B77E2B84DB880016FCC6 /* UIColor+Ext.swift */; };
@@ -349,6 +350,7 @@
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		A30023DE2B8751E1008C059F /* NSAttributedString+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSAttributedString+Ext.swift"; sourceTree = "<group>"; };
 		A30023E02B875A41008C059F /* UIImage+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Ext.swift"; sourceTree = "<group>"; };
+		A314DD8B2B8DE9370013AFA9 /* GQTextFieldDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GQTextFieldDelegate.swift; sourceTree = "<group>"; };
 		A321B77A2B84D0860016FCC6 /* GQSupportFooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GQSupportFooterView.swift; sourceTree = "<group>"; };
 		A321B77C2B84D09D0016FCC6 /* GQSupportFooterView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GQSupportFooterView.xib; sourceTree = "<group>"; };
 		A321B77E2B84DB880016FCC6 /* UIColor+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Ext.swift"; sourceTree = "<group>"; };
@@ -820,6 +822,7 @@
 			children = (
 				A36D8AFE2B8DBDF6001F095F /* GQTextField.swift */,
 				A36D8B002B8DBE04001F095F /* GQTextField.xib */,
+				A314DD8B2B8DE9370013AFA9 /* GQTextFieldDelegate.swift */,
 			);
 			path = GQTextField;
 			sourceTree = "<group>";
@@ -1368,6 +1371,7 @@
 				D8119A2A69D06240CC1FD0F644C155C4 /* GQNavigationBar.xib in Sources */,
 				58D6EEFDBE71509B344A29178DF7A117 /* GQPayment.swift in Sources */,
 				B70497951CAB2D615B0906D14ACCFFD7 /* GQPaymentDelegate.swift in Sources */,
+				A314DD8C2B8DE9370013AFA9 /* GQTextFieldDelegate.swift in Sources */,
 				E064840DFFC8A2EED64B6E137FFE5D7C /* GQPaymentIOSSDKNative-dummy.m in Sources */,
 				DD9ADD805766929625092E4A0F83B341 /* GQTagView.swift in Sources */,
 				EDC556A7C7A5349A5B38FACA540D1E64 /* GQTagView.xib in Sources */,

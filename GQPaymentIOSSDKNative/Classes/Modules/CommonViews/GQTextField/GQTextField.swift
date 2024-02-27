@@ -9,19 +9,38 @@ import UIKit
 
 class GQTextField: UIView {
     
+    enum State {
+        case active
+        case inactive
+        case error
+    }
+    
     @IBOutlet var contentView: UIView!
+    @IBOutlet weak var textFiledView: UIView!
     
     @IBOutlet weak var textFieldIcon: UIImageView!
     
     @IBOutlet weak var textFieldTitle: UILabel!
     @IBOutlet weak var textField: UITextField!
     
+    public var delegate: (any GQTextFieldDelegate)?
     
     private var cornerRadius: CGFloat = 0.12
+    public var isTitleEnabled: Bool = false
+    
+    @IBOutlet weak var errorMessageLabel: UILabel!
+    
+    public var title: String? {
+        didSet {
+            add(newTitle: self.title)
+        }
+    }
     
     public var text: String? {
         return self.textField.text
     }
+    
+    private var state: GQTextField.State = .inactive
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -52,6 +71,8 @@ class GQTextField: UIView {
         
         setupStaticText()
         textfieldInactiveState()
+        textFieldTitle.isHidden = true
+        errorMessageLabel.isHidden = true
     }
     
     private func setupStaticText() {
@@ -59,46 +80,94 @@ class GQTextField: UIView {
         textField.font = .customFont(.dmSans, weight: .bold, size: 14)
         textField.textAlignment = .left
         
-        textField.attributedPlaceholder = NSAttributedString(string: "Enter OTP",
-                                    font: .customFont(.dmSans, weight: .regular, size: 14),
-                                                             color: .gray4D4B5A)
-
+        errorMessageLabel.textColor = .redA82B10
+        errorMessageLabel.font = .customFont(.dmSans, weight: .medium, size: 14)
+        errorMessageLabel.numberOfLines = 0
+        errorMessageLabel.lineBreakMode = .byWordWrapping
+        errorMessageLabel.textAlignment = .left
+    }
+    
+    private func add(newTitle: String?) {
+        guard let newTitle else { return }
+        Task { @MainActor in
+            self.textFieldTitle.text = newTitle
+            self.textField.attributedPlaceholder = NSAttributedString(string: newTitle,
+                                        font: .customFont(.dmSans, weight: .regular, size: 14),
+                                                                 color: .gray4D4B5A)
+        }
     }
     
     private func textfieldInactiveState() {
         Task { @MainActor in
             self.textField.resignFirstResponder()
-            self.contentView.backgroundColor = .whiteFAFCFD
+            self.textFiledView.backgroundColor = .whiteFAFCFD
             self.textField.isEnabled = true
-            self.contentView.set(cornerRadius: cornerRadius, borderWidth: 1, borderColor: .grayBFBFC6)
+            self.textFiledView.set(cornerRadius: cornerRadius, borderWidth: 1, borderColor: .grayBFBFC6)
+            self.state = .inactive
         }
     }
     
     private func textfieldActiveState() {
         Task { @MainActor in
-            self.contentView.backgroundColor = .whiteFAFCFD
+            self.textFiledView.backgroundColor = .whiteFAFCFD
             self.textField.isEnabled = true
-            self.contentView.set(cornerRadius: cornerRadius, borderWidth: 2, borderColor: .blue4029CC)
+            self.textFiledView.set(cornerRadius: cornerRadius, borderWidth: 1, borderColor: .blue4029CC)
             self.textField.becomeFirstResponder()
+            self.state = .active
         }
     }
     
-    public func configureForOTP() {
+    public func assignErrorState(message: String) {
         Task { @MainActor in
-            self.textFieldTitle.isHidden = true
+            self.textFiledView.set(cornerRadius: cornerRadius, borderWidth: 1, borderColor: .redD23614)
+            self.errorMessageLabel.text = message
+            self.errorMessageLabel.isHidden = false
+            self.state = .error
         }
     }
     
+    public func resignErrorState() {
+        Task { @MainActor in
+            self.textFiledView.set(cornerRadius: cornerRadius, borderWidth: 1, borderColor: .redD23614)
+            self.errorMessageLabel.isHidden = true
+            self.state = .active
+        }
+    }
     
 }
 
 extension GQTextField: UITextFieldDelegate {
+    
     func textFieldDidBeginEditing(_ textField: UITextField) {
         textfieldActiveState()
+        delegate?.textFieldDidBeginEditing(self)
+    }
+    
+    func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
+        if isTitleEnabled {
+            Task { @MainActor in
+                self.textFieldTitle.isHidden = false
+            }
+        }
+        return true
     }
     
     func textFieldDidEndEditing(_ textField: UITextField) {
-        textfieldInactiveState()
+        if isTitleEnabled, textField.text?.isEmpty ?? true {
+            Task { @MainActor in
+                self.textFieldTitle.isHidden = false
+            }
+        }
+        delegate?.textFieldDidEndEditing(self)
+        if self.state != .error {
+            textfieldInactiveState()
+        }
     }
     
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        defer {
+            delegate?.textField(self, didChange: self.text)
+        }
+        return true
+    }
 }

@@ -144,7 +144,7 @@ class GQMobileTextField: UIView {
             self.textField.resignFirstResponder()
             self.contentView.backgroundColor = .grayDFDFE3
             self.textField.isEnabled = false
-            self.contentView.set(cornerRadius: cornerRadius, borderWidth: 2, borderColor: .grayBFBFC6)
+            self.contentView.set(cornerRadius: cornerRadius, borderWidth: 1, borderColor: .grayBFBFC6)
             self.textFieldButton.setTitle(State.completed.title, for: .normal)
         }
     }
