@@ -59,7 +59,7 @@ class EnterMobileNumberViewController: GQBaseViewController {
         
         otpTextField.delegate = self
         otpTextField.isTitleEnabled = false
-        inActiveOTPState()
+        inactiveOTPState()
     }
     
     private func setupLabels() {
@@ -105,15 +105,17 @@ class EnterMobileNumberViewController: GQBaseViewController {
         }
     }
     
-    private func inActiveOTPState() {
+    private func inactiveOTPState() {
         Task { @MainActor in
             self.setupInitialStateForNoteLabel()
+            self.otpTextField.isHidden = true
         }
     }
     
     private func activeOTPState() {
         Task { @MainActor in
             self.setupOTPStateForNoteLabel()
+            self.otpTextField.isHidden = false
         }
     }
 }
@@ -125,8 +127,7 @@ extension EnterMobileNumberViewController: GQMobileTextFieldDelegate {
     }
     
     func textFieldDidClickChange(_ textField: GQMobileTextField) {
-        // Onclick of change maybe revert back to inactive OTP State.
-        print(textField.text ?? "No Mobile Number")
+        self.inactiveOTPState()
     }
     
 }

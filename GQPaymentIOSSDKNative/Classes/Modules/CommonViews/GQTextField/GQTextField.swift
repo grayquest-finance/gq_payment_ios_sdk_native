@@ -128,7 +128,7 @@ class GQTextField: UIView {
     
     public func resignErrorState() {
         Task { @MainActor in
-            self.textFiledView.set(cornerRadius: cornerRadius, borderWidth: 1, borderColor: .redD23614)
+            self.textFiledView.set(cornerRadius: cornerRadius, borderWidth: 1, borderColor: .blue4029CC)
             self.errorMessageLabel.isHidden = true
             self.state = .active
         }

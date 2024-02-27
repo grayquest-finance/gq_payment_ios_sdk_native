@@ -25,8 +25,29 @@ class GQBaseViewController: UIViewController {
         navigationController.navigationBar.standardAppearance = navBarAppearrance
         navigationController.navigationBar.scrollEdgeAppearance = navBarAppearrance
         
-        navigationItem.hidesBackButton = false
+        setupBackAction()
         setupCloseAction()
+    }
+    
+    func setupBackAction() {
+//        Disable default back button functionality.
+        navigationItem.hidesBackButton = true
+        
+//        Adding new back button functionality.
+        let backButton = UIBarButtonItem(image: .getImage(icon: .backIcon,
+                                                           renderingMode: .alwaysOriginal),
+                                          style: .done,
+                                          target: self,
+                                          action: #selector(backButtonAction)
+        )
+        backButton.tintColor = .clear
+        self.navigationItem.leftBarButtonItem = backButton
+    }
+    
+    @objc func backButtonAction(_ selector: Selector) {
+        Task { @MainActor in
+            self.navigationController?.popViewController(animated: true)
+        }
     }
     
     func setupCloseAction() {
