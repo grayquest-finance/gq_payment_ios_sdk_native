@@ -58,12 +58,24 @@ class EnterMobileNumberViewController: GQBaseViewController {
         overrideUserInterfaceStyle = .light
         
         setupLabels()
-        mobileTextField.delegate = self
+        setupButtons()
         
+        mobileTextField.delegate = self
         otpTextField.delegate = self
         otpTextField.isTitleEnabled = false
 
         setOTPState(active: false)
+    }
+    
+    private func setupButtons() {
+        verifyOTPButton.titleLabel?.font = .customFont(.poppins, weight: .medium, size: 16)
+        verifyOTPButton.backgroundColor = .white
+        verifyOTPButton.setTitle("VERIFY OTP", for: .normal)
+        verifyOTPButton.setImage(.getImage(icon: .rightArrow)?.withTintColor(.black26262D), for: .normal)
+        verifyOTPButton.tintColor = .black26262D
+        verifyOTPButton.configuration?.imagePlacement = .trailing
+        verifyOTPButton.set(cornerRadius: 0.2, borderWidth: 1, borderColor: .grayDFDFE3)
+        verifyOTPButton.addShadow()
     }
     
     private func setupLabels() {
@@ -95,15 +107,6 @@ class EnterMobileNumberViewController: GQBaseViewController {
         otpTextField.title = "Enter OTP"
         
         resendOTPLabel.text = "Did not receive OTP? Resend in 00:00"
-        
-        verifyOTPButton.titleLabel?.font = .customFont(.poppins, weight: .medium, size: 16)
-        verifyOTPButton.backgroundColor = .white
-        verifyOTPButton.setTitle("Verify OTP", for: .normal)
-        verifyOTPButton.setImage(.getImage(icon: .rightArrow)?.withTintColor(.black26262D), for: .normal)
-        verifyOTPButton.tintColor = .black26262D
-        verifyOTPButton.configuration?.imagePlacement = .trailing
-        verifyOTPButton.set(cornerRadius: 0.2, borderWidth: 1, borderColor: .grayDFDFE3)
-        verifyOTPButton.addShadow()
     }
     
     private func setupInitialStateForNoteLabel() {

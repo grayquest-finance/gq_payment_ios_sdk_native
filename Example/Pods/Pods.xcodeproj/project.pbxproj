@@ -132,6 +132,7 @@
 		A3539A962B872B15001146C8 /* Poppins-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A3539A942B8728A3001146C8 /* Poppins-Medium.ttf */; };
 		A3539A972B872B18001146C8 /* Poppins-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A3539A932B87288F001146C8 /* Poppins-Regular.ttf */; };
 		A3539A982B872B1B001146C8 /* Poppins-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A3539A952B8728AE001146C8 /* Poppins-Bold.ttf */; };
+		A3645B0E2B8F4B070048091E /* UIViewController+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3645B0D2B8F4B070048091E /* UIViewController+Ext.swift */; };
 		A36D8AFF2B8DBDF6001F095F /* GQTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36D8AFE2B8DBDF6001F095F /* GQTextField.swift */; };
 		A36D8B012B8DBE04001F095F /* GQTextField.xib in Resources */ = {isa = PBXBuildFile; fileRef = A36D8B002B8DBE04001F095F /* GQTextField.xib */; };
 		A36D9D042B8482B1003F2647 /* OTPTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36D9D032B8482B1003F2647 /* OTPTextField.swift */; };
@@ -359,6 +360,7 @@
 		A3539A932B87288F001146C8 /* Poppins-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Regular.ttf"; sourceTree = "<group>"; };
 		A3539A942B8728A3001146C8 /* Poppins-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Medium.ttf"; sourceTree = "<group>"; };
 		A3539A952B8728AE001146C8 /* Poppins-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Bold.ttf"; sourceTree = "<group>"; };
+		A3645B0D2B8F4B070048091E /* UIViewController+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Ext.swift"; sourceTree = "<group>"; };
 		A36D8AFE2B8DBDF6001F095F /* GQTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GQTextField.swift; sourceTree = "<group>"; };
 		A36D8B002B8DBE04001F095F /* GQTextField.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GQTextField.xib; sourceTree = "<group>"; };
 		A36D9D032B8482B1003F2647 /* OTPTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPTextField.swift; sourceTree = "<group>"; };
@@ -621,6 +623,7 @@
 				A375C24F2B8622520015B72D /* UIFont+Ext.swift */,
 				A30023DE2B8751E1008C059F /* NSAttributedString+Ext.swift */,
 				A30023E02B875A41008C059F /* UIImage+Ext.swift */,
+				A3645B0D2B8F4B070048091E /* UIViewController+Ext.swift */,
 			);
 			name = Extensions;
 			path = GQPaymentIOSSDKNative/Classes/Extensions;
@@ -1365,6 +1368,7 @@
 				260667726C77E79A70D51942C12780D8 /* GQEMIViewController.swift in Sources */,
 				93CE112DE920A4330BA8E498943A5AA4 /* GQEMIViewController.xib in Sources */,
 				29D04D816B69C6F00EA69AF201F1961D /* GQEMIViewModel.swift in Sources */,
+				A3645B0E2B8F4B070048091E /* UIViewController+Ext.swift in Sources */,
 				90B101077A4DAD851B14037C73BB5D6D /* GQNavigationBar.swift in Sources */,
 				A36D8AFF2B8DBDF6001F095F /* GQTextField.swift in Sources */,
 				A3477FAC2B85C4DA00377D38 /* GQMobileTextField.swift in Sources */,

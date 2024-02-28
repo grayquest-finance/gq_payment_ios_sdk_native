@@ -21,18 +21,18 @@ extension UIView {
     }
     
     func addShadow() {
-//        self.layer.masksToBounds = false
+        self.layer.masksToBounds = false
         self.layer.shadowColor = UIColor.black18274B.cgColor
         self.layer.shadowOffset = CGSize(width: 0, height: 2)
-        self.layer.shadowOpacity = 0.4
-        self.layer.shadowRadius = 0.5
-//        layer.shadowPath = UIBezierPath(rect: CGRect(x: 0,
-//                                                        y: bounds.maxY - layer.shadowRadius,
-//                                                        width: bounds.width,
-//                                                        height: layer.shadowRadius)).cgPath
+        self.layer.shadowOpacity = 0.2
+        self.layer.shadowRadius = 4
+        self.layer.shadowPath = UIBezierPath(rect: CGRect(x: 0,
+                                                          y: bounds.midY * 0.8,
+                                                          width: bounds.width,
+                                                          height: bounds.height * 0.65)).cgPath
     }
     
-//MARK: Use this function to load the XIB file.
+//MARK: Use this function to load an XIB file with a class.
     internal func loadNib() {
         let name = String(describing: Self.self)
         _ = UINib(nibName: name, bundle: GQPayment.bundle).instantiate(withOwner: self)
