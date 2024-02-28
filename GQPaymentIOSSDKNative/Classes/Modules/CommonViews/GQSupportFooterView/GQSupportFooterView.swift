@@ -35,11 +35,8 @@ class GQSupportFooterView: UIView {
     }
     
     private func setupView() {
-        _ = UINib(nibName: "GQSupportFooterView", bundle: GQPayment.bundle).instantiate(withOwner: self)
-        self.addSubview(contentView)
-        self.contentView.frame = self.bounds
-        self.contentView.autoresizingMask = [.flexibleHeight, .flexibleWidth]
-        self.backgroundColor = .clear
+        self.loadNib()
+        contentView.combine(with: self)
     }
     
     override func awakeFromNib() {

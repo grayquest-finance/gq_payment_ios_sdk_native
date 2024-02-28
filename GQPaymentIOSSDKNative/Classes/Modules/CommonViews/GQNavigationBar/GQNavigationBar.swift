@@ -13,19 +13,25 @@ class GQNavigationBar: UINavigationBar {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        setupUI()
+        setupView()
     }
     
     required init?(coder: NSCoder) {
         super.init(coder: coder)
+        setupView()
+    }
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
         setupUI()
     }
     
+    private func setupView() {
+        self.loadNib()
+        contentView.combine(with: self)
+    }
+    
     private func setupUI() {
-        UINib(nibName: "GQNavigationBar", bundle: Bundle(for: type(of: self))).instantiate(withOwner: self)
-        self.addSubview(contentView)
-        contentView.frame = self.bounds
-        contentView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         self.contentView.backgroundColor = GQPayment.themeColor
     }
 

@@ -24,10 +24,8 @@ class GQGILEView: UIView {
     }
     
     private func setupView() {
-        _ = UINib(nibName: "GQGILEView", bundle: GQPayment.bundle).instantiate(withOwner: self)
-        self.addSubview(contentView)
-        self.contentView.frame = self.bounds
-        self.contentView.autoresizingMask = [.flexibleHeight, .flexibleWidth]
+        self.loadNib()
+        contentView.combine(with: self)
     }
 
     override func awakeFromNib() {

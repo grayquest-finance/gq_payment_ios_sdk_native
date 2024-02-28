@@ -23,7 +23,7 @@ extension UIView {
     func addShadow() {
 //        self.layer.masksToBounds = false
         self.layer.shadowColor = UIColor.black18274B.cgColor
-        self.layer.shadowOffset = CGSize(width: 0, height: 1)
+        self.layer.shadowOffset = CGSize(width: 0, height: 2)
         self.layer.shadowOpacity = 0.4
         self.layer.shadowRadius = 0.5
 //        layer.shadowPath = UIBezierPath(rect: CGRect(x: 0,
@@ -32,12 +32,18 @@ extension UIView {
 //                                                        height: layer.shadowRadius)).cgPath
     }
     
-//    func connect(with view: UIView) {
-//        let name = String(describing: self)
-//        _ = UINib(nibName: name, bundle: Bundle(for: type(of: self))).instantiate(withOwner: self)
-//        view.addSubview(self)
-//        self.frame = view.bounds
-//        self.autoresizingMask = [.flexibleHeight, .flexibleWidth]
-//    }
+//MARK: Use this function to load the XIB file.
+    internal func loadNib() {
+        let name = String(describing: Self.self)
+        _ = UINib(nibName: name, bundle: GQPayment.bundle).instantiate(withOwner: self)
+    }
+    
+//MARK: Use this function to attach any `contentView` with a view whose XIB is loaded.
+    internal func combine(with view: UIView) {
+        view.addSubview(self)
+        self.frame = view.bounds
+        self.autoresizingMask = [.flexibleHeight, .flexibleWidth]
+        view.backgroundColor = .clear
+    }
     
 }

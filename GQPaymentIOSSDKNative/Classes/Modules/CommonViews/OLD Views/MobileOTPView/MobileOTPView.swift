@@ -33,25 +33,25 @@ class MobileOTPView: UIView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        setupUI()
+        setupView()
     }
     
     required init?(coder: NSCoder) {
         super.init(coder: coder)
-        setupUI()
+        setupView()
+    }
+    
+    private func setupView() {
+        self.loadNib()
+        contentView.combine(with: self)
     }
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        setupUI()
     }
     
     private func setupUI() {
-//        let name = String(describing: self)
-        UINib(nibName: "MobileOTPView", bundle: Bundle(for: type(of: self))).instantiate(withOwner: self)
-        self.addSubview(contentView)
-        contentView.frame = self.bounds
-        contentView.autoresizingMask = [.flexibleHeight, .flexibleWidth]
-        
         contentView.backgroundColor = .white
         
         var prev: OTPTextField?
