@@ -17,6 +17,7 @@ extension UIImage {
         case otpIcon
         case newWindowIcon
         case supportIcon
+        case rightArrow
         
         var name: String {
             return self.rawValue

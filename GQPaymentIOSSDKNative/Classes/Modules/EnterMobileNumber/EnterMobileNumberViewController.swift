@@ -19,7 +19,10 @@ class EnterMobileNumberViewController: GQBaseViewController {
     
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var noteLabel: UILabel!
-    
+    @IBOutlet weak var mobileNumberLabel: UILabel!
+    @IBOutlet weak var resendOTPLabel: UILabel!
+
+    @IBOutlet weak var verifyOTPButton: UIButton!
     
 //  MARK: Variables
     private var viewModel: (any EnterMobileNumberViewModelType)?
@@ -59,7 +62,8 @@ class EnterMobileNumberViewController: GQBaseViewController {
         
         otpTextField.delegate = self
         otpTextField.isTitleEnabled = false
-        inactiveOTPState()
+
+        setOTPState(active: false)
     }
     
     private func setupLabels() {
@@ -69,14 +73,37 @@ class EnterMobileNumberViewController: GQBaseViewController {
         titleLabel.lineBreakMode = .byWordWrapping
         titleLabel.textAlignment = .left
         
-        noteLabel.textColor = .black
+        noteLabel.textColor = .black4D4B5A
         noteLabel.font = .customFont(.dmSans, weight: .regular, size: 14)
         noteLabel.numberOfLines = 0
         noteLabel.lineBreakMode = .byWordWrapping
         noteLabel.textAlignment = .left
+        
+        resendOTPLabel.textColor = .gray4D4B5A
+        resendOTPLabel.font = .customFont(.dmSans, weight: .regular, size: 14)
+        resendOTPLabel.numberOfLines = 0
+        resendOTPLabel.lineBreakMode = .byWordWrapping
+        resendOTPLabel.textAlignment = .center
+        
+        mobileNumberLabel.textColor = .black4D4B5A
+        mobileNumberLabel.font = .customFont(.dmSans, weight: .bold, size: 14)
+        mobileNumberLabel.numberOfLines = 1
+        mobileNumberLabel.lineBreakMode = .byWordWrapping
+        mobileNumberLabel.textAlignment = .center
                 
         titleLabel.text = "Enter your Mobile Number"
         otpTextField.title = "Enter OTP"
+        
+        resendOTPLabel.text = "Did not receive OTP? Resend in 00:00"
+        
+        verifyOTPButton.titleLabel?.font = .customFont(.poppins, weight: .medium, size: 16)
+        verifyOTPButton.backgroundColor = .white
+        verifyOTPButton.setTitle("Verify OTP", for: .normal)
+        verifyOTPButton.setImage(.getImage(icon: .rightArrow)?.withTintColor(.black26262D), for: .normal)
+        verifyOTPButton.tintColor = .black26262D
+        verifyOTPButton.configuration?.imagePlacement = .trailing
+        verifyOTPButton.set(cornerRadius: 0.2, borderWidth: 1, borderColor: .grayDFDFE3)
+        verifyOTPButton.addShadow()
     }
     
     private func setupInitialStateForNoteLabel() {
@@ -94,40 +121,40 @@ class EnterMobileNumberViewController: GQBaseViewController {
     
     private func setupOTPStateForNoteLabel() {
         Task { @MainActor in
-            let noteTitle = NSAttributedString(string: "We have sent a 4-digit OTP on your mobile number ",
-                                          font: .customFont(.dmSans, weight: .regular, size: 14),
-                                          color: .black4D4B5A)
-            let noteDescription = NSAttributedString(string: self.mobileTextField.text ?? "N/A",
-                                                     font: .customFont(.dmSans, weight: .bold, size: 14),
-                                                     color: .black4D4B5A)
-            self.noteLabel.attributedText = noteTitle.addAttributedString(noteDescription)
+            self.noteLabel.text = "We have sent a 4-digit OTP on your mobile number"
+            self.noteLabel.font = .customFont(.dmSans, weight: .regular, size: 14)
+            self.noteLabel.textColor = .black4D4B5A
             self.noteLabel.textAlignment = .center
+            
+            self.mobileNumberLabel.text = self.mobileTextField.text ?? "N/A"
         }
     }
     
-    private func inactiveOTPState() {
+    private func setOTPState(active: Bool) {
         Task { @MainActor in
-            self.setupInitialStateForNoteLabel()
-            self.otpTextField.isHidden = true
+            active ? self.setupOTPStateForNoteLabel() : self.setupInitialStateForNoteLabel()
+            let isHidden = !active
+            self.otpTextField.isHidden = isHidden
+            self.resendOTPLabel.isHidden = isHidden
+            self.mobileNumberLabel.isHidden = isHidden
+            self.verifyOTPButton.isHidden = isHidden
         }
     }
     
-    private func activeOTPState() {
-        Task { @MainActor in
-            self.setupOTPStateForNoteLabel()
-            self.otpTextField.isHidden = false
-        }
+    @IBAction func clickedVerifyOTPButton(_ sender: UIButton) {
+        
     }
+    
 }
 
 extension EnterMobileNumberViewController: GQMobileTextFieldDelegate {
     
     func textFieldDidClickSendOTP(_ textField: GQMobileTextField) {
-        self.activeOTPState()
+        setOTPState(active: true)
     }
     
     func textFieldDidClickChange(_ textField: GQMobileTextField) {
-        self.inactiveOTPState()
+        setOTPState(active: false)
     }
     
 }

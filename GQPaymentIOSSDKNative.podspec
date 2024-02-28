@@ -38,9 +38,9 @@ Pod::Spec.new do |s|
   
   s.pod_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
   
-  # s.resource_bundles = {
-  #   'GQPaymentIOSSDKNative' => ['GQPaymentIOSSDKNative/Assets/*.png']
-  # }
+  s.resource_bundles = {
+    'GQPaymentIOSSDKNative' => ['GQPaymentIOSSDKNative/Assets/']
+  }
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
