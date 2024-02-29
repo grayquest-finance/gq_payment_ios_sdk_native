@@ -55,8 +55,6 @@ class EnterMobileNumberViewController: GQBaseViewController {
     }
 
     private func setupUI() {
-        overrideUserInterfaceStyle = .light
-        
         setupLabels()
         setupButtons()
         

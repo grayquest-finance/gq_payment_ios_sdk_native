@@ -21,10 +21,11 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yiC-kU-Mbx">
-                                <rect key="frame" x="109.5" y="316" width="156" height="35"/>
+                                <rect key="frame" x="109.5" y="316.5" width="156" height="34.5"/>
                                 <color key="backgroundColor" systemColor="systemIndigoColor"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <state key="normal" title="Button"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Open Native SDK"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Open Native SDK"/>
                                 <connections>
                                     <action selector="clickedOpenSDKButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="UMA-1L-VUe"/>

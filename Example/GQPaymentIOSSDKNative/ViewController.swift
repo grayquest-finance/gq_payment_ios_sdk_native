@@ -13,14 +13,22 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var openSDKButton: UIButton!
     
+    private var themeColor: UIColor = .red991F2C
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        setupUI()
+    }
+    
+    private func setupUI() {
+        openSDKButton.backgroundColor = themeColor
+        openSDKButton.layer.cornerRadius = openSDKButton.frame.height * 0.2
     }
     
     @IBAction func clickedOpenSDKButton(_ sender: UIButton) {
 //      MARK: Created Instance of GQPayment class and called open function.
         let gqPayment = GQPayment(delegate: self)
+        gqPayment.setTheme(color: themeColor)
         gqPayment.open(on: self)
     }
     

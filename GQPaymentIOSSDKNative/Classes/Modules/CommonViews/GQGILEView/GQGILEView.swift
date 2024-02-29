@@ -36,7 +36,7 @@ class GQGILEView: UIView {
     private func setupUI() {
         self.backgroundColor = .clear
         contentView.set(cornerRadius: 0.06)
-        contentView.backgroundColor = .red991F2C
+        contentView.backgroundColor = GQPayment.themeColor
         
         gileTitleLabel.textColor = .white
         gileTitleLabel.font = .customFont(.dmSans, weight: .regular, size: 16)

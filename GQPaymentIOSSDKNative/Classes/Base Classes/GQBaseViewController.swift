@@ -15,6 +15,7 @@ class GQBaseViewController: UIViewController {
         super.viewDidLoad()
         setupNavigationBar()
         setupResignResponderTapGesture()
+        setupCommonUI()
     }
     
     func setupNavigationBar() {
@@ -27,6 +28,10 @@ class GQBaseViewController: UIViewController {
         
         setupBackAction()
         setupCloseAction()
+    }
+    
+    func setupCommonUI() {
+        overrideUserInterfaceStyle = .light
     }
     
     func setupBackAction() {

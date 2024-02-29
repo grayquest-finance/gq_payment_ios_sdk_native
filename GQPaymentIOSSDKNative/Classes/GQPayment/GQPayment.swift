@@ -9,7 +9,7 @@ import UIKit
 
 public final class GQPayment {
     
-    public static var themeColor: UIColor = .systemIndigo
+    public static var themeColor: UIColor = .red991F2C
     
     internal static var bundle: Bundle {
         return Bundle(for: Self.self)
@@ -53,5 +53,8 @@ public final class GQPayment {
         }
     }
     
+    public func setTheme(color: UIColor) {
+        Self.themeColor = color
+    }
     
 }
