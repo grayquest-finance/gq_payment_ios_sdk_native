@@ -27,6 +27,10 @@ extension UIColor {
     @nonobjc static let blue4029CC: UIColor = UIColor(red: 64, green: 41, blue: 204)
     
     
+    //  MARK: Yellow Shades
+    @nonobjc static let yellowFFCA00: UIColor = UIColor(red: 255, green: 202, blue: 0)
+    
+    
 //  MARK: Purple Shades
     @nonobjc static let purple63499D: UIColor = UIColor(red: 99, green: 73, blue: 157)
     

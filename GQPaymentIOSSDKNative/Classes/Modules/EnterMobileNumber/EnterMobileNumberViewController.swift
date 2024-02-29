@@ -22,7 +22,7 @@ class EnterMobileNumberViewController: GQBaseViewController {
     @IBOutlet weak var mobileNumberLabel: UILabel!
     @IBOutlet weak var resendOTPLabel: UILabel!
 
-    @IBOutlet weak var verifyOTPButton: UIButton!
+    @IBOutlet weak var verifyOTPButton: GQButton!
     
 //  MARK: Variables
     private var viewModel: (any EnterMobileNumberViewModelType)?
@@ -66,14 +66,13 @@ class EnterMobileNumberViewController: GQBaseViewController {
     }
     
     private func setupButtons() {
-        verifyOTPButton.titleLabel?.font = .customFont(.poppins, weight: .medium, size: 16)
-        verifyOTPButton.backgroundColor = .white
+        verifyOTPButton.setTitle(with: .customFont(.poppins, weight: .medium, size: 16))
+        verifyOTPButton.disabledStateBackgroundColor = .white
+        verifyOTPButton.enabledStateBackgroundColor = .yellowFFCA00
         verifyOTPButton.setTitle("VERIFY OTP", for: .normal)
-        verifyOTPButton.setImage(.getImage(icon: .rightArrow)?.withTintColor(.black26262D), for: .normal)
-        verifyOTPButton.tintColor = .black26262D
-        verifyOTPButton.configuration?.imagePlacement = .trailing
-        verifyOTPButton.set(cornerRadius: 0.2, borderWidth: 1, borderColor: .grayDFDFE3)
-        verifyOTPButton.addShadow()
+        verifyOTPButton.setTint(color: .black26262D)
+        verifyOTPButton.setImage(.getImage(icon: .rightArrow), placement: .trailing)
+        verifyOTPButton.setDisabled()
     }
     
     private func setupLabels() {
@@ -143,7 +142,7 @@ class EnterMobileNumberViewController: GQBaseViewController {
     }
     
     @IBAction func clickedVerifyOTPButton(_ sender: UIButton) {
-        
+        print(otpTextField.text ?? "No OTP")
     }
     
 }
@@ -163,10 +162,13 @@ extension EnterMobileNumberViewController: GQMobileTextFieldDelegate {
 extension EnterMobileNumberViewController: GQTextFieldDelegate {
     
     func textField(_ textField: GQTextField, didChange text: String?) {
+        // Condition needs to be changed and OTP validity needs to be taken from API.
         if (text?.count ?? 0) == 4 {
             textField.resignErrorState()
+            verifyOTPButton.setEnabled()
         } else {
             textField.assignErrorState(message: "Incorrect OTP")
+            verifyOTPButton.setDisabled()
         }
     }
     

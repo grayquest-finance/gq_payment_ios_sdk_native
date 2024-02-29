@@ -131,6 +131,11 @@ class GQTextField: UIView {
         }
     }
     
+    @IBAction func textFieldOnChangeText(_ sender: UITextField) {
+        delegate?.textField(self, didChange: self.text)
+    }
+    
+    
 }
 
 extension GQTextField: UITextFieldDelegate {
@@ -160,11 +165,5 @@ extension GQTextField: UITextFieldDelegate {
             textfieldInactiveState()
         }
     }
-    
-    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-        defer {
-            delegate?.textField(self, didChange: self.text)
-        }
-        return true
-    }
+
 }
