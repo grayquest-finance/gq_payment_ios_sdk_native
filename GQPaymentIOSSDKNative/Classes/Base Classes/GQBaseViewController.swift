@@ -10,6 +10,7 @@ import UIKit
 class GQBaseViewController: UIViewController {
     
     private weak var scrollViewToAdjust: UIScrollView?
+    internal var isBackButtonEnabled: Bool = true
     
     public override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,6 +38,8 @@ class GQBaseViewController: UIViewController {
     func setupBackAction() {
 //        Disable default back button functionality.
         navigationItem.hidesBackButton = true
+        
+        guard isBackButtonEnabled else { return }
         
 //        Adding new back button functionality.
         let backButton = UIBarButtonItem(image: .getImage(icon: .backIcon,

@@ -7,9 +7,14 @@
 
 import Foundation
 
-public protocol GQPaymentDelegate {
-    nonisolated func gqPayment(_ gqPayment: GQPayment, onSuccess data: [String: Any]?)
-    nonisolated func gqPayment(_ gqPayment: GQPayment, onFailure data: [String: Any]?, error: Error)
-    nonisolated func gqPayment(_ gqPayment: GQPayment, onCancel data: [String: Any]?)
+@MainActor public protocol GQPaymentDelegate {
+    func gqPayment(_ gqPayment: GQPayment, onSuccess data: [String: Any]?)
+    func gqPayment(_ gqPayment: GQPayment, onFailure data: [String: Any]?, error: Error)
+    func gqPayment(_ gqPayment: GQPayment, onCancel data: [String: Any]?)
 }
 
+extension GQPaymentDelegate {
+    func gqPayment(_ gqPayment: GQPayment, onSuccess data: [String: Any]?) { }
+    func gqPayment(_ gqPayment: GQPayment, onFailure data: [String: Any]?, error: Error) { }
+    func gqPayment(_ gqPayment: GQPayment, onCancel data: [String: Any]?) { }
+}

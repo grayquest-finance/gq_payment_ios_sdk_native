@@ -181,4 +181,9 @@ extension GQMobileTextField: UITextFieldDelegate {
         textfieldInactiveState()
     }
     
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        guard string.isEmpty || (textField.text?.count ?? 0) < 10 else { return false }
+        return true
+    }
+    
 }
