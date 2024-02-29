@@ -34,5 +34,9 @@
   "pod_target_xcconfig": {
     "EXCLUDED_ARCHS[sdk=iphonesimulator*]": "arm64"
   },
+  "resources": [
+    "GQPaymentIOSSDKNative/Assets/*.xcassets",
+    "GQPaymentIOSSDKNative/Assets/Fonts/**/*.ttf"
+  ],
   "swift_version": "5.0"
 }

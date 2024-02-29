@@ -7,14 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		26476C2CB068F5EE7379745C /* Pods_GQPaymentIOSSDKNative_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F65AA910D9481E62679D64D3 /* Pods_GQPaymentIOSSDKNative_Example.framework */; };
+		3404631E959C26E5727C1744 /* Pods_GQPaymentIOSSDKNative_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F04E2B96C5B543DF5C02FE7 /* Pods_GQPaymentIOSSDKNative_Tests.framework */; };
+		3883685DE2408C1EE235D27A /* Pods_GQPaymentIOSSDKNative_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 624F77B93F2FF155E1D54B4A /* Pods_GQPaymentIOSSDKNative_Example.framework */; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
 		607FACD81AFB9204008FA782 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* ViewController.swift */; };
 		607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
-		C62910AC330356159FCEEDC2 /* Pods_GQPaymentIOSSDKNative_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2879EA2FD303E869C2E65C9 /* Pods_GQPaymentIOSSDKNative_Tests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,11 +28,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		111C2BEF0D38F7A1C8F6EF57 /* Pods-GQPaymentIOSSDKNative_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GQPaymentIOSSDKNative_Tests.debug.xcconfig"; path = "Target Support Files/Pods-GQPaymentIOSSDKNative_Tests/Pods-GQPaymentIOSSDKNative_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		2312A381CCD562C7F2328629 /* Pods-GQPaymentIOSSDKNative_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GQPaymentIOSSDKNative_Example.release.xcconfig"; path = "Target Support Files/Pods-GQPaymentIOSSDKNative_Example/Pods-GQPaymentIOSSDKNative_Example.release.xcconfig"; sourceTree = "<group>"; };
+		27689CE291059FE0266E35B4 /* Pods-GQPaymentIOSSDKNative_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GQPaymentIOSSDKNative_Tests.release.xcconfig"; path = "Target Support Files/Pods-GQPaymentIOSSDKNative_Tests/Pods-GQPaymentIOSSDKNative_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		2F04E2B96C5B543DF5C02FE7 /* Pods_GQPaymentIOSSDKNative_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GQPaymentIOSSDKNative_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		49A6B7C61F889ADACB2335B2 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
-		52772FE579A2215E5D074A30 /* Pods-GQPaymentIOSSDKNative_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GQPaymentIOSSDKNative_Example.debug.xcconfig"; path = "Target Support Files/Pods-GQPaymentIOSSDKNative_Example/Pods-GQPaymentIOSSDKNative_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		5620753DA51D52234140D02E /* Pods-GQPaymentIOSSDKNative_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GQPaymentIOSSDKNative_Tests.release.xcconfig"; path = "Target Support Files/Pods-GQPaymentIOSSDKNative_Tests/Pods-GQPaymentIOSSDKNative_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		58805A8AF183A56193EA1A70 /* Pods-GQPaymentIOSSDKNative_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GQPaymentIOSSDKNative_Example.release.xcconfig"; path = "Target Support Files/Pods-GQPaymentIOSSDKNative_Example/Pods-GQPaymentIOSSDKNative_Example.release.xcconfig"; sourceTree = "<group>"; };
+		5A54CB13FF70998F511E12C6 /* Pods-GQPaymentIOSSDKNative_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GQPaymentIOSSDKNative_Example.debug.xcconfig"; path = "Target Support Files/Pods-GQPaymentIOSSDKNative_Example/Pods-GQPaymentIOSSDKNative_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* GQPaymentIOSSDKNative_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GQPaymentIOSSDKNative_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACD51AFB9204008FA782 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -43,10 +43,10 @@
 		607FACE51AFB9204008FA782 /* GQPaymentIOSSDKNative_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GQPaymentIOSSDKNative_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
-		B2879EA2FD303E869C2E65C9 /* Pods_GQPaymentIOSSDKNative_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GQPaymentIOSSDKNative_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		624F77B93F2FF155E1D54B4A /* Pods_GQPaymentIOSSDKNative_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GQPaymentIOSSDKNative_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7668CCA89A62E9CEEA71C8A /* GQPaymentIOSSDKNative.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = GQPaymentIOSSDKNative.podspec; path = ../GQPaymentIOSSDKNative.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		CD423FCA609C87A32095FF46 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
-		F65AA910D9481E62679D64D3 /* Pods_GQPaymentIOSSDKNative_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GQPaymentIOSSDKNative_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E0C96092F71FB245C1384700 /* Pods-GQPaymentIOSSDKNative_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GQPaymentIOSSDKNative_Tests.debug.xcconfig"; path = "Target Support Files/Pods-GQPaymentIOSSDKNative_Tests/Pods-GQPaymentIOSSDKNative_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,7 +54,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				26476C2CB068F5EE7379745C /* Pods_GQPaymentIOSSDKNative_Example.framework in Frameworks */,
+				3883685DE2408C1EE235D27A /* Pods_GQPaymentIOSSDKNative_Example.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -62,22 +62,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C62910AC330356159FCEEDC2 /* Pods_GQPaymentIOSSDKNative_Tests.framework in Frameworks */,
+				3404631E959C26E5727C1744 /* Pods_GQPaymentIOSSDKNative_Tests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		049D7A0923C180A115F6AE2E /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				F65AA910D9481E62679D64D3 /* Pods_GQPaymentIOSSDKNative_Example.framework */,
-				B2879EA2FD303E869C2E65C9 /* Pods_GQPaymentIOSSDKNative_Tests.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		607FACC71AFB9204008FA782 = {
 			isa = PBXGroup;
 			children = (
@@ -86,7 +77,7 @@
 				607FACE81AFB9204008FA782 /* Tests */,
 				607FACD11AFB9204008FA782 /* Products */,
 				D66732DA96D6A7F843C09FC5 /* Pods */,
-				049D7A0923C180A115F6AE2E /* Frameworks */,
+				F3FC9B4D47B598C061BD438B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -151,12 +142,21 @@
 		D66732DA96D6A7F843C09FC5 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				52772FE579A2215E5D074A30 /* Pods-GQPaymentIOSSDKNative_Example.debug.xcconfig */,
-				2312A381CCD562C7F2328629 /* Pods-GQPaymentIOSSDKNative_Example.release.xcconfig */,
-				111C2BEF0D38F7A1C8F6EF57 /* Pods-GQPaymentIOSSDKNative_Tests.debug.xcconfig */,
-				5620753DA51D52234140D02E /* Pods-GQPaymentIOSSDKNative_Tests.release.xcconfig */,
+				5A54CB13FF70998F511E12C6 /* Pods-GQPaymentIOSSDKNative_Example.debug.xcconfig */,
+				58805A8AF183A56193EA1A70 /* Pods-GQPaymentIOSSDKNative_Example.release.xcconfig */,
+				E0C96092F71FB245C1384700 /* Pods-GQPaymentIOSSDKNative_Tests.debug.xcconfig */,
+				27689CE291059FE0266E35B4 /* Pods-GQPaymentIOSSDKNative_Tests.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		F3FC9B4D47B598C061BD438B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				624F77B93F2FF155E1D54B4A /* Pods_GQPaymentIOSSDKNative_Example.framework */,
+				2F04E2B96C5B543DF5C02FE7 /* Pods_GQPaymentIOSSDKNative_Tests.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -166,11 +166,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 607FACEF1AFB9204008FA782 /* Build configuration list for PBXNativeTarget "GQPaymentIOSSDKNative_Example" */;
 			buildPhases = (
-				46F156D2317C753DA7B1CB42 /* [CP] Check Pods Manifest.lock */,
+				3A023500D6BAF8A4DB5733AD /* [CP] Check Pods Manifest.lock */,
 				607FACCC1AFB9204008FA782 /* Sources */,
 				607FACCD1AFB9204008FA782 /* Frameworks */,
 				607FACCE1AFB9204008FA782 /* Resources */,
-				F9C24DEADADC190266023B4E /* [CP] Embed Pods Frameworks */,
+				DBF8A1AFF438654FB9699BC6 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -185,7 +185,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 607FACF21AFB9204008FA782 /* Build configuration list for PBXNativeTarget "GQPaymentIOSSDKNative_Tests" */;
 			buildPhases = (
-				041A8111A34552AF7F09D1CD /* [CP] Check Pods Manifest.lock */,
+				B74997CB5133056E7B78C53B /* [CP] Check Pods Manifest.lock */,
 				607FACE11AFB9204008FA782 /* Sources */,
 				607FACE21AFB9204008FA782 /* Frameworks */,
 				607FACE31AFB9204008FA782 /* Resources */,
@@ -261,29 +261,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		041A8111A34552AF7F09D1CD /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-GQPaymentIOSSDKNative_Tests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		46F156D2317C753DA7B1CB42 /* [CP] Check Pods Manifest.lock */ = {
+		3A023500D6BAF8A4DB5733AD /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -305,7 +283,29 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		F9C24DEADADC190266023B4E /* [CP] Embed Pods Frameworks */ = {
+		B74997CB5133056E7B78C53B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GQPaymentIOSSDKNative_Tests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DBF8A1AFF438654FB9699BC6 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -488,7 +488,7 @@
 		};
 		607FACF01AFB9204008FA782 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 52772FE579A2215E5D074A30 /* Pods-GQPaymentIOSSDKNative_Example.debug.xcconfig */;
+			baseConfigurationReference = 5A54CB13FF70998F511E12C6 /* Pods-GQPaymentIOSSDKNative_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = GQPaymentIOSSDKNative/Info.plist;
@@ -504,7 +504,7 @@
 		};
 		607FACF11AFB9204008FA782 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2312A381CCD562C7F2328629 /* Pods-GQPaymentIOSSDKNative_Example.release.xcconfig */;
+			baseConfigurationReference = 58805A8AF183A56193EA1A70 /* Pods-GQPaymentIOSSDKNative_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = GQPaymentIOSSDKNative/Info.plist;
@@ -520,7 +520,7 @@
 		};
 		607FACF31AFB9204008FA782 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 111C2BEF0D38F7A1C8F6EF57 /* Pods-GQPaymentIOSSDKNative_Tests.debug.xcconfig */;
+			baseConfigurationReference = E0C96092F71FB245C1384700 /* Pods-GQPaymentIOSSDKNative_Tests.debug.xcconfig */;
 			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
@@ -542,7 +542,7 @@
 		};
 		607FACF41AFB9204008FA782 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5620753DA51D52234140D02E /* Pods-GQPaymentIOSSDKNative_Tests.release.xcconfig */;
+			baseConfigurationReference = 27689CE291059FE0266E35B4 /* Pods-GQPaymentIOSSDKNative_Tests.release.xcconfig */;
 			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
