@@ -15,10 +15,13 @@
                 <outlet property="mobileNumberLabel" destination="kE0-5U-KUY" id="B5i-30-67U"/>
                 <outlet property="mobileTextField" destination="lm0-cc-PKa" id="0Ry-uh-Br5"/>
                 <outlet property="noteLabel" destination="HUp-Et-piq" id="5hs-A9-zjE"/>
+                <outlet property="noteOTPStackView" destination="fJ3-dN-Dby" id="Tpj-cr-X0S"/>
                 <outlet property="otpTextField" destination="HTx-OQ-u0y" id="SHw-Rr-bwj"/>
                 <outlet property="resendOTPLabel" destination="UvH-4y-cVt" id="twK-EO-LMe"/>
+                <outlet property="resentOTPStackView" destination="LCS-kW-4sn" id="sXD-em-tVH"/>
                 <outlet property="scrollView" destination="oh5-lt-UC4" id="afx-fA-fMr"/>
                 <outlet property="supportFooterView" destination="ofi-BW-sSX" id="lqX-pa-H8q"/>
+                <outlet property="timerLabel" destination="Rkj-IZ-Fyr" id="cWC-jz-mpv"/>
                 <outlet property="titleLabel" destination="ZUp-Yr-Fde" id="DTu-fC-7Ly"/>
                 <outlet property="verifyOTPButton" destination="7Hp-xW-IfG" id="jrI-qX-LGG"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="kLQ-4N-zda"/>
@@ -78,32 +81,43 @@
                                                                 </stackView>
                                                             </subviews>
                                                         </stackView>
-                                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="32" translatesAutoresizingMaskIntoConstraints="NO" id="fJ3-dN-Dby">
+                                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="32" translatesAutoresizingMaskIntoConstraints="NO" id="fJ3-dN-Dby">
                                                             <rect key="frame" x="0.0" y="178.33333333333337" width="362" height="95"/>
                                                             <subviews>
                                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="Lu8-jw-muL">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="362" height="42.666666666666664"/>
+                                                                    <rect key="frame" x="160.33333333333334" y="0.0" width="41.333333333333343" height="42.666666666666664"/>
                                                                     <subviews>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HUp-Et-piq">
-                                                                            <rect key="frame" x="0.0" y="0.0" width="362" height="20.333333333333332"/>
+                                                                            <rect key="frame" x="0.0" y="0.0" width="41.333333333333336" height="20.333333333333332"/>
                                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                             <nil key="textColor"/>
                                                                             <nil key="highlightedColor"/>
                                                                         </label>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kE0-5U-KUY">
-                                                                            <rect key="frame" x="0.0" y="22.333333333333258" width="362" height="20.333333333333329"/>
+                                                                            <rect key="frame" x="0.0" y="22.333333333333258" width="41.333333333333336" height="20.333333333333329"/>
                                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                             <nil key="textColor"/>
                                                                             <nil key="highlightedColor"/>
                                                                         </label>
                                                                     </subviews>
                                                                 </stackView>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UvH-4y-cVt">
-                                                                    <rect key="frame" x="0.0" y="74.666666666666629" width="362" height="20.333333333333329"/>
-                                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                                    <nil key="textColor"/>
-                                                                    <nil key="highlightedColor"/>
-                                                                </label>
+                                                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="LCS-kW-4sn">
+                                                                    <rect key="frame" x="135.66666666666669" y="74.666666666666629" width="90.666666666666686" height="20.333333333333329"/>
+                                                                    <subviews>
+                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UvH-4y-cVt">
+                                                                            <rect key="frame" x="0.0" y="0.0" width="41.333333333333336" height="20.333333333333332"/>
+                                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                            <nil key="textColor"/>
+                                                                            <nil key="highlightedColor"/>
+                                                                        </label>
+                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rkj-IZ-Fyr" customClass="GQTimerLabel" customModule="GQPaymentIOSSDKNative" customModuleProvider="target">
+                                                                            <rect key="frame" x="49.333333333333314" y="0.0" width="41.333333333333343" height="20.333333333333332"/>
+                                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                            <nil key="textColor"/>
+                                                                            <nil key="highlightedColor"/>
+                                                                        </label>
+                                                                    </subviews>
+                                                                </stackView>
                                                             </subviews>
                                                         </stackView>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="7Hp-xW-IfG" customClass="GQButton" customModule="GQPaymentIOSSDKNative" customModuleProvider="target">

@@ -138,6 +138,7 @@
 		962403BF7B5FC33C167EB80DF704590C /* GQTextField.xib in Sources */ = {isa = PBXBuildFile; fileRef = BC8DEF4DE0194D0C1A55F756D498236D /* GQTextField.xib */; };
 		9BF888FF6B82A38FB91797BA83624516 /* NetworkType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42363E32A0FEBD8AE2C5F560F556F98C /* NetworkType.swift */; };
 		A374EAD72B9068360009E1C1 /* GQButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A374EAD62B9068360009E1C1 /* GQButton.swift */; };
+		A374EADA2B9085300009E1C1 /* GQTimerLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A374EAD92B9085300009E1C1 /* GQTimerLabel.swift */; };
 		A90409A1E4E43862903142A45B845B78 /* UIColor+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046F103DC881749AC9A3EA91F46370F2 /* UIColor+Ext.swift */; };
 		A9CEDFFF45ED3146A7C1FF49FBAEF964 /* Pods-GQPaymentIOSSDKNative_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 7B9D5435220E6B3A6AD2F5DC7EF14B6B /* Pods-GQPaymentIOSSDKNative_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AE4FB23BDE335C3F34D04873C0D2225F /* GQGILEView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F16ADC0888C7B5C221F67034508F27A9 /* GQGILEView.swift */; };
@@ -360,6 +361,7 @@
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9E80B926FC38B160012D17F0AC24395E /* VerifyOTPViewModel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = VerifyOTPViewModel.swift; sourceTree = "<group>"; };
 		A374EAD62B9068360009E1C1 /* GQButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GQButton.swift; sourceTree = "<group>"; };
+		A374EAD92B9085300009E1C1 /* GQTimerLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GQTimerLabel.swift; sourceTree = "<group>"; };
 		A3CB0691ED8DD9537D4C58FE6033C61C /* Poppins-Regular.ttf */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file; path = "Poppins-Regular.ttf"; sourceTree = "<group>"; };
 		A431B1F5CEC35031A8BA21797C22B232 /* GQPayment.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = GQPayment.swift; sourceTree = "<group>"; };
 		A719508C6E19E20D9A13C80B98477DCE /* Pods-GQPaymentIOSSDKNative_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-GQPaymentIOSSDKNative_Example-frameworks.sh"; sourceTree = "<group>"; };
@@ -806,6 +808,7 @@
 		9E5DB2EEF1B99CCCBCF39E89365A6BCD /* CommonViews */ = {
 			isa = PBXGroup;
 			children = (
+				A374EAD82B90850F0009E1C1 /* GQTimerLabel */,
 				A374EAD52B9068060009E1C1 /* GQButton */,
 				AE2D1CA4A5B6A17B3EF03584DECD4CA2 /* GQGILEView */,
 				7AD537104D196F72CA18075EA4FE99F4 /* GQMobileTextField */,
@@ -824,6 +827,14 @@
 				A374EAD62B9068360009E1C1 /* GQButton.swift */,
 			);
 			path = GQButton;
+			sourceTree = "<group>";
+		};
+		A374EAD82B90850F0009E1C1 /* GQTimerLabel */ = {
+			isa = PBXGroup;
+			children = (
+				A374EAD92B9085300009E1C1 /* GQTimerLabel.swift */,
+			);
+			path = GQTimerLabel;
 			sourceTree = "<group>";
 		};
 		A6C173C93E52E30859AA07DB054DE271 /* Support Files */ = {
@@ -1394,6 +1405,7 @@
 				599DACE224E467155DC10B894D83EE75 /* PaymentTagCollectionViewCell.xib in Sources */,
 				C8EE290BABE7FCEC831D7A51431ACCA6 /* ProceedButtonCollectionReusableView.swift in Sources */,
 				12AFC21473CD457DBF19EAACE7DD474D /* ProceedButtonCollectionReusableView.xib in Sources */,
+				A374EADA2B9085300009E1C1 /* GQTimerLabel.swift in Sources */,
 				A90409A1E4E43862903142A45B845B78 /* UIColor+Ext.swift in Sources */,
 				66FB30AF5676735D4E5471C928997962 /* UIFont+Ext.swift in Sources */,
 				64CD7FE6205098213BDB8E14E568DD5B /* UIImage+Ext.swift in Sources */,

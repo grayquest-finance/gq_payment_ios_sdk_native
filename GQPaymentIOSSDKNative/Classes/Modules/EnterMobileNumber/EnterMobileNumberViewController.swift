@@ -13,6 +13,9 @@ class EnterMobileNumberViewController: GQBaseViewController {
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var gileView: GQGILEView!
     @IBOutlet weak var supportFooterView: GQSupportFooterView!
+    
+    @IBOutlet weak var noteOTPStackView: UIStackView!
+    @IBOutlet weak var resentOTPStackView: UIStackView!
         
     @IBOutlet weak var mobileTextField: GQMobileTextField!
     @IBOutlet weak var otpTextField: GQTextField!
@@ -21,7 +24,8 @@ class EnterMobileNumberViewController: GQBaseViewController {
     @IBOutlet weak var noteLabel: UILabel!
     @IBOutlet weak var mobileNumberLabel: UILabel!
     @IBOutlet weak var resendOTPLabel: UILabel!
-
+    @IBOutlet weak var timerLabel: GQTimerLabel!
+    
     @IBOutlet weak var verifyOTPButton: GQButton!
     
 //  MARK: Variables
@@ -56,6 +60,7 @@ class EnterMobileNumberViewController: GQBaseViewController {
 
     private func setupUI() {
         setupLabels()
+        setupTimerLabel()
         setupButtons()
         
         mobileTextField.delegate = self
@@ -90,9 +95,9 @@ class EnterMobileNumberViewController: GQBaseViewController {
         
         resendOTPLabel.textColor = .gray4D4B5A
         resendOTPLabel.font = .customFont(.dmSans, weight: .regular, size: 14)
-        resendOTPLabel.numberOfLines = 0
+        resendOTPLabel.numberOfLines = 1
         resendOTPLabel.lineBreakMode = .byWordWrapping
-        resendOTPLabel.textAlignment = .center
+        resendOTPLabel.textAlignment = .right
         
         mobileNumberLabel.textColor = .black4D4B5A
         mobileNumberLabel.font = .customFont(.dmSans, weight: .bold, size: 14)
@@ -103,7 +108,19 @@ class EnterMobileNumberViewController: GQBaseViewController {
         titleLabel.text = "Enter your Mobile Number"
         otpTextField.title = "Enter OTP"
         
-        resendOTPLabel.text = "Did not receive OTP? Resend in 00:00"
+        resendOTPLabel.text = "Did not receive OTP? Resend in"
+    }
+    
+    private func setupTimerLabel() {
+        timerLabel.textColor = .black26262D
+        timerLabel.font = .customFont(.dmSans, weight: .bold, size: 12)
+        timerLabel.numberOfLines = 1
+        timerLabel.lineBreakMode = .byWordWrapping
+        timerLabel.textAlignment = .center
+        timerLabel.backgroundColor = .purpleDCD6FF
+        timerLabel.set(cornerRadius: 0.1)
+        timerLabel.initialTime = 180 //seconds
+        timerLabel.delegate = self
     }
     
     private func setupInitialStateForNoteLabel() {
@@ -133,9 +150,12 @@ class EnterMobileNumberViewController: GQBaseViewController {
     private func setOTPState(active: Bool) {
         Task { @MainActor in
             active ? self.setupOTPStateForNoteLabel() : self.setupInitialStateForNoteLabel()
+            active ? self.timerLabel.startTimer() : self.timerLabel.resetTimer()
+            
             let isHidden = !active
+            self.noteOTPStackView.alignment = active ? .center : .fill
             self.otpTextField.isHidden = isHidden
-            self.resendOTPLabel.isHidden = isHidden
+            self.resentOTPStackView.isHidden = isHidden
             self.mobileNumberLabel.isHidden = isHidden
             self.verifyOTPButton.isHidden = isHidden
         }
@@ -170,6 +190,14 @@ extension EnterMobileNumberViewController: GQTextFieldDelegate {
             textField.assignErrorState(message: "Incorrect OTP")
             verifyOTPButton.setDisabled()
         }
+    }
+    
+}
+
+extension EnterMobileNumberViewController: GQTimerLabelDelegate {
+    
+    func timerCountdownCompleted(_ timer: GQTimerLabel) {
+        print("Time's Up!!!")
     }
     
 }
