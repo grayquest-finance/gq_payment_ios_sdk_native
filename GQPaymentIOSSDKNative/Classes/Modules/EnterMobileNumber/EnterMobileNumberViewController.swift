@@ -66,6 +66,7 @@ class EnterMobileNumberViewController: GQBaseViewController {
         mobileTextField.delegate = self
         otpTextField.delegate = self
         otpTextField.isTitleEnabled = false
+        otpTextField.onlyDigits = true
 
         setOTPState(active: false)
     }
@@ -149,8 +150,15 @@ class EnterMobileNumberViewController: GQBaseViewController {
     
     private func setOTPState(active: Bool) {
         Task { @MainActor in
-            active ? self.setupOTPStateForNoteLabel() : self.setupInitialStateForNoteLabel()
-            active ? self.timerLabel.startTimer() : self.timerLabel.resetTimer()
+
+            if active {
+                self.setupOTPStateForNoteLabel()
+                self.timerLabel.startTimer()
+                self.otpTextField.clear()
+            } else {
+                self.setupInitialStateForNoteLabel()
+                self.timerLabel.resetTimer()
+            }
             
             let isHidden = !active
             self.noteOTPStackView.alignment = active ? .center : .fill

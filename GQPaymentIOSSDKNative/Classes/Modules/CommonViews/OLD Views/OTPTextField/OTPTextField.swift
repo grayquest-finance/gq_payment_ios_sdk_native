@@ -28,7 +28,7 @@ class OTPTextField: UITextField {
     }
     
     override public func deleteBackward() {
-        self.text = ""
+        self.text = .empty
         self.previousTextField?.becomeFirstResponder()
     }
 }

@@ -27,7 +27,7 @@ final class NetworkService {
             case .get:
                 do {
                     if let dictionary = try Encoder.shared.serialize(data: parameters) {
-                        var components = URLComponents(string: request.url?.absoluteString ?? "")
+                        var components = URLComponents(string: request.url?.absoluteString ?? .empty)
                         var queryItems = components?.queryItems ?? []
                         for (key, value) in dictionary {
                             let query = URLQueryItem(name: key, value: "\(value)")

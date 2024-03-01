@@ -22,7 +22,7 @@ class MobileOTPView: UIView {
     }
     
     var getOTP: String? {
-        let otp = textfields.reduce("", { $0 + ($1.text ?? "") })
+        let otp = textfields.reduce(String.empty, { $0 + ($1.text ?? .empty) })
         
         if otp.isEmpty {
             return nil

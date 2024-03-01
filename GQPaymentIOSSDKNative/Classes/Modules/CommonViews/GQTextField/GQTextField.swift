@@ -42,6 +42,16 @@ class GQTextField: UIView {
     
     private var state: GQTextField.State = .inactive
     
+    public var onlyDigits: Bool = false {
+        didSet {
+            if onlyDigits {
+                self.textField.keyboardType = .numberPad
+            } else {
+                self.textField.keyboardType = .default
+            }
+        }
+    }
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupView()
@@ -131,6 +141,12 @@ class GQTextField: UIView {
         }
     }
     
+    public func clear() {
+        Task { @MainActor in
+            self.textField.text = .empty
+        }
+    }
+    
     @IBAction func textFieldOnChangeText(_ sender: UITextField) {
         delegate?.textField(self, didChange: self.text)
     }
@@ -164,6 +180,17 @@ extension GQTextField: UITextFieldDelegate {
         if self.state != .error {
             textfieldInactiveState()
         }
+    }
+    
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        if onlyDigits {
+            if string.isOnlyDigits {
+                return true
+            } else {
+                return false
+            }
+        }
+        return true
     }
 
 }

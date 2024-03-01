@@ -7,11 +7,6 @@
 
 import UIKit
 
-@MainActor protocol GQMobileTextFieldDelegate {
-    func textFieldDidClickSendOTP(_ textField: GQMobileTextField)
-    func textFieldDidClickChange(_ textField: GQMobileTextField)
-}
-
 class GQMobileTextField: UIView {
     
     enum State {
@@ -40,7 +35,7 @@ class GQMobileTextField: UIView {
     
     public var text: String? {
         // Need to check format of Mobile Number
-        return  (textFieldCode.text ?? "") + (textField.text ?? "")
+        return  (textFieldCode.text ?? .empty) + (textField.text ?? .empty)
     }
     
     public var delegate: (any GQMobileTextFieldDelegate)?
@@ -71,6 +66,7 @@ class GQMobileTextField: UIView {
         self.textFieldButton.set(cornerRadius: cornerRadius)
         
         self.textField.delegate = self
+        self.textField.keyboardType = .phonePad
         self.textFieldIcon.image = .getImage(icon: .phoneIcon)
         
         setupStaticText()
@@ -182,7 +178,7 @@ extension GQMobileTextField: UITextFieldDelegate {
     }
     
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-        guard string.isEmpty || (textField.text?.count ?? 0) < 10 else { return false }
+        guard string.isEmpty || (textField.text?.count ?? 0) < 10, string.isOnlyDigits else { return false }
         return true
     }
     
