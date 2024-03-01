@@ -12,8 +12,7 @@ extension String {
     internal static let empty = ""
     
     var isOnlyDigits: Bool {
-        // Need to use regex.
-        return self.allSatisfy{ $0.isNumber }
+        return GQValidationService.onlyDigits(text: self)
     }
     
 }

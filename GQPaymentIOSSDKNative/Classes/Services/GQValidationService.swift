@@ -19,4 +19,11 @@ final class GQValidationService {
         return result
     }
     
+    static func onlyDigits(text: String?) -> Bool {
+        let digitsRegex = #"^\d+$"#
+        let digitsTest = NSPredicate(format: "SELF MATCHES %@", digitsRegex)
+        let result = digitsTest.evaluate(with: text)
+        return result
+    }
+    
 }

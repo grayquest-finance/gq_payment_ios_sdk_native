@@ -183,6 +183,8 @@ extension GQTextField: UITextFieldDelegate {
     }
     
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        if string.isEmpty { return true }
+        
         if onlyDigits {
             if string.isOnlyDigits {
                 return true
@@ -190,6 +192,7 @@ extension GQTextField: UITextFieldDelegate {
                 return false
             }
         }
+        
         return true
     }
 
