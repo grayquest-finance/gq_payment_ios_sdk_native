@@ -178,7 +178,8 @@ extension GQMobileTextField: UITextFieldDelegate {
     }
     
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-        guard string.isEmpty || (textField.text?.count ?? 0) < 10, string.isOnlyDigits else { return false }
+        if string.isEmpty { return true }
+        guard (textField.text?.count ?? 0) < 10, string.isOnlyDigits else { return false }
         return true
     }
     
