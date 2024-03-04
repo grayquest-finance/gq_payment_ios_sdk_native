@@ -17,6 +17,9 @@ public final class GQPayment {
         return Bundle(for: Self.self)
     }
     
+//    Tells the Log class that the SDK ca print/ log data. True to print data.
+    internal static var debugMode: Bool = true
+    
 //    Delegate which will receive payment callback.
     public var delegate: (any GQPaymentDelegate)?
     

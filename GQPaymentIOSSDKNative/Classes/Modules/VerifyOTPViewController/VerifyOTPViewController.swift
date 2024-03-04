@@ -103,8 +103,6 @@ class VerifyOTPViewController: GQBaseViewController {
     @IBAction func clickedVerifyOTPButton(_ sender: UIButton) {
         
         if mobileOTPView.isCompleted {
-            print(mobileOTPView.getOTP ?? "No OTP")
-            
             Task { @MainActor in
                 let paymentMethodsVM = PaymentMethodsViewModel()
                 let paymentMethodsVC = PaymentMethodsViewController(viewModel: paymentMethodsVM)
@@ -112,7 +110,7 @@ class VerifyOTPViewController: GQBaseViewController {
             }
             
         } else {
-            print("Please complete OTP incorret or Invalid!!!")
+            GQLogger.shared.alert("Please complete OTP incorret or Invalid!!!")
         }
         
     }

@@ -42,6 +42,9 @@ Pod::Spec.new do |s|
                  "GQPaymentIOSSDKNative/Assets/Fonts/**/*.ttf"
                 ]
 
+#  s.static_framework = true
+#  s.vendored_frameworks = 'Pod/GQPaymentIOSSDKNative.xcframework'
+                
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
   # s.dependency 'AFNetworking', '~> 2.3'

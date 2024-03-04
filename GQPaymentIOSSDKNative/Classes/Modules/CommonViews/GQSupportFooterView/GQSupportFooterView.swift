@@ -61,8 +61,8 @@ class GQSupportFooterView: UIView {
         
         setupIcons()
         
-        titleLabel.text = "Facing issues here?"
-        descriptionLabel.text = "Please contact our support team by clicking here"
+        titleLabel.text = GQStaticText.facingIssues
+        descriptionLabel.text = GQStaticText.contactSupport
     }
     
     private func setupIcons() {

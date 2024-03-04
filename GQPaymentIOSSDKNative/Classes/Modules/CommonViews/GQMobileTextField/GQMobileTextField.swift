@@ -17,9 +17,9 @@ class GQMobileTextField: UIView {
         var title: String {
             switch self {
                 case .inactive, .active:
-                    return "Send OTP"
+                    return GQStaticText.sendOTP
                 case .completed:
-                    return "Change"
+                    return GQStaticText.change
             }
         }
     }
@@ -88,11 +88,11 @@ class GQMobileTextField: UIView {
         
         textFieldButton.titleLabel?.font = .customFont(.dmSans, weight: .bold, size: 14)
         
-        textField.attributedPlaceholder = NSAttributedString(string: "Enter mobile number",
+        textField.attributedPlaceholder = NSAttributedString(string: GQStaticText.mobileNumberPlaceholder,
                                     font: .customFont(.dmSans, weight: .regular, size: 14),
                                                              color: .gray4D4B5A)
         
-        textFieldCode.text = "+91 -"
+        textFieldCode.text = GQStaticText.phoneCode
     }
     
     private func inactiveOTPState() {

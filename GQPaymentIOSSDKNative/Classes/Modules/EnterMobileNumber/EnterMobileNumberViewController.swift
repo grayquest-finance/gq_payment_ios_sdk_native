@@ -75,7 +75,7 @@ class EnterMobileNumberViewController: GQBaseViewController {
         verifyOTPButton.setTitle(with: .customFont(.poppins, weight: .medium, size: 16))
         verifyOTPButton.disabledStateBackgroundColor = .white
         verifyOTPButton.enabledStateBackgroundColor = .yellowFFCA00
-        verifyOTPButton.setTitle("VERIFY OTP", for: .normal)
+        verifyOTPButton.setTitle(GQStaticText.verifyOTP.capitalized, for: .normal)
         verifyOTPButton.setTint(color: .black26262D)
         verifyOTPButton.setImage(.getImage(icon: .rightArrow), placement: .trailing)
         verifyOTPButton.setDisabled()
@@ -106,10 +106,10 @@ class EnterMobileNumberViewController: GQBaseViewController {
         mobileNumberLabel.lineBreakMode = .byWordWrapping
         mobileNumberLabel.textAlignment = .center
                 
-        titleLabel.text = "Enter your Mobile Number"
-        otpTextField.title = "Enter OTP"
+        titleLabel.text = GQStaticText.enterYourMobileNumber
+        otpTextField.title = GQStaticText.enterOTP
         
-        resendOTPLabel.text = "Did not receive OTP? Resend in"
+        resendOTPLabel.text = GQStaticText.resendOTP
     }
     
     private func setupTimerLabel() {
@@ -126,10 +126,10 @@ class EnterMobileNumberViewController: GQBaseViewController {
     
     private func setupInitialStateForNoteLabel() {
         Task { @MainActor in
-            let noteTitle = NSAttributedString(string: "NOTE: ",
+            let noteTitle = NSAttributedString(string: GQStaticText.note,
                                           font: .customFont(.dmSans, weight: .bold, size: 14),
                                           color: .green40850A)
-            let noteDescription = NSAttributedString(string: "Please enter the mobile number which you generally use for your banking purposes.",
+            let noteDescription = NSAttributedString(string: GQStaticText.mobileNumberNote,
                                                      font: .customFont(.dmSans, weight: .regular, size: 14),
                                                      color: .gray4D4B5A)
             self.noteLabel.attributedText = noteTitle.addAttributedString(noteDescription)
@@ -139,12 +139,12 @@ class EnterMobileNumberViewController: GQBaseViewController {
     
     private func setupOTPStateForNoteLabel() {
         Task { @MainActor in
-            self.noteLabel.text = "We have sent a 4-digit OTP on your mobile number"
+            self.noteLabel.text = GQStaticText.sentOTPMesssage
             self.noteLabel.font = .customFont(.dmSans, weight: .regular, size: 14)
             self.noteLabel.textColor = .black4D4B5A
             self.noteLabel.textAlignment = .center
             
-            self.mobileNumberLabel.text = self.mobileTextField.text ?? "N/A"
+            self.mobileNumberLabel.text = self.mobileTextField.text ?? GQStaticText.notknown
         }
     }
     
@@ -160,8 +160,10 @@ class EnterMobileNumberViewController: GQBaseViewController {
                 self.timerLabel.resetTimer()
             }
             
-            let isHidden = !active
             self.noteOTPStackView.alignment = active ? .center : .fill
+            self.verifyOTPButton.setDisabled()
+            
+            let isHidden = !active
             self.otpTextField.isHidden = isHidden
             self.resentOTPStackView.isHidden = isHidden
             self.mobileNumberLabel.isHidden = isHidden
@@ -170,7 +172,7 @@ class EnterMobileNumberViewController: GQBaseViewController {
     }
     
     @IBAction func clickedVerifyOTPButton(_ sender: UIButton) {
-        print(otpTextField.text ?? "No OTP")
+        GQLogger.shared.log(otpTextField.text ?? "No OTP")
     }
     
 }
@@ -195,7 +197,7 @@ extension EnterMobileNumberViewController: GQTextFieldDelegate {
             textField.resignErrorState()
             verifyOTPButton.setEnabled()
         } else {
-            textField.assignErrorState(message: "Incorrect OTP")
+            textField.assignErrorState(message: GQStaticText.incorrectOTP)
             verifyOTPButton.setDisabled()
         }
     }
@@ -205,7 +207,7 @@ extension EnterMobileNumberViewController: GQTextFieldDelegate {
 extension EnterMobileNumberViewController: GQTimerLabelDelegate {
     
     func timerCountdownCompleted(_ timer: GQTimerLabel) {
-        print("Time's Up!!!")
+        GQLogger.shared.log("Time's Up!!!")
     }
     
 }
