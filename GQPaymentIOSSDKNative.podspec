@@ -31,19 +31,19 @@ Pod::Spec.new do |s|
   s.ios.deployment_target = '15.0'
   s.swift_versions = "5.0"
 
-  s.source_files = 'GQPaymentIOSSDKNative/Classes/**/*'
+#  s.source_files = 'GQPaymentIOSSDKNative/Classes/**/*'
   s.dependency 'CashfreePG', '~> 2.0.3'
   s.dependency 'razorpay-pod', '1.2.5'
   s.dependency 'Easebuzz', '~> 1.1'
   
   s.pod_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
   
-  s.resources = ["GQPaymentIOSSDKNative/Assets/*.xcassets",
-                 "GQPaymentIOSSDKNative/Assets/Fonts/**/*.ttf"
-                ]
+#  s.resources = ["GQPaymentIOSSDKNative/Assets/*.xcassets",
+#                 "GQPaymentIOSSDKNative/Assets/Fonts/**/*.ttf"
+#                ]
 
-#  s.static_framework = true
-#  s.vendored_frameworks = 'Pod/GQPaymentIOSSDKNative.xcframework'
+  s.vendored_frameworks = 'GQPaymentIOSSDKNative.xcframework'
+  s.exclude_files = 'BuildFramework.sh'
                 
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
