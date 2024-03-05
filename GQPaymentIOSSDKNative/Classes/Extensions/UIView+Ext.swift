@@ -35,7 +35,7 @@ extension UIView {
 //MARK: Use this function to load an XIB file with a class.
     internal func loadNib() {
         let name = String(describing: Self.self)
-        _ = UINib(nibName: name, bundle: GQPayment.bundle).instantiate(withOwner: self)
+        _ = UINib(nibName: name, bundle: GQPaymentSDK.bundle).instantiate(withOwner: self)
     }
     
 //MARK: Use this function to attach any `contentView` with a view whose XIB is loaded.

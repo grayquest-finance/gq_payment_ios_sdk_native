@@ -26,4 +26,8 @@ final class GQValidationService {
         return result
     }
     
+    static func containsAnyValidEnvironment(_ value: String) -> Bool {
+        let validEnvironments = ["test", "stage", "preprod", "live"]
+        return validEnvironments.contains(value.lowercased())
+    }
 }

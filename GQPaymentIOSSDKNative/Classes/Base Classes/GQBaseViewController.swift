@@ -7,7 +7,7 @@
 
 import UIKit
 
-class GQBaseViewController: UIViewController {
+public class GQBaseViewController: UIViewController {
     
     private weak var scrollViewToAdjust: UIScrollView?
     internal var isBackButtonEnabled: Bool = true
@@ -33,6 +33,14 @@ class GQBaseViewController: UIViewController {
     
     func setupCommonUI() {
         overrideUserInterfaceStyle = .light
+    }
+    
+    func showLoader() {
+        
+    }
+    
+    func hideLoader() {
+        
     }
     
     func setupBackAction() {

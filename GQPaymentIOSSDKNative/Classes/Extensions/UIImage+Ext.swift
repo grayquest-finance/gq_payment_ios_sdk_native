@@ -29,7 +29,7 @@ extension UIImage {
 //                                               bundle: GQPayment.bundle)
 //            ).withRenderingMode(renderingMode)
         return UIImage(named: icon.name,
-                       in: GQPayment.bundle,
+                       in: GQPaymentSDK.bundle,
                        compatibleWith: .none
         )?.withRenderingMode(renderingMode)
     }

@@ -32,7 +32,7 @@ class GQNavigationBar: UINavigationBar {
     }
     
     private func setupUI() {
-        self.contentView.backgroundColor = GQPayment.themeColor
+        self.contentView.backgroundColor = GQPaymentSDK.themeColor
     }
 
 }

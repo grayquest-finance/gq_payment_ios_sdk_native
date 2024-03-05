@@ -32,7 +32,7 @@ class EnterMobileNumberViewController: GQBaseViewController {
     private var viewModel: (any EnterMobileNumberViewModelType)?
     
     init(viewModel: some EnterMobileNumberViewModelType) {
-        super.init(nibName: "EnterMobileNumberViewController", bundle: GQPayment.bundle)
+        super.init(nibName: "EnterMobileNumberViewController", bundle: GQPaymentSDK.bundle)
         self.viewModel = viewModel
     }
     

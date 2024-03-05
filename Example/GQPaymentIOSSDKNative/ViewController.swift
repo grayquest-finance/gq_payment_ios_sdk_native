@@ -15,9 +15,32 @@ class ViewController: UIViewController {
     
     private var themeColor: UIColor = .red991F2C
     
+    private var configObject: [String: Any]?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        setupConfig()
+    }
+    
+    private func setupConfig() {
+        self.configObject = ["auth": ["client_secret_key": "a96dd7ea-7d4a-4772-92c3-ac481713be4a",
+                                      "gq_api_key": "b59bf799-2a82-4298-b901-09c512ea4aaa",
+                                      "client_id": "GQ-0d2ed24e-cc1f-400b-a4e3-7208c88b99b5"
+                                     ],
+                             "env": "test",
+                             "customer_number": "8425900023",
+                             "student_id": "demo_00023",
+                             "pp_config": ["slug": "masira-darvesh-gile"],
+                                        "fee_headers": ["Payable_fee_EMI": "12000",
+                                                        "Payable_fee_PG": "100",
+                                                        "Payable_fee_Auto_Debit": "10000"
+                                                       ]
+                            ]
     }
     
     private func setupUI() {
@@ -27,9 +50,10 @@ class ViewController: UIViewController {
     
     @IBAction func clickedOpenSDKButton(_ sender: UIButton) {
 //      MARK: Created Instance of GQPayment class and called open function.
-        let gqPayment = GQPayment(delegate: self)
-        gqPayment.setTheme(color: themeColor)
-        gqPayment.open(on: self)
+        DispatchQueue.main.async {
+            let gqPayment = GQPaymentSDK(clientData: self.configObject, delegate: self)
+            self.present(gqPayment, animated: true)
+        }
     }
     
 
@@ -37,15 +61,15 @@ class ViewController: UIViewController {
 
 //MARK: GQPayment Delegate functions to receive payment status.
 extension ViewController: GQPaymentDelegate {
-    func gqPayment(_ gqPayment: GQPaymentIOSSDKNative.GQPayment, onSuccess data: [String : Any]?) {
+    func gqSuccessResponse(data: [String : Any]?) {
         
     }
     
-    func gqPayment(_ gqPayment: GQPaymentIOSSDKNative.GQPayment, onFailure data: [String : Any]?, error: Error) {
+    func gqFailureResponse(data: [String : Any]?) {
         
     }
     
-    func gqPayment(_ gqPayment: GQPaymentIOSSDKNative.GQPayment, onCancel data: [String : Any]?) {
+    func gqCancelResponse(data: [String : Any]?) {
         
     }
     
