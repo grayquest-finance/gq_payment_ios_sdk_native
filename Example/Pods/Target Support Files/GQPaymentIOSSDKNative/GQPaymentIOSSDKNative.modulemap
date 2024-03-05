@@ -1,6 +1,0 @@
-framework module GQPaymentIOSSDKNative {
-  umbrella header "GQPaymentIOSSDKNative-umbrella.h"
-
-  export *
-  module * { export * }
-}

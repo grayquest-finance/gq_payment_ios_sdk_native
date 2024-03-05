@@ -1,0 +1,4176 @@
+{
+  "ABIRoot": {
+    "kind": "Root",
+    "name": "TopLevel",
+    "printedName": "TopLevel",
+    "children": [
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "GQPaymentIOSSDKNative",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "GQPaymentIOSSDKNative",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "GQPaymentIOSSDKNative",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "GQPaymentIOSSDKNative",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "GQPaymentIOSSDKNative",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "RegexBuilder",
+        "printedName": "RegexBuilder",
+        "declKind": "Import",
+        "moduleName": "GQPaymentIOSSDKNative"
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "GQPaymentIOSSDKNative",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "GQPaymentIOSSDKNative",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "GQPaymentIOSSDKNative",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "GQPaymentIOSSDKNative",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "GQPaymentIOSSDKNative",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "GQPaymentIOSSDKNative",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "OSLog",
+        "printedName": "OSLog",
+        "declKind": "Import",
+        "moduleName": "GQPaymentIOSSDKNative"
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "GQPaymentIOSSDKNative",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "GQPaymentIOSSDKNative",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "GQPaymentIOSSDKNative",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "GQPaymentIOSSDKNative",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "GQPayment",
+        "printedName": "GQPayment",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "themeColor",
+            "printedName": "themeColor",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "UIColor",
+                "printedName": "UIKit.UIColor",
+                "usr": "c:objc(cs)UIColor"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:21GQPaymentIOSSDKNative0A0C10themeColorSo7UIColorCvpZ",
+            "mangledName": "$s21GQPaymentIOSSDKNative0A0C10themeColorSo7UIColorCvpZ",
+            "moduleName": "GQPaymentIOSSDKNative",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "Final",
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UIColor",
+                    "printedName": "UIKit.UIColor",
+                    "usr": "c:objc(cs)UIColor"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:21GQPaymentIOSSDKNative0A0C10themeColorSo7UIColorCvgZ",
+                "mangledName": "$s21GQPaymentIOSSDKNative0A0C10themeColorSo7UIColorCvgZ",
+                "moduleName": "GQPaymentIOSSDKNative",
+                "static": true,
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UIColor",
+                    "printedName": "UIKit.UIColor",
+                    "usr": "c:objc(cs)UIColor"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:21GQPaymentIOSSDKNative0A0C10themeColorSo7UIColorCvsZ",
+                "mangledName": "$s21GQPaymentIOSSDKNative0A0C10themeColorSo7UIColorCvsZ",
+                "moduleName": "GQPaymentIOSSDKNative",
+                "static": true,
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:21GQPaymentIOSSDKNative0A0C10themeColorSo7UIColorCvMZ",
+                "mangledName": "$s21GQPaymentIOSSDKNative0A0C10themeColorSo7UIColorCvMZ",
+                "moduleName": "GQPaymentIOSSDKNative",
+                "static": true,
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "delegate",
+            "printedName": "delegate",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "GQPaymentIOSSDKNative.GQPaymentDelegate?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GQPaymentDelegate",
+                    "printedName": "GQPaymentIOSSDKNative.GQPaymentDelegate",
+                    "usr": "s:21GQPaymentIOSSDKNative0A8DelegateP"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:21GQPaymentIOSSDKNative0A0C8delegateAA0A8Delegate_pSgvp",
+            "mangledName": "$s21GQPaymentIOSSDKNative0A0C8delegateAA0A8Delegate_pSgvp",
+            "moduleName": "GQPaymentIOSSDKNative",
+            "declAttributes": [
+              "HasInitialValue",
+              "Final",
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "GQPaymentIOSSDKNative.GQPaymentDelegate?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "GQPaymentDelegate",
+                        "printedName": "GQPaymentIOSSDKNative.GQPaymentDelegate",
+                        "usr": "s:21GQPaymentIOSSDKNative0A8DelegateP"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:21GQPaymentIOSSDKNative0A0C8delegateAA0A8Delegate_pSgvg",
+                "mangledName": "$s21GQPaymentIOSSDKNative0A0C8delegateAA0A8Delegate_pSgvg",
+                "moduleName": "GQPaymentIOSSDKNative",
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "GQPaymentIOSSDKNative.GQPaymentDelegate?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "GQPaymentDelegate",
+                        "printedName": "GQPaymentIOSSDKNative.GQPaymentDelegate",
+                        "usr": "s:21GQPaymentIOSSDKNative0A8DelegateP"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:21GQPaymentIOSSDKNative0A0C8delegateAA0A8Delegate_pSgvs",
+                "mangledName": "$s21GQPaymentIOSSDKNative0A0C8delegateAA0A8Delegate_pSgvs",
+                "moduleName": "GQPaymentIOSSDKNative",
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:21GQPaymentIOSSDKNative0A0C8delegateAA0A8Delegate_pSgvM",
+                "mangledName": "$s21GQPaymentIOSSDKNative0A0C8delegateAA0A8Delegate_pSgvM",
+                "moduleName": "GQPaymentIOSSDKNative",
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "presentationStyle",
+            "printedName": "presentationStyle",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "UIModalPresentationStyle",
+                "printedName": "UIKit.UIModalPresentationStyle",
+                "usr": "c:@E@UIModalPresentationStyle"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:21GQPaymentIOSSDKNative0A0C17presentationStyleSo019UIModalPresentationD0Vvp",
+            "mangledName": "$s21GQPaymentIOSSDKNative0A0C17presentationStyleSo019UIModalPresentationD0Vvp",
+            "moduleName": "GQPaymentIOSSDKNative",
+            "declAttributes": [
+              "HasInitialValue",
+              "Final",
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UIModalPresentationStyle",
+                    "printedName": "UIKit.UIModalPresentationStyle",
+                    "usr": "c:@E@UIModalPresentationStyle"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:21GQPaymentIOSSDKNative0A0C17presentationStyleSo019UIModalPresentationD0Vvg",
+                "mangledName": "$s21GQPaymentIOSSDKNative0A0C17presentationStyleSo019UIModalPresentationD0Vvg",
+                "moduleName": "GQPaymentIOSSDKNative",
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UIModalPresentationStyle",
+                    "printedName": "UIKit.UIModalPresentationStyle",
+                    "usr": "c:@E@UIModalPresentationStyle"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:21GQPaymentIOSSDKNative0A0C17presentationStyleSo019UIModalPresentationD0Vvs",
+                "mangledName": "$s21GQPaymentIOSSDKNative0A0C17presentationStyleSo019UIModalPresentationD0Vvs",
+                "moduleName": "GQPaymentIOSSDKNative",
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:21GQPaymentIOSSDKNative0A0C17presentationStyleSo019UIModalPresentationD0VvM",
+                "mangledName": "$s21GQPaymentIOSSDKNative0A0C17presentationStyleSo019UIModalPresentationD0VvM",
+                "moduleName": "GQPaymentIOSSDKNative",
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "transitionStyle",
+            "printedName": "transitionStyle",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "UIModalTransitionStyle",
+                "printedName": "UIKit.UIModalTransitionStyle",
+                "usr": "c:@E@UIModalTransitionStyle"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:21GQPaymentIOSSDKNative0A0C15transitionStyleSo017UIModalTransitionD0Vvp",
+            "mangledName": "$s21GQPaymentIOSSDKNative0A0C15transitionStyleSo017UIModalTransitionD0Vvp",
+            "moduleName": "GQPaymentIOSSDKNative",
+            "declAttributes": [
+              "HasInitialValue",
+              "Final",
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UIModalTransitionStyle",
+                    "printedName": "UIKit.UIModalTransitionStyle",
+                    "usr": "c:@E@UIModalTransitionStyle"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:21GQPaymentIOSSDKNative0A0C15transitionStyleSo017UIModalTransitionD0Vvg",
+                "mangledName": "$s21GQPaymentIOSSDKNative0A0C15transitionStyleSo017UIModalTransitionD0Vvg",
+                "moduleName": "GQPaymentIOSSDKNative",
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UIModalTransitionStyle",
+                    "printedName": "UIKit.UIModalTransitionStyle",
+                    "usr": "c:@E@UIModalTransitionStyle"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:21GQPaymentIOSSDKNative0A0C15transitionStyleSo017UIModalTransitionD0Vvs",
+                "mangledName": "$s21GQPaymentIOSSDKNative0A0C15transitionStyleSo017UIModalTransitionD0Vvs",
+                "moduleName": "GQPaymentIOSSDKNative",
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:21GQPaymentIOSSDKNative0A0C15transitionStyleSo017UIModalTransitionD0VvM",
+                "mangledName": "$s21GQPaymentIOSSDKNative0A0C15transitionStyleSo017UIModalTransitionD0VvM",
+                "moduleName": "GQPaymentIOSSDKNative",
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(delegate:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "GQPayment",
+                "printedName": "GQPaymentIOSSDKNative.GQPayment",
+                "usr": "s:21GQPaymentIOSSDKNative0A0C"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "GenericTypeParam",
+                "printedName": "τ_0_0"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:21GQPaymentIOSSDKNative0A0C8delegateACx_tcAA0A8DelegateRzlufc",
+            "mangledName": "$s21GQPaymentIOSSDKNative0A0C8delegateACx_tcAA0A8DelegateRzlufc",
+            "moduleName": "GQPaymentIOSSDKNative",
+            "genericSig": "<τ_0_0 where τ_0_0 : GQPaymentIOSSDKNative.GQPaymentDelegate>",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "open",
+            "printedName": "open(on:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "UIViewController",
+                "printedName": "UIKit.UIViewController",
+                "usr": "c:objc(cs)UIViewController"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:21GQPaymentIOSSDKNative0A0C4open2onySo16UIViewControllerC_tF",
+            "mangledName": "$s21GQPaymentIOSSDKNative0A0C4open2onySo16UIViewControllerC_tF",
+            "moduleName": "GQPaymentIOSSDKNative",
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "setTheme",
+            "printedName": "setTheme(color:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "UIColor",
+                "printedName": "UIKit.UIColor",
+                "usr": "c:objc(cs)UIColor"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:21GQPaymentIOSSDKNative0A0C8setTheme5colorySo7UIColorC_tF",
+            "mangledName": "$s21GQPaymentIOSSDKNative0A0C8setTheme5colorySo7UIColorC_tF",
+            "moduleName": "GQPaymentIOSSDKNative",
+            "declAttributes": [
+              "Final",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "s:21GQPaymentIOSSDKNative0A0C",
+        "mangledName": "$s21GQPaymentIOSSDKNative0A0C",
+        "moduleName": "GQPaymentIOSSDKNative",
+        "declAttributes": [
+          "Final",
+          "AccessControl"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "GQPaymentIOSSDKNative",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "GQPaymentDelegate",
+        "printedName": "GQPaymentDelegate",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "gqPayment",
+            "printedName": "gqPayment(_:onSuccess:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "GQPayment",
+                "printedName": "GQPaymentIOSSDKNative.GQPayment",
+                "usr": "s:21GQPaymentIOSSDKNative0A0C"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "[Swift.String : Any]?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Dictionary",
+                    "printedName": "[Swift.String : Any]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ProtocolComposition",
+                        "printedName": "Any"
+                      }
+                    ],
+                    "usr": "s:SD"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:21GQPaymentIOSSDKNative0A8DelegateP9gqPayment_9onSuccessyAA0A0C_SDySSypGSgtF",
+            "mangledName": "$s21GQPaymentIOSSDKNative0A8DelegateP9gqPayment_9onSuccessyAA0A0C_SDySSypGSgtF",
+            "moduleName": "GQPaymentIOSSDKNative",
+            "genericSig": "<τ_0_0 where τ_0_0 : GQPaymentIOSSDKNative.GQPaymentDelegate>",
+            "sugared_genericSig": "<Self where Self : GQPaymentIOSSDKNative.GQPaymentDelegate>",
+            "protocolReq": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "gqPayment",
+            "printedName": "gqPayment(_:onFailure:error:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "GQPayment",
+                "printedName": "GQPaymentIOSSDKNative.GQPayment",
+                "usr": "s:21GQPaymentIOSSDKNative0A0C"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "[Swift.String : Any]?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Dictionary",
+                    "printedName": "[Swift.String : Any]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ProtocolComposition",
+                        "printedName": "Any"
+                      }
+                    ],
+                    "usr": "s:SD"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Error",
+                "printedName": "Swift.Error",
+                "usr": "s:s5ErrorP"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:21GQPaymentIOSSDKNative0A8DelegateP9gqPayment_9onFailure5erroryAA0A0C_SDySSypGSgs5Error_ptF",
+            "mangledName": "$s21GQPaymentIOSSDKNative0A8DelegateP9gqPayment_9onFailure5erroryAA0A0C_SDySSypGSgs5Error_ptF",
+            "moduleName": "GQPaymentIOSSDKNative",
+            "genericSig": "<τ_0_0 where τ_0_0 : GQPaymentIOSSDKNative.GQPaymentDelegate>",
+            "sugared_genericSig": "<Self where Self : GQPaymentIOSSDKNative.GQPaymentDelegate>",
+            "protocolReq": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "gqPayment",
+            "printedName": "gqPayment(_:onCancel:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "GQPayment",
+                "printedName": "GQPaymentIOSSDKNative.GQPayment",
+                "usr": "s:21GQPaymentIOSSDKNative0A0C"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "[Swift.String : Any]?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Dictionary",
+                    "printedName": "[Swift.String : Any]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ProtocolComposition",
+                        "printedName": "Any"
+                      }
+                    ],
+                    "usr": "s:SD"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:21GQPaymentIOSSDKNative0A8DelegateP9gqPayment_8onCancelyAA0A0C_SDySSypGSgtF",
+            "mangledName": "$s21GQPaymentIOSSDKNative0A8DelegateP9gqPayment_8onCancelyAA0A0C_SDySSypGSgtF",
+            "moduleName": "GQPaymentIOSSDKNative",
+            "genericSig": "<τ_0_0 where τ_0_0 : GQPaymentIOSSDKNative.GQPaymentDelegate>",
+            "sugared_genericSig": "<Self where Self : GQPaymentIOSSDKNative.GQPaymentDelegate>",
+            "protocolReq": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Protocol",
+        "usr": "s:21GQPaymentIOSSDKNative0A8DelegateP",
+        "mangledName": "$s21GQPaymentIOSSDKNative0A8DelegateP",
+        "moduleName": "GQPaymentIOSSDKNative",
+        "declAttributes": [
+          "AccessControl",
+          "Custom"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "GQPaymentIOSSDKNative",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "GQPaymentIOSSDKNative",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "GQPaymentIOSSDKNative",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "GQPaymentIOSSDKNative",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "GQPaymentIOSSDKNative",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "GQPaymentIOSSDKNative",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "GQPaymentIOSSDKNative",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "GQPaymentIOSSDKNative",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "GQPaymentIOSSDKNative",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "GQPaymentIOSSDKNative",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "GQPaymentIOSSDKNative",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "GQPaymentIOSSDKNative",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "GQPaymentIOSSDKNative",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "GQPaymentIOSSDKNative",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "GQPaymentIOSSDKNative",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "GQPaymentIOSSDKNative",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "GQPaymentIOSSDKNative",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "GQPaymentIOSSDKNative",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "GQPaymentIOSSDKNative",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "GQPaymentIOSSDKNative",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "GQPaymentIOSSDKNative",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "GQPaymentIOSSDKNative",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "GQPaymentIOSSDKNative",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "GQPaymentIOSSDKNative",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "GQPaymentIOSSDKNative",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "GQPaymentIOSSDKNative",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "GQPaymentIOSSDKNative",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "GQPaymentIOSSDKNative",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "GQPaymentIOSSDKNative",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "GQPaymentIOSSDKNative"
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "GQPaymentIOSSDKNative"
+      },
+      {
+        "kind": "Import",
+        "name": "SwiftUI",
+        "printedName": "SwiftUI",
+        "declKind": "Import",
+        "moduleName": "GQPaymentIOSSDKNative"
+      },
+      {
+        "kind": "Import",
+        "name": "DeveloperToolsSupport",
+        "printedName": "DeveloperToolsSupport",
+        "declKind": "Import",
+        "moduleName": "GQPaymentIOSSDKNative"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "UIColor",
+        "printedName": "UIColor",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "red991F2C",
+            "printedName": "red991F2C",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "UIColor",
+                "printedName": "UIKit.UIColor",
+                "usr": "c:objc(cs)UIColor"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:So7UIColorC21GQPaymentIOSSDKNativeE9red991F2CABvpZ",
+            "mangledName": "$sSo7UIColorC21GQPaymentIOSSDKNativeE9red991F2CABvpZ",
+            "moduleName": "GQPaymentIOSSDKNative",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "Final",
+              "HasStorage",
+              "AccessControl",
+              "NonObjC",
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UIColor",
+                    "printedName": "UIKit.UIColor",
+                    "usr": "c:objc(cs)UIColor"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:So7UIColorC21GQPaymentIOSSDKNativeE9red991F2CABvgZ",
+                "mangledName": "$sSo7UIColorC21GQPaymentIOSSDKNativeE9red991F2CABvgZ",
+                "moduleName": "GQPaymentIOSSDKNative",
+                "static": true,
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "isFromExtension": true,
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Class",
+        "usr": "c:objc(cs)UIColor",
+        "moduleName": "UIKit",
+        "isOpen": true,
+        "intro_iOS": "2.0",
+        "objc_name": "UIColor",
+        "declAttributes": [
+          "Available",
+          "ObjC",
+          "SynthesizedProtocol",
+          "NonSendable",
+          "Sendable",
+          "Dynamic"
+        ],
+        "superclassUsr": "c:objc(cs)NSObject",
+        "isExternal": true,
+        "inheritsConvenienceInitializers": true,
+        "superclassNames": [
+          "ObjectiveC.NSObject"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_ExpressibleByColorLiteral",
+            "printedName": "_ExpressibleByColorLiteral",
+            "usr": "s:s26_ExpressibleByColorLiteralP",
+            "mangledName": "$ss26_ExpressibleByColorLiteralP"
+          }
+        ]
+      }
+    ],
+    "json_format_version": 8
+  },
+  "ConstValues": [
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Modules\/GQEMI\/Views\/EMIApplicationCollectionViewCell.swift",
+      "kind": "FloatLiteral",
+      "offset": 964,
+      "length": 4,
+      "value": "0.03"
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Modules\/GQEMI\/Views\/EMIApplicationCollectionViewCell.swift",
+      "kind": "IntegerLiteral",
+      "offset": 983,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Modules\/GQEMI\/Views\/EMIApplicationCollectionViewCell.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1312,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Modules\/GQEMI\/Views\/EMIApplicationCollectionViewCell.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1372,
+      "length": 2,
+      "value": "16"
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Modules\/GQEMI\/Views\/EMIApplicationCollectionViewCell.swift",
+      "kind": "StringLiteral",
+      "offset": 1431,
+      "length": 17,
+      "value": "\"Application ID:\""
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Modules\/GQEMI\/Views\/EMIApplicationCollectionViewCell.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1611,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Modules\/GQEMI\/Views\/EMIApplicationCollectionViewCell.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1672,
+      "length": 2,
+      "value": "20"
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Modules\/GQEMI\/Views\/EMIApplicationCollectionViewCell.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1830,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Modules\/GQEMI\/Views\/EMIApplicationCollectionViewCell.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1882,
+      "length": 2,
+      "value": "16"
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Modules\/GQEMI\/Views\/EMIApplicationCollectionViewCell.swift",
+      "kind": "IntegerLiteral",
+      "offset": 2053,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Modules\/GQEMI\/Views\/EMIApplicationCollectionViewCell.swift",
+      "kind": "IntegerLiteral",
+      "offset": 2109,
+      "length": 2,
+      "value": "16"
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Modules\/GQEMI\/Views\/EMIApplicationCollectionViewCell.swift",
+      "kind": "StringLiteral",
+      "offset": 2164,
+      "length": 13,
+      "value": "\"Fee Amount:\""
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Modules\/GQEMI\/Views\/EMIApplicationCollectionViewCell.swift",
+      "kind": "IntegerLiteral",
+      "offset": 2328,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Modules\/GQEMI\/Views\/EMIApplicationCollectionViewCell.swift",
+      "kind": "IntegerLiteral",
+      "offset": 2385,
+      "length": 2,
+      "value": "20"
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Modules\/GQEMI\/Views\/EMIApplicationCollectionViewCell.swift",
+      "kind": "IntegerLiteral",
+      "offset": 2549,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Modules\/GQEMI\/Views\/EMIApplicationCollectionViewCell.swift",
+      "kind": "IntegerLiteral",
+      "offset": 2603,
+      "length": 2,
+      "value": "16"
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Modules\/GQEMI\/Views\/EMIApplicationCollectionViewCell.swift",
+      "kind": "IntegerLiteral",
+      "offset": 2771,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Modules\/GQEMI\/Views\/EMIApplicationCollectionViewCell.swift",
+      "kind": "IntegerLiteral",
+      "offset": 2826,
+      "length": 2,
+      "value": "16"
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Modules\/GQEMI\/Views\/EMIApplicationCollectionViewCell.swift",
+      "kind": "FloatLiteral",
+      "offset": 3024,
+      "length": 3,
+      "value": "0.2"
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Modules\/GQEMI\/Views\/EMIApplicationCollectionViewCell.swift",
+      "kind": "StringLiteral",
+      "offset": 3366,
+      "length": 8,
+      "value": "\"344586\""
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Modules\/GQEMI\/Views\/EMIApplicationCollectionViewCell.swift",
+      "kind": "StringLiteral",
+      "offset": 3405,
+      "length": 29,
+      "value": "\"Created On: \""
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Modules\/GQEMI\/Views\/EMIApplicationCollectionViewCell.swift",
+      "kind": "StringLiteral",
+      "offset": 3420,
+      "length": 12,
+      "value": "\"06\/02\/2024\""
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Modules\/GQEMI\/Views\/EMIApplicationCollectionViewCell.swift",
+      "kind": "StringLiteral",
+      "offset": 3433,
+      "length": 1,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Modules\/GQEMI\/Views\/EMIApplicationCollectionViewCell.swift",
+      "kind": "StringLiteral",
+      "offset": 3470,
+      "length": 10,
+      "value": "\"1,20,000\""
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Modules\/GQEMI\/Views\/EMIApplicationCollectionViewCell.swift",
+      "kind": "StringLiteral",
+      "offset": 3513,
+      "length": 33,
+      "value": "\"Student Name: \""
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Modules\/GQEMI\/Views\/EMIApplicationCollectionViewCell.swift",
+      "kind": "StringLiteral",
+      "offset": 3530,
+      "length": 14,
+      "value": "\"abcde fghijk\""
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Modules\/GQEMI\/Views\/EMIApplicationCollectionViewCell.swift",
+      "kind": "StringLiteral",
+      "offset": 3545,
+      "length": 1,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Modules\/GQEMI\/Views\/EMIApplicationCollectionViewCell.swift",
+      "kind": "StringLiteral",
+      "offset": 3580,
+      "length": 33,
+      "value": "\"Academic Year: \""
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Modules\/GQEMI\/Views\/EMIApplicationCollectionViewCell.swift",
+      "kind": "StringLiteral",
+      "offset": 3598,
+      "length": 13,
+      "value": "\"2022 - 2023\""
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Modules\/GQEMI\/Views\/EMIApplicationCollectionViewCell.swift",
+      "kind": "StringLiteral",
+      "offset": 3612,
+      "length": 1,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Modules\/GQEMI\/Views\/EMIApplicationCollectionViewCell.swift",
+      "kind": "StringLiteral",
+      "offset": 3655,
+      "length": 18,
+      "value": "\"Decision Pending\""
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Utilities\/Encoder.swift",
+      "kind": "StringLiteral",
+      "offset": 889,
+      "length": 26,
+      "value": "\"Could Not Serialize Data\""
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Modules\/EnterMobileNumber\/EnterMobileNumberViewController.swift",
+      "kind": "StringLiteral",
+      "offset": 1081,
+      "length": 33,
+      "value": "\"EnterMobileNumberViewController\""
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Modules\/EnterMobileNumber\/EnterMobileNumberViewController.swift",
+      "kind": "StringLiteral",
+      "offset": 1244,
+      "length": 39,
+      "value": "\"init(coder:) has not been implemented\""
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Modules\/EnterMobileNumber\/EnterMobileNumberViewController.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1979,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Modules\/EnterMobileNumber\/EnterMobileNumberViewController.swift",
+      "kind": "BooleanLiteral",
+      "offset": 2019,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Modules\/EnterMobileNumber\/EnterMobileNumberViewController.swift",
+      "kind": "BooleanLiteral",
+      "offset": 2053,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Modules\/EnterMobileNumber\/EnterMobileNumberViewController.swift",
+      "kind": "IntegerLiteral",
+      "offset": 2189,
+      "length": 2,
+      "value": "16"
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Modules\/EnterMobileNumber\/EnterMobileNumberViewController.swift",
+      "kind": "IntegerLiteral",
+      "offset": 2737,
+      "length": 2,
+      "value": "18"
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Modules\/EnterMobileNumber\/EnterMobileNumberViewController.swift",
+      "kind": "IntegerLiteral",
+      "offset": 2776,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Modules\/EnterMobileNumber\/EnterMobileNumberViewController.swift",
+      "kind": "IntegerLiteral",
+      "offset": 2992,
+      "length": 2,
+      "value": "14"
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Modules\/EnterMobileNumber\/EnterMobileNumberViewController.swift",
+      "kind": "IntegerLiteral",
+      "offset": 3030,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Modules\/EnterMobileNumber\/EnterMobileNumberViewController.swift",
+      "kind": "IntegerLiteral",
+      "offset": 3253,
+      "length": 2,
+      "value": "14"
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Modules\/EnterMobileNumber\/EnterMobileNumberViewController.swift",
+      "kind": "IntegerLiteral",
+      "offset": 3296,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Modules\/EnterMobileNumber\/EnterMobileNumberViewController.swift",
+      "kind": "IntegerLiteral",
+      "offset": 3534,
+      "length": 2,
+      "value": "14"
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Modules\/EnterMobileNumber\/EnterMobileNumberViewController.swift",
+      "kind": "IntegerLiteral",
+      "offset": 3580,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Modules\/EnterMobileNumber\/EnterMobileNumberViewController.swift",
+      "kind": "IntegerLiteral",
+      "offset": 4041,
+      "length": 2,
+      "value": "12"
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Modules\/EnterMobileNumber\/EnterMobileNumberViewController.swift",
+      "kind": "IntegerLiteral",
+      "offset": 4080,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Modules\/EnterMobileNumber\/EnterMobileNumberViewController.swift",
+      "kind": "FloatLiteral",
+      "offset": 4264,
+      "length": 3,
+      "value": "0.1"
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Modules\/EnterMobileNumber\/EnterMobileNumberViewController.swift",
+      "kind": "IntegerLiteral",
+      "offset": 4302,
+      "length": 3,
+      "value": "180"
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Modules\/EnterMobileNumber\/EnterMobileNumberViewController.swift",
+      "kind": "IntegerLiteral",
+      "offset": 4606,
+      "length": 2,
+      "value": "14"
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Modules\/EnterMobileNumber\/EnterMobileNumberViewController.swift",
+      "kind": "IntegerLiteral",
+      "offset": 4870,
+      "length": 2,
+      "value": "14"
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Modules\/EnterMobileNumber\/EnterMobileNumberViewController.swift",
+      "kind": "IntegerLiteral",
+      "offset": 5327,
+      "length": 2,
+      "value": "14"
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Modules\/EnterMobileNumber\/EnterMobileNumberViewController.swift",
+      "kind": "StringLiteral",
+      "offset": 6456,
+      "length": 8,
+      "value": "\"No OTP\""
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Modules\/EnterMobileNumber\/EnterMobileNumberViewController.swift",
+      "kind": "StringLiteral",
+      "offset": 132,
+      "length": 31,
+      "value": "\"GQPaymentIOSSDKNative.EnterMobileNumberViewController\""
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Modules\/EnterMobileNumber\/EnterMobileNumberViewController.swift",
+      "kind": "BooleanLiteral",
+      "offset": 6652,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Modules\/EnterMobileNumber\/EnterMobileNumberViewController.swift",
+      "kind": "BooleanLiteral",
+      "offset": 6764,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Modules\/EnterMobileNumber\/EnterMobileNumberViewController.swift",
+      "kind": "IntegerLiteral",
+      "offset": 7040,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Modules\/EnterMobileNumber\/EnterMobileNumberViewController.swift",
+      "kind": "IntegerLiteral",
+      "offset": 7046,
+      "length": 1,
+      "value": "4"
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Modules\/EnterMobileNumber\/EnterMobileNumberViewController.swift",
+      "kind": "StringLiteral",
+      "offset": 7447,
+      "length": 14,
+      "value": "\"Time's Up!!!\""
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Modules\/EnterMobileNumber\/EnterMobileNumberViewModel.swift",
+      "kind": "StringLiteral",
+      "offset": 322,
+      "length": 45,
+      "value": "\"GITAM Institute of Management, Mumbai, CBSE\""
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Base Classes\/GQBaseViewController.swift",
+      "kind": "BooleanLiteral",
+      "offset": 267,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Base Classes\/GQBaseViewController.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1130,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Base Classes\/GQBaseViewController.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1878,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Base Classes\/GQBaseViewController.swift",
+      "kind": "BooleanLiteral",
+      "offset": 2537,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Base Classes\/GQBaseViewController.swift",
+      "kind": "BooleanLiteral",
+      "offset": 3212,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Base Classes\/GQBaseViewController.swift",
+      "kind": "IntegerLiteral",
+      "offset": 3780,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Base Classes\/GQBaseViewController.swift",
+      "kind": "IntegerLiteral",
+      "offset": 3789,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Base Classes\/GQBaseViewController.swift",
+      "kind": "IntegerLiteral",
+      "offset": 3865,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Base Classes\/GQBaseViewController.swift",
+      "kind": "BooleanLiteral",
+      "offset": 4689,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Modules\/CommonViews\/GQButton\/GQButton.swift",
+      "kind": "FloatLiteral",
+      "offset": 409,
+      "length": 3,
+      "value": "0.2"
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Modules\/CommonViews\/GQButton\/GQButton.swift",
+      "kind": "IntegerLiteral",
+      "offset": 427,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Modules\/CommonViews\/GQButton\/GQButton.swift",
+      "kind": "BooleanLiteral",
+      "offset": 613,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Modules\/CommonViews\/GQButton\/GQButton.swift",
+      "kind": "BooleanLiteral",
+      "offset": 760,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Modules\/CommonViews\/GQButton\/GQButton.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1144,
+      "length": 2,
+      "value": "14"
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Modules\/GQEMI\/GQEMIViewController.swift",
+      "kind": "StringLiteral",
+      "offset": 434,
+      "length": 21,
+      "value": "\"GQEMIViewController\""
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Modules\/GQEMI\/GQEMIViewController.swift",
+      "kind": "StringLiteral",
+      "offset": 596,
+      "length": 39,
+      "value": "\"init(coder:) has not been implemented\""
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Modules\/GQEMI\/GQEMIViewController.swift",
+      "kind": "BooleanLiteral",
+      "offset": 975,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Modules\/GQEMI\/GQEMIViewController.swift",
+      "kind": "StringLiteral",
+      "offset": 1116,
+      "length": 34,
+      "value": "\"EMIApplicationCollectionViewCell\""
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Modules\/GQEMI\/GQEMIViewController.swift",
+      "kind": "StringLiteral",
+      "offset": 1258,
+      "length": 34,
+      "value": "\"EMIApplicationCollectionViewCell\""
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Modules\/GQEMI\/GQEMIViewController.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1530,
+      "length": 2,
+      "value": "28"
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Modules\/GQEMI\/GQEMIViewController.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1582,
+      "length": 2,
+      "value": "28"
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Modules\/GQEMI\/GQEMIViewController.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1660,
+      "length": 2,
+      "value": "15"
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Modules\/GQEMI\/GQEMIViewController.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1670,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Modules\/GQEMI\/GQEMIViewController.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1681,
+      "length": 2,
+      "value": "15"
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Modules\/GQEMI\/GQEMIViewController.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1692,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Modules\/GQEMI\/GQEMIViewController.swift",
+      "kind": "FloatLiteral",
+      "offset": 1862,
+      "length": 3,
+      "value": "0.8"
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Modules\/GQEMI\/GQEMIViewController.swift",
+      "kind": "StringLiteral",
+      "offset": 120,
+      "length": 19,
+      "value": "\"GQPaymentIOSSDKNative.GQEMIViewController\""
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Modules\/GQEMI\/GQEMIViewController.swift",
+      "kind": "IntegerLiteral",
+      "offset": 2209,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Modules\/GQEMI\/GQEMIViewController.swift",
+      "kind": "StringLiteral",
+      "offset": 2419,
+      "length": 34,
+      "value": "\"EMIApplicationCollectionViewCell\""
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Modules\/GQEMI\/GQEMIViewModel.swift",
+      "kind": "Array",
+      "offset": 313,
+      "length": 30,
+      "value": "[\"A\", \"B\", \"C\", \"D\", \"E\", \"F\"]"
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Modules\/GQEMI\/GQEMIViewModel.swift",
+      "kind": "IntegerLiteral",
+      "offset": 414,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Modules\/GQEMI\/GQEMIViewModel.swift",
+      "kind": "IntegerLiteral",
+      "offset": 515,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Modules\/CommonViews\/GQGILEView\/GQGILEView.swift",
+      "kind": "FloatLiteral",
+      "offset": 783,
+      "length": 4,
+      "value": "0.06"
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Modules\/CommonViews\/GQGILEView\/GQGILEView.swift",
+      "kind": "IntegerLiteral",
+      "offset": 974,
+      "length": 2,
+      "value": "16"
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Modules\/CommonViews\/GQGILEView\/GQGILEView.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1017,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Modules\/CommonViews\/GQGILEView\/GQGILEView.swift",
+      "kind": "FloatLiteral",
+      "offset": 1282,
+      "length": 3,
+      "value": "0.1"
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Utilities\/GQLogger.swift",
+      "kind": "StringLiteral",
+      "offset": 285,
+      "length": 7,
+      "value": "\"GQLog\""
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Utilities\/GQLogger.swift",
+      "kind": "StringLiteral",
+      "offset": 408,
+      "length": 9,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Utilities\/GQLogger.swift",
+      "kind": "StringLiteral",
+      "offset": 416,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Utilities\/GQLogger.swift",
+      "kind": "StringLiteral",
+      "offset": 545,
+      "length": 9,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Utilities\/GQLogger.swift",
+      "kind": "StringLiteral",
+      "offset": 553,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Utilities\/GQLogger.swift",
+      "kind": "StringLiteral",
+      "offset": 678,
+      "length": 9,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Utilities\/GQLogger.swift",
+      "kind": "StringLiteral",
+      "offset": 686,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Utilities\/GQLogger.swift",
+      "kind": "StringLiteral",
+      "offset": 816,
+      "length": 9,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Utilities\/GQLogger.swift",
+      "kind": "StringLiteral",
+      "offset": 824,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Modules\/CommonViews\/GQMobileTextField\/GQMobileTextField.swift",
+      "kind": "FloatLiteral",
+      "offset": 784,
+      "length": 4,
+      "value": "0.12"
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Modules\/CommonViews\/GQMobileTextField\/GQMobileTextField.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1989,
+      "length": 2,
+      "value": "14"
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Modules\/CommonViews\/GQMobileTextField\/GQMobileTextField.swift",
+      "kind": "IntegerLiteral",
+      "offset": 2031,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Modules\/CommonViews\/GQMobileTextField\/GQMobileTextField.swift",
+      "kind": "IntegerLiteral",
+      "offset": 2244,
+      "length": 2,
+      "value": "14"
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Modules\/CommonViews\/GQMobileTextField\/GQMobileTextField.swift",
+      "kind": "IntegerLiteral",
+      "offset": 2382,
+      "length": 2,
+      "value": "14"
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Modules\/CommonViews\/GQMobileTextField\/GQMobileTextField.swift",
+      "kind": "IntegerLiteral",
+      "offset": 2589,
+      "length": 2,
+      "value": "14"
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Modules\/CommonViews\/GQMobileTextField\/GQMobileTextField.swift",
+      "kind": "BooleanLiteral",
+      "offset": 2979,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Modules\/CommonViews\/GQMobileTextField\/GQMobileTextField.swift",
+      "kind": "BooleanLiteral",
+      "offset": 3233,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Modules\/CommonViews\/GQMobileTextField\/GQMobileTextField.swift",
+      "kind": "BooleanLiteral",
+      "offset": 3481,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Modules\/CommonViews\/GQMobileTextField\/GQMobileTextField.swift",
+      "kind": "IntegerLiteral",
+      "offset": 3560,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Modules\/CommonViews\/GQMobileTextField\/GQMobileTextField.swift",
+      "kind": "BooleanLiteral",
+      "offset": 3815,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Modules\/CommonViews\/GQMobileTextField\/GQMobileTextField.swift",
+      "kind": "IntegerLiteral",
+      "offset": 3894,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Modules\/CommonViews\/GQMobileTextField\/GQMobileTextField.swift",
+      "kind": "BooleanLiteral",
+      "offset": 4361,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Modules\/CommonViews\/GQMobileTextField\/GQMobileTextField.swift",
+      "kind": "IntegerLiteral",
+      "offset": 4441,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Modules\/CommonViews\/GQMobileTextField\/GQMobileTextField.swift",
+      "kind": "BooleanLiteral",
+      "offset": 5779,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Modules\/CommonViews\/GQMobileTextField\/GQMobileTextField.swift",
+      "kind": "IntegerLiteral",
+      "offset": 5826,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Modules\/CommonViews\/GQMobileTextField\/GQMobileTextField.swift",
+      "kind": "IntegerLiteral",
+      "offset": 5831,
+      "length": 2,
+      "value": "10"
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Modules\/CommonViews\/GQMobileTextField\/GQMobileTextField.swift",
+      "kind": "BooleanLiteral",
+      "offset": 5869,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Modules\/CommonViews\/GQMobileTextField\/GQMobileTextField.swift",
+      "kind": "BooleanLiteral",
+      "offset": 5892,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/GQPayment\/GQPayment.swift",
+      "kind": "BooleanLiteral",
+      "offset": 525,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/GQPayment\/GQPayment.swift",
+      "kind": "BooleanLiteral",
+      "offset": 2692,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/GQPayment\/GQPayment.swift",
+      "kind": "BooleanLiteral",
+      "offset": 2764,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Utilities\/GQStaticText.swift",
+      "kind": "StringLiteral",
+      "offset": 246,
+      "length": 21,
+      "value": "\"Enter mobile number\""
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Utilities\/GQStaticText.swift",
+      "kind": "StringLiteral",
+      "offset": 307,
+      "length": 26,
+      "value": "\"Enter your Mobile Number\""
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Utilities\/GQStaticText.swift",
+      "kind": "StringLiteral",
+      "offset": 359,
+      "length": 10,
+      "value": "\"Send OTP\""
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Utilities\/GQStaticText.swift",
+      "kind": "StringLiteral",
+      "offset": 394,
+      "length": 8,
+      "value": "\"Change\""
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Utilities\/GQStaticText.swift",
+      "kind": "StringLiteral",
+      "offset": 430,
+      "length": 12,
+      "value": "\"VERIFY OTP\""
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Utilities\/GQStaticText.swift",
+      "kind": "StringLiteral",
+      "offset": 469,
+      "length": 11,
+      "value": "\"Enter OTP\""
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Utilities\/GQStaticText.swift",
+      "kind": "StringLiteral",
+      "offset": 508,
+      "length": 32,
+      "value": "\"Did not receive OTP? Resend in\""
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Utilities\/GQStaticText.swift",
+      "kind": "StringLiteral",
+      "offset": 563,
+      "length": 8,
+      "value": "\"NOTE: \""
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Utilities\/GQStaticText.swift",
+      "kind": "StringLiteral",
+      "offset": 605,
+      "length": 50,
+      "value": "\"We have sent a 4-digit OTP on your mobile number\""
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Utilities\/GQStaticText.swift",
+      "kind": "StringLiteral",
+      "offset": 690,
+      "length": 83,
+      "value": "\"Please enter the mobile number which you generally use for your banking purposes.\""
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Utilities\/GQStaticText.swift",
+      "kind": "StringLiteral",
+      "offset": 804,
+      "length": 15,
+      "value": "\"Incorrect OTP\""
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Utilities\/GQStaticText.swift",
+      "kind": "StringLiteral",
+      "offset": 850,
+      "length": 21,
+      "value": "\"Facing issues here?\""
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Utilities\/GQStaticText.swift",
+      "kind": "StringLiteral",
+      "offset": 904,
+      "length": 50,
+      "value": "\"Please contact our support team by clicking here\""
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Utilities\/GQStaticText.swift",
+      "kind": "StringLiteral",
+      "offset": 1005,
+      "length": 7,
+      "value": "\"+91 -\""
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Utilities\/GQStaticText.swift",
+      "kind": "StringLiteral",
+      "offset": 1039,
+      "length": 5,
+      "value": "\"N\/A\""
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Modules\/CommonViews\/GQSupportFooterView\/GQSupportFooterView.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1199,
+      "length": 2,
+      "value": "18"
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Modules\/CommonViews\/GQSupportFooterView\/GQSupportFooterView.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1238,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Modules\/CommonViews\/GQSupportFooterView\/GQSupportFooterView.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1467,
+      "length": 2,
+      "value": "14"
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Modules\/CommonViews\/GQSupportFooterView\/GQSupportFooterView.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1512,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Modules\/CommonViews\/GQTagView\/GQTagView.swift",
+      "kind": "IntegerLiteral",
+      "offset": 876,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Modules\/CommonViews\/GQTagView\/GQTagView.swift",
+      "kind": "IntegerLiteral",
+      "offset": 950,
+      "length": 2,
+      "value": "14"
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Modules\/CommonViews\/GQTagView\/GQTagView.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1041,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Modules\/CommonViews\/GQTextField\/GQTextField.swift",
+      "kind": "FloatLiteral",
+      "offset": 575,
+      "length": 4,
+      "value": "0.12"
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Modules\/CommonViews\/GQTextField\/GQTextField.swift",
+      "kind": "BooleanLiteral",
+      "offset": 618,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Modules\/CommonViews\/GQTextField\/GQTextField.swift",
+      "kind": "BooleanLiteral",
+      "offset": 962,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Modules\/CommonViews\/GQTextField\/GQTextField.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1812,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Modules\/CommonViews\/GQTextField\/GQTextField.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1854,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Modules\/CommonViews\/GQTextField\/GQTextField.swift",
+      "kind": "IntegerLiteral",
+      "offset": 2011,
+      "length": 2,
+      "value": "14"
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Modules\/CommonViews\/GQTextField\/GQTextField.swift",
+      "kind": "IntegerLiteral",
+      "offset": 2190,
+      "length": 2,
+      "value": "14"
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Modules\/CommonViews\/GQTextField\/GQTextField.swift",
+      "kind": "IntegerLiteral",
+      "offset": 2236,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Modules\/CommonViews\/GQTextField\/GQTextField.swift",
+      "kind": "IntegerLiteral",
+      "offset": 2696,
+      "length": 2,
+      "value": "14"
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Modules\/CommonViews\/GQTextField\/GQTextField.swift",
+      "kind": "BooleanLiteral",
+      "offset": 3031,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Modules\/CommonViews\/GQTextField\/GQTextField.swift",
+      "kind": "IntegerLiteral",
+      "offset": 3112,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Modules\/CommonViews\/GQTextField\/GQTextField.swift",
+      "kind": "BooleanLiteral",
+      "offset": 3369,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Modules\/CommonViews\/GQTextField\/GQTextField.swift",
+      "kind": "IntegerLiteral",
+      "offset": 3450,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Modules\/CommonViews\/GQTextField\/GQTextField.swift",
+      "kind": "IntegerLiteral",
+      "offset": 3740,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Modules\/CommonViews\/GQTextField\/GQTextField.swift",
+      "kind": "BooleanLiteral",
+      "offset": 3864,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Modules\/CommonViews\/GQTextField\/GQTextField.swift",
+      "kind": "IntegerLiteral",
+      "offset": 4065,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Modules\/CommonViews\/GQTextField\/GQTextField.swift",
+      "kind": "BooleanLiteral",
+      "offset": 4140,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Modules\/CommonViews\/GQTextField\/GQTextField.swift",
+      "kind": "BooleanLiteral",
+      "offset": 4841,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Modules\/CommonViews\/GQTextField\/GQTextField.swift",
+      "kind": "BooleanLiteral",
+      "offset": 4886,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Modules\/CommonViews\/GQTextField\/GQTextField.swift",
+      "kind": "BooleanLiteral",
+      "offset": 5016,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Modules\/CommonViews\/GQTextField\/GQTextField.swift",
+      "kind": "BooleanLiteral",
+      "offset": 5103,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Modules\/CommonViews\/GQTextField\/GQTextField.swift",
+      "kind": "BooleanLiteral",
+      "offset": 5437,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Modules\/CommonViews\/GQTextField\/GQTextField.swift",
+      "kind": "BooleanLiteral",
+      "offset": 5537,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Modules\/CommonViews\/GQTextField\/GQTextField.swift",
+      "kind": "BooleanLiteral",
+      "offset": 5586,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Modules\/CommonViews\/GQTextField\/GQTextField.swift",
+      "kind": "BooleanLiteral",
+      "offset": 5640,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Modules\/CommonViews\/GQTimerLabel\/GQTimerLabel.swift",
+      "kind": "IntegerLiteral",
+      "offset": 275,
+      "length": 3,
+      "value": "180"
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Modules\/CommonViews\/GQTimerLabel\/GQTimerLabel.swift",
+      "kind": "IntegerLiteral",
+      "offset": 484,
+      "length": 2,
+      "value": "60"
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Modules\/CommonViews\/GQTimerLabel\/GQTimerLabel.swift",
+      "kind": "IntegerLiteral",
+      "offset": 566,
+      "length": 1,
+      "value": "6"
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Modules\/CommonViews\/GQTimerLabel\/GQTimerLabel.swift",
+      "kind": "IntegerLiteral",
+      "offset": 609,
+      "length": 1,
+      "value": "4"
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Modules\/CommonViews\/GQTimerLabel\/GQTimerLabel.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1002,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Modules\/CommonViews\/GQTimerLabel\/GQTimerLabel.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1646,
+      "length": 1,
+      "value": "2"
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Modules\/CommonViews\/GQTimerLabel\/GQTimerLabel.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1711,
+      "length": 1,
+      "value": "2"
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Modules\/CommonViews\/GQTimerLabel\/GQTimerLabel.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1847,
+      "length": 1,
+      "value": "2"
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Modules\/CommonViews\/GQTimerLabel\/GQTimerLabel.swift",
+      "kind": "IntegerLiteral",
+      "offset": 2162,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Modules\/CommonViews\/GQTimerLabel\/GQTimerLabel.swift",
+      "kind": "IntegerLiteral",
+      "offset": 2352,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Modules\/CommonViews\/GQTimerLabel\/GQTimerLabel.swift",
+      "kind": "IntegerLiteral",
+      "offset": 2543,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Modules\/CommonViews\/GQTimerLabel\/GQTimerLabel.swift",
+      "kind": "BooleanLiteral",
+      "offset": 2786,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Modules\/CommonViews\/GQTimerLabel\/GQTimerLabel.swift",
+      "kind": "BooleanLiteral",
+      "offset": 2826,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Modules\/CommonViews\/GQTimerLabel\/GQTimerLabel.swift",
+      "kind": "BooleanLiteral",
+      "offset": 2925,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Utilities\/GQValidationService.swift",
+      "kind": "StringLiteral",
+      "offset": 335,
+      "length": 12,
+      "value": "\"^\\d{10}$\""
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Utilities\/GQValidationService.swift",
+      "kind": "StringLiteral",
+      "offset": 392,
+      "length": 17,
+      "value": "\"SELF MATCHES %@\""
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Utilities\/GQValidationService.swift",
+      "kind": "StringLiteral",
+      "offset": 594,
+      "length": 9,
+      "value": "\"^\\d+$\""
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Utilities\/GQValidationService.swift",
+      "kind": "StringLiteral",
+      "offset": 649,
+      "length": 17,
+      "value": "\"SELF MATCHES %@\""
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Services\/HTTPMethod.swift",
+      "kind": "StringLiteral",
+      "offset": 252,
+      "length": 5,
+      "value": "\"GET\""
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Services\/HTTPMethod.swift",
+      "kind": "StringLiteral",
+      "offset": 297,
+      "length": 6,
+      "value": "\"POST\""
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Modules\/CommonViews\/OLD Views\/MobileOTPView\/MobileOTPView.swift",
+      "kind": "BooleanLiteral",
+      "offset": 422,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Modules\/CommonViews\/OLD Views\/MobileOTPView\/MobileOTPView.swift",
+      "kind": "BooleanLiteral",
+      "offset": 431,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Modules\/CommonViews\/OLD Views\/MobileOTPView\/MobileOTPView.swift",
+      "kind": "FloatLiteral",
+      "offset": 1279,
+      "length": 3,
+      "value": "0.6"
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Modules\/CommonViews\/OLD Views\/MobileOTPView\/MobileOTPView.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1791,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Modules\/CommonViews\/OLD Views\/MobileOTPView\/MobileOTPView.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1824,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Modules\/CommonViews\/OLD Views\/MobileOTPView\/MobileOTPView.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1940,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Modules\/CommonViews\/OLD Views\/MobileOTPView\/MobileOTPView.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1995,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Modules\/CommonViews\/OLD Views\/MobileOTPView\/MobileOTPView.swift",
+      "kind": "BooleanLiteral",
+      "offset": 2326,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Modules\/CommonViews\/OLD Views\/MobileOTPView\/MobileOTPView.swift",
+      "kind": "BooleanLiteral",
+      "offset": 2365,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Services\/NetworkEnvironment.swift",
+      "kind": "StringLiteral",
+      "offset": 342,
+      "length": 15,
+      "value": "\"www.google.in\""
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Services\/NetworkEnvironment.swift",
+      "kind": "StringLiteral",
+      "offset": 403,
+      "length": 16,
+      "value": "\"www.google.com\""
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Services\/NetworkEnvironment.swift",
+      "kind": "StringLiteral",
+      "offset": 462,
+      "length": 15,
+      "value": "\"www.google.to\""
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Services\/NetworkError.swift",
+      "kind": "StringLiteral",
+      "offset": 356,
+      "length": 19,
+      "value": "\"No Internet Found\""
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Services\/NetworkError.swift",
+      "kind": "StringLiteral",
+      "offset": 419,
+      "length": 11,
+      "value": "\"Not Found\""
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Services\/NetworkError.swift",
+      "kind": "StringLiteral",
+      "offset": 497,
+      "length": 24,
+      "value": "\"Something Went Wrong: \""
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Services\/NetworkService.swift",
+      "kind": "Array",
+      "offset": 1053,
+      "length": 2,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Services\/NetworkService.swift",
+      "kind": "StringLiteral",
+      "offset": 1184,
+      "length": 10,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Services\/NetworkService.swift",
+      "kind": "StringLiteral",
+      "offset": 1193,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Services\/NetworkType.swift",
+      "kind": "StringLiteral",
+      "offset": 785,
+      "length": 7,
+      "value": "\"\/home\""
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Services\/NetworkType.swift",
+      "kind": "StringLiteral",
+      "offset": 866,
+      "length": 7,
+      "value": "\"\/more\""
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Services\/NetworkType.swift",
+      "kind": "StringLiteral",
+      "offset": 950,
+      "length": 10,
+      "value": "\"\/listing\""
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Services\/NetworkType.swift",
+      "kind": "StringLiteral",
+      "offset": 1036,
+      "length": 9,
+      "value": "\"\/detail\""
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Services\/NetworkType.swift",
+      "kind": "Dictionary",
+      "offset": 1349,
+      "length": 36,
+      "value": "[(\"Content-Type\", \"application\/json\")]"
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Extensions\/NSAttributedString+Ext.swift",
+      "kind": "IntegerLiteral",
+      "offset": 274,
+      "length": 2,
+      "value": "15"
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Modules\/CommonViews\/OLD Views\/OTPTextField\/OTPTextField.swift",
+      "kind": "FloatLiteral",
+      "offset": 494,
+      "length": 4,
+      "value": "0.05"
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Modules\/CommonViews\/OLD Views\/OTPTextField\/OTPTextField.swift",
+      "kind": "IntegerLiteral",
+      "offset": 513,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Modules\/PaymentMethods\/Views\/CollectionViewCells\/PaymentMethodsCollectionViewCell.swift",
+      "kind": "FloatLiteral",
+      "offset": 1442,
+      "length": 4,
+      "value": "0.08"
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Modules\/PaymentMethods\/Views\/CollectionViewCells\/PaymentMethodsCollectionViewCell.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1461,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Modules\/PaymentMethods\/Views\/CollectionViewCells\/PaymentMethodsCollectionViewCell.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1694,
+      "length": 2,
+      "value": "20"
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Modules\/PaymentMethods\/Views\/CollectionViewCells\/PaymentMethodsCollectionViewCell.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1788,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Modules\/PaymentMethods\/Views\/CollectionViewCells\/PaymentMethodsCollectionViewCell.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1899,
+      "length": 2,
+      "value": "18"
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Modules\/PaymentMethods\/Views\/CollectionViewCells\/PaymentMethodsCollectionViewCell.swift",
+      "kind": "IntegerLiteral",
+      "offset": 2002,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Modules\/PaymentMethods\/Views\/CollectionViewCells\/PaymentMethodsCollectionViewCell.swift",
+      "kind": "IntegerLiteral",
+      "offset": 2118,
+      "length": 2,
+      "value": "18"
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Modules\/PaymentMethods\/Views\/CollectionViewCells\/PaymentMethodsCollectionViewCell.swift",
+      "kind": "IntegerLiteral",
+      "offset": 2240,
+      "length": 2,
+      "value": "30"
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Modules\/PaymentMethods\/Views\/CollectionViewCells\/PaymentMethodsCollectionViewCell.swift",
+      "kind": "IntegerLiteral",
+      "offset": 2364,
+      "length": 2,
+      "value": "14"
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Modules\/PaymentMethods\/Views\/CollectionViewCells\/PaymentMethodsCollectionViewCell.swift",
+      "kind": "BooleanLiteral",
+      "offset": 2688,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Modules\/PaymentMethods\/Views\/CollectionViewCells\/PaymentMethodsCollectionViewCell.swift",
+      "kind": "StringLiteral",
+      "offset": 2727,
+      "length": 30,
+      "value": "\"PaymentTagCollectionViewCell\""
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Modules\/PaymentMethods\/Views\/CollectionViewCells\/PaymentMethodsCollectionViewCell.swift",
+      "kind": "StringLiteral",
+      "offset": 2865,
+      "length": 30,
+      "value": "\"PaymentTagCollectionViewCell\""
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Modules\/PaymentMethods\/Views\/CollectionViewCells\/PaymentMethodsCollectionViewCell.swift",
+      "kind": "IntegerLiteral",
+      "offset": 3135,
+      "length": 1,
+      "value": "5"
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Modules\/PaymentMethods\/Views\/CollectionViewCells\/PaymentMethodsCollectionViewCell.swift",
+      "kind": "IntegerLiteral",
+      "offset": 3186,
+      "length": 1,
+      "value": "5"
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Modules\/PaymentMethods\/Views\/CollectionViewCells\/PaymentMethodsCollectionViewCell.swift",
+      "kind": "FloatLiteral",
+      "offset": 3368,
+      "length": 3,
+      "value": "0.2"
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Modules\/PaymentMethods\/Views\/CollectionViewCells\/PaymentMethodsCollectionViewCell.swift",
+      "kind": "FloatLiteral",
+      "offset": 3425,
+      "length": 4,
+      "value": "0.08"
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Modules\/PaymentMethods\/Views\/CollectionViewCells\/PaymentMethodsCollectionViewCell.swift",
+      "kind": "IntegerLiteral",
+      "offset": 3444,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Modules\/PaymentMethods\/Views\/CollectionViewCells\/PaymentMethodsCollectionViewCell.swift",
+      "kind": "FloatLiteral",
+      "offset": 3647,
+      "length": 3,
+      "value": "0.9"
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Modules\/PaymentMethods\/Views\/CollectionViewCells\/PaymentMethodsCollectionViewCell.swift",
+      "kind": "FloatLiteral",
+      "offset": 3700,
+      "length": 3,
+      "value": "0.2"
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Modules\/PaymentMethods\/Views\/CollectionViewCells\/PaymentMethodsCollectionViewCell.swift",
+      "kind": "StringLiteral",
+      "offset": 4042,
+      "length": 16,
+      "value": "\"Option \""
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Modules\/PaymentMethods\/Views\/CollectionViewCells\/PaymentMethodsCollectionViewCell.swift",
+      "kind": "StringLiteral",
+      "offset": 4057,
+      "length": 1,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Modules\/PaymentMethods\/Views\/CollectionViewCells\/PaymentMethodsCollectionViewCell.swift",
+      "kind": "FloatLiteral",
+      "offset": 4323,
+      "length": 3,
+      "value": "0.1"
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Modules\/PaymentMethods\/Views\/CollectionViewCells\/PaymentMethodsCollectionViewCell.swift",
+      "kind": "IntegerLiteral",
+      "offset": 4913,
+      "length": 1,
+      "value": "2"
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Modules\/PaymentMethods\/Views\/CollectionViewCells\/PaymentMethodsCollectionViewCell.swift",
+      "kind": "StringLiteral",
+      "offset": 5123,
+      "length": 30,
+      "value": "\"PaymentTagCollectionViewCell\""
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Modules\/PaymentMethods\/Views\/CollectionViewCells\/PaymentMethodsCollectionViewCell.swift",
+      "kind": "IntegerLiteral",
+      "offset": 5292,
+      "length": 1,
+      "value": "2"
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Modules\/PaymentMethods\/Views\/CollectionViewCells\/PaymentMethodsCollectionViewCell.swift",
+      "kind": "IntegerLiteral",
+      "offset": 5297,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Modules\/PaymentMethods\/Views\/CollectionViewCells\/PaymentMethodsCollectionViewCell.swift",
+      "kind": "StringLiteral",
+      "offset": 5334,
+      "length": 21,
+      "value": "\"easy and convenient\""
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Modules\/PaymentMethods\/Views\/CollectionViewCells\/PaymentMethodsCollectionViewCell.swift",
+      "kind": "StringLiteral",
+      "offset": 5407,
+      "length": 6,
+      "value": "\"easy\""
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Modules\/PaymentMethods\/Views\/CollectionViewCells\/PaymentMethodsCollectionViewCell.swift",
+      "kind": "IntegerLiteral",
+      "offset": 5697,
+      "length": 2,
+      "value": "50"
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Modules\/PaymentMethods\/PaymentMethodsViewController.swift",
+      "kind": "StringLiteral",
+      "offset": 540,
+      "length": 30,
+      "value": "\"PaymentMethodsViewController\""
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Modules\/PaymentMethods\/PaymentMethodsViewController.swift",
+      "kind": "StringLiteral",
+      "offset": 711,
+      "length": 39,
+      "value": "\"init(coder:) has not been implemented\""
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Modules\/PaymentMethods\/PaymentMethodsViewController.swift",
+      "kind": "FloatLiteral",
+      "offset": 1354,
+      "length": 3,
+      "value": "0.5"
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Modules\/PaymentMethods\/PaymentMethodsViewController.swift",
+      "kind": "FloatLiteral",
+      "offset": 1438,
+      "length": 3,
+      "value": "0.5"
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Modules\/PaymentMethods\/PaymentMethodsViewController.swift",
+      "kind": "FloatLiteral",
+      "offset": 1505,
+      "length": 3,
+      "value": "0.5"
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Modules\/PaymentMethods\/PaymentMethodsViewController.swift",
+      "kind": "StringLiteral",
+      "offset": 1569,
+      "length": 22,
+      "value": "\"arrowshape.down.fill\""
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Modules\/PaymentMethods\/PaymentMethodsViewController.swift",
+      "kind": "StringLiteral",
+      "offset": 1658,
+      "length": 20,
+      "value": "\"arrowshape.up.fill\""
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Modules\/PaymentMethods\/PaymentMethodsViewController.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1778,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Modules\/PaymentMethods\/PaymentMethodsViewController.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1918,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Modules\/PaymentMethods\/PaymentMethodsViewController.swift",
+      "kind": "StringLiteral",
+      "offset": 1980,
+      "length": 34,
+      "value": "\"PaymentMethodsCollectionViewCell\""
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Modules\/PaymentMethods\/PaymentMethodsViewController.swift",
+      "kind": "StringLiteral",
+      "offset": 2132,
+      "length": 34,
+      "value": "\"PaymentMethodsCollectionViewCell\""
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Modules\/PaymentMethods\/PaymentMethodsViewController.swift",
+      "kind": "StringLiteral",
+      "offset": 2216,
+      "length": 37,
+      "value": "\"ProceedButtonCollectionReusableView\""
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Modules\/PaymentMethods\/PaymentMethodsViewController.swift",
+      "kind": "StringLiteral",
+      "offset": 2427,
+      "length": 37,
+      "value": "\"ProceedButtonCollectionReusableView\""
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Modules\/PaymentMethods\/PaymentMethodsViewController.swift",
+      "kind": "IntegerLiteral",
+      "offset": 2700,
+      "length": 2,
+      "value": "12"
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Modules\/PaymentMethods\/PaymentMethodsViewController.swift",
+      "kind": "IntegerLiteral",
+      "offset": 3043,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Modules\/PaymentMethods\/PaymentMethodsViewController.swift",
+      "kind": "BooleanLiteral",
+      "offset": 3070,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Modules\/PaymentMethods\/PaymentMethodsViewController.swift",
+      "kind": "IntegerLiteral",
+      "offset": 3166,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Modules\/PaymentMethods\/PaymentMethodsViewController.swift",
+      "kind": "IntegerLiteral",
+      "offset": 3178,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Modules\/PaymentMethods\/PaymentMethodsViewController.swift",
+      "kind": "BooleanLiteral",
+      "offset": 3202,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Modules\/PaymentMethods\/PaymentMethodsViewController.swift",
+      "kind": "StringLiteral",
+      "offset": 129,
+      "length": 28,
+      "value": "\"GQPaymentIOSSDKNative.PaymentMethodsViewController\""
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Modules\/PaymentMethods\/PaymentMethodsViewController.swift",
+      "kind": "IntegerLiteral",
+      "offset": 3532,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Modules\/PaymentMethods\/PaymentMethodsViewController.swift",
+      "kind": "StringLiteral",
+      "offset": 3742,
+      "length": 34,
+      "value": "\"PaymentMethodsCollectionViewCell\""
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Modules\/PaymentMethods\/PaymentMethodsViewController.swift",
+      "kind": "FloatLiteral",
+      "offset": 4992,
+      "length": 3,
+      "value": "0.9"
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Modules\/PaymentMethods\/PaymentMethodsViewController.swift",
+      "kind": "IntegerLiteral",
+      "offset": 5005,
+      "length": 3,
+      "value": "300"
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Modules\/PaymentMethods\/PaymentMethodsViewController.swift",
+      "kind": "StringLiteral",
+      "offset": 5480,
+      "length": 37,
+      "value": "\"ProceedButtonCollectionReusableView\""
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Modules\/PaymentMethods\/PaymentMethodsViewController.swift",
+      "kind": "BooleanLiteral",
+      "offset": 5641,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Modules\/PaymentMethods\/PaymentMethodsViewController.swift",
+      "kind": "IntegerLiteral",
+      "offset": 6058,
+      "length": 2,
+      "value": "60"
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Modules\/PaymentMethods\/PaymentMethodsViewController.swift",
+      "kind": "BooleanLiteral",
+      "offset": 6445,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Modules\/PaymentMethods\/PaymentMethodsViewModel.swift",
+      "kind": "IntegerLiteral",
+      "offset": 673,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Modules\/PaymentMethods\/PaymentMethodsViewModel.swift",
+      "kind": "IntegerLiteral",
+      "offset": 727,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Modules\/PaymentMethods\/PaymentMethodsViewModel.swift",
+      "kind": "IntegerLiteral",
+      "offset": 802,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Modules\/PaymentMethods\/PaymentMethodsViewModel.swift",
+      "kind": "IntegerLiteral",
+      "offset": 807,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Modules\/PaymentMethods\/PaymentMethodsViewModel.swift",
+      "kind": "Array",
+      "offset": 865,
+      "length": 15,
+      "value": "[\"A\", \"B\", \"C\"]"
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Modules\/PaymentMethods\/PaymentMethodsViewModel.swift",
+      "kind": "IntegerLiteral",
+      "offset": 976,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Modules\/PaymentMethods\/Views\/CollectionViewCells\/PaymentTagCollectionViewCell.swift",
+      "kind": "FloatLiteral",
+      "offset": 951,
+      "length": 3,
+      "value": "0.2"
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Modules\/PaymentMethods\/Views\/CollectionViewCells\/PaymentTagCollectionViewCell.swift",
+      "kind": "FloatLiteral",
+      "offset": 999,
+      "length": 3,
+      "value": "0.2"
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Modules\/PaymentMethods\/Views\/CollectionViewCells\/PaymentTagCollectionViewCell.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1061,
+      "length": 2,
+      "value": "12"
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Modules\/PaymentMethods\/Views\/CollectionViewCells\/PaymentTagCollectionViewCell.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1119,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Modules\/PaymentMethods\/Views\/CollectionViewCells\/ProceedButtonCollectionReusableView.swift",
+      "kind": "FloatLiteral",
+      "offset": 655,
+      "length": 3,
+      "value": "0.2"
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Modules\/PaymentMethods\/Views\/CollectionViewCells\/ProceedButtonCollectionReusableView.swift",
+      "kind": "BooleanLiteral",
+      "offset": 885,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Extensions\/String+Ext.swift",
+      "kind": "StringLiteral",
+      "offset": 170,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Extensions\/UIColor+Ext.swift",
+      "kind": "IntegerLiteral",
+      "offset": 235,
+      "length": 3,
+      "value": "255"
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Extensions\/UIColor+Ext.swift",
+      "kind": "IntegerLiteral",
+      "offset": 253,
+      "length": 3,
+      "value": "255"
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Extensions\/UIColor+Ext.swift",
+      "kind": "IntegerLiteral",
+      "offset": 269,
+      "length": 3,
+      "value": "255"
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Extensions\/UIColor+Ext.swift",
+      "kind": "FloatLiteral",
+      "offset": 281,
+      "length": 3,
+      "value": "1.0"
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Extensions\/UIColor+Ext.swift",
+      "kind": "IntegerLiteral",
+      "offset": 383,
+      "length": 3,
+      "value": "153"
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Extensions\/UIColor+Ext.swift",
+      "kind": "IntegerLiteral",
+      "offset": 395,
+      "length": 2,
+      "value": "31"
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Extensions\/UIColor+Ext.swift",
+      "kind": "IntegerLiteral",
+      "offset": 405,
+      "length": 2,
+      "value": "44"
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Extensions\/UIColor+Ext.swift",
+      "kind": "IntegerLiteral",
+      "offset": 467,
+      "length": 3,
+      "value": "168"
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Extensions\/UIColor+Ext.swift",
+      "kind": "IntegerLiteral",
+      "offset": 479,
+      "length": 2,
+      "value": "43"
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Extensions\/UIColor+Ext.swift",
+      "kind": "IntegerLiteral",
+      "offset": 489,
+      "length": 2,
+      "value": "16"
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Extensions\/UIColor+Ext.swift",
+      "kind": "IntegerLiteral",
+      "offset": 551,
+      "length": 3,
+      "value": "210"
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Extensions\/UIColor+Ext.swift",
+      "kind": "IntegerLiteral",
+      "offset": 563,
+      "length": 2,
+      "value": "54"
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Extensions\/UIColor+Ext.swift",
+      "kind": "IntegerLiteral",
+      "offset": 573,
+      "length": 2,
+      "value": "20"
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Extensions\/UIColor+Ext.swift",
+      "kind": "IntegerLiteral",
+      "offset": 670,
+      "length": 2,
+      "value": "64"
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Extensions\/UIColor+Ext.swift",
+      "kind": "IntegerLiteral",
+      "offset": 681,
+      "length": 3,
+      "value": "133"
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Extensions\/UIColor+Ext.swift",
+      "kind": "IntegerLiteral",
+      "offset": 692,
+      "length": 2,
+      "value": "10"
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Extensions\/UIColor+Ext.swift",
+      "kind": "IntegerLiteral",
+      "offset": 787,
+      "length": 2,
+      "value": "64"
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Extensions\/UIColor+Ext.swift",
+      "kind": "IntegerLiteral",
+      "offset": 798,
+      "length": 2,
+      "value": "41"
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Extensions\/UIColor+Ext.swift",
+      "kind": "IntegerLiteral",
+      "offset": 808,
+      "length": 3,
+      "value": "204"
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Extensions\/UIColor+Ext.swift",
+      "kind": "IntegerLiteral",
+      "offset": 912,
+      "length": 3,
+      "value": "255"
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Extensions\/UIColor+Ext.swift",
+      "kind": "IntegerLiteral",
+      "offset": 924,
+      "length": 3,
+      "value": "202"
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Extensions\/UIColor+Ext.swift",
+      "kind": "IntegerLiteral",
+      "offset": 935,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Extensions\/UIColor+Ext.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1033,
+      "length": 2,
+      "value": "99"
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Extensions\/UIColor+Ext.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1044,
+      "length": 2,
+      "value": "73"
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Extensions\/UIColor+Ext.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1054,
+      "length": 3,
+      "value": "157"
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Extensions\/UIColor+Ext.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1120,
+      "length": 3,
+      "value": "220"
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Extensions\/UIColor+Ext.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1132,
+      "length": 3,
+      "value": "214"
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Extensions\/UIColor+Ext.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1143,
+      "length": 3,
+      "value": "255"
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Extensions\/UIColor+Ext.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1230,
+      "length": 2,
+      "value": "77"
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Extensions\/UIColor+Ext.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1241,
+      "length": 2,
+      "value": "75"
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Extensions\/UIColor+Ext.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1251,
+      "length": 2,
+      "value": "90"
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Extensions\/UIColor+Ext.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1314,
+      "length": 3,
+      "value": "128"
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Extensions\/UIColor+Ext.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1326,
+      "length": 3,
+      "value": "126"
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Extensions\/UIColor+Ext.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1337,
+      "length": 3,
+      "value": "141"
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Extensions\/UIColor+Ext.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1401,
+      "length": 3,
+      "value": "191"
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Extensions\/UIColor+Ext.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1413,
+      "length": 3,
+      "value": "191"
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Extensions\/UIColor+Ext.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1424,
+      "length": 3,
+      "value": "198"
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Extensions\/UIColor+Ext.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1488,
+      "length": 3,
+      "value": "216"
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Extensions\/UIColor+Ext.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1500,
+      "length": 3,
+      "value": "216"
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Extensions\/UIColor+Ext.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1511,
+      "length": 3,
+      "value": "216"
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Extensions\/UIColor+Ext.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1575,
+      "length": 3,
+      "value": "223"
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Extensions\/UIColor+Ext.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1587,
+      "length": 3,
+      "value": "223"
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Extensions\/UIColor+Ext.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1598,
+      "length": 3,
+      "value": "227"
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Extensions\/UIColor+Ext.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1695,
+      "length": 3,
+      "value": "245"
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Extensions\/UIColor+Ext.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1707,
+      "length": 3,
+      "value": "245"
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Extensions\/UIColor+Ext.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1718,
+      "length": 3,
+      "value": "245"
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Extensions\/UIColor+Ext.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1783,
+      "length": 3,
+      "value": "250"
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Extensions\/UIColor+Ext.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1795,
+      "length": 3,
+      "value": "252"
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Extensions\/UIColor+Ext.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1806,
+      "length": 3,
+      "value": "253"
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Extensions\/UIColor+Ext.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1904,
+      "length": 2,
+      "value": "77"
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Extensions\/UIColor+Ext.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1915,
+      "length": 2,
+      "value": "75"
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Extensions\/UIColor+Ext.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1925,
+      "length": 2,
+      "value": "90"
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Extensions\/UIColor+Ext.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1989,
+      "length": 2,
+      "value": "38"
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Extensions\/UIColor+Ext.swift",
+      "kind": "IntegerLiteral",
+      "offset": 2000,
+      "length": 2,
+      "value": "38"
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Extensions\/UIColor+Ext.swift",
+      "kind": "IntegerLiteral",
+      "offset": 2010,
+      "length": 2,
+      "value": "45"
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Extensions\/UIColor+Ext.swift",
+      "kind": "IntegerLiteral",
+      "offset": 2074,
+      "length": 2,
+      "value": "24"
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Extensions\/UIColor+Ext.swift",
+      "kind": "IntegerLiteral",
+      "offset": 2085,
+      "length": 2,
+      "value": "39"
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Extensions\/UIColor+Ext.swift",
+      "kind": "IntegerLiteral",
+      "offset": 2095,
+      "length": 2,
+      "value": "75"
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Extensions\/UIFont+Ext.swift",
+      "kind": "StringLiteral",
+      "offset": 392,
+      "length": 74,
+      "value": "\"UIFont+:  Failed to register font: \""
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Extensions\/UIFont+Ext.swift",
+      "kind": "StringLiteral",
+      "offset": 439,
+      "length": 1,
+      "value": "\" - for resource not found.\""
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Extensions\/UIFont+Ext.swift",
+      "kind": "StringLiteral",
+      "offset": 622,
+      "length": 68,
+      "value": "\"UIFont+:  Failed to register font - font data could not be loaded.\""
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Extensions\/UIFont+Ext.swift",
+      "kind": "StringLiteral",
+      "offset": 835,
+      "length": 72,
+      "value": "\"UIFont+:  Failed to register font - data provider could not be loaded.\""
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Extensions\/UIFont+Ext.swift",
+      "kind": "StringLiteral",
+      "offset": 1034,
+      "length": 63,
+      "value": "\"UIFont+:  Failed to register font - font could not be loaded.\""
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Extensions\/UIFont+Ext.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1245,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Extensions\/UIFont+Ext.swift",
+      "kind": "StringLiteral",
+      "offset": 1288,
+      "length": 132,
+      "value": "\"UIFont+:  Failed to register font - register graphics font failed - this font may have already been registered in the main bundle.\""
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Extensions\/UIFont+Ext.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1801,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Extensions\/UIFont+Ext.swift",
+      "kind": "StringLiteral",
+      "offset": 1993,
+      "length": 6,
+      "value": "\".ttf\""
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Extensions\/UIFont+Ext.swift",
+      "kind": "BooleanLiteral",
+      "offset": 2036,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Extensions\/UIFont+Ext.swift",
+      "kind": "StringLiteral",
+      "offset": 2203,
+      "length": 8,
+      "value": "\"DMSans\""
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Extensions\/UIFont+Ext.swift",
+      "kind": "StringLiteral",
+      "offset": 2262,
+      "length": 9,
+      "value": "\"Poppins\""
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Extensions\/UIFont+Ext.swift",
+      "kind": "StringLiteral",
+      "offset": 2447,
+      "length": 3,
+      "value": "\"-\""
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Extensions\/UIFont+Ext.swift",
+      "kind": "StringLiteral",
+      "offset": 2599,
+      "length": 3,
+      "value": "\"-\""
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Extensions\/UIView+Ext.swift",
+      "kind": "BooleanLiteral",
+      "offset": 263,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Extensions\/UIView+Ext.swift",
+      "kind": "IntegerLiteral",
+      "offset": 338,
+      "length": 1,
+      "value": "2"
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Extensions\/UIView+Ext.swift",
+      "kind": "BooleanLiteral",
+      "offset": 577,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Extensions\/UIView+Ext.swift",
+      "kind": "IntegerLiteral",
+      "offset": 692,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Extensions\/UIView+Ext.swift",
+      "kind": "IntegerLiteral",
+      "offset": 703,
+      "length": 1,
+      "value": "2"
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Extensions\/UIView+Ext.swift",
+      "kind": "FloatLiteral",
+      "offset": 741,
+      "length": 3,
+      "value": "0.2"
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Extensions\/UIView+Ext.swift",
+      "kind": "IntegerLiteral",
+      "offset": 779,
+      "length": 1,
+      "value": "4"
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Extensions\/UIView+Ext.swift",
+      "kind": "IntegerLiteral",
+      "offset": 842,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Extensions\/UIView+Ext.swift",
+      "kind": "FloatLiteral",
+      "offset": 920,
+      "length": 3,
+      "value": "0.8"
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Extensions\/UIView+Ext.swift",
+      "kind": "FloatLiteral",
+      "offset": 1086,
+      "length": 4,
+      "value": "0.65"
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Modules\/VerifyOTPViewController\/VerifyOTPViewController.swift",
+      "kind": "StringLiteral",
+      "offset": 812,
+      "length": 25,
+      "value": "\"VerifyOTPViewController\""
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Modules\/VerifyOTPViewController\/VerifyOTPViewController.swift",
+      "kind": "StringLiteral",
+      "offset": 943,
+      "length": 39,
+      "value": "\"init(coder:) has not been implemented\""
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Modules\/VerifyOTPViewController\/VerifyOTPViewController.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1505,
+      "length": 2,
+      "value": "24"
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Modules\/VerifyOTPViewController\/VerifyOTPViewController.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1560,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Modules\/VerifyOTPViewController\/VerifyOTPViewController.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1758,
+      "length": 2,
+      "value": "16"
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Modules\/VerifyOTPViewController\/VerifyOTPViewController.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1817,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Modules\/VerifyOTPViewController\/VerifyOTPViewController.swift",
+      "kind": "IntegerLiteral",
+      "offset": 2026,
+      "length": 2,
+      "value": "18"
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Modules\/VerifyOTPViewController\/VerifyOTPViewController.swift",
+      "kind": "IntegerLiteral",
+      "offset": 2088,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Modules\/VerifyOTPViewController\/VerifyOTPViewController.swift",
+      "kind": "IntegerLiteral",
+      "offset": 2302,
+      "length": 2,
+      "value": "16"
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Modules\/VerifyOTPViewController\/VerifyOTPViewController.swift",
+      "kind": "IntegerLiteral",
+      "offset": 2362,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Modules\/VerifyOTPViewController\/VerifyOTPViewController.swift",
+      "kind": "IntegerLiteral",
+      "offset": 2588,
+      "length": 2,
+      "value": "16"
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Modules\/VerifyOTPViewController\/VerifyOTPViewController.swift",
+      "kind": "IntegerLiteral",
+      "offset": 2657,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Modules\/VerifyOTPViewController\/VerifyOTPViewController.swift",
+      "kind": "StringLiteral",
+      "offset": 2814,
+      "length": 18,
+      "value": "\"OTP Verification\""
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Modules\/VerifyOTPViewController\/VerifyOTPViewController.swift",
+      "kind": "StringLiteral",
+      "offset": 2862,
+      "length": 70,
+      "value": "\"Enter the 4 digit OTP (One Time Password) sent on your mobile number\""
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Modules\/VerifyOTPViewController\/VerifyOTPViewController.swift",
+      "kind": "StringLiteral",
+      "offset": 2966,
+      "length": 16,
+      "value": "\"+91-8456666666\""
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Modules\/VerifyOTPViewController\/VerifyOTPViewController.swift",
+      "kind": "StringLiteral",
+      "offset": 3090,
+      "length": 29,
+      "value": "\"Did not receive OTP? Resend\""
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Modules\/VerifyOTPViewController\/VerifyOTPViewController.swift",
+      "kind": "StringLiteral",
+      "offset": 3159,
+      "length": 54,
+      "value": "\"Entered mobile number is wrong? Change Mobile Number\""
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Modules\/VerifyOTPViewController\/VerifyOTPViewController.swift",
+      "kind": "IntegerLiteral",
+      "offset": 3322,
+      "length": 2,
+      "value": "16"
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Modules\/VerifyOTPViewController\/VerifyOTPViewController.swift",
+      "kind": "StringLiteral",
+      "offset": 3480,
+      "length": 10,
+      "value": "\"Send OTP\""
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Modules\/VerifyOTPViewController\/VerifyOTPViewController.swift",
+      "kind": "FloatLiteral",
+      "offset": 3548,
+      "length": 3,
+      "value": "0.2"
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Modules\/VerifyOTPViewController\/VerifyOTPViewController.swift",
+      "kind": "BooleanLiteral",
+      "offset": 3961,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Modules\/VerifyOTPViewController\/VerifyOTPViewController.swift",
+      "kind": "StringLiteral",
+      "offset": 4045,
+      "length": 44,
+      "value": "\"Please complete OTP incorret or Invalid!!!\""
+    },
+    {
+      "filePath": "\/Users\/valentine\/Documents\/GrayQuest\/gq_payment_ios_sdk_native\/GQPaymentIOSSDKNative\/Classes\/Modules\/VerifyOTPViewController\/VerifyOTPViewController.swift",
+      "kind": "StringLiteral",
+      "offset": 124,
+      "length": 23,
+      "value": "\"GQPaymentIOSSDKNative.VerifyOTPViewController\""
+    },
+    {
+      "filePath": "\/Users\/valentine\/Library\/Developer\/Xcode\/DerivedData\/GQPaymentIOSSDKNative-dwgrciihtktxskemvoffrfynipfu\/Build\/Intermediates.noindex\/ArchiveIntermediates\/GQPaymentIOSSDKNative\/IntermediateBuildFilesPath\/Pods.build\/Release-iphoneos\/GQPaymentIOSSDKNative.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "kind": "StringLiteral",
+      "offset": 729,
+      "length": 10,
+      "value": "\"backIcon\""
+    },
+    {
+      "filePath": "\/Users\/valentine\/Library\/Developer\/Xcode\/DerivedData\/GQPaymentIOSSDKNative-dwgrciihtktxskemvoffrfynipfu\/Build\/Intermediates.noindex\/ArchiveIntermediates\/GQPaymentIOSSDKNative\/IntermediateBuildFilesPath\/Pods.build\/Release-iphoneos\/GQPaymentIOSSDKNative.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "kind": "StringLiteral",
+      "offset": 867,
+      "length": 11,
+      "value": "\"closeIcon\""
+    },
+    {
+      "filePath": "\/Users\/valentine\/Library\/Developer\/Xcode\/DerivedData\/GQPaymentIOSSDKNative-dwgrciihtktxskemvoffrfynipfu\/Build\/Intermediates.noindex\/ArchiveIntermediates\/GQPaymentIOSSDKNative\/IntermediateBuildFilesPath\/Pods.build\/Release-iphoneos\/GQPaymentIOSSDKNative.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "kind": "StringLiteral",
+      "offset": 1014,
+      "length": 15,
+      "value": "\"grayQuestIcon\""
+    },
+    {
+      "filePath": "\/Users\/valentine\/Library\/Developer\/Xcode\/DerivedData\/GQPaymentIOSSDKNative-dwgrciihtktxskemvoffrfynipfu\/Build\/Intermediates.noindex\/ArchiveIntermediates\/GQPaymentIOSSDKNative\/IntermediateBuildFilesPath\/Pods.build\/Release-iphoneos\/GQPaymentIOSSDKNative.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "kind": "StringLiteral",
+      "offset": 1165,
+      "length": 15,
+      "value": "\"newWindowIcon\""
+    },
+    {
+      "filePath": "\/Users\/valentine\/Library\/Developer\/Xcode\/DerivedData\/GQPaymentIOSSDKNative-dwgrciihtktxskemvoffrfynipfu\/Build\/Intermediates.noindex\/ArchiveIntermediates\/GQPaymentIOSSDKNative\/IntermediateBuildFilesPath\/Pods.build\/Release-iphoneos\/GQPaymentIOSSDKNative.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "kind": "StringLiteral",
+      "offset": 1304,
+      "length": 9,
+      "value": "\"otpIcon\""
+    },
+    {
+      "filePath": "\/Users\/valentine\/Library\/Developer\/Xcode\/DerivedData\/GQPaymentIOSSDKNative-dwgrciihtktxskemvoffrfynipfu\/Build\/Intermediates.noindex\/ArchiveIntermediates\/GQPaymentIOSSDKNative\/IntermediateBuildFilesPath\/Pods.build\/Release-iphoneos\/GQPaymentIOSSDKNative.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "kind": "StringLiteral",
+      "offset": 1441,
+      "length": 11,
+      "value": "\"phoneIcon\""
+    },
+    {
+      "filePath": "\/Users\/valentine\/Library\/Developer\/Xcode\/DerivedData\/GQPaymentIOSSDKNative-dwgrciihtktxskemvoffrfynipfu\/Build\/Intermediates.noindex\/ArchiveIntermediates\/GQPaymentIOSSDKNative\/IntermediateBuildFilesPath\/Pods.build\/Release-iphoneos\/GQPaymentIOSSDKNative.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "kind": "StringLiteral",
+      "offset": 1582,
+      "length": 12,
+      "value": "\"rightArrow\""
+    },
+    {
+      "filePath": "\/Users\/valentine\/Library\/Developer\/Xcode\/DerivedData\/GQPaymentIOSSDKNative-dwgrciihtktxskemvoffrfynipfu\/Build\/Intermediates.noindex\/ArchiveIntermediates\/GQPaymentIOSSDKNative\/IntermediateBuildFilesPath\/Pods.build\/Release-iphoneos\/GQPaymentIOSSDKNative.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "kind": "StringLiteral",
+      "offset": 1726,
+      "length": 13,
+      "value": "\"supportIcon\""
+    }
+  ]
+}

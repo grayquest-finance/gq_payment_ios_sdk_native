@@ -19,7 +19,6 @@
     "ios": "15.0"
   },
   "swift_versions": "5.0",
-  "source_files": "GQPaymentIOSSDKNative/Classes/**/*",
   "dependencies": {
     "CashfreePG": [
       "~> 2.0.3"
@@ -31,12 +30,7 @@
       "~> 1.1"
     ]
   },
-  "pod_target_xcconfig": {
-    "EXCLUDED_ARCHS[sdk=iphonesimulator*]": "arm64"
-  },
-  "resources": [
-    "GQPaymentIOSSDKNative/Assets/*.xcassets",
-    "GQPaymentIOSSDKNative/Assets/Fonts/**/*.ttf"
-  ],
+  "vendored_frameworks": "GQPaymentIOSSDKNative.xcframework",
+  "exclude_files": "BuildFramework.sh",
   "swift_version": "5.0"
 }
