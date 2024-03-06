@@ -7,9 +7,9 @@
 
 import Foundation
 
-class Encoder {
+class GQEncoder {
     
-    static let shared = Encoder()
+    static let shared = GQEncoder()
     
     func encode(data: any Encodable) throws -> Data {
         
@@ -21,6 +21,17 @@ class Encoder {
         } catch let error {
             throw NetworkError.somethingWrong(error.localizedDescription)
         }
+    }
+    
+    func encode(dictionary: JSONDictionary) -> Data? {
+        let data = dictionary.map { key, value in
+            let escapedKey = "\(key)".addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) ?? ""
+            let escapedValue = "\(value)".addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) ?? ""
+            return escapedKey + "=" + escapedValue
+        }
+        .joined(separator: "&")
+        .data(using: .utf8)
+        return data
     }
     
     func serialize(data: any Encodable) throws -> [String: Any]? {

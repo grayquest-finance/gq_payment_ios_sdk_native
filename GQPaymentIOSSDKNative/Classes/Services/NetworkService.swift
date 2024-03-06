@@ -25,27 +25,17 @@ final class NetworkService {
         if let parameters = networkType.parameters {
             switch networkType.httpMethod {
             case .get:
-                do {
-                    if let dictionary = try Encoder.shared.serialize(data: parameters) {
-                        var components = URLComponents(string: request.url?.absoluteString ?? .empty)
-                        var queryItems = components?.queryItems ?? []
-                        for (key, value) in dictionary {
-                            let query = URLQueryItem(name: key, value: "\(value)")
-                            queryItems.append(query)
-                        }
-                        components?.queryItems = queryItems
-                        request.url = components?.url
-                    }
-                } catch (let error) {
-                    throw NetworkError.somethingWrong(error.localizedDescription)
+                var components = URLComponents(string: request.url?.absoluteString ?? .empty)
+                var queryItems = components?.queryItems ?? []
+                for (key, value) in parameters {
+                    let query = URLQueryItem(name: key, value: "\(value)")
+                    queryItems.append(query)
                 }
+                components?.queryItems = queryItems
+                request.url = components?.url
             case .post:
-                do {
-                    let encoded = try Encoder.shared.encode(data: parameters)
-                    request.httpBody = encoded
-                } catch (let error) {
-                    throw NetworkError.somethingWrong(error.localizedDescription)
-                }
+                let encoded = GQEncoder.shared.encode(dictionary: parameters)
+                request.httpBody = encoded
             }
         }
         

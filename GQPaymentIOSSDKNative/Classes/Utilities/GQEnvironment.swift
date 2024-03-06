@@ -8,14 +8,20 @@
 import Foundation
 
 class Environment {
-    
-    static let shared = Environment()
-    
     var env: String = "test"
     var gqApiKey: String = ""
-    var clientID: String = ""
-    var clientSecret: String = ""
-    var abase: String = ""
+    var clientID: String = "" {
+        didSet {
+            updateAbase()
+        }
+    }
+    var clientSecret: String = "" {
+        didSet {
+            updateAbase()
+        }
+    }
+    
+    var abase: String?
     var customerNumber: String = ""
     var customerID: Int = 0
     var customerCode: String = ""
@@ -29,6 +35,10 @@ class Environment {
     static var source: String = "isdk"
     static var version: String = "\"1.1\""
     static var customerAPI: String = "v1/customer/create-customer"
+    
+    static let shared = Environment()
+    
+    private init() { }
     
     // Method to update values
     func update(environment: String) {
@@ -47,8 +57,8 @@ class Environment {
         self.clientSecret = clientSecret
     }
     
-    func updateAbase(abase: String){
-        self.abase = abase
+    func updateAbase(){
+        self.abase = (self.clientID + ":" + self.clientSecret).encodeStringToBase64()
     }
     
     func updateCustomerNumber(customerNumber: String){
@@ -111,5 +121,22 @@ class Environment {
         default:
             return "https://erp-sdk.graydev.tech/"
         }
+    }
+    
+    func clear() {
+        update(environment: "test")
+        updateClientId(clientID: "")
+        updateClientSecret(clientSecret: "")
+        updateApiKey(apiKey: "")
+//        updateAbase(abase: "")
+        updateCustomerNumber(customerNumber: "")
+        updateCustomerId(custId: 0)
+        updateCustomerCode(custCode: "")
+        updateCustomerType(custType: "")
+        updateStudentID(stdId: "")
+        updateTheme(theme: "")
+        updateCustomization(customization: "")
+        updatePpConfig(ppConfig: "")
+        updateFeeHeaders(feeHeader: "")
     }
 }

@@ -7,15 +7,14 @@
 
 import Foundation
 
+typealias JSONDictionary = [String: Any]
+
 enum NetworkType {
-    case home(any Encodable)
-    case more(any Encodable)
-    case listing(any Encodable)
-    case detail(any Encodable)
+    case createCustomer(JSONDictionary)
     
-    static private var environment: NetworkEnvironment = .production
+    static private var environment: GQNetworkEnvironment = .test
     
-    static public func set(environment: NetworkEnvironment) {
+    static public func set(environment: GQNetworkEnvironment) {
         Self.environment = environment
     }
 }
@@ -24,38 +23,37 @@ extension NetworkType {
     
     public var httpMethod: HTTPMethod {
         switch self {
-        case .home, .more, .listing:
-            return .get
-        case .detail:
+        case .createCustomer:
             return .post
+        default:
+            return .get
         }
     }
     
     public var endpoint: String {
         switch self {
-        case .home:
-            return NetworkType.environment.baseURL + "/home"
-        case .more:
-            return NetworkType.environment.baseURL + "/more"
-        case .listing:
-            return NetworkType.environment.baseURL + "/listing"
-        case .detail:
-            return NetworkType.environment.baseURL + "/detail"
+        case .createCustomer:
+            return NetworkType.environment.baseURL + "/v1" + "/customer/create-customer"
         }
     }
     
-    public var parameters: (any Encodable)? {
+    public var parameters: JSONDictionary? {
         switch self {
-        case .home(let parameter), .more(let parameter), .listing(let parameter), .detail(let parameter):
-            return parameter
+        case .createCustomer(let params):
+            return params
         }
     }
     
     public var headers: [String: String] {
-        return ["Content-Type": "application/json"]
+        return ["Content-Type": "application/x-www-form-urlencoded",
+                "Accept": "application/json",
+                "GQ-API-Key": "\(Environment.shared.gqApiKey)",
+                "Authorization": "Basic \(Environment.shared.abase ?? .empty)"
+                ]
     }
     
     public var cachePolicy: URLRequest.CachePolicy {
         return .reloadIgnoringLocalCacheData
     }
+    
 }

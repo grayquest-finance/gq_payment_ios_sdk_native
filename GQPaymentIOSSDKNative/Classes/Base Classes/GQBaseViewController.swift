@@ -12,6 +12,47 @@ public class GQBaseViewController: UIViewController {
     private weak var scrollViewToAdjust: UIScrollView?
     internal var isBackButtonEnabled: Bool = true
     
+    private weak var loader: UIActivityIndicatorView?
+    
+    public func showLoader() {
+        Task { @MainActor in
+            if let loader = self.loader {
+                loader.startAnimating()
+                loader.isHidden = false
+            } else {
+                let activityIndicator = UIActivityIndicatorView()
+                activityIndicator.hidesWhenStopped = true
+                activityIndicator.color = .black
+                activityIndicator.backgroundColor = .black.withAlphaComponent(0.3)
+                self.view.addSubview(activityIndicator)
+
+                //Adding Constraints
+                activityIndicator.translatesAutoresizingMaskIntoConstraints = false
+                activityIndicator.center = self.view.center
+                activityIndicator.heightAnchor.constraint(equalToConstant: 40).isActive = true
+                activityIndicator.widthAnchor.constraint(equalToConstant: 40).isActive = true
+                activityIndicator.centerXAnchor.constraint(equalTo: self.view.centerXAnchor).isActive = true
+                activityIndicator.centerYAnchor.constraint(equalTo: self.view.centerYAnchor).isActive = true
+
+                activityIndicator.startAnimating()
+                self.view.addSubview(activityIndicator)
+                self.loader = activityIndicator
+            }
+            
+            // disable interaction
+            self.view.isUserInteractionEnabled = false
+        }
+    }
+
+    public func hideLoader() {
+        Task { @MainActor in
+            self.loader?.stopAnimating()
+            
+            // enable interaction
+            self.view.isUserInteractionEnabled = true
+        }
+    }
+    
     public override func viewDidLoad() {
         super.viewDidLoad()
         setupNavigationBar()
@@ -35,14 +76,6 @@ public class GQBaseViewController: UIViewController {
         overrideUserInterfaceStyle = .light
     }
     
-    func showLoader() {
-        
-    }
-    
-    func hideLoader() {
-        
-    }
-    
     func setupBackAction() {
 //        Disable default back button functionality.
         navigationItem.hidesBackButton = true
@@ -62,8 +95,13 @@ public class GQBaseViewController: UIViewController {
     
     @objc func backButtonAction(_ selector: Selector) {
         Task { @MainActor in
-            self.navigationController?.popViewController(animated: true)
+//            self.navigationController?.popViewController(animated: true)
+            configureBackAction()
         }
+    }
+    
+    internal func configureBackAction() {
+        
     }
     
     func setupCloseAction() {

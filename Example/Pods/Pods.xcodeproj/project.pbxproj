@@ -117,7 +117,7 @@
 		42B6E7C15D58BC3E27C288284A10BDAB /* UIFont+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA4B5C80D1DF25224A56DCC20A14AA9 /* UIFont+Ext.swift */; };
 		43CE1A6FC62ADE486D2458A804731007 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1B9ACC4FCE80C62D6179BE5C2A0D305E /* Assets.xcassets */; };
 		4ABAADE2FCC9B2615C00C9C0244E2A7E /* GQSupportFooterView.xib in Sources */ = {isa = PBXBuildFile; fileRef = D4523AB19BCD36A840DFEE2A25A243D6 /* GQSupportFooterView.xib */; };
-		4BDC8C7BD47E0D96D767D4D922725175 /* Encoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB66EFB6E0B8458E2423F753946DC714 /* Encoder.swift */; };
+		4BDC8C7BD47E0D96D767D4D922725175 /* GQEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB66EFB6E0B8458E2423F753946DC714 /* GQEncoder.swift */; };
 		4FAE9866DD6423AD49AF060F86E0D5A0 /* Pods-GQPaymentIOSSDKNative_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C18B0A71FF4558AD82808E83D35FA54 /* Pods-GQPaymentIOSSDKNative_Tests-dummy.m */; };
 		516E7209C721FC9F93ED390C176415C1 /* GQNavigationBar.xib in Sources */ = {isa = PBXBuildFile; fileRef = C494CE32440D022C9038CE101D0CF147 /* GQNavigationBar.xib */; };
 		539EBC4560A38DFC684B7CD8505C7A6A /* PaymentMethodsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 233A458669B3D948CBB313F502264BFB /* PaymentMethodsViewController.swift */; };
@@ -141,6 +141,7 @@
 		98BC412088DB00E05D7D2A23208762BD /* DMSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 62C4641F9828AA1586BDD62EF393EE9D /* DMSans-Bold.ttf */; };
 		9C2840982B6A2EC6D2FE6F8D6D1CBB48 /* NSAttributedString+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 609D39EB9E77343C5189F4F069D58944 /* NSAttributedString+Ext.swift */; };
 		9E78D491F5C4E4D0831A766193772E76 /* GQTagView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A8EE591EF027D73502CB203D12F3CC /* GQTagView.swift */; };
+		A36B3CD62B9899AD00628C90 /* CreateCustomerResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36B3CD52B9899AD00628C90 /* CreateCustomerResponse.swift */; };
 		A395D5C72B9733F200633227 /* GQUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = A395D5C62B9733F200633227 /* GQUtility.swift */; };
 		A395D5C92B9734B700633227 /* GQEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = A395D5C82B9734B700633227 /* GQEnvironment.swift */; };
 		A3BC71022B91E0950087EECB /* GQLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3BC71012B91E0950087EECB /* GQLogger.swift */; };
@@ -149,7 +150,7 @@
 		A9CEDFFF45ED3146A7C1FF49FBAEF964 /* Pods-GQPaymentIOSSDKNative_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 7B9D5435220E6B3A6AD2F5DC7EF14B6B /* Pods-GQPaymentIOSSDKNative_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B3CA53A3FBFF88FED1139092CB6D6995 /* GQEMIViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6080F0BD3E3E3DD4DE36FDDC51A91FEF /* GQEMIViewModel.swift */; };
 		B47142323BB88CE494132DF7813D2EA4 /* GQPaymentSDK.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50F50664583E8E44652932A3749F3CF0 /* GQPaymentSDK.swift */; };
-		B6BF6DDFD5CB74D2A80B60DF678D5151 /* NetworkEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66CC512C4ECE7C0FF1E7593D6884CA0E /* NetworkEnvironment.swift */; };
+		B6BF6DDFD5CB74D2A80B60DF678D5151 /* GQNetworkEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66CC512C4ECE7C0FF1E7593D6884CA0E /* GQNetworkEnvironment.swift */; };
 		B99DD3BB92BF3D9A6226D5A0B10E0B8B /* EnterMobileNumberViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DF38CFF9BB860C2A430E6DE0284750C /* EnterMobileNumberViewController.swift */; };
 		BA775AA418410CCB4CEC014FDB14A2FD /* PaymentMethodsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FB30E65A9856C343836204478061612 /* PaymentMethodsCollectionViewCell.swift */; };
 		C1A6175F7A306FA9C0DEC29D201408C7 /* GQNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51378A4181BEF39D095C3860FC30D2AD /* GQNavigationBar.swift */; };
@@ -346,7 +347,7 @@
 		62C4641F9828AA1586BDD62EF393EE9D /* DMSans-Bold.ttf */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file; path = "DMSans-Bold.ttf"; sourceTree = "<group>"; };
 		64DBA58A66026AC5EF1AEA47BF6B567E /* GQMobileTextFieldDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = GQMobileTextFieldDelegate.swift; sourceTree = "<group>"; };
 		65F1A8151B43561461D496C7523D3311 /* GQGILEView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = GQGILEView.swift; sourceTree = "<group>"; };
-		66CC512C4ECE7C0FF1E7593D6884CA0E /* NetworkEnvironment.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = NetworkEnvironment.swift; sourceTree = "<group>"; };
+		66CC512C4ECE7C0FF1E7593D6884CA0E /* GQNetworkEnvironment.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = GQNetworkEnvironment.swift; sourceTree = "<group>"; };
 		6A067A221D31BEE945A111440B3965FB /* Pods-GQPaymentIOSSDKNative_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-GQPaymentIOSSDKNative_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
 		6A2B101DFBB028F72328EFE719A27DCC /* CashfreePGUISDK-xcframeworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "CashfreePGUISDK-xcframeworks.sh"; sourceTree = "<group>"; };
 		6CA6218D2C61FA9FB511503BDCA1A068 /* VerifyOTPViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = VerifyOTPViewController.swift; sourceTree = "<group>"; };
@@ -374,6 +375,7 @@
 		950B841F33040FDD5A7C4BD28F0C527E /* EnterMobileNumberViewModel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = EnterMobileNumberViewModel.swift; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9DF38CFF9BB860C2A430E6DE0284750C /* EnterMobileNumberViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = EnterMobileNumberViewController.swift; sourceTree = "<group>"; };
+		A36B3CD52B9899AD00628C90 /* CreateCustomerResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateCustomerResponse.swift; sourceTree = "<group>"; };
 		A395D5C62B9733F200633227 /* GQUtility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GQUtility.swift; sourceTree = "<group>"; };
 		A395D5C82B9734B700633227 /* GQEnvironment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GQEnvironment.swift; sourceTree = "<group>"; };
 		A3BC71012B91E0950087EECB /* GQLogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GQLogger.swift; sourceTree = "<group>"; };
@@ -412,7 +414,7 @@
 		F33A82E6D0982A4603FC992BE39A4F47 /* Pods-GQPaymentIOSSDKNative_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-GQPaymentIOSSDKNative_Example-dummy.m"; sourceTree = "<group>"; };
 		F514AEAA741AFAA10B32BEECDD9EA4F1 /* GQPaymentIOSSDKNative.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = GQPaymentIOSSDKNative.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		F765A1664D980338A19A6A09E5B665BA /* CashfreeAnalyticsSDK.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CashfreeAnalyticsSDK.debug.xcconfig; sourceTree = "<group>"; };
-		FB66EFB6E0B8458E2423F753946DC714 /* Encoder.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Encoder.swift; sourceTree = "<group>"; };
+		FB66EFB6E0B8458E2423F753946DC714 /* GQEncoder.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = GQEncoder.swift; sourceTree = "<group>"; };
 		FC188022B1FB2C635DA8D0DF590D13C9 /* Easebuzz.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Easebuzz.release.xcconfig; sourceTree = "<group>"; };
 		FD3CAC65AE03A6B935261EF0FB6FD173 /* Poppins-Regular.ttf */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file; path = "Poppins-Regular.ttf"; sourceTree = "<group>"; };
 		FF837BA4B96BC5CF4DCE76EB9B184B63 /* GQMobileTextField.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; path = GQMobileTextField.xib; sourceTree = "<group>"; };
@@ -829,7 +831,7 @@
 			children = (
 				C879681FCEF715E2E54A32855F9524CF /* HTTPMethod.swift */,
 				369E23B984CC2B762401A180FEE7C9A4 /* Model.swift */,
-				66CC512C4ECE7C0FF1E7593D6884CA0E /* NetworkEnvironment.swift */,
+				66CC512C4ECE7C0FF1E7593D6884CA0E /* GQNetworkEnvironment.swift */,
 				29C6284777F4D108347BD661A2083BC3 /* NetworkError.swift */,
 				244A18DBB153521ACAB69379FD141191 /* NetworkService.swift */,
 				ED5FAA9CD3992C0BFB4A4A72F4DF32F6 /* NetworkType.swift */,
@@ -970,6 +972,7 @@
 			children = (
 				50F50664583E8E44652932A3749F3CF0 /* GQPaymentSDK.swift */,
 				45EF335BF9893292D9FFF20A7FFC9762 /* GQPaymentDelegate.swift */,
+				A36B3CD52B9899AD00628C90 /* CreateCustomerResponse.swift */,
 			);
 			name = GQPayment;
 			path = GQPaymentIOSSDKNative/Classes/GQPayment;
@@ -1068,7 +1071,7 @@
 			isa = PBXGroup;
 			children = (
 				C89DFC6FD4F3FB73D169282B11C48616 /* Decoder.swift */,
-				FB66EFB6E0B8458E2423F753946DC714 /* Encoder.swift */,
+				FB66EFB6E0B8458E2423F753946DC714 /* GQEncoder.swift */,
 				210716B4345295E766009818E7EFCE8B /* GQStaticText.swift */,
 				DC09596623F8EE18B311317DF0D2E416 /* GQValidationService.swift */,
 				A3BC71012B91E0950087EECB /* GQLogger.swift */,
@@ -1395,7 +1398,7 @@
 				38ABC6A995ADFBE4D0C2A41015F8BC82 /* Decoder.swift in Sources */,
 				049D23FF9FB6371619AB9C895789C1E2 /* EMIApplicationCollectionViewCell.swift in Sources */,
 				59EDD8840DB9CF5632397FB8EFCE8E95 /* EMIApplicationCollectionViewCell.xib in Sources */,
-				4BDC8C7BD47E0D96D767D4D922725175 /* Encoder.swift in Sources */,
+				4BDC8C7BD47E0D96D767D4D922725175 /* GQEncoder.swift in Sources */,
 				B99DD3BB92BF3D9A6226D5A0B10E0B8B /* EnterMobileNumberViewController.swift in Sources */,
 				C5B05419C8BCB744E127BB2223435465 /* EnterMobileNumberViewController.xib in Sources */,
 				E4DFB06A3DE33F12F78029810BAFEAA7 /* EnterMobileNumberViewModel.swift in Sources */,
@@ -1429,13 +1432,14 @@
 				2816F66FD0072C7C193324DD8DBD1740 /* MobileOTPView.swift in Sources */,
 				5F65488E14F4F65615D5D03684E6C87C /* MobileOTPView.xib in Sources */,
 				A75B7FCE5FAE7180BD4BF882DC201026 /* Model.swift in Sources */,
-				B6BF6DDFD5CB74D2A80B60DF678D5151 /* NetworkEnvironment.swift in Sources */,
+				B6BF6DDFD5CB74D2A80B60DF678D5151 /* GQNetworkEnvironment.swift in Sources */,
 				FA47C4CED10D58A8F81272A373238A1C /* NetworkError.swift in Sources */,
 				0F97F9F9DBFCF90CF5C2CD55E2117DD9 /* NetworkService.swift in Sources */,
 				17C753342611CE76EF04A39993C78DF1 /* NetworkType.swift in Sources */,
 				9C2840982B6A2EC6D2FE6F8D6D1CBB48 /* NSAttributedString+Ext.swift in Sources */,
 				A395D5C92B9734B700633227 /* GQEnvironment.swift in Sources */,
 				1F123E69203BB23972F000438CD6867B /* OTPTextField.swift in Sources */,
+				A36B3CD62B9899AD00628C90 /* CreateCustomerResponse.swift in Sources */,
 				BA775AA418410CCB4CEC014FDB14A2FD /* PaymentMethodsCollectionViewCell.swift in Sources */,
 				59B187D76BC153DB02C6DCEF315BA184 /* PaymentMethodsCollectionViewCell.xib in Sources */,
 				539EBC4560A38DFC684B7CD8505C7A6A /* PaymentMethodsViewController.swift in Sources */,
