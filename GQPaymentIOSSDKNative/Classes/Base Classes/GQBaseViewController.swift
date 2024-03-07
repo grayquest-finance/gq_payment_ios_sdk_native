@@ -60,7 +60,7 @@ public class GQBaseViewController: UIViewController {
         setupCommonUI()
     }
     
-    func setupNavigationBar() {
+    internal func setupNavigationBar() {
         guard let navigationController = self.navigationController else { return }
         
         let navBarAppearrance = UINavigationBarAppearance()
@@ -72,11 +72,11 @@ public class GQBaseViewController: UIViewController {
         setupCloseAction()
     }
     
-    func setupCommonUI() {
+    internal func setupCommonUI() {
         overrideUserInterfaceStyle = .light
     }
     
-    func setupBackAction() {
+    internal func setupBackAction() {
 //        Disable default back button functionality.
         navigationItem.hidesBackButton = true
         
@@ -104,7 +104,7 @@ public class GQBaseViewController: UIViewController {
         
     }
     
-    func setupCloseAction() {
+    internal func setupCloseAction() {
         let closeButton = UIBarButtonItem(image: .getImage(icon: .closeIcon,
                                                            renderingMode: .alwaysOriginal),
                                           style: .done,
@@ -129,7 +129,7 @@ public class GQBaseViewController: UIViewController {
 //MARK: Adjust Scrollview when Keyboard appears and disappears.
 extension GQBaseViewController {
     
-    public func adjustScrollViewForKeyboard(scrollView: UIScrollView) {
+    internal func adjustScrollViewForKeyboard(scrollView: UIScrollView) {
         let notificationCenter = NotificationCenter.default
         notificationCenter.addObserver(self, selector: #selector(adjustForHideKeyboard), name: UIResponder.keyboardWillHideNotification, object: nil)
         notificationCenter.addObserver(self, selector: #selector(adjustForShowKeyboard), name: UIResponder.keyboardWillChangeFrameNotification, object: nil)

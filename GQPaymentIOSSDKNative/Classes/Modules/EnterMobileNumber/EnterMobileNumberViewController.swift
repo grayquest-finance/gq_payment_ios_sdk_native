@@ -30,6 +30,7 @@ class EnterMobileNumberViewController: GQBaseViewController {
     
 //  MARK: Variables
     private var viewModel: (any EnterMobileNumberViewModelType)?
+    weak var gqPaymentSDK: GQPaymentSDK?
     
     init(viewModel: some EnterMobileNumberViewModelType) {
         super.init(nibName: "EnterMobileNumberViewController", bundle: GQPaymentSDK.bundle)
@@ -49,6 +50,12 @@ class EnterMobileNumberViewController: GQBaseViewController {
     public override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         configureUI()
+    }
+    
+    override func dismiss(animated flag: Bool, completion: (() -> Void)? = nil) {
+        super.dismiss(animated: flag, completion: { [weak self] in
+            self?.gqPaymentSDK?.dismiss(animated: true)
+        })
     }
     
     public func configureUI() {

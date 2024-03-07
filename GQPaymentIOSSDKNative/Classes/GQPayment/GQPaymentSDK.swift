@@ -57,20 +57,12 @@ public class GQPaymentSDK: GQBaseViewController {
     private var mobileNumber: String = ""
     private var errorMessage: String = ""
     private var isInValid: Bool = false
-//    private var isFirstLoad: Bool = true
     
     override public func viewDidLoad() {
         super.viewDidLoad()
         
         self.showLoader()
         configureClientJSONData()
-    }
-    
-    public override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-//        if !isFirstLoad {
-//            self.dismiss(animated: true)
-//        }
     }
     
     private func configureClientJSONData() {
@@ -208,7 +200,7 @@ public class GQPaymentSDK: GQBaseViewController {
         Task(priority: .userInitiated) {
             do {
                 let response = try await NetworkService.shared.perform(networkType: .createCustomer(data), responseType: CreateCustomerResponse.self)
-                self.isFirstLoad = false
+//                self.isFirstLoad = false
                 self.hideLoader()
                 self.open()
             } catch (let error) {
@@ -223,6 +215,7 @@ public class GQPaymentSDK: GQBaseViewController {
         Task { @MainActor in
             let mobileNumberViewmodel = EnterMobileNumberViewModel()
             let mobileNumberViewcontroller = EnterMobileNumberViewController(viewModel: mobileNumberViewmodel)
+            mobileNumberViewcontroller.gqPaymentSDK = self
             
 //        MARK: For Using Inbuilt Navigation BAR
             let navigationController = UINavigationController(rootViewController: mobileNumberViewcontroller)
