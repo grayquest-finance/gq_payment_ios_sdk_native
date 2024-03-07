@@ -93,15 +93,14 @@ public class GQBaseViewController: UIViewController {
         self.navigationItem.leftBarButtonItem = backButton
     }
     
-    @objc func backButtonAction(_ selector: Selector) {
-        Task { @MainActor in
-//            self.navigationController?.popViewController(animated: true)
-            configureBackAction()
-        }
+    @objc private func backButtonAction(_ selector: Selector) {
+        configureBackAction()
     }
     
     internal func configureBackAction() {
-        
+        Task { @MainActor in
+            self.navigationController?.popViewController(animated: true)
+        }
     }
     
     internal func setupCloseAction() {
@@ -115,8 +114,9 @@ public class GQBaseViewController: UIViewController {
         self.navigationItem.rightBarButtonItem = closeButton
     }
     
-    @objc func closeButtonAction(_ selector: Selector) {
+    @objc private func closeButtonAction(_ selector: Selector) {
         Task { @MainActor in
+            GQUtility.shared.delegate?.gqCancelResponse(data: nil)
             self.dismiss(animated: true)
         }
     }

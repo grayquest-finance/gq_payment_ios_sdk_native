@@ -62,15 +62,24 @@ class ViewController: UIViewController {
 //MARK: GQPayment Delegate functions to receive payment status.
 extension ViewController: GQPaymentDelegate {
     func gqSuccessResponse(data: [String : Any]?) {
-        
+        print("SDK Success!!!")
+        if let data {
+            print("Data: \(data)")
+        }
     }
     
     func gqFailureResponse(data: [String : Any]?) {
-        
+        print("SDK Failure!!!")
+        if let data {
+            print("Data: \(data)")
+        }
     }
     
     func gqCancelResponse(data: [String : Any]?) {
-        
+        print("Closed SDK!!!")
+        if let data {
+            print("Data: \(data)")
+        }
     }
     
 }

@@ -64,6 +64,19 @@ class EnterMobileNumberViewController: GQBaseViewController {
             await gileView.configure(with: viewModel?.gile)
         }
     }
+    
+    override func configureBackAction() {
+        Task { @MainActor in
+            let alert = UIAlertController(title: "Do you want to go back?", message: "Your changes will not be saved and discarded", preferredStyle: .alert)
+            let okayAction = UIAlertAction(title: "Okay", style: .default) { action in
+                super.configureBackAction()
+            }
+            let cancelAction = UIAlertAction(title: "Cancel", style: .default, handler: nil)
+            alert.addAction(okayAction)
+            alert.addAction(cancelAction)
+            self.present(alert, animated: true)
+        }
+    }
 
     private func setupUI() {
         setupLabels()

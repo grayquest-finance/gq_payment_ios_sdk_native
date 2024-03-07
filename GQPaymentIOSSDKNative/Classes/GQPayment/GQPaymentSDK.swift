@@ -7,24 +7,32 @@
 
 import UIKit
 
-public class GQPaymentSDK: GQBaseViewController {
+final public class GQPaymentSDK: GQBaseViewController {
     
 //    Theme Color to be displayed by the client.
     public static var themeColor: UIColor = .red991F2C
     
 //    Delegate which will receive payment callback.
-    public var delegate: (any GQPaymentDelegate)?
+    public var delegate: (any GQPaymentDelegate)? {
+        didSet {
+            GQUtility.shared.delegate = self.delegate
+        }
+    }
     
 //    Initialise the class with certain properties
     public init(clientData: [String: Any]?, delegate: some GQPaymentDelegate) {
         super.init(nibName: nil, bundle: nil)
         
-//        Loading Dependencies
+        defer {
+//            Needs to be called in defer since else didSet wont work.
+            self.delegate = delegate
+        }
+        
+//        Loading Dependencies.
         Self.loadDependencies()
         
+//        Setting Data and Configuration.
         self.clientJSONObject = clientData
-        self.delegate = delegate
-        
         self.modalPresentationStyle = .overCurrentContext
         self.modalTransitionStyle = .crossDissolve
     }
@@ -200,7 +208,6 @@ public class GQPaymentSDK: GQBaseViewController {
         Task(priority: .userInitiated) {
             do {
                 let response = try await NetworkService.shared.perform(networkType: .createCustomer(data), responseType: CreateCustomerResponse.self)
-//                self.isFirstLoad = false
                 self.hideLoader()
                 self.open()
             } catch (let error) {

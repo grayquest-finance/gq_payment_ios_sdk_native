@@ -9,6 +9,12 @@ import Foundation
 
 final class GQUtility {
     
+    static let shared = GQUtility()
+    
+    private init() { }
+    
+    internal var delegate: GQPaymentDelegate?
+    
     static func convertDictionaryToJson(dictionary: [String: Any]) -> String? {
         do {
             let jsonData = try JSONSerialization.data(withJSONObject: dictionary, options: .prettyPrinted)
