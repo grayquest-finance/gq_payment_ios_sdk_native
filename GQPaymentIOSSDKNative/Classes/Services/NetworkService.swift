@@ -15,6 +15,7 @@ final class NetworkService {
     
     func perform<T: Decodable>(networkType: NetworkType, responseType: T.Type) async throws -> T? {
         
+//    MARK: Request Parameters
         guard let url = URL(string: networkType.endpoint) else { throw NetworkError.notFound }
         var request = URLRequest(url: url)
         
@@ -39,8 +40,16 @@ final class NetworkService {
             }
         }
         
+//    MARK: Response Parameters
         do {
-            let (data, _) = try await URLSession.shared.data(for: request)
+            let (data, response) = try await URLSession.shared.data(for: request)
+            
+            guard let httpResponse = response as? HTTPURLResponse else { throw NetworkError.invalidResponse }
+            guard (200...299) ~= httpResponse.statusCode else {
+                let errorModel = try Decoder.shared.decode(data: data, type: NetworkErrorResponse.self)
+                throw NetworkError.somethingWrong(errorModel?.message)
+            }
+            
             let model = try Decoder.shared.decode(data: data, type: T.self)
             return model
         } catch (let error) {

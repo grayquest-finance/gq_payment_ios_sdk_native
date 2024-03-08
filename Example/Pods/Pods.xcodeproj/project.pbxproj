@@ -146,7 +146,7 @@
 		A395D5C92B9734B700633227 /* GQEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = A395D5C82B9734B700633227 /* GQEnvironment.swift */; };
 		A3BC71022B91E0950087EECB /* GQLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3BC71012B91E0950087EECB /* GQLogger.swift */; };
 		A5FE8116320141791D4F8C170F0BEEC6 /* GQGILEView.xib in Sources */ = {isa = PBXBuildFile; fileRef = 6EC130FA05613FE95AE5990857A323F1 /* GQGILEView.xib */; };
-		A75B7FCE5FAE7180BD4BF882DC201026 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 369E23B984CC2B762401A180FEE7C9A4 /* Model.swift */; };
+		A75B7FCE5FAE7180BD4BF882DC201026 /* NetworkErrorResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 369E23B984CC2B762401A180FEE7C9A4 /* NetworkErrorResponse.swift */; };
 		A9CEDFFF45ED3146A7C1FF49FBAEF964 /* Pods-GQPaymentIOSSDKNative_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 7B9D5435220E6B3A6AD2F5DC7EF14B6B /* Pods-GQPaymentIOSSDKNative_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B3CA53A3FBFF88FED1139092CB6D6995 /* GQEMIViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6080F0BD3E3E3DD4DE36FDDC51A91FEF /* GQEMIViewModel.swift */; };
 		B47142323BB88CE494132DF7813D2EA4 /* GQPaymentSDK.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50F50664583E8E44652932A3749F3CF0 /* GQPaymentSDK.swift */; };
@@ -313,7 +313,7 @@
 		3550F168270EEA4B11125468CE212BB3 /* Pods-GQPaymentIOSSDKNative_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-GQPaymentIOSSDKNative_Example-Info.plist"; sourceTree = "<group>"; };
 		35CC2D19BA4DD794C955CD3087497A86 /* UIColor+Ext.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "UIColor+Ext.swift"; sourceTree = "<group>"; };
 		3654A0805FEB7AE464B6416D7F4A59CF /* Pods-GQPaymentIOSSDKNative_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-GQPaymentIOSSDKNative_Example-acknowledgements.plist"; sourceTree = "<group>"; };
-		369E23B984CC2B762401A180FEE7C9A4 /* Model.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		369E23B984CC2B762401A180FEE7C9A4 /* NetworkErrorResponse.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = NetworkErrorResponse.swift; sourceTree = "<group>"; };
 		37015A902A9501735AF8660449AF5CC5 /* Pods-GQPaymentIOSSDKNative_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-GQPaymentIOSSDKNative_Example.release.xcconfig"; sourceTree = "<group>"; };
 		38656C35B39DE8DBF0A1CD7B1B2D410F /* razorpay-pod.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "razorpay-pod.debug.xcconfig"; sourceTree = "<group>"; };
 		3C08CF1DF47BE802800C2FAE2BE4C620 /* MobileOTPView.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; path = MobileOTPView.xib; sourceTree = "<group>"; };
@@ -830,7 +830,7 @@
 			isa = PBXGroup;
 			children = (
 				C879681FCEF715E2E54A32855F9524CF /* HTTPMethod.swift */,
-				369E23B984CC2B762401A180FEE7C9A4 /* Model.swift */,
+				369E23B984CC2B762401A180FEE7C9A4 /* NetworkErrorResponse.swift */,
 				66CC512C4ECE7C0FF1E7593D6884CA0E /* GQNetworkEnvironment.swift */,
 				29C6284777F4D108347BD661A2083BC3 /* NetworkError.swift */,
 				244A18DBB153521ACAB69379FD141191 /* NetworkService.swift */,
@@ -1431,7 +1431,7 @@
 				6D5F0B337F013281225B877218DC840C /* HTTPMethod.swift in Sources */,
 				2816F66FD0072C7C193324DD8DBD1740 /* MobileOTPView.swift in Sources */,
 				5F65488E14F4F65615D5D03684E6C87C /* MobileOTPView.xib in Sources */,
-				A75B7FCE5FAE7180BD4BF882DC201026 /* Model.swift in Sources */,
+				A75B7FCE5FAE7180BD4BF882DC201026 /* NetworkErrorResponse.swift in Sources */,
 				B6BF6DDFD5CB74D2A80B60DF678D5151 /* GQNetworkEnvironment.swift in Sources */,
 				FA47C4CED10D58A8F81272A373238A1C /* NetworkError.swift in Sources */,
 				0F97F9F9DBFCF90CF5C2CD55E2117DD9 /* NetworkService.swift in Sources */,
