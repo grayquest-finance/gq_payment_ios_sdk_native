@@ -15,4 +15,11 @@ extension String {
         return GQValidationService.onlyDigits(text: self)
     }
     
+    func encodeStringToBase64() -> String? {
+        if let inputData = self.data(using: .utf8) {
+            return inputData.base64EncodedString()
+        }
+        return nil
+    }
+    
 }

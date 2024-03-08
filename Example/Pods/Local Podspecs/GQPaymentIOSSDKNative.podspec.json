@@ -30,10 +30,13 @@
       "~> 1.1"
     ]
   },
+  "source_files": "GQPaymentIOSSDKNative/Classes/**/*",
+  "resources": [
+    "GQPaymentIOSSDKNative/Assets/*.xcassets",
+    "GQPaymentIOSSDKNative/Assets/Fonts/**/*.ttf"
+  ],
   "pod_target_xcconfig": {
     "EXCLUDED_ARCHS[sdk=iphonesimulator*]": "arm64"
   },
-  "vendored_frameworks": "GQPaymentIOSSDKNative.xcframework",
-  "exclude_files": "BuildFramework.sh",
   "swift_version": "5.0"
 }

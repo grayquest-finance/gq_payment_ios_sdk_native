@@ -51,7 +51,7 @@ class PaymentMethodsViewController: GQBaseViewController {
     
     private func setupScrollButton() {
         scrollButton.set(cornerRadius: 0.5)
-        scrollButton.backgroundColor = GQPayment.themeColor.withAlphaComponent(0.5)
+        scrollButton.backgroundColor = GQPaymentSDK.themeColor.withAlphaComponent(0.5)
         scrollButton.tintColor = .darkGray.withAlphaComponent(0.5)
         
         scrollButton.setImage(UIImage(systemName: "arrowshape.down.fill"), for: .normal)

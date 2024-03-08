@@ -45,7 +45,7 @@ extension UIFont {
         
         fonts.forEach { font in
             font.fileNames.forEach { fileName in
-                registerFont(fileName: fileName, bundle: GQPayment.bundle)
+                registerFont(fileName: fileName, bundle: GQPaymentSDK.bundle)
             }
         }
         

@@ -12,25 +12,25 @@ class GQLogger {
     
     static let shared = GQLogger()
     
-    private var logger = Logger(subsystem: GQPayment.bundle.bundleIdentifier ?? .empty, category: "GQLog")
+    private var logger = Logger(subsystem: GQPaymentSDK.bundle.bundleIdentifier ?? .empty, category: "GQLog")
     
     internal func log(_ text: String) {
-        guard GQPayment.debugMode else { return }
+        guard GQPaymentSDK.debugMode else { return }
         logger.log("\(text)")
     }
     
     internal func alert(_ text: String) {
-        guard GQPayment.debugMode else { return }
+        guard GQPaymentSDK.debugMode else { return }
         logger.warning("\(text)")
     }
     
     internal func info(_ text: String) {
-        guard GQPayment.debugMode else { return }
+        guard GQPaymentSDK.debugMode else { return }
         logger.info("\(text)")
     }
     
     internal func error(_ text: String) {
-        guard GQPayment.debugMode else { return }
+        guard GQPaymentSDK.debugMode else { return }
         logger.critical("\(text)")
     }
     

@@ -30,9 +30,10 @@ class EnterMobileNumberViewController: GQBaseViewController {
     
 //  MARK: Variables
     private var viewModel: (any EnterMobileNumberViewModelType)?
+    weak var gqPaymentSDK: GQPaymentSDK?
     
     init(viewModel: some EnterMobileNumberViewModelType) {
-        super.init(nibName: "EnterMobileNumberViewController", bundle: GQPayment.bundle)
+        super.init(nibName: "EnterMobileNumberViewController", bundle: GQPaymentSDK.bundle)
         self.viewModel = viewModel
     }
     
@@ -51,10 +52,29 @@ class EnterMobileNumberViewController: GQBaseViewController {
         configureUI()
     }
     
+    override func dismiss(animated flag: Bool, completion: (() -> Void)? = nil) {
+        super.dismiss(animated: flag, completion: { [weak self] in
+            self?.gqPaymentSDK?.dismiss(animated: true)
+        })
+    }
+    
     public func configureUI() {
         //Needs to be called after API call.
         Task {
             await gileView.configure(with: viewModel?.gile)
+        }
+    }
+    
+    override func configureBackAction() {
+        Task { @MainActor in
+            let alert = UIAlertController(title: "Do you want to go back?", message: "Your changes will not be saved and discarded", preferredStyle: .alert)
+            let okayAction = UIAlertAction(title: "Okay", style: .default) { action in
+                super.configureBackAction()
+            }
+            let cancelAction = UIAlertAction(title: "Cancel", style: .default, handler: nil)
+            alert.addAction(okayAction)
+            alert.addAction(cancelAction)
+            self.present(alert, animated: true)
         }
     }
 

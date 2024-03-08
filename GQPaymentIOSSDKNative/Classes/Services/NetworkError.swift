@@ -10,7 +10,8 @@ import Foundation
 enum NetworkError: Error {
     case noInterent
     case notFound
-    case somethingWrong(String)
+    case invalidResponse
+    case somethingWrong(String?)
 }
 
 extension NetworkError: LocalizedError {
@@ -20,8 +21,10 @@ extension NetworkError: LocalizedError {
             return "No Internet Found"
         case .notFound:
             return "Not Found"
+        case .invalidResponse:
+            return "Inavlid Response"
         case .somethingWrong(let description):
-            return "Something Went Wrong: " + description
+            return "Something Went Wrong: " + (description ?? .empty)
         }
     }
 }

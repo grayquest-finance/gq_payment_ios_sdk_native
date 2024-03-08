@@ -94,7 +94,7 @@ class VerifyOTPViewController: GQBaseViewController {
     
     private func setupButtons() {
         verifyOTPButton.titleLabel?.font = .systemFont(ofSize: 16, weight: .bold)
-        verifyOTPButton.backgroundColor = GQPayment.themeColor
+        verifyOTPButton.backgroundColor = GQPaymentSDK.themeColor
         verifyOTPButton.tintColor = .white
         verifyOTPButton.setTitle("Send OTP", for: .normal)
         verifyOTPButton.set(cornerRadius: 0.2)

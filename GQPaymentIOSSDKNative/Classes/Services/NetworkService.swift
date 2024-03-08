@@ -15,6 +15,7 @@ final class NetworkService {
     
     func perform<T: Decodable>(networkType: NetworkType, responseType: T.Type) async throws -> T? {
         
+//    MARK: Request Parameters
         guard let url = URL(string: networkType.endpoint) else { throw NetworkError.notFound }
         var request = URLRequest(url: url)
         
@@ -25,32 +26,30 @@ final class NetworkService {
         if let parameters = networkType.parameters {
             switch networkType.httpMethod {
             case .get:
-                do {
-                    if let dictionary = try Encoder.shared.serialize(data: parameters) {
-                        var components = URLComponents(string: request.url?.absoluteString ?? .empty)
-                        var queryItems = components?.queryItems ?? []
-                        for (key, value) in dictionary {
-                            let query = URLQueryItem(name: key, value: "\(value)")
-                            queryItems.append(query)
-                        }
-                        components?.queryItems = queryItems
-                        request.url = components?.url
-                    }
-                } catch (let error) {
-                    throw NetworkError.somethingWrong(error.localizedDescription)
+                var components = URLComponents(string: request.url?.absoluteString ?? .empty)
+                var queryItems = components?.queryItems ?? []
+                for (key, value) in parameters {
+                    let query = URLQueryItem(name: key, value: "\(value)")
+                    queryItems.append(query)
                 }
+                components?.queryItems = queryItems
+                request.url = components?.url
             case .post:
-                do {
-                    let encoded = try Encoder.shared.encode(data: parameters)
-                    request.httpBody = encoded
-                } catch (let error) {
-                    throw NetworkError.somethingWrong(error.localizedDescription)
-                }
+                let encoded = GQEncoder.shared.encode(dictionary: parameters)
+                request.httpBody = encoded
             }
         }
         
+//    MARK: Response Parameters
         do {
-            let (data, _) = try await URLSession.shared.data(for: request)
+            let (data, response) = try await URLSession.shared.data(for: request)
+            
+            guard let httpResponse = response as? HTTPURLResponse else { throw NetworkError.invalidResponse }
+            guard (200...299) ~= httpResponse.statusCode else {
+                let errorModel = try Decoder.shared.decode(data: data, type: NetworkErrorResponse.self)
+                throw NetworkError.somethingWrong(errorModel?.message)
+            }
+            
             let model = try Decoder.shared.decode(data: data, type: T.self)
             return model
         } catch (let error) {
