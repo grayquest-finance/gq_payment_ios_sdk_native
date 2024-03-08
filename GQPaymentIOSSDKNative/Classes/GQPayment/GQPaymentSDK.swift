@@ -186,7 +186,8 @@ final public class GQPaymentSDK: GQBaseViewController {
             let errorObject: [String: Any] = [
                 "error": errorMessage
             ]
-            DispatchQueue.main.async {
+            Task { @MainActor in
+                self.dismiss(animated: true)
                 self.delegate?.gqFailureResponse(data: errorObject)
             }
         }else{
@@ -241,9 +242,12 @@ final public class GQPaymentSDK: GQBaseViewController {
             let errorObject: [String: Any] = [
                 "error": error
             ]
+            Task { @MainActor in
+                self.dismiss(animated: true)
+            }
             self.delegate?.gqFailureResponse(data: errorObject)
         } else if let responseObject = responseObject {
-            DispatchQueue.main.async {
+//            DispatchQueue.main.async {
                 let message = responseObject["message"] as! String
                 
                 if (message == "Customer Exists") {
@@ -261,7 +265,7 @@ final public class GQPaymentSDK: GQBaseViewController {
                 self.environment.updateCustomerId(custId: data["customer_id"] as! Int)
                 
                 self.getURL()
-            }
+//            }
         }
     }
     
