@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'GQPaymentIOSSDKNative'
-  s.version          = '0.1.0'
+  s.version          = '0.1.2'
   s.summary          = 'GrayQuest Education Finance Pvt. Ltd. iOS SDK'
 
 # This description is used to generate tags and improve search results.
@@ -28,19 +28,16 @@ Pod::Spec.new do |s|
   s.source           = { :git => 'https://github.com/grayquest-finance/gq_payment_ios_sdk_native.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
-  s.ios.deployment_target = '13.0'
+  s.ios.deployment_target = '15.0'
   s.swift_versions = "5.0"
 
   s.dependency 'CashfreePG', '~> 2.0.3'
   s.dependency 'razorpay-pod', '1.2.5'
   s.dependency 'Easebuzz', '~> 1.1'
   
-#  Mark: Need these lines for Development
-#  s.source_files = 'GQPaymentIOSSDKNative/Classes/**/*'
-#  s.resources = ["GQPaymentIOSSDKNative/Assets/*.xcassets",
-#                 "GQPaymentIOSSDKNative/Assets/Fonts/**/*.ttf"
-#                ]
-#  s.pod_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
+  # s.source_files = 'GQPaymentIOSSDKNative/Classes/**/*'
+  # s.resources = ["GQPaymentIOSSDKNative/Assets/*.xcassets", "GQPaymentIOSSDKNative/Assets/Fonts/**/*.ttf"]
+  # s.pod_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
 
 # Mark: Need these lines for PRODUCTION
   s.vendored_frameworks = 'GQPaymentIOSSDKNative.xcframework'

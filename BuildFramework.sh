@@ -3,7 +3,7 @@
 #1 - Creating build for iPhoneOS
 
 xcodebuild archive \
--workspace $(pwd)/Example/GQPaymentIOSSDKNative.xcworkspace \
+-workspace Example/GQPaymentIOSSDKNative.xcworkspace \
 -scheme GQPaymentIOSSDKNative \
 -configuration Release \
 -sdk iphoneos \
@@ -15,9 +15,9 @@ SKIP_INSTALL=NO \
 #2 - Creating build for iPhone Simulator
 
 xcodebuild archive \
--workspace $(pwd)/Example/GQPaymentIOSSDKNative.xcworkspace \
+-workspace Example/GQPaymentIOSSDKNative.xcworkspace \
 -scheme GQPaymentIOSSDKNative \
--configuration Debug \
+-configuration Release \
 -sdk iphonesimulator \
 -archivePath archives/ios_simulators.xcarchive \
 BUILD_LIBRARY_FOR_DISTRIBUTION=YES \
@@ -30,4 +30,4 @@ xcodebuild \
 -create-xcframework \
 -framework archives/ios_devices.xcarchive/Products/Library/Frameworks/GQPaymentIOSSDKNative.framework \
 -framework archives/ios_simulators.xcarchive/Products/Library/Frameworks/GQPaymentIOSSDKNative.framework \
--output $(pwd)/GQPaymentIOSSDKNative.xcframework
+-output GQPaymentIOSSDKNative.xcframework

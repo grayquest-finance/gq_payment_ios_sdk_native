@@ -3,20 +3,20 @@
   "version": "0.1.0",
   "summary": "GrayQuest Education Finance Pvt. Ltd. iOS SDK",
   "description": "\"The SDK is an integrated flow in ERP that will enable users to avail multiple payment options in a seamless manner, with faster integration and deployment times.\"",
-  "homepage": "https://github.com/1410avi/GQPaymentIOSSDKNative",
+  "homepage": "https://github.com/grayquest-finance/gq_payment_ios_sdk_native",
   "license": {
     "type": "MIT",
     "file": "LICENSE"
   },
   "authors": {
-    "1410avi": "avinash.soni@grayquest.com"
+    "grayquest-finance": "developer@grayquest.com"
   },
   "source": {
-    "git": "https://github.com/1410avi/GQPaymentIOSSDKNative.git",
+    "git": "https://github.com/grayquest-finance/gq_payment_ios_sdk_native.git",
     "tag": "0.1.0"
   },
   "platforms": {
-    "ios": "15.0"
+    "ios": "13.0"
   },
   "swift_versions": "5.0",
   "dependencies": {
@@ -30,7 +30,13 @@
       "~> 1.1"
     ]
   },
-  "vendored_frameworks": "GQPaymentIOSSDKNative.xcframework",
-  "exclude_files": "BuildFramework.sh",
+  "source_files": "GQPaymentIOSSDKNative/Classes/**/*",
+  "resources": [
+    "GQPaymentIOSSDKNative/Assets/*.xcassets",
+    "GQPaymentIOSSDKNative/Assets/Fonts/**/*.ttf"
+  ],
+  "pod_target_xcconfig": {
+    "EXCLUDED_ARCHS[sdk=iphonesimulator*]": "arm64"
+  },
   "swift_version": "5.0"
 }
