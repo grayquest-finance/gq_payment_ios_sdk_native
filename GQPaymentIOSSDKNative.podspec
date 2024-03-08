@@ -21,14 +21,14 @@ Pod::Spec.new do |s|
 "The SDK is an integrated flow in ERP that will enable users to avail multiple payment options in a seamless manner, with faster integration and deployment times."
                        DESC
 
-  s.homepage         = 'https://github.com/1410avi/GQPaymentIOSSDKNative'
+  s.homepage         = 'https://github.com/grayquest-finance/gq_payment_ios_sdk_native'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { '1410avi' => 'avinash.soni@grayquest.com' }
-  s.source           = { :git => 'https://github.com/1410avi/GQPaymentIOSSDKNative.git', :tag => s.version.to_s }
+  s.author           = { 'grayquest-finance' => 'developer@grayquest.com' }
+  s.source           = { :git => 'https://github.com/grayquest-finance/gq_payment_ios_sdk_native.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
-  s.ios.deployment_target = '15.0'
+  s.ios.deployment_target = '13.0'
   s.swift_versions = "5.0"
 
   s.dependency 'CashfreePG', '~> 2.0.3'
