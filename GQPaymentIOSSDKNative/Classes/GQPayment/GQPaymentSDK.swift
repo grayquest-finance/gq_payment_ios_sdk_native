@@ -210,10 +210,12 @@ final public class GQPaymentSDK: GQBaseViewController {
             do {
                 let response = try await NetworkService.shared.perform(networkType: .createCustomer(data), responseType: CreateCustomerResponse.self)
                 self.hideLoader()
+                self.handleAPIResult(response: response) //Not needed
                 self.open()
             } catch (let error) {
                 GQLogger.shared.error(error.localizedDescription)
                 self.hideLoader()
+                self.delegate?.gqFailureResponse(data: ["error": error.localizedDescription])
                 self.dismiss(animated: true)
             }
         }
@@ -235,38 +237,14 @@ final public class GQPaymentSDK: GQBaseViewController {
         }
     }
     
-    func handleAPIResult(responseObject: [String: Any]?, error: String?) {
-        if let error = error {
-            // Handle error
-//            print("API Error: \(error)")
-            let errorObject: [String: Any] = [
-                "error": error
-            ]
-            Task { @MainActor in
-                self.dismiss(animated: true)
-            }
-            self.delegate?.gqFailureResponse(data: errorObject)
-        } else if let responseObject = responseObject {
-//            DispatchQueue.main.async {
-                let message = responseObject["message"] as! String
-                
-                if (message == "Customer Exists") {
-//                    print("existing")
-                    self.environment.updateCustomerType(custType: "existing")
-                }
-                else {
-//                    print("new")
-                    self.environment.updateCustomerType(custType: "new")
-                }
-                
-                let data = responseObject["data"] as! [String:AnyObject]
-//                print("ResponseData: \(data)")
-                self.environment.updateCustomerCode(custCode: data["customer_code"] as! String)
-                self.environment.updateCustomerId(custId: data["customer_id"] as! Int)
-                
-                self.getURL()
-//            }
-        }
+    func handleAPIResult(response: CreateCustomerResponse?) {
+        guard let response else { return }
+        
+        self.environment.updateCustomerType(custType: response.doesExist ? "existing" : "new")
+        self.environment.updateCustomerCode(custCode: response.data?.customerCode)
+        self.environment.updateCustomerId(custId: response.data?.customerID)
+        
+        self.getURL()
     }
     
     private func getURL(){
@@ -289,12 +267,12 @@ final public class GQPaymentSDK: GQBaseViewController {
         
         webloadUrl += "&env=\(environment.env)"
         
-        if environment.customerID != 0{
-            webloadUrl += "&cid=\(environment.customerID)"
+        if let customerID = environment.customerID {
+            webloadUrl += "&cid=\(customerID)"
         }
         
-        if !environment.customerCode.isEmpty {
-            webloadUrl += "&ccode=\(environment.customerCode)"
+        if let customerCode = environment.customerCode, !customerCode.isEmpty {
+            webloadUrl += "&ccode=\(customerCode)"
         }
         
         if !environment.theme.isEmpty {
@@ -318,8 +296,7 @@ final public class GQPaymentSDK: GQBaseViewController {
         
         webloadUrl += "&_v=\(Environment.version)"
         
-//        print("Complete WebUrl: \(webloadUrl)")
-        
+        GQLogger.shared.info("WEBLOAD URL: \(webloadUrl)")
     }
         
 }

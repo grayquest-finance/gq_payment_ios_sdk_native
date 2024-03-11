@@ -1,7 +1,6 @@
 #!/bin/bash
 
 #1 - Creating build for iPhoneOS
-
 xcodebuild archive \
 -workspace Example/GQPaymentIOSSDKNative.xcworkspace \
 -scheme GQPaymentIOSSDKNative \
@@ -13,7 +12,6 @@ SKIP_INSTALL=NO \
 
 
 #2 - Creating build for iPhone Simulator
-
 xcodebuild archive \
 -workspace Example/GQPaymentIOSSDKNative.xcworkspace \
 -scheme GQPaymentIOSSDKNative \
@@ -25,7 +23,6 @@ SKIP_INSTALL=NO \
 
 
 #3 - Combining both the archives as xcframework to add in the project.
-
 xcodebuild \
 -create-xcframework \
 -framework archives/ios_devices.xcarchive/Products/Library/Frameworks/GQPaymentIOSSDKNative.framework \

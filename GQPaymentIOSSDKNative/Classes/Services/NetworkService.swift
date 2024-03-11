@@ -53,6 +53,7 @@ final class NetworkService {
             let model = try Decoder.shared.decode(data: data, type: T.self)
             return model
         } catch (let error) {
+            GQLogger.shared.error(error.localizedDescription)
             throw NetworkError.somethingWrong(error.localizedDescription)
         }
         

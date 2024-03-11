@@ -24,7 +24,7 @@ extension NetworkError: LocalizedError {
         case .invalidResponse:
             return "Inavlid Response"
         case .somethingWrong(let description):
-            return "Something Went Wrong: " + (description ?? .empty)
+            return description ?? GQStaticText.somethingWrong
         }
     }
 }

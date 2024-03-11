@@ -13,6 +13,10 @@ struct CreateCustomerResponse: Codable {
     var statusCode: Int?
     var message: String?
     var data: CreateCustomerData?
+    
+    var doesExist: Bool {
+        return message == "Customer Exists"
+    }
 
     enum CodingKeys: String, CodingKey {
         case success

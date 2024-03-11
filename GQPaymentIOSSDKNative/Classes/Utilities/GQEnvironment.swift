@@ -23,8 +23,8 @@ class Environment {
     
     var abase: String?
     var customerNumber: String = ""
-    var customerID: Int = 0
-    var customerCode: String = ""
+    var customerID: Int?
+    var customerCode: String?
     var customerType: String = "new"
     var studentID: String = ""
     var theme: String = ""
@@ -65,11 +65,11 @@ class Environment {
         self.customerNumber = customerNumber
     }
     
-    func updateCustomerId(custId: Int){
+    func updateCustomerId(custId: Int?) {
         self.customerID = custId
     }
     
-    func updateCustomerCode(custCode: String){
+    func updateCustomerCode(custCode: String?){
         self.customerCode = custCode
     }
     
