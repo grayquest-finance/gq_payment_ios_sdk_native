@@ -35,12 +35,11 @@ Pod::Spec.new do |s|
   s.dependency 'razorpay-pod', '1.2.5'
   s.dependency 'Easebuzz', '~> 1.1'
   
-   s.source_files = 'GQPaymentIOSSDKNative/Classes/**/*'
-   s.resources = ["GQPaymentIOSSDKNative/Assets/*.xcassets", "GQPaymentIOSSDKNative/Assets/Fonts/**/*.ttf"]
   s.pod_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
+  
+  s.source_files = 'GQPaymentIOSSDKNative/Classes/**/*'
+  s.resources = ["GQPaymentIOSSDKNative/Assets/*.xcassets", "GQPaymentIOSSDKNative/Assets/Fonts/**/*.ttf"]
 
-# Mark: Need these lines for PRODUCTION
-  # s.source_files = 'GQPaymentIOSSDKNative.xcframework/**/*'
 #  s.vendored_frameworks = 'GQPaymentIOSSDKNative.xcframework'
 #  s.exclude_files = 'BuildFramework.sh'
                 
