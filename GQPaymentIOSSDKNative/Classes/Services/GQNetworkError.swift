@@ -7,14 +7,14 @@
 
 import Foundation
 
-enum NetworkError: Error {
+enum GQError: Error {
     case noInterent
     case notFound
     case invalidResponse
     case somethingWrong(String?)
 }
 
-extension NetworkError: LocalizedError {
+extension GQError: LocalizedError {
     var errorDescription: String? {
         switch self {
         case .noInterent:

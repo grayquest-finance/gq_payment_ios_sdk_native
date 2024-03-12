@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct NetworkErrorResponse: Decodable {
+struct GQNetworkErrorResponse: Decodable {
     var message: String?
 //    var status: Int?
 }

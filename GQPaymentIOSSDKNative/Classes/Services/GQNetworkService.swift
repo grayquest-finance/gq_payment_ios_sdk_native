@@ -7,16 +7,16 @@
 
 import Foundation
 
-final class NetworkService {
+final class GQNetworkService {
     
-    static let shared = NetworkService()
+    static let shared = GQNetworkService()
     
     private init() { }
     
-    func perform<T: Decodable>(networkType: NetworkType, responseType: T.Type) async throws -> T? {
+    func perform<T: Decodable>(networkType: GQNetworkType, responseType: T.Type) async throws -> T? {
         
 //    MARK: Request Parameters
-        guard let url = URL(string: networkType.endpoint) else { throw NetworkError.notFound }
+        guard let url = URL(string: networkType.endpoint) else { throw GQError.notFound }
         var request = URLRequest(url: url)
         
         request.cachePolicy = networkType.cachePolicy
@@ -44,17 +44,19 @@ final class NetworkService {
         do {
             let (data, response) = try await URLSession.shared.data(for: request)
             
-            guard let httpResponse = response as? HTTPURLResponse else { throw NetworkError.invalidResponse }
+            guard let httpResponse = response as? HTTPURLResponse else { throw GQError.invalidResponse }
             guard (200...299) ~= httpResponse.statusCode else {
-                let errorModel = try Decoder.shared.decode(data: data, type: NetworkErrorResponse.self)
-                throw NetworkError.somethingWrong(errorModel?.message)
+                let errorModel = try Decoder.shared.decode(data: data, type: GQNetworkErrorResponse.self)
+                throw GQError.somethingWrong(errorModel?.message)
             }
             
             let model = try Decoder.shared.decode(data: data, type: T.self)
             return model
+        } catch is DecodingError {
+            throw GQError.somethingWrong(GQStaticText.somethingWrong + " - Decoding Error")
         } catch (let error) {
             GQLogger.shared.error(error.localizedDescription)
-            throw NetworkError.somethingWrong(error.localizedDescription)
+            throw GQError.somethingWrong(error.localizedDescription)
         }
         
 //        return nil

@@ -19,18 +19,12 @@ class GQEncoder {
         do {
             return try encoder.encode(data)
         } catch let error {
-            throw NetworkError.somethingWrong(error.localizedDescription)
+            throw GQError.somethingWrong(error.localizedDescription)
         }
     }
     
     func encode(dictionary: JSONDictionary) -> Data? {
-        let data = dictionary.map { key, value in
-            let escapedKey = "\(key)".addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) ?? ""
-            let escapedValue = "\(value)".addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) ?? ""
-            return escapedKey + "=" + escapedValue
-        }
-        .joined(separator: "&")
-        .data(using: .utf8)
+        let data = try? JSONSerialization.data(withJSONObject: dictionary, options: [.fragmentsAllowed])
         return data
     }
     
@@ -41,10 +35,10 @@ class GQEncoder {
             if let dictionary = serialized as? [String: Any] {
                 return dictionary
             } else {
-                throw NetworkError.somethingWrong("Could Not Serialize Data")
+                throw GQError.somethingWrong("Could Not Serialize Data")
             }
         } catch (let error) {
-            throw NetworkError.somethingWrong(error.localizedDescription)
+            throw GQError.somethingWrong(error.localizedDescription)
         }
     }
     

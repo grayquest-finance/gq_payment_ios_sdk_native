@@ -23,7 +23,7 @@ enum GQStaticText {
     static let incorrectOTP = "Incorrect OTP"
     static let facingIssues = "Facing issues here?"
     static let contactSupport = "Please contact our support team by clicking here"
-    static let somethingWrong = "Something Went Wrong!!"
+    static let somethingWrong = "Something Went Wrong"
     
 // Dynamic Values
     static let phoneCode = "+91 -"

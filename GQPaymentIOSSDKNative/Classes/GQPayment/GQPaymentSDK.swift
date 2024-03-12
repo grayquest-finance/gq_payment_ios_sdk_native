@@ -10,7 +10,7 @@ import UIKit
 final public class GQPaymentSDK: GQBaseViewController {
     
 //    Theme Color to be displayed by the client.
-    public static var themeColor: UIColor = .red991F2C
+    internal static var themeColor: UIColor = .red991F2C
     
 //    Delegate which will receive payment callback.
     public var delegate: (any GQPaymentDelegate)? {
@@ -59,165 +59,161 @@ final public class GQPaymentSDK: GQBaseViewController {
 //    Tells the Log class that the SDK ca print/ log data. True to print data.
     internal static var debugMode: Bool = true
     
-    var environment = Environment.shared
+    let environment = GQEnvironment.shared
     
     public var clientJSONObject: [String: Any]?
-    private var mobileNumber: String = ""
-    private var errorMessage: String = ""
-    private var isInValid: Bool = false
     
     override public func viewDidLoad() {
         super.viewDidLoad()
         
         self.showLoader()
-        configureClientJSONData()
+        configureSessionRequest()
     }
     
-    private func configureClientJSONData() {
-        if let jsonString = GQUtility.convertDictionaryToJson(dictionary: clientJSONObject ?? ["errpr":"Invalid JSON Object"]) {
-            Environment.shared.clear()
-            if let jsonData = jsonString.data(using: .utf8) {
-                do {
-                    if let json = try JSONSerialization.jsonObject(with: jsonData, options: []) as? [String: Any] {
-                        // Accessing values
-                        if let auth = json["auth"] as? [String: Any],
-                           let clientId = auth["client_id"] as? String,
-                           let clientSecret = auth["client_secret_key"] as? String,
-                           let apiKey = auth["gq_api_key"] as? String {
-                            environment.updateClientId(clientID: clientId)
-                            environment.updateClientSecret(clientSecret: clientSecret)
-                            environment.updateApiKey(apiKey: apiKey)
-                        } else {
-                            isInValid = true
-                            errorMessage += "Auth is missing"
-                            print("No Auth Object available")
-                        }
-                        
-                        if let studentID = json["student_id"] as? String {
-                            environment.updateStudentID(stdId: studentID)
-                        }else {
-                            isInValid = true
-                            errorMessage += ", Student Id is required"
-                        }
-                        
-                        if let env = json["env"] as? String {
-                            if GQValidationService.containsAnyValidEnvironment(env){
-                                environment.update(environment: env)
-                            }else{
-                                isInValid = true
-                                errorMessage += ", Invalid environment"
-                            }
-                        }else{
-                            isInValid = true
-                            errorMessage += ", Environment is required"
-                        }
-                        
-                        if let customization = json["customization"] as? [String: Any],
-                           let theme_color = customization["theme_color"] as? String {
-                            environment.updateTheme(theme: theme_color)
-                            if let customizationData = try? JSONSerialization.data(withJSONObject: customization as Any, options: .prettyPrinted),
-                               let customizationString = String(data: customizationData, encoding: .utf8) {
-                                environment.updateCustomization(customization: customizationString)
-                            } else {
-//                                print("Error converting customization to JSON string.")
-                            }
-                        }
-                        
-                        if var ppConfig = json["pp_config"] as? [String: Any]{
-                            if let slug = ppConfig["slug"] as? String, !slug.isEmpty {
-                                if let ppConfigData = try? JSONSerialization.data(withJSONObject: ppConfig as Any, options: .prettyPrinted),
-                                   let ppConfigString = String(data: ppConfigData, encoding: .utf8) {
-                                    environment.updatePpConfig(ppConfig: ppConfigString)
-                                } else {
-                                    isInValid = true
-                                    errorMessage += ", Invalid PP Config Object"
-                                }
-                            } else {
-                                isInValid = true
-                                errorMessage += ", Slug is required"
-                            }
-                        } else {
-//                            print("ppConfig Not avaibale")
-                        }
-                        
-                        if var feeHeaders = json["fee_headers"] as? [String: Any]{
-                            if let feeHeadersData = try? JSONSerialization.data(withJSONObject: feeHeaders as Any, options: .prettyPrinted),
-                               let feeHeadersString = String(data: feeHeadersData, encoding: .utf8) {
-                                environment.updateFeeHeaders(feeHeader: feeHeadersString)
-                            } else {
-                                isInValid = true
-                                errorMessage += ", Invalid Fee Headers Object"
-                            }
-                        } else {
-//                            print("Fee Headers Not avaibale")
-                        }
-                        
-                        if let customerNumber = json["customer_number"] as? String {
-                            if GQValidationService.validate(mobileNumber: customerNumber) {
-                                environment.updateCustomerNumber(customerNumber: customerNumber)
-                                mobileNumber = customerNumber
-                                
-                                
-                            }else{
-                                isInValid = true
-                                errorMessage += ", Invalid customer number"
-                            }
-                        }else{
-//                            print("Customer Number Not Available ")
-                        }
-                    } else {
-                        isInValid = true
-                        errorMessage += ", Invalid JSON Object"
-                    }
-                } catch {
-                    isInValid = true
-                    errorMessage += ", Invalid JSON Object"
-                }
-            } else {
-                isInValid = true
-                errorMessage += ", Invalid JSON Object"
-            }
-        } else {
-            isInValid = true
-            errorMessage += ", Invalid JSON Object"
+    private func configureSessionRequest() {
+        guard let clientJSON = self.clientJSONObject else {
+            self.handleError(description: "Requires JSON Object to proceed")
+            return
         }
         
-        if isInValid {
-            let errorObject: [String: Any] = [
-                "error": errorMessage
-            ]
-            Task { @MainActor in
-                self.dismiss(animated: true)
-                self.delegate?.gqFailureResponse(data: errorObject)
-            }
-        }else{
-            if mobileNumber.isEmpty{
-                environment.updateCustomerType(custType: "new")
-                getURL()
-            }else{
-                let parameters: [String: Any] = [
-                    "customer_mobile": "\(environment.customerNumber)",
-                ]
-                self.fetchCustomer(with: parameters)
+        var errorMessage: String = ""
+        var isInValid: Bool = false
+        
+        // Auth Requirements
+        if let auth = clientJSON["auth"] as? JSONDictionary,
+           let clientId = auth["client_id"] as? String,
+           let clientSecret = auth["client_secret_key"] as? String,
+           let apiKey = auth["gq_api_key"] as? String {
+            environment.updateClientId(clientID: clientId)
+            environment.updateClientSecret(clientSecret: clientSecret)
+            environment.updateApiKey(apiKey: apiKey)
+        } else {
+            isInValid = true
+            errorMessage += "Auth is missing"
+        }
+        
+        // Student ID Requirements
+        if let studentID = clientJSON["student_id"] as? String {
+            environment.updateStudentID(stdId: studentID)
+        }else {
+            isInValid = true
+            errorMessage += ", Student Id is required"
+        }
+        
+        // Environment Requirements
+        if let env = clientJSON["env"] as? String, GQNetworkEnvironment.isValid(environment: env) {
+                environment.update(environment: env)
+        } else {
+            isInValid = true
+            errorMessage += ", Enter a valid Environment"
+        }
+        
+        // PP Config Requirements
+        if let ppConfig = clientJSON["pp_config"] as? JSONDictionary {
+            if let slug = ppConfig["slug"] as? String, !slug.isEmpty {
+                environment.updatePpConfig(ppConfig: ppConfig)
+            } else {
+                isInValid = true
+                errorMessage += ", Slug is required"
             }
         }
+        
+        // Fee Headers Requirements
+        if let feeHeaders = clientJSON["fee_headers"] as? JSONDictionary {
+            environment.updateFeeHeaders(feeHeader: feeHeaders)
+        }
+        
+        // Theme Requirements
+        if let customization = clientJSON["customization"] as? JSONDictionary,
+           let themeColor = customization["theme_color"] as? String {
+            environment.updateTheme(theme: themeColor)
+            environment.updateCustomization(customization: customization)
+        }
+        
+        // Mobile Number Requirements
+        if let customerNumber = clientJSON["customer_number"] as? String {
+            if GQValidationService.validate(mobileNumber: customerNumber) {
+                environment.updateCustomerNumber(customerNumber: customerNumber)
+            }else{
+                isInValid = true
+                errorMessage += ", Invalid customer number"
+            }
+        }
+        
+        guard !isInValid else {
+            self.handleError(description: errorMessage)
+            return
+        }
+        
+        // Customer Data, Changed to Model or take dynamic values
+        let customerData: JSONDictionary = [
+            "session_data": [
+                "gq_api_key": environment.gqApiKey,
+                "client_secret_key": environment.clientSecret,
+                "client_id": environment.clientID,
+                "student_id": environment.studentID,
+                "application_id": "",
+                "api_base_url": GQNetworkEnvironment(rawValue: environment.env)?.baseURL ?? .empty,
+                "env": environment.env,
+                "user_type": "",
+                "fee_helper_text": "",
+                "payable_helper_text": "",
+                "aBase64": environment.abase,
+                "customer_id": environment.customerID,
+                "customer_code": environment.customerCode,
+                "student_details": [
+                    "student_first_name": "",
+                    "student_middle_name": "",
+                    "student_last_name": "",
+                    "student_type": "", //Existing or NEW
+                    "customer_first_name": "",
+                    "customer_last_name": ""
+                ],
+                "customer_details": [
+                    "customer_dob": "1896-10-14",
+                    "customer_email": "avi@mail.com",
+                    "customer_first_name": "AviFirst",
+                    "customer_gender": "MALE",
+                    "customer_last_name": "AviLast",
+                    "customer_marital_status": "OTHERS",
+                ],
+                "kyc_details": nil,
+                "residential_details": nil,
+                "employment_details": nil,
+                "theme_color": environment.themeColor,
+                "logo_url": environment.instituteLogo,
+                "notes": nil,
+                "financing_config": nil,
+                "pp_config": environment.ppConfig,
+                "fee_headers": environment.feeHeaders
+            ],
+            "customer_mobile": environment.customerMobileNumber
+        ]
+        
+        startCustomerSession(with: customerData)
     }
     
-    private func fetchCustomer(with data: JSONDictionary?) {
+    private func startCustomerSession(with data: JSONDictionary?) {
         guard let data else { return }
         
         Task(priority: .userInitiated) {
             do {
-                let response = try await NetworkService.shared.perform(networkType: .createCustomer(data), responseType: CreateCustomerResponse.self)
+                let response = try await GQNetworkService.shared.perform(networkType: .customerSession(data), responseType: CustomerSessionResponse.self)
                 self.hideLoader()
-                self.handleAPIResult(response: response) //Not needed
+                self.handleAPIResult(response: response)
                 self.open()
             } catch (let error) {
-                GQLogger.shared.error(error.localizedDescription)
-                self.hideLoader()
-                self.delegate?.gqFailureResponse(data: ["error": error.localizedDescription])
-                self.dismiss(animated: true)
+                self.handleError(description: error.localizedDescription)
             }
+        }
+    }
+    
+    private func handleError(description: String) {
+        Task { @MainActor in
+            GQLogger.shared.error(description)
+            self.hideLoader()
+            self.delegate?.gqFailureResponse(data: ["error": description])
+            self.dismiss(animated: true)
         }
     }
     
@@ -237,66 +233,13 @@ final public class GQPaymentSDK: GQBaseViewController {
         }
     }
     
-    func handleAPIResult(response: CreateCustomerResponse?) {
+    func handleAPIResult(response: CustomerSessionResponse?) {
         guard let response else { return }
         
-        self.environment.updateCustomerType(custType: response.doesExist ? "existing" : "new")
+//        self.environment.updateCustomerType(custType: response.doesExist ? "existing" : "new")
         self.environment.updateCustomerCode(custCode: response.data?.customerCode)
         self.environment.updateCustomerId(custId: response.data?.customerID)
-        
-        self.getURL()
-    }
-    
-    private func getURL(){
-        
-        var webloadUrl: String = ""
-        
-        let baseURL = self.environment.webLoadURL()
-        
-        webloadUrl = baseURL
-        
-        webloadUrl += "instant-eligibility?gapik=\(environment.gqApiKey)"
-        
-        webloadUrl += "&abase=\(environment.abase ?? .empty)"
-        
-        webloadUrl += "&sid=\(environment.studentID)"
-        
-        if !environment.customerNumber.isEmpty{
-            webloadUrl += "&m=\(environment.customerNumber)"
-        }
-        
-        webloadUrl += "&env=\(environment.env)"
-        
-        if let customerID = environment.customerID {
-            webloadUrl += "&cid=\(customerID)"
-        }
-        
-        if let customerCode = environment.customerCode, !customerCode.isEmpty {
-            webloadUrl += "&ccode=\(customerCode)"
-        }
-        
-        if !environment.theme.isEmpty {
-            webloadUrl += "&pc=\(environment.theme)"
-        }
-        
-        webloadUrl += "&s=\(Environment.source)"
-        webloadUrl += "&user=\(environment.customerType)"
-        
-        if !environment.customizationString.isEmpty{
-            webloadUrl += ""
-        }
-        
-        if !environment.ppConfigString.isEmpty {
-            webloadUrl += "&_pp_config=\(environment.ppConfigString)"
-        }
-        
-        if !environment.feeHeadersString.isEmpty {
-            webloadUrl += "&_fee_headers=\(environment.feeHeadersString)"
-        }
-        
-        webloadUrl += "&_v=\(Environment.version)"
-        
-        GQLogger.shared.info("WEBLOAD URL: \(webloadUrl)")
+        self.environment.updateSDKSessionCode(sessionCode: response.data?.sdkSessionCode)
     }
         
 }

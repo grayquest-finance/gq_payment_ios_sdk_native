@@ -52,6 +52,11 @@ class EnterMobileNumberViewController: GQBaseViewController {
         configureUI()
     }
     
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        timerLabel.resetTimer()
+    }
+    
     override func dismiss(animated flag: Bool, completion: (() -> Void)? = nil) {
         super.dismiss(animated: flag, completion: { [weak self] in
             self?.gqPaymentSDK?.dismiss(animated: true)

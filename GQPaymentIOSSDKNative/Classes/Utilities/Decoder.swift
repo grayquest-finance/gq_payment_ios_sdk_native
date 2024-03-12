@@ -19,7 +19,7 @@ class Decoder {
             let decoded = try decoder.decode(T.self, from: data)
             return decoded
         } catch (let error) {
-            throw NetworkError.somethingWrong(error.localizedDescription)
+            throw GQError.somethingWrong(error.localizedDescription)
         }
     }
     

@@ -9,21 +9,24 @@ import Foundation
 
 typealias JSONDictionary = [String: Any]
 
-enum NetworkType {
+enum GQNetworkType {
     case createCustomer(JSONDictionary)
+    case customerSession(JSONDictionary)
     
     static private var environment: GQNetworkEnvironment = .test
+    
+    static let apiVersion: String = "/v1"
     
     static public func set(environment: GQNetworkEnvironment) {
         Self.environment = environment
     }
 }
 
-extension NetworkType {
+extension GQNetworkType {
     
     public var httpMethod: HTTPMethod {
         switch self {
-        case .createCustomer:
+        case .createCustomer, .customerSession:
             return .post
         default:
             return .get
@@ -33,22 +36,24 @@ extension NetworkType {
     public var endpoint: String {
         switch self {
         case .createCustomer:
-            return NetworkType.environment.baseURL + "/v1" + "/customer/create-customer"
+            return GQNetworkType.environment.baseURL + GQNetworkType.apiVersion + "/customer/create-customer"
+        case .customerSession:
+            return GQNetworkType.environment.baseURL + GQNetworkType.apiVersion + "/wrapper/customer-session"
         }
     }
     
     public var parameters: JSONDictionary? {
         switch self {
-        case .createCustomer(let params):
+        case .createCustomer(let params), .customerSession(let params):
             return params
         }
     }
     
     public var headers: [String: String] {
-        return ["Content-Type": "application/x-www-form-urlencoded",
-                "Accept": "application/json",
-                "GQ-API-Key": "\(Environment.shared.gqApiKey)",
-                "Authorization": "Basic \(Environment.shared.abase ?? .empty)"
+        return ["Content-Type" : "application/json",
+                "Accept"       : "application/json",
+                "GQ-API-Key"   : "\(GQEnvironment.shared.gqApiKey)",
+                "Authorization": "Basic \(GQEnvironment.shared.abase ?? .empty)"
                 ]
     }
     

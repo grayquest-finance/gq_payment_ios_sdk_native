@@ -15,6 +15,7 @@ enum GQNetworkEnvironment: String {
 }
 
 extension GQNetworkEnvironment {
+    
     var baseURL: String {
         switch self {
         case .stage:
@@ -28,7 +29,7 @@ extension GQNetworkEnvironment {
         }
     }
     
-    func isValid(environment: String) -> Bool {
+    static func isValid(environment: String) -> Bool {
         return GQNetworkEnvironment(rawValue: environment.lowercased()) != nil
     }
     
