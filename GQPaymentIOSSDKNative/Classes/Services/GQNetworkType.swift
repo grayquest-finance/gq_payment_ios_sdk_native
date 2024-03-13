@@ -10,8 +10,8 @@ import Foundation
 typealias JSONDictionary = [String: Any]
 
 enum GQNetworkType {
-    case createCustomer(JSONDictionary)
     case customerSession(JSONDictionary)
+    case authorize
     
     static private var environment: GQNetworkEnvironment = .test
     
@@ -26,7 +26,7 @@ extension GQNetworkType {
     
     public var httpMethod: HTTPMethod {
         switch self {
-        case .createCustomer, .customerSession:
+        case .customerSession:
             return .post
         default:
             return .get
@@ -35,23 +35,24 @@ extension GQNetworkType {
     
     public var endpoint: String {
         switch self {
-        case .createCustomer:
-            return GQNetworkType.environment.baseURL + GQNetworkType.apiVersion + "/customer/create-customer"
         case .customerSession:
             return GQNetworkType.environment.baseURL + GQNetworkType.apiVersion + "/wrapper/customer-session"
+        case .authorize:
+            return GQNetworkType.environment.baseURL + GQNetworkType.apiVersion + "/auth/authorize"
         }
     }
     
     public var parameters: JSONDictionary? {
         switch self {
-        case .createCustomer(let params), .customerSession(let params):
+        case .customerSession(let params):
             return params
+        case .authorize:
+            return nil
         }
     }
     
     public var headers: [String: String] {
         return ["Content-Type" : "application/json",
-                "Accept"       : "application/json",
                 "GQ-API-Key"   : "\(GQEnvironment.shared.gqApiKey)",
                 "Authorization": "Basic \(GQEnvironment.shared.abase ?? .empty)"
                 ]

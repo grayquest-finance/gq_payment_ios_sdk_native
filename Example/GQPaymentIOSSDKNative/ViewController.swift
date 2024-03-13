@@ -28,6 +28,7 @@ class ViewController: UIViewController {
     
     private var configObject: [String: Any]?
     private var responseObject: [String: Any]?
+    private var callBackString: String = "Callback"
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -58,7 +59,7 @@ class ViewController: UIViewController {
                                  "customization": [
                                                     "theme_color": themeColorTextField.text ?? ""
                                                   ],
-                                 "optional_data": optionalDataTextField.text ?? ""
+                                 "optional": optionalDataTextField.text ?? ""
                             ]
     }
     
@@ -88,7 +89,7 @@ class ViewController: UIViewController {
     
     @IBAction func clickedCallBackButton(_ sender: UIButton) {
         Task { @MainActor in
-            let alert = UIAlertController(title: "Response Callback", message: "\(self.responseObject ?? [:])", preferredStyle: .alert)
+            let alert = UIAlertController(title: self.callBackString, message: "\(self.responseObject ?? [:])", preferredStyle: .alert)
             let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
             alert.addAction(okAction)
             self.present(alert, animated: true)
@@ -106,19 +107,19 @@ class ViewController: UIViewController {
 //MARK: GQPayment Delegate functions to receive payment status.
 extension ViewController: GQPaymentDelegate {
     func gqSuccessResponse(data: [String : Any]?) {
-        print("SDK Success!!!")
+        self.callBackString = "Success Callback"
         self.responseObject = data
         configureCallBack(state: false)
     }
     
     func gqFailureResponse(data: [String : Any]?) {
-        print("SDK Failure!!!")
+        self.callBackString = "Failure Callback"
         self.responseObject = data
         configureCallBack(state: false)
     }
     
     func gqCancelResponse(data: [String : Any]?) {
-        print("Closed SDK!!!")
+        self.callBackString = "Cancel Callback"
         self.responseObject = data
         configureCallBack(state: false)
     }

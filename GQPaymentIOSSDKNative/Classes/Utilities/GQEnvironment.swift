@@ -52,6 +52,9 @@ class GQEnvironment {
     
     // Session Codes
     var sdkSessionCode: String?
+    var platformCode: String? {
+        return self.customerCode
+    }
     
     static let source: String = "isdk"
     static let version: String = "1.1"

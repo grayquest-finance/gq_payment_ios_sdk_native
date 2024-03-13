@@ -59,7 +59,9 @@ class EnterMobileNumberViewController: GQBaseViewController {
     
     override func dismiss(animated flag: Bool, completion: (() -> Void)? = nil) {
         super.dismiss(animated: flag, completion: { [weak self] in
-            self?.gqPaymentSDK?.dismiss(animated: true)
+            Task { @MainActor in
+                self?.gqPaymentSDK?.dismiss(animated: true)
+            }
         })
     }
     

@@ -215,7 +215,7 @@ final public class GQPaymentSDK: GQBaseViewController {
         Task { @MainActor in
             GQLogger.shared.error(description)
             self.hideLoader()
-            self.delegate?.gqFailureResponse(data: ["error": description])
+            self.delegate?.gqFailureResponse(data: ["Error": description])
             self.dismiss(animated: true)
         }
     }

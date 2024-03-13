@@ -116,7 +116,7 @@ public class GQBaseViewController: UIViewController {
     
     @objc private func closeButtonAction(_ selector: Selector) {
         Task { @MainActor in
-            GQUtility.shared.delegate?.gqCancelResponse(data: nil)
+            GQUtility.shared.delegate?.gqCancelResponse(data: ["Status": "GQPaymentSDK Cancelled/Closed"])
             self.dismiss(animated: true)
         }
     }
