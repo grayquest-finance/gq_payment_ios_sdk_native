@@ -44,22 +44,28 @@ class ViewController: UIViewController {
     }
     
     private func setupConfig() {
-        self.configObject = ["auth": ["client_secret_key": clientSecretKeyTextField.text ?? "",
-                                      "gq_api_key": apiKeyTextField.text ?? "",
-                                      "client_id": clientIDTextField.text ?? ""
-                                     ],
-                             "env": environmentTextField.text ?? "",
-                             "customer_number": customerNumberTextField.text ?? "",
-                             "student_id": studentIDTextField.text ?? "",
-                             "pp_config": ppConfigTextField.text ?? "",
-                             "fee_headers": feeHeaderTextField.text ?? ""
+        self.configObject = [
+                                "auth": [
+                                          "client_secret_key": clientSecretKeyTextField.text ?? "",
+                                          "gq_api_key": apiKeyTextField.text ?? "",
+                                          "client_id": clientIDTextField.text ?? ""
+                                        ],
+                                 "env": environmentTextField.text ?? "",
+                                 "customer_number": customerNumberTextField.text ?? "",
+                                 "student_id": studentIDTextField.text ?? "",
+                                 "pp_config": ppConfigTextField.text ?? "",
+                                 "fee_headers": feeHeaderTextField.text ?? "",
+                                 "customization": [
+                                                    "theme_color": themeColorTextField.text ?? ""
+                                                  ],
+                                 "optional_data": optionalDataTextField.text ?? ""
                             ]
     }
     
     @IBAction func clickedOpenSDKButton(_ sender: UIButton) {
         setupConfig()
 //      MARK: Created Instance of GQPaymentSDK class and pass data, Then initialise it.
-        DispatchQueue.main.async {
+        Task { @MainActor in
             let gqPayment = GQPaymentSDK(clientData: self.configObject, delegate: self)
             self.present(gqPayment, animated: true)
         }

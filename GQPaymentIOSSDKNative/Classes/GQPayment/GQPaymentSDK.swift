@@ -13,7 +13,7 @@ final public class GQPaymentSDK: GQBaseViewController {
     internal static var themeColor: UIColor = .red991F2C
     
 //    Delegate which will receive payment callback.
-    public var delegate: (any GQPaymentDelegate)? {
+    @objc public var delegate: (any GQPaymentDelegate)? {
         didSet {
             GQUtility.shared.delegate = self.delegate
         }
@@ -61,7 +61,7 @@ final public class GQPaymentSDK: GQBaseViewController {
     
     let environment = GQEnvironment.shared
     
-    public var clientJSONObject: [String: Any]?
+    @objc public var clientJSONObject: [String: Any]?
     
     override public func viewDidLoad() {
         super.viewDidLoad()
@@ -76,7 +76,7 @@ final public class GQPaymentSDK: GQBaseViewController {
             return
         }
         
-        var errorMessage: String = ""
+        var errorMessage = [String]()
         var isInValid: Bool = false
         
         // Auth Requirements
@@ -89,7 +89,7 @@ final public class GQPaymentSDK: GQBaseViewController {
             environment.updateApiKey(apiKey: apiKey)
         } else {
             isInValid = true
-            errorMessage += "Auth is missing"
+            errorMessage.append("Auth is missing")
         }
         
         // Student ID Requirements
@@ -97,7 +97,7 @@ final public class GQPaymentSDK: GQBaseViewController {
             environment.updateStudentID(stdId: studentID)
         }else {
             isInValid = true
-            errorMessage += ", Student Id is required"
+            errorMessage.append("Student Id is required")
         }
         
         // Environment Requirements
@@ -105,7 +105,7 @@ final public class GQPaymentSDK: GQBaseViewController {
                 environment.update(environment: env)
         } else {
             isInValid = true
-            errorMessage += ", Enter a valid Environment"
+            errorMessage.append("Enter a valid Environment")
         }
         
         // PP Config Requirements
@@ -114,7 +114,7 @@ final public class GQPaymentSDK: GQBaseViewController {
                 environment.updatePpConfig(ppConfig: ppConfig)
             } else {
                 isInValid = true
-                errorMessage += ", Slug is required"
+                errorMessage.append("Slug is required")
             }
         }
         
@@ -126,7 +126,7 @@ final public class GQPaymentSDK: GQBaseViewController {
         // Theme Requirements
         if let customization = clientJSON["customization"] as? JSONDictionary,
            let themeColor = customization["theme_color"] as? String {
-            environment.updateTheme(theme: themeColor)
+            environment.updateTheme(color: themeColor)
             environment.updateCustomization(customization: customization)
         }
         
@@ -136,12 +136,15 @@ final public class GQPaymentSDK: GQBaseViewController {
                 environment.updateCustomerNumber(customerNumber: customerNumber)
             }else{
                 isInValid = true
-                errorMessage += ", Invalid customer number"
+                errorMessage.append("Invalid customer number")
             }
         }
         
+        // Needs Change
+        environment.instituteLogo = "https://ezyschooling-1.s3.amazonaws.com/schools/logos/user_generic-school-user/VIBGYOR_High_School_2424_Logo_1.jpg"
+        
         guard !isInValid else {
-            self.handleError(description: errorMessage)
+            self.handleError(description: errorMessage.joined(separator: ", "))
             return
         }
         

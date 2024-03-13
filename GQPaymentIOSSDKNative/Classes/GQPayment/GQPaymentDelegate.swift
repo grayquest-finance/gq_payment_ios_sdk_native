@@ -7,7 +7,7 @@
 
 import Foundation
 
-@MainActor public protocol GQPaymentDelegate {
+@MainActor @objc public protocol GQPaymentDelegate {
     func gqSuccessResponse(data: [String: Any]?)
     
     func gqFailureResponse(data: [String: Any]?)

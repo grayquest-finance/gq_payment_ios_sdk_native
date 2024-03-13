@@ -140,6 +140,8 @@
 		9809F098EF80429E2AA598E54EE9925C /* GQStaticText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2332EE326F31B04457595F9F267CEE05 /* GQStaticText.swift */; };
 		99894DE6B19A2AFA4CD0B190AACE63C2 /* ProceedButtonCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 685A77CBF74DB609726D0AAD06A400A7 /* ProceedButtonCollectionReusableView.swift */; };
 		9FEAFE400DDB437840448C9F6BD52011 /* GQButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC1496473B99A54CEB59F37FB131C080 /* GQButton.swift */; };
+		A36134682BA17B8700616330 /* UIImageView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36134672BA17B8700616330 /* UIImageView+Ext.swift */; };
+		A361346A2BA18AC200616330 /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36134692BA18AC200616330 /* ImageCache.swift */; };
 		A393DB9C2BA038B9009EA90F /* CustomerSessionResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A393DB9B2BA038B9009EA90F /* CustomerSessionResponse.swift */; };
 		A40EB477BFF2E147D3D63D6434BD82EE /* CreateCustomerResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E4BBCD00E182BB746B18C057CEA42C /* CreateCustomerResponse.swift */; };
 		A47457A5D3A3B079754884757408404D /* GQEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB5945A9339FDA4C333176CADDE786F3 /* GQEncoder.swift */; };
@@ -367,6 +369,8 @@
 		9A5484261394AF28F0CA1A231AA26CD0 /* GQNetworkErrorResponse.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = GQNetworkErrorResponse.swift; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		A2993F1A959C6DEA9E1685E8B12F6D21 /* GQNetworkService.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = GQNetworkService.swift; sourceTree = "<group>"; };
+		A36134672BA17B8700616330 /* UIImageView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Ext.swift"; sourceTree = "<group>"; };
+		A36134692BA18AC200616330 /* ImageCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCache.swift; sourceTree = "<group>"; };
 		A393DB9B2BA038B9009EA90F /* CustomerSessionResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerSessionResponse.swift; sourceTree = "<group>"; };
 		A3BF2B60CFA8DAD65F0D428B4F9D9A10 /* GQNetworkEnvironment.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = GQNetworkEnvironment.swift; sourceTree = "<group>"; };
 		A719508C6E19E20D9A13C80B98477DCE /* Pods-GQPaymentIOSSDKNative_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-GQPaymentIOSSDKNative_Example-frameworks.sh"; sourceTree = "<group>"; };
@@ -730,6 +734,7 @@
 				E6AF750108A892BC16186A193EBF5270 /* UIImage+Ext.swift */,
 				596225EA299008C75978590B09CA1849 /* UIView+Ext.swift */,
 				AAA79A754AAFB3FEDC5CCB4B252D1C94 /* UIViewController+Ext.swift */,
+				A36134672BA17B8700616330 /* UIImageView+Ext.swift */,
 			);
 			name = Extensions;
 			path = GQPaymentIOSSDKNative/Classes/Extensions;
@@ -1045,6 +1050,7 @@
 				2332EE326F31B04457595F9F267CEE05 /* GQStaticText.swift */,
 				BBB4F35AFC7AE9D9CAAACA5C94250C81 /* GQUtility.swift */,
 				8FBFEDAAE9C9C9DFA80A6F5D523FBA3F /* GQValidationService.swift */,
+				A36134692BA18AC200616330 /* ImageCache.swift */,
 			);
 			name = Utilities;
 			path = GQPaymentIOSSDKNative/Classes/Utilities;
@@ -1382,6 +1388,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A36134682BA17B8700616330 /* UIImageView+Ext.swift in Sources */,
 				A40EB477BFF2E147D3D63D6434BD82EE /* CreateCustomerResponse.swift in Sources */,
 				455EBF8C5C05F7EE324112870E7BFB50 /* Decoder.swift in Sources */,
 				182AF78D4EE9E465F5A869FD66CE1FCE /* EMIApplicationCollectionViewCell.swift in Sources */,
@@ -1436,6 +1443,7 @@
 				CD61CB0E53CEC95E9E6B0081CAD58FCC /* PaymentMethodsViewModel.swift in Sources */,
 				2895110B1E69052D1FE74EBF14E9F732 /* PaymentTagCollectionViewCell.swift in Sources */,
 				931FA2E6AEE0FF606A733137C73CB542 /* PaymentTagCollectionViewCell.xib in Sources */,
+				A361346A2BA18AC200616330 /* ImageCache.swift in Sources */,
 				99894DE6B19A2AFA4CD0B190AACE63C2 /* ProceedButtonCollectionReusableView.swift in Sources */,
 				A6B8199C283C6D1F7018B2564DE84303 /* ProceedButtonCollectionReusableView.xib in Sources */,
 				F80BA3BAA7E6EA93322A72BC1CE29648 /* String+Ext.swift in Sources */,

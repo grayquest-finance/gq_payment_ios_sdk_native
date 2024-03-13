@@ -41,12 +41,14 @@ class GQEnvironment {
     
     var themeColor: String? {
         didSet {
-//            GQPaymentSDK.themeColor = UIColor
+            if let color = themeColor {
+                GQPaymentSDK.themeColor = UIColor(hexString: color) ?? .red991F2C
+            }
         }
     }
     
     // Institute Details
-    var instituteLogo: String? = "https://ezyschooling-1.s3.amazonaws.com/schools/logos/user_generic-school-user/VIBGYOR_High_School_2424_Logo_1.jpg"
+    var instituteLogo: String?
     
     // Session Codes
     var sdkSessionCode: String?
@@ -98,8 +100,8 @@ class GQEnvironment {
         self.studentID = stdId
     }
     
-    func updateTheme(theme: String) {
-        self.themeColor = theme
+    func updateTheme(color: String?) {
+        self.themeColor = color
     }
     
     func updateCustomization(customization: JSONDictionary?) {
@@ -128,7 +130,7 @@ class GQEnvironment {
         updateCustomerCode(custCode: "")
         updateCustomerType(custType: "")
         updateStudentID(stdId: "")
-        updateTheme(theme: "")
+        updateTheme(color: nil)
         updateCustomization(customization: nil)
         updatePpConfig(ppConfig: nil)
         updateFeeHeaders(feeHeader: nil)

@@ -9,12 +9,31 @@ import Foundation
 
 extension UIColor {
     
+    convenience init?(hexString: String) {
+        var hexString = hexString.trimmingCharacters(in: .whitespacesAndNewlines)
+        hexString = hexString.replacingOccurrences(of: "#", with: "")
+
+        guard hexString.count == 6 else {
+            return nil
+        }
+
+        var rgbValue: UInt64 = 0
+        Scanner(string: hexString).scanHexInt64(&rgbValue)
+
+        self.init(
+            red: CGFloat((rgbValue & 0xFF0000) >> 16) / 255.0,
+            green: CGFloat((rgbValue & 0x00FF00) >> 8) / 255.0,
+            blue: CGFloat(rgbValue & 0x0000FF) / 255.0,
+            alpha: 1.0
+        )
+    }
+    
     convenience init(red: CGFloat, green: CGFloat, blue: CGFloat) {
         self.init(red: red/255, green: green/255, blue: blue/255, alpha: 1.0)
     }
     
 //  MARK: Red Shades
-    @nonobjc public static let red991F2C: UIColor = UIColor(red: 153, green: 31, blue: 44)
+    @nonobjc static let red991F2C: UIColor = UIColor(red: 153, green: 31, blue: 44)
     @nonobjc static let redA82B10: UIColor = UIColor(red: 168, green: 43, blue: 16)
     @nonobjc static let redD23614: UIColor = UIColor(red: 210, green: 54, blue: 20)
     
