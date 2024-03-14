@@ -28,9 +28,6 @@ final public class GQPaymentSDK: GQBaseViewController {
             self.delegate = delegate
         }
         
-//        Loading Dependencies.
-        Self.loadDependencies()
-        
 //        Setting Data and Configuration.
         self.clientJSONObject = clientData
         self.modalPresentationStyle = .overCurrentContext
@@ -41,7 +38,8 @@ final public class GQPaymentSDK: GQBaseViewController {
         fatalError("init(coder:) has not been implemented")
     }
     
-    private static func loadDependencies() {
+//        Loading Dependencies.
+    private func loadDependencies() {
         UIFont.loadFonts()
     }
     
@@ -67,7 +65,14 @@ final public class GQPaymentSDK: GQBaseViewController {
         super.viewDidLoad()
         
         self.showLoader()
+        loadDependencies()
         configureSessionRequest()
+    }
+    
+    public override func dismiss(animated flag: Bool, completion: (() -> Void)? = nil) {
+        super.dismiss(animated: flag) { [weak self] in
+            self?.close()
+        }
     }
     
     private func configureSessionRequest() {
@@ -220,7 +225,7 @@ final public class GQPaymentSDK: GQBaseViewController {
         }
     }
     
-    public func open() {
+    private func open() {
         Task { @MainActor in
             let mobileNumberViewmodel = EnterMobileNumberViewModel()
             let mobileNumberViewcontroller = EnterMobileNumberViewController(viewModel: mobileNumberViewmodel)
@@ -243,6 +248,11 @@ final public class GQPaymentSDK: GQBaseViewController {
         self.environment.updateCustomerCode(custCode: response.data?.customerCode)
         self.environment.updateCustomerId(custId: response.data?.customerID)
         self.environment.updateSDKSessionCode(sessionCode: response.data?.sdkSessionCode)
+    }
+    
+//    Clearing all data used in SDK
+    private func close() {
+        ImageCache.shared.clearCache()
     }
         
 }

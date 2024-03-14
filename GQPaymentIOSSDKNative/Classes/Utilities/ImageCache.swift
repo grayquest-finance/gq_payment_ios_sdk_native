@@ -22,4 +22,21 @@ final class ImageCache {
         self.cache.setObject(image, forKey: url as AnyObject)
     }
     
+    func clearCache() {
+        self.cache.removeAllObjects()
+    }
+    
+    func fetchImage(url: String?) async throws -> UIImage? {
+//        if let cachedImage = Self.shared.getCachedImage(for: url) {
+//            return cachedImage
+//        }
+            
+        guard let urlString = url, let imageURL = URL(string: urlString) else { throw GQError.notFound }
+    
+        let (imageData, _) = try await URLSession.shared.data(from: imageURL)
+        let newImage = UIImage(data: imageData)
+        ImageCache.shared.cacheNewImage(for: urlString, image: newImage)
+        return newImage
+    }
+    
 }

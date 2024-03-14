@@ -9,21 +9,23 @@ import UIKit
 
 extension UIImageView {
     
+    internal func setOnMainThread(with image: UIImage?) {
+        Task { @MainActor in
+            self.image = image
+        }
+    }
+    
     final func setImage(url: String?, placeHolder: UIImage? = nil) {
         if let cachedImage = ImageCache.shared.getCachedImage(for: url) {
-            self.image = cachedImage
+            setOnMainThread(with: cachedImage)
             return
         }
         
-        self.image = placeHolder
-        
-        guard let urlString = url, let imageURL = URL(string: urlString) else { return }
+        setOnMainThread(with: placeHolder)
         
         Task { [weak self] in
-            let (imageData, _) = try await URLSession.shared.data(from: imageURL)
-            let newImage = UIImage(data: imageData)
-            self?.image = newImage
-            ImageCache.shared.cacheNewImage(for: urlString, image: newImage)
+            let newImage: UIImage? = try? await ImageCache.shared.fetchImage(url: url)
+            self?.setOnMainThread(with: newImage)
         }
         
     }
