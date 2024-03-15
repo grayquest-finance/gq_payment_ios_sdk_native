@@ -11,13 +11,27 @@ import RegexBuilder
 protocol EnterMobileNumberViewModelType {
     var gile: String? { get }
     
+    func authorize() async throws
 }
 
 class EnterMobileNumberViewModel: EnterMobileNumberViewModelType {
     
     var gile: String? = "GITAM Institute of Management, Mumbai, CBSE"
     
+    func beginSendOTPProcess() async throws {
+        try await authorize()
+    }
     
+    func authorize() async throws {
+        let authorizeTokenRequest = AuthorizeTokenRequest(platformCode: GQEnvironment.shared.platformCode)
+        
+        let authorizeResponse = try await GQNetworkService.shared.perform(networkType: .authorize, data: authorizeTokenRequest, responseType: AuthorizeTokenResponse.self)
+        GQEnvironment.shared.updateTokens(authorizeResponse: authorizeResponse)
+    }
+    
+    func checkMobile() async throws {
+        
+    }
 
     
 }

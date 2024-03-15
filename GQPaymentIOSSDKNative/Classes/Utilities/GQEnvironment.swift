@@ -53,8 +53,12 @@ class GQEnvironment {
     // Session Codes
     var sdkSessionCode: String?
     var platformCode: String? {
-        return self.customerCode
+        return "56c50d3a-9dca-47c8-8116-63ddffa72ea7"
     }
+    
+    // Session Tokens
+    var accessToken: String?
+    var refreshToken: String?
     
     static let source: String = "isdk"
     static let version: String = "1.1"
@@ -121,6 +125,12 @@ class GQEnvironment {
     
     func updateSDKSessionCode(sessionCode: String?) {
         self.sdkSessionCode = sessionCode
+    }
+    
+    func updateTokens(authorizeResponse: AuthorizeTokenResponse?) {
+        guard let data = authorizeResponse?.data else { return }
+        self.accessToken = data.accessToken
+        self.refreshToken = data.refreshToken
     }
     
     func clear() {

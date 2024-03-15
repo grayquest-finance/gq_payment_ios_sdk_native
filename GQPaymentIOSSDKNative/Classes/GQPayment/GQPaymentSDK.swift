@@ -54,11 +54,12 @@ final public class GQPaymentSDK: GQBaseViewController {
         return Bundle(for: Self.self)
     }
     
-//    Tells the Log class that the SDK ca print/ log data. True to print data.
+//    Tells the Log class that the SDK can print/ log data. True to print data.
     internal static var debugMode: Bool = true
     
     let environment = GQEnvironment.shared
     
+//    The JSON Dictionary passed from client app.
     @objc public var clientJSONObject: [String: Any]?
     
     override public func viewDidLoad() {
@@ -206,7 +207,7 @@ final public class GQPaymentSDK: GQBaseViewController {
         
         Task(priority: .userInitiated) {
             do {
-                let response = try await GQNetworkService.shared.perform(networkType: .customerSession(data), responseType: CustomerSessionResponse.self)
+                let response = try await GQNetworkService.shared.perform(networkType: .customerSession, parameters: data, responseType: CustomerSessionResponse.self)
                 self.hideLoader()
                 self.handleAPIResult(response: response)
                 self.open()

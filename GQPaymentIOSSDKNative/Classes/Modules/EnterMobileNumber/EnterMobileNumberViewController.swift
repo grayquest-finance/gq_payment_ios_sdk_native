@@ -200,6 +200,11 @@ class EnterMobileNumberViewController: GQBaseViewController {
     
     @IBAction func clickedVerifyOTPButton(_ sender: UIButton) {
         GQLogger.shared.log(otpTextField.text ?? "No OTP")
+        Task { @MainActor in
+            let emiViewModel = GQEMIViewModel()
+            let emiViewController = GQEMIViewController(viewModel: emiViewModel)
+            self.navigationController?.pushViewController(emiViewController, animated: true)
+        }
     }
     
 }

@@ -10,8 +10,19 @@ import Foundation
 typealias JSONDictionary = [String: Any]
 
 enum GQNetworkType {
-    case customerSession(JSONDictionary)
+    
+    // ERP APIs
+    case customerSession
     case authorize
+    
+    // Cust APIs
+    case checkMobile
+    
+    // Noti APIs
+    case sendOTP
+    
+    // SVC APIs
+    
     
     static private var environment: GQNetworkEnvironment = .test
     
@@ -19,6 +30,7 @@ enum GQNetworkType {
     
     static public func set(environment: GQNetworkEnvironment) {
         Self.environment = environment
+        GQLogger.shared.alert("Network Services on \(environment.rawValue)")
     }
 }
 
@@ -39,23 +51,20 @@ extension GQNetworkType {
             return GQNetworkType.environment.baseURL + GQNetworkType.apiVersion + "/wrapper/customer-session"
         case .authorize:
             return GQNetworkType.environment.baseURL + GQNetworkType.apiVersion + "/auth/authorize"
-        }
-    }
-    
-    public var parameters: JSONDictionary? {
-        switch self {
-        case .customerSession(let params):
-            return params
-        case .authorize:
-            return nil
+        case .checkMobile:
+            return GQNetworkType.environment.baseURL + GQNetworkType.apiVersion + "/auth/login/check-mobile"
+        case .sendOTP:
+            return GQNetworkType.environment.baseURL + GQNetworkType.apiVersion + "/customer-portal/otp/send-otp"
         }
     }
     
     public var headers: [String: String] {
-        return ["Content-Type" : "application/json",
-                "GQ-API-Key"   : "\(GQEnvironment.shared.gqApiKey)",
-                "Authorization": "Basic \(GQEnvironment.shared.abase ?? .empty)"
-                ]
+        switch self {
+        case .customerSession, .sendOTP:
+            return GQRequestHeaders.basicAuth
+        default:
+            return GQRequestHeaders.noAuth
+        }
     }
     
     public var cachePolicy: URLRequest.CachePolicy {

@@ -28,7 +28,7 @@ class GQEncoder {
         return data
     }
     
-    func serialize(data: any Encodable) throws -> [String: Any]? {
+    func serialize(data: any Encodable) throws -> JSONDictionary? {
         do {
             let encoded = try Self.shared.encode(data: data)
             let serialized = try JSONSerialization.jsonObject(with: encoded)

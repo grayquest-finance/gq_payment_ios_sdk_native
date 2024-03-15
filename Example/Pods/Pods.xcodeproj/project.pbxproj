@@ -142,6 +142,7 @@
 		9FEAFE400DDB437840448C9F6BD52011 /* GQButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC1496473B99A54CEB59F37FB131C080 /* GQButton.swift */; };
 		A36134682BA17B8700616330 /* UIImageView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36134672BA17B8700616330 /* UIImageView+Ext.swift */; };
 		A361346A2BA18AC200616330 /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36134692BA18AC200616330 /* ImageCache.swift */; };
+		A38FBADB2BA435B200641F22 /* AuthorizeToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = A38FBADA2BA435B200641F22 /* AuthorizeToken.swift */; };
 		A393DB9C2BA038B9009EA90F /* CustomerSessionResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A393DB9B2BA038B9009EA90F /* CustomerSessionResponse.swift */; };
 		A40EB477BFF2E147D3D63D6434BD82EE /* CreateCustomerResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E4BBCD00E182BB746B18C057CEA42C /* CreateCustomerResponse.swift */; };
 		A47457A5D3A3B079754884757408404D /* GQEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB5945A9339FDA4C333176CADDE786F3 /* GQEncoder.swift */; };
@@ -371,6 +372,7 @@
 		A2993F1A959C6DEA9E1685E8B12F6D21 /* GQNetworkService.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = GQNetworkService.swift; sourceTree = "<group>"; };
 		A36134672BA17B8700616330 /* UIImageView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Ext.swift"; sourceTree = "<group>"; };
 		A36134692BA18AC200616330 /* ImageCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCache.swift; sourceTree = "<group>"; };
+		A38FBADA2BA435B200641F22 /* AuthorizeToken.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizeToken.swift; sourceTree = "<group>"; };
 		A393DB9B2BA038B9009EA90F /* CustomerSessionResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerSessionResponse.swift; sourceTree = "<group>"; };
 		A3BF2B60CFA8DAD65F0D428B4F9D9A10 /* GQNetworkEnvironment.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = GQNetworkEnvironment.swift; sourceTree = "<group>"; };
 		A719508C6E19E20D9A13C80B98477DCE /* Pods-GQPaymentIOSSDKNative_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-GQPaymentIOSSDKNative_Example-frameworks.sh"; sourceTree = "<group>"; };
@@ -603,6 +605,7 @@
 		39188912A2073DB7F45A92FEA28BB059 /* EnterMobileNumber */ = {
 			isa = PBXGroup;
 			children = (
+				A38FBAD92BA41D6300641F22 /* Models */,
 				780FE2F5235D932EB6EDE9B76BC5F264 /* EnterMobileNumberViewController.swift */,
 				DAE39FA4066445AAF1C7C5B700D9EBDB /* EnterMobileNumberViewController.xib */,
 				BC3978ADAD4B17AE4018AAFA08EC71C1 /* EnterMobileNumberViewModel.swift */,
@@ -920,6 +923,14 @@
 				2A5546BEE10A7AA706149CF4E66A5902 /* GQTagView.xib */,
 			);
 			path = GQTagView;
+			sourceTree = "<group>";
+		};
+		A38FBAD92BA41D6300641F22 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				A38FBADA2BA435B200641F22 /* AuthorizeToken.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		B2B68073FB6AF7786900F3542CDD2880 /* Pods */ = {
@@ -1414,6 +1425,7 @@
 				AA5580BBDEEE11B9F3A4E7B6F0E0CABB /* GQNetworkEnvironment.swift in Sources */,
 				B4FABF257EE9EBA8CD3E310C3DBEE59C /* GQPaymentDelegate.swift in Sources */,
 				88AD3543F32A32927E68F4CC2FFF35FB /* GQPaymentIOSSDKNative-dummy.m in Sources */,
+				A38FBADB2BA435B200641F22 /* AuthorizeToken.swift in Sources */,
 				F6C03D44721B9481B1840BDBC80F1547 /* GQPaymentSDK.swift in Sources */,
 				A393DB9C2BA038B9009EA90F /* CustomerSessionResponse.swift in Sources */,
 				9809F098EF80429E2AA598E54EE9925C /* GQStaticText.swift in Sources */,

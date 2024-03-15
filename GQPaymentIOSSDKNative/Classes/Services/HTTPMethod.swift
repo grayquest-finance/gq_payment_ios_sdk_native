@@ -20,3 +20,15 @@ enum HTTPMethod {
         }
     }
 }
+
+struct GQRequestHeaders {
+    static let noAuth = [
+        "Content-Type" : "application/json"
+    ]
+    
+    static let basicAuth = [
+        "Content-Type" : "application/json",
+        "GQ-API-Key"   : "\(GQEnvironment.shared.gqApiKey)",
+        "Authorization": "Basic \(GQEnvironment.shared.abase ?? .empty)"
+    ]
+}
