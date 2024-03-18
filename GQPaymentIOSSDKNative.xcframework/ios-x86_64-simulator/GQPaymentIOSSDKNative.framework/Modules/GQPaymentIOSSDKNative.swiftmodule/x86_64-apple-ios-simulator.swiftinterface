@@ -1,0 +1,41 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.9.2 (swiftlang-5.9.2.2.56 clang-1500.1.0.2.5)
+// swift-module-flags: -target x86_64-apple-ios15.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name GQPaymentIOSSDKNative
+// swift-module-flags-ignorable: -enable-bare-slash-regex
+import DeveloperToolsSupport
+import Foundation
+@_exported import GQPaymentIOSSDKNative
+import OSLog
+import RegexBuilder
+import Swift
+import SwiftUI
+import UIKit
+import _Concurrency
+import _StringProcessing
+import _SwiftConcurrencyShims
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) public class GQBaseViewController : UIKit.UIViewController {
+  @_Concurrency.MainActor(unsafe) public func showLoader()
+  @_Concurrency.MainActor(unsafe) public func hideLoader()
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewDidLoad()
+  @objc deinit
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
+}
+@_Concurrency.MainActor @objc public protocol GQPaymentDelegate {
+  @objc @_Concurrency.MainActor func gqSuccessResponse(data: [Swift.String : Any]?)
+  @objc @_Concurrency.MainActor func gqFailureResponse(data: [Swift.String : Any]?)
+  @objc @_Concurrency.MainActor func gqCancelResponse(data: [Swift.String : Any]?)
+}
+@objc @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) final public class GQPaymentSDK : GQPaymentIOSSDKNative.GQBaseViewController {
+  @objc @_Concurrency.MainActor(unsafe) final public var delegate: (any GQPaymentIOSSDKNative.GQPaymentDelegate)? {
+    @objc get
+    @objc set
+  }
+  @_Concurrency.MainActor(unsafe) public init(clientData: [Swift.String : Any]?, delegate: some GQPaymentDelegate)
+  @_Concurrency.MainActor(unsafe) final public var presentationStyle: UIKit.UIModalPresentationStyle
+  @_Concurrency.MainActor(unsafe) final public var transitionStyle: UIKit.UIModalTransitionStyle
+  @objc @_Concurrency.MainActor(unsafe) final public var clientJSONObject: [Swift.String : Any]?
+  @_Concurrency.MainActor(unsafe) @objc override final public func viewDidLoad()
+  @_Concurrency.MainActor(unsafe) @objc override final public func dismiss(animated flag: Swift.Bool, completion: (() -> Swift.Void)? = nil)
+  @objc deinit
+}

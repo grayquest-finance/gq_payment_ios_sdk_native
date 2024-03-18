@@ -40,8 +40,8 @@ Pod::Spec.new do |s|
 #   s.source_files = 'GQPaymentIOSSDKNative/Classes/**/*'
 #   s.resources = ["GQPaymentIOSSDKNative/Assets/*.xcassets", "GQPaymentIOSSDKNative/Assets/Fonts/**/*.ttf"]
 
-   s.vendored_frameworks = 'GQPaymentIOSSDKNative.xcframework'
-   s.exclude_files = 'BuildFramework.sh'
+    s.vendored_frameworks = 'GQPaymentIOSSDKNative.xcframework'
+    s.exclude_files = 'BuildFramework.sh'
                 
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
