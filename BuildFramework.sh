@@ -35,17 +35,16 @@ xcodebuild \
 -output GQPaymentIOSSDKNative.xcframework
 
 
-#5 - Deintegrating old pods and installing new one in the Example Project.
-#sed -i '' "s/^$1/#$1/" GQPaymentIOSSDKNative.podspec
-#sed -i '' "s/^#$1/$1/" GQPaymentIOSSDKNative.podspec
+#5 - CuNcommenting specific lines for prod/ Commenting specific lines needed for development.
+#Note: source_files, resources - For Development AND vendored_frameworks, exclude_files - For Production.
+file="GQPaymentIOSSDKNative.podspec"
+dev_line_number="40,41"
+prod_line_number="43,44"
+sed -i -e "${dev_line_number}s/^/# /" "$file"
+sed -i -e "${prod_line_number}s/^#/ /" "$file"
 
-#cd Example/
-#pod deintegrate
-#pod install
 
-# Need to make it dynamic in script
-#  s.source_files = 'GQPaymentIOSSDKNative/Classes/**/*'
-#  s.resources = ["GQPaymentIOSSDKNative/Assets/*.xcassets", "GQPaymentIOSSDKNative/Assets/Fonts/**/*.ttf"]
-# ----
-#  s.vendored_frameworks = 'GQPaymentIOSSDKNative.xcframework'
-#  s.exclude_files = 'BuildFramework.sh'
+#6 - Deintegrating old pods and installing new one in the Example Project.
+cd Example/
+pod deintegrate
+pod install
