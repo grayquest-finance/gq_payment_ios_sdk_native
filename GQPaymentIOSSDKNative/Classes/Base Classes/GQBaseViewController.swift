@@ -7,7 +7,7 @@
 
 import UIKit
 
-internal class GQBaseViewController: UIViewController, GQLoadable {
+internal class GQBaseViewController: UIViewController, GQLoadable {    
     
     private weak var scrollViewToAdjust: UIScrollView?
     internal var isBackButtonEnabled: Bool = true

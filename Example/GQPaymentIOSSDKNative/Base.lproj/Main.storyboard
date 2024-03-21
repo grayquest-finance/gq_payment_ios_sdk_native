@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="vXZ-lx-hvc">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -29,7 +29,7 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="1Mb-qO-Neo">
                                                 <rect key="frame" x="16" y="20" width="343" height="660"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GQPayment SDK" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dTQ-FC-ewl">
+                                                    <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GQPayment SDK" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dTQ-FC-ewl">
                                                         <rect key="frame" x="0.0" y="0.0" width="343" height="28"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="28" id="ocn-v5-UIj"/>
@@ -203,10 +203,12 @@
                         <outlet property="customerNumberTextField" destination="O6k-dY-eLa" id="Rgi-oZ-o6w"/>
                         <outlet property="environmentTextField" destination="Noa-fb-NUi" id="e7l-Oy-h0v"/>
                         <outlet property="feeHeaderTextField" destination="nRS-9x-Bg2" id="ETi-CA-rgm"/>
+                        <outlet property="mainTitleLabel" destination="dTQ-FC-ewl" id="8uN-li-jh8"/>
                         <outlet property="openSDKButton" destination="yiC-kU-Mbx" id="FSc-fk-ROx"/>
                         <outlet property="optionalDataTextField" destination="imW-GV-EgX" id="iLr-GD-yHM"/>
                         <outlet property="ppConfigTextField" destination="XTM-1K-Nqf" id="9xn-dp-lkx"/>
                         <outlet property="prefillButton" destination="hyf-3d-bRf" id="fGe-3P-lwV"/>
+                        <outlet property="scrollView" destination="oln-xe-c5U" id="kkd-8Z-zzc"/>
                         <outlet property="studentIDTextField" destination="qVv-yi-v5e" id="Wpe-1r-Df5"/>
                         <outlet property="themeColorTextField" destination="QUx-JS-Od3" id="SBm-9n-WjF"/>
                     </connections>

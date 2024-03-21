@@ -11,6 +11,8 @@ import GQPaymentIOSSDKNative
 
 class ViewController: UIViewController {
     
+    @IBOutlet weak var scrollView: UIScrollView!
+    
     @IBOutlet weak var clientIDTextField: UITextField!
     @IBOutlet weak var clientSecretKeyTextField: UITextField!
     @IBOutlet weak var apiKeyTextField: UITextField!
@@ -25,6 +27,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var openSDKButton: UIButton!
     @IBOutlet weak var prefillButton: UIButton!
     @IBOutlet weak var callBackButton: UIButton!
+    
+    @IBOutlet weak var mainTitleLabel: UILabel!
     
     private var configObject: [String: Any]?
     private var responseObject: [String: Any]?
@@ -42,6 +46,12 @@ class ViewController: UIViewController {
         openSDKButton.layer.cornerRadius = openSDKButton.frame.height * 0.2
         prefillButton.layer.cornerRadius = openSDKButton.frame.height * 0.2
         callBackButton.layer.cornerRadius = openSDKButton.frame.height * 0.2
+        
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(clearAllFields))
+        tapGesture.numberOfTapsRequired = 3
+        mainTitleLabel.addGestureRecognizer(tapGesture)
+        
+        adjustScrollViewForKeyboard()
     }
     
     private func setupConfig() {
@@ -61,6 +71,24 @@ class ViewController: UIViewController {
                                                   ],
                                  "optional": optionalDataTextField.text ?? ""
                             ]
+    }
+    
+    @objc func clearAllFields() {
+        Task { @MainActor in
+            self.clientIDTextField.text = ""
+            self.clientSecretKeyTextField.text = ""
+            self.apiKeyTextField.text = ""
+            self.environmentTextField.text = ""
+            self.studentIDTextField.text = ""
+            self.customerNumberTextField.text = ""
+            self.ppConfigTextField.text = ""
+            self.feeHeaderTextField.text = ""
+            self.themeColorTextField.text = ""
+            self.optionalDataTextField.text = ""
+            self.callBackButton.isHidden = true
+            self.responseObject = nil
+            self.callBackString = "Callback"
+        }
     }
     
     @IBAction func clickedOpenSDKButton(_ sender: UIButton) {
@@ -124,4 +152,34 @@ extension ViewController: GQPaymentDelegate {
         configureCallBack(state: false)
     }
     
+}
+
+extension ViewController {
+    internal func adjustScrollViewForKeyboard() {
+        let notificationCenter = NotificationCenter.default
+        notificationCenter.addObserver(self, selector: #selector(adjustForHideKeyboard), name: Notification.Name.UIKeyboardWillHide, object: nil)
+        notificationCenter.addObserver(self, selector: #selector(adjustForShowKeyboard), name: Notification.Name.UIKeyboardDidChangeFrame, object: nil)
+        scrollView.bounces = false
+    }
+    
+    @objc func adjustForShowKeyboard(notification: Notification) {
+        guard let keyboardValue = notification.userInfo?[UIKeyboardFrameEndUserInfoKey] as? NSValue else { return }
+
+        Task { @MainActor in
+            let keyboardScreenEndFrame = keyboardValue.cgRectValue
+            let keyboardViewEndFrame = view.convert(keyboardScreenEndFrame, from: view.window)
+
+            let contentInset = UIEdgeInsets(top: 0, left: 0, bottom: keyboardViewEndFrame.height - view.safeAreaInsets.bottom, right: 0)
+
+            scrollView.contentInset = contentInset
+            scrollView.scrollIndicatorInsets = contentInset
+        }
+    }
+    
+    @objc func adjustForHideKeyboard(notification: Notification) {
+        Task { @MainActor in
+            scrollView.contentInset = .zero
+            scrollView.scrollIndicatorInsets = .zero
+        }
+    }
 }

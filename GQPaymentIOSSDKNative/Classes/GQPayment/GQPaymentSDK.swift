@@ -69,8 +69,6 @@ final public class GQPaymentSDK: UIViewController, GQLoadable {
     
     override public func viewDidLoad() {
         super.viewDidLoad()
-        
-        self.showLoader()
         loadDependencies()
         configureSessionRequest()
     }
@@ -78,6 +76,7 @@ final public class GQPaymentSDK: UIViewController, GQLoadable {
     public override func dismiss(animated flag: Bool, completion: (() -> Void)? = nil) {
         super.dismiss(animated: flag) { [weak self] in
             self?.close()
+            completion?()
         }
     }
     
@@ -212,9 +211,12 @@ final public class GQPaymentSDK: UIViewController, GQLoadable {
         
         Task(priority: .userInitiated) {
             do {
+                await MainActor.run {
+                    self.showLoader()
+                }
                 let response = try await GQNetworkService.shared.perform(networkType: .customerSession, parameters: data, responseType: CustomerSessionResponse.self)
                 self.handleAPIResult(response: response)
-                self.hideLoader()
+                hideLoader()
                 self.open()
             } catch (let error) {
                 self.handleError(description: error.localizedDescription)
@@ -222,27 +224,28 @@ final public class GQPaymentSDK: UIViewController, GQLoadable {
         }
     }
     
-    @MainActor private func handleError(description: String) {
+    private func handleError(description: String) {
         GQLogger.shared.error(description)
-        self.hideLoader()
-        self.dismiss(animated: true)
-        self.delegate?.gqFailureResponse(data: ["Error": description])
+        Task {
+            await MainActor.run {
+                hideLoader()
+                self.dismiss(animated: true)
+            }
+            self.delegate?.gqFailureResponse(data: ["Error": description])
+        }
     }
     
      @MainActor private func open() {
-//        Task { @MainActor in
-            let mobileNumberViewmodel = EnterMobileNumberViewModel()
-            let mobileNumberViewcontroller = EnterMobileNumberViewController(viewModel: mobileNumberViewmodel)
-            mobileNumberViewcontroller.gqPaymentSDK = self
-            
-//        MARK: For Using Inbuilt Navigation BAR
-            let navigationController = UINavigationController(rootViewController: mobileNumberViewcontroller)
-            navigationController.modalPresentationStyle = self.presentationStyle
-            navigationController.modalTransitionStyle = self.transitionStyle
-            
-            navigationController.isModalInPresentation = true
-            self.present(navigationController, animated: true)
-//        }
+        let mobileNumberViewmodel = EnterMobileNumberViewModel()
+        let mobileNumberViewcontroller = EnterMobileNumberViewController(viewModel: mobileNumberViewmodel)
+        mobileNumberViewcontroller.gqPaymentSDK = self
+        
+        let navigationController = UINavigationController(rootViewController: mobileNumberViewcontroller)
+        navigationController.modalPresentationStyle = self.presentationStyle
+        navigationController.modalTransitionStyle = self.transitionStyle
+        
+        navigationController.isModalInPresentation = true
+        self.present(navigationController, animated: true)
     }
     
     func handleAPIResult(response: CustomerSessionResponse?) {

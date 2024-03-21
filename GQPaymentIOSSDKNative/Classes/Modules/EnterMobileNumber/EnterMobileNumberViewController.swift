@@ -143,60 +143,66 @@ class EnterMobileNumberViewController: GQBaseViewController {
         timerLabel.delegate = self
     }
     
-    private func setupInitialStateForNoteLabel() {
-        Task { @MainActor in
-            let noteTitle = NSAttributedString(string: GQStaticText.note,
-                                          font: .customFont(.dmSans, weight: .bold, size: 14),
-                                          color: .green40850A)
-            let noteDescription = NSAttributedString(string: GQStaticText.mobileNumberNote,
-                                                     font: .customFont(.dmSans, weight: .regular, size: 14),
-                                                     color: .gray4D4B5A)
-            self.noteLabel.attributedText = noteTitle.addAttributedString(noteDescription)
-            self.noteLabel.textAlignment = .left
-        }
+    @MainActor private func setupInitialStateForNoteLabel() {
+        let noteTitle = NSAttributedString(string: GQStaticText.note,
+                                      font: .customFont(.dmSans, weight: .bold, size: 14),
+                                      color: .green40850A)
+        let noteDescription = NSAttributedString(string: GQStaticText.mobileNumberNote,
+                                                 font: .customFont(.dmSans, weight: .regular, size: 14),
+                                                 color: .gray4D4B5A)
+        self.noteLabel.attributedText = noteTitle.addAttributedString(noteDescription)
+        self.noteLabel.textAlignment = .left
     }
     
-    private func setupOTPStateForNoteLabel() {
-        Task { @MainActor in
-            self.noteLabel.text = GQStaticText.sentOTPMesssage
-            self.noteLabel.font = .customFont(.dmSans, weight: .regular, size: 14)
-            self.noteLabel.textColor = .black4D4B5A
-            self.noteLabel.textAlignment = .center
-            
-            self.mobileNumberLabel.text = self.mobileTextField.text ?? GQStaticText.notknown
-        }
+    @MainActor private func setupOTPStateForNoteLabel() {
+        self.noteLabel.text = GQStaticText.sentOTPMesssage
+        self.noteLabel.font = .customFont(.dmSans, weight: .regular, size: 14)
+        self.noteLabel.textColor = .black4D4B5A
+        self.noteLabel.textAlignment = .center
+        
+        self.mobileNumberLabel.text = self.mobileTextField.text ?? GQStaticText.notknown
     }
     
-    private func setOTPState(active: Bool) {
-        Task { @MainActor in
-
-            if active {
-                self.setupOTPStateForNoteLabel()
-                self.timerLabel.startTimer()
-                self.otpTextField.clear()
-            } else {
-                self.setupInitialStateForNoteLabel()
-                self.timerLabel.resetTimer()
-            }
-            
-            self.noteOTPStackView.alignment = active ? .center : .fill
-            self.verifyOTPButton.setDisabled()
-            
-            let isHidden = !active
-            self.otpTextField.isHidden = isHidden
-            self.resentOTPStackView.isHidden = isHidden
-            self.mobileNumberLabel.isHidden = isHidden
-            self.verifyOTPButton.isHidden = isHidden
+    @MainActor private func setOTPState(active: Bool) {
+        if active {
+            self.setupOTPStateForNoteLabel()
+            self.timerLabel.startTimer()
+            self.otpTextField.clear()
+        } else {
+            self.setupInitialStateForNoteLabel()
+            self.timerLabel.resetTimer()
         }
+        
+        self.noteOTPStackView.alignment = active ? .center : .fill
+        self.verifyOTPButton.setDisabled()
+        
+        let isHidden = !active
+        self.otpTextField.isHidden = isHidden
+        self.resentOTPStackView.isHidden = isHidden
+        self.mobileNumberLabel.isHidden = isHidden
+        self.verifyOTPButton.isHidden = isHidden
     }
     
     @IBAction func clickedVerifyOTPButton(_ sender: UIButton) {
         GQLogger.shared.log(otpTextField.text ?? "No OTP")
-        Task { @MainActor in
-            let emiViewModel = GQEMIViewModel()
-            let emiViewController = GQEMIViewController(viewModel: emiViewModel)
-            self.navigationController?.pushViewController(emiViewController, animated: true)
+        Task(priority: .userInitiated) {
+            do {
+                showLoader()
+                try await viewModel?.authorize()
+                hideLoader()
+                displayEMIScreen()
+            } catch (let error) {
+                GQLogger.shared.error("Could not authorize SDK!: \(error.localizedDescription)")
+                hideLoader()
+            }
         }
+
+    }
+    
+    @MainActor private func displayEMIScreen() {
+        let emiViewModel = GQEMIViewModel()
+        let emiViewController = GQEMIViewController(viewModel: emiViewModel)
+        self.navigationController?.pushViewController(emiViewController, animated: true)
     }
     
 }

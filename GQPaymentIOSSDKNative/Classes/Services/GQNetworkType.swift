@@ -38,7 +38,7 @@ extension GQNetworkType {
     
     public var httpMethod: HTTPMethod {
         switch self {
-        case .customerSession:
+        case .customerSession, .authorize:
             return .post
         default:
             return .get
