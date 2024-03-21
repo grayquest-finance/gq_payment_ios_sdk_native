@@ -7,57 +7,26 @@
 
 import UIKit
 
-public class GQBaseViewController: UIViewController {
+internal class GQBaseViewController: UIViewController, GQLoadable {
     
     private weak var scrollViewToAdjust: UIScrollView?
     internal var isBackButtonEnabled: Bool = true
     
-    private weak var loader: UIActivityIndicatorView?
-    
-    public func showLoader() {
-        Task { @MainActor in
-            if let loader = self.loader {
-                loader.startAnimating()
-                loader.isHidden = false
-            } else {
-                let activityIndicator = UIActivityIndicatorView()
-                activityIndicator.hidesWhenStopped = true
-                activityIndicator.color = .black
-                activityIndicator.backgroundColor = .black.withAlphaComponent(0.3)
-                self.view.addSubview(activityIndicator)
-
-                //Adding Constraints
-                activityIndicator.translatesAutoresizingMaskIntoConstraints = false
-                activityIndicator.center = self.view.center
-                activityIndicator.heightAnchor.constraint(equalToConstant: 40).isActive = true
-                activityIndicator.widthAnchor.constraint(equalToConstant: 40).isActive = true
-                activityIndicator.centerXAnchor.constraint(equalTo: self.view.centerXAnchor).isActive = true
-                activityIndicator.centerYAnchor.constraint(equalTo: self.view.centerYAnchor).isActive = true
-
-                activityIndicator.startAnimating()
-                self.view.addSubview(activityIndicator)
-                self.loader = activityIndicator
-            }
-            
-            // disable interaction
-            self.view.isUserInteractionEnabled = false
-        }
-    }
-
-    public func hideLoader() {
-        Task { @MainActor in
-            self.loader?.stopAnimating()
-            
-            // enable interaction
-            self.view.isUserInteractionEnabled = true
-        }
-    }
+    weak var loader: GQLoaderViewController?
     
     public override func viewDidLoad() {
         super.viewDidLoad()
         setupNavigationBar()
         setupResignResponderTapGesture()
         setupCommonUI()
+    }
+    
+    override func dismiss(animated flag: Bool, completion: (() -> Void)? = nil) {
+        super.dismiss(animated: flag, completion: {
+            Task { @MainActor in
+                GQPaymentSDK.entrance?.dismiss(animated: true)
+            }
+        })
     }
     
     internal func setupNavigationBar() {
@@ -160,6 +129,7 @@ extension GQBaseViewController {
             scrollView.scrollIndicatorInsets = .zero
         }
     }
+    
 }
 
 extension GQBaseViewController {
@@ -173,4 +143,5 @@ extension GQBaseViewController {
         // Check if first responder is a textfield
         self.view.endEditing(true)
     }
+    
 }

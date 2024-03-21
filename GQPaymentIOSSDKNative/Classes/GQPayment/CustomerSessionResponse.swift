@@ -24,12 +24,13 @@ struct CustomerSessionResponse: Codable {
 // MARK: - CustomerSessionData
 struct CustomerSessionResponseData: Codable {
     var customerID: Int?
-    var customerCode, customerMobile, sdkSessionCode: String?
+    var customerCode, customerMobile, sdkSessionCode, userType: String?
 
     enum CodingKeys: String, CodingKey {
         case customerID = "customer_id"
         case customerCode = "customer_code"
         case customerMobile = "customer_mobile"
         case sdkSessionCode = "sdk_session_code"
+        case userType = "user_type"
     }
 }

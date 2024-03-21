@@ -57,14 +57,6 @@ class EnterMobileNumberViewController: GQBaseViewController {
         timerLabel.resetTimer()
     }
     
-    override func dismiss(animated flag: Bool, completion: (() -> Void)? = nil) {
-        super.dismiss(animated: flag, completion: { [weak self] in
-            Task { @MainActor in
-                self?.gqPaymentSDK?.dismiss(animated: true)
-            }
-        })
-    }
-    
     public func configureUI() {
         //Needs to be called after API call.
         Task {
@@ -102,7 +94,7 @@ class EnterMobileNumberViewController: GQBaseViewController {
         verifyOTPButton.setTitle(with: .customFont(.poppins, weight: .medium, size: 16))
         verifyOTPButton.disabledStateBackgroundColor = .white
         verifyOTPButton.enabledStateBackgroundColor = .yellowFFCA00
-        verifyOTPButton.setTitle(GQStaticText.verifyOTP.capitalized, for: .normal)
+        verifyOTPButton.setTitle(GQStaticText.verifyOTP.uppercased(), for: .normal)
         verifyOTPButton.setTint(color: .black26262D)
         verifyOTPButton.setImage(.getImage(icon: .rightArrow), placement: .trailing)
         verifyOTPButton.setDisabled()

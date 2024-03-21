@@ -7,7 +7,9 @@
 
 import UIKit
 
-final public class GQPaymentSDK: GQBaseViewController {
+final public class GQPaymentSDK: UIViewController, GQLoadable {
+    
+    internal static var entrance: GQPaymentSDK?
     
 //    Theme Color to be displayed by the client.
     internal static var themeColor: UIColor = .red991F2C
@@ -26,6 +28,7 @@ final public class GQPaymentSDK: GQBaseViewController {
         defer {
 //            Needs to be called in defer since else didSet wont work.
             self.delegate = delegate
+            Self.entrance = self
         }
         
 //        Setting Data and Configuration.
@@ -56,6 +59,8 @@ final public class GQPaymentSDK: GQBaseViewController {
     
 //    Tells the Log class that the SDK can print/ log data. True to print data.
     internal static var debugMode: Bool = true
+    
+    weak var loader: GQLoaderViewController?
     
     let environment = GQEnvironment.shared
     
@@ -208,8 +213,8 @@ final public class GQPaymentSDK: GQBaseViewController {
         Task(priority: .userInitiated) {
             do {
                 let response = try await GQNetworkService.shared.perform(networkType: .customerSession, parameters: data, responseType: CustomerSessionResponse.self)
-                self.hideLoader()
                 self.handleAPIResult(response: response)
+                self.hideLoader()
                 self.open()
             } catch (let error) {
                 self.handleError(description: error.localizedDescription)
@@ -217,17 +222,15 @@ final public class GQPaymentSDK: GQBaseViewController {
         }
     }
     
-    private func handleError(description: String) {
-        Task { @MainActor in
-            GQLogger.shared.error(description)
-            self.hideLoader()
-            self.delegate?.gqFailureResponse(data: ["Error": description])
-            self.dismiss(animated: true)
-        }
+    @MainActor private func handleError(description: String) {
+        GQLogger.shared.error(description)
+        self.hideLoader()
+        self.dismiss(animated: true)
+        self.delegate?.gqFailureResponse(data: ["Error": description])
     }
     
-    private func open() {
-        Task { @MainActor in
+     @MainActor private func open() {
+//        Task { @MainActor in
             let mobileNumberViewmodel = EnterMobileNumberViewModel()
             let mobileNumberViewcontroller = EnterMobileNumberViewController(viewModel: mobileNumberViewmodel)
             mobileNumberViewcontroller.gqPaymentSDK = self
@@ -239,7 +242,7 @@ final public class GQPaymentSDK: GQBaseViewController {
             
             navigationController.isModalInPresentation = true
             self.present(navigationController, animated: true)
-        }
+//        }
     }
     
     func handleAPIResult(response: CustomerSessionResponse?) {

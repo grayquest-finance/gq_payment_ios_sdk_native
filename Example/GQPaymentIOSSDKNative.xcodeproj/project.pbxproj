@@ -7,14 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0BB3B510FC13695524EF2AB7 /* Pods_GQPaymentIOSSDKNative_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6523B1A283751EA638FFFBDC /* Pods_GQPaymentIOSSDKNative_Tests.framework */; };
-		0FAD34D6DE6352A494134E87 /* Pods_GQPaymentIOSSDKNative_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62B9D06A4402E81451F73BCE /* Pods_GQPaymentIOSSDKNative_Example.framework */; };
+		1155987D3448AADCB374093B /* Pods_GQPaymentIOSSDKNative_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2AC54F2A00FCF5EA78B9E8C /* Pods_GQPaymentIOSSDKNative_Example.framework */; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
 		607FACD81AFB9204008FA782 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* ViewController.swift */; };
 		607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
+		A518BBA2B9E6E4CB76346922 /* Pods_GQPaymentIOSSDKNative_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89A3CF8EFC73637F0ABEDE91 /* Pods_GQPaymentIOSSDKNative_Tests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +29,8 @@
 
 /* Begin PBXFileReference section */
 		49A6B7C61F889ADACB2335B2 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		5271CFB557F7C49FE8BAFCAD /* Pods-GQPaymentIOSSDKNative_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GQPaymentIOSSDKNative_Tests.debug.xcconfig"; path = "Target Support Files/Pods-GQPaymentIOSSDKNative_Tests/Pods-GQPaymentIOSSDKNative_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		5333D243B086CDA51FAF7ED0 /* Pods-GQPaymentIOSSDKNative_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GQPaymentIOSSDKNative_Example.release.xcconfig"; path = "Target Support Files/Pods-GQPaymentIOSSDKNative_Example/Pods-GQPaymentIOSSDKNative_Example.release.xcconfig"; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* GQPaymentIOSSDKNative_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GQPaymentIOSSDKNative_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACD51AFB9204008FA782 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -39,14 +41,12 @@
 		607FACE51AFB9204008FA782 /* GQPaymentIOSSDKNative_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GQPaymentIOSSDKNative_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
-		62B9D06A4402E81451F73BCE /* Pods_GQPaymentIOSSDKNative_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GQPaymentIOSSDKNative_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		6523B1A283751EA638FFFBDC /* Pods_GQPaymentIOSSDKNative_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GQPaymentIOSSDKNative_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		7C40E12CA636DA5D8E5A1F31 /* Pods-GQPaymentIOSSDKNative_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GQPaymentIOSSDKNative_Tests.debug.xcconfig"; path = "Target Support Files/Pods-GQPaymentIOSSDKNative_Tests/Pods-GQPaymentIOSSDKNative_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		86B5FB44D1F5E35102F0E2D1 /* Pods-GQPaymentIOSSDKNative_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GQPaymentIOSSDKNative_Tests.release.xcconfig"; path = "Target Support Files/Pods-GQPaymentIOSSDKNative_Tests/Pods-GQPaymentIOSSDKNative_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		AD4D8CE58FE5DFE385058BFA /* Pods-GQPaymentIOSSDKNative_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GQPaymentIOSSDKNative_Example.debug.xcconfig"; path = "Target Support Files/Pods-GQPaymentIOSSDKNative_Example/Pods-GQPaymentIOSSDKNative_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		89A3CF8EFC73637F0ABEDE91 /* Pods_GQPaymentIOSSDKNative_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GQPaymentIOSSDKNative_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9FA46EEEDC4463F82EE7937A /* Pods-GQPaymentIOSSDKNative_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GQPaymentIOSSDKNative_Tests.release.xcconfig"; path = "Target Support Files/Pods-GQPaymentIOSSDKNative_Tests/Pods-GQPaymentIOSSDKNative_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		B7668CCA89A62E9CEEA71C8A /* GQPaymentIOSSDKNative.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = GQPaymentIOSSDKNative.podspec; path = ../GQPaymentIOSSDKNative.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		C2AC54F2A00FCF5EA78B9E8C /* Pods_GQPaymentIOSSDKNative_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GQPaymentIOSSDKNative_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD423FCA609C87A32095FF46 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
-		E1E920E3B834A2705E481EBF /* Pods-GQPaymentIOSSDKNative_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GQPaymentIOSSDKNative_Example.release.xcconfig"; path = "Target Support Files/Pods-GQPaymentIOSSDKNative_Example/Pods-GQPaymentIOSSDKNative_Example.release.xcconfig"; sourceTree = "<group>"; };
+		D62B1C6968D49527A107C6EE /* Pods-GQPaymentIOSSDKNative_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GQPaymentIOSSDKNative_Example.debug.xcconfig"; path = "Target Support Files/Pods-GQPaymentIOSSDKNative_Example/Pods-GQPaymentIOSSDKNative_Example.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,7 +54,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0FAD34D6DE6352A494134E87 /* Pods_GQPaymentIOSSDKNative_Example.framework in Frameworks */,
+				1155987D3448AADCB374093B /* Pods_GQPaymentIOSSDKNative_Example.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -62,18 +62,18 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0BB3B510FC13695524EF2AB7 /* Pods_GQPaymentIOSSDKNative_Tests.framework in Frameworks */,
+				A518BBA2B9E6E4CB76346922 /* Pods_GQPaymentIOSSDKNative_Tests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		1056F18B293625E00C20FE82 /* Frameworks */ = {
+		3018A79B4FE374D9EC876C8D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				62B9D06A4402E81451F73BCE /* Pods_GQPaymentIOSSDKNative_Example.framework */,
-				6523B1A283751EA638FFFBDC /* Pods_GQPaymentIOSSDKNative_Tests.framework */,
+				C2AC54F2A00FCF5EA78B9E8C /* Pods_GQPaymentIOSSDKNative_Example.framework */,
+				89A3CF8EFC73637F0ABEDE91 /* Pods_GQPaymentIOSSDKNative_Tests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -86,7 +86,7 @@
 				607FACE81AFB9204008FA782 /* Tests */,
 				607FACD11AFB9204008FA782 /* Products */,
 				D66732DA96D6A7F843C09FC5 /* Pods */,
-				1056F18B293625E00C20FE82 /* Frameworks */,
+				3018A79B4FE374D9EC876C8D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -151,10 +151,10 @@
 		D66732DA96D6A7F843C09FC5 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				AD4D8CE58FE5DFE385058BFA /* Pods-GQPaymentIOSSDKNative_Example.debug.xcconfig */,
-				E1E920E3B834A2705E481EBF /* Pods-GQPaymentIOSSDKNative_Example.release.xcconfig */,
-				7C40E12CA636DA5D8E5A1F31 /* Pods-GQPaymentIOSSDKNative_Tests.debug.xcconfig */,
-				86B5FB44D1F5E35102F0E2D1 /* Pods-GQPaymentIOSSDKNative_Tests.release.xcconfig */,
+				D62B1C6968D49527A107C6EE /* Pods-GQPaymentIOSSDKNative_Example.debug.xcconfig */,
+				5333D243B086CDA51FAF7ED0 /* Pods-GQPaymentIOSSDKNative_Example.release.xcconfig */,
+				5271CFB557F7C49FE8BAFCAD /* Pods-GQPaymentIOSSDKNative_Tests.debug.xcconfig */,
+				9FA46EEEDC4463F82EE7937A /* Pods-GQPaymentIOSSDKNative_Tests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -166,11 +166,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 607FACEF1AFB9204008FA782 /* Build configuration list for PBXNativeTarget "GQPaymentIOSSDKNative_Example" */;
 			buildPhases = (
-				C83C761C674F1BEE7B59DBC0 /* [CP] Check Pods Manifest.lock */,
+				265AB031DEE34EC635B33034 /* [CP] Check Pods Manifest.lock */,
 				607FACCC1AFB9204008FA782 /* Sources */,
 				607FACCD1AFB9204008FA782 /* Frameworks */,
 				607FACCE1AFB9204008FA782 /* Resources */,
-				6DE83015A4825EB68333E2BB /* [CP] Embed Pods Frameworks */,
+				A6E8F5563F6E8B11084064AD /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -185,7 +185,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 607FACF21AFB9204008FA782 /* Build configuration list for PBXNativeTarget "GQPaymentIOSSDKNative_Tests" */;
 			buildPhases = (
-				16D34CEF24E436DB3B6933F7 /* [CP] Check Pods Manifest.lock */,
+				3EC8B45CC6D62B08CB6F14BD /* [CP] Check Pods Manifest.lock */,
 				607FACE11AFB9204008FA782 /* Sources */,
 				607FACE21AFB9204008FA782 /* Frameworks */,
 				607FACE31AFB9204008FA782 /* Resources */,
@@ -263,7 +263,29 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		16D34CEF24E436DB3B6933F7 /* [CP] Check Pods Manifest.lock */ = {
+		265AB031DEE34EC635B33034 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GQPaymentIOSSDKNative_Example-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3EC8B45CC6D62B08CB6F14BD /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -285,7 +307,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		6DE83015A4825EB68333E2BB /* [CP] Embed Pods Frameworks */ = {
+		A6E8F5563F6E8B11084064AD /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -315,28 +337,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GQPaymentIOSSDKNative_Example/Pods-GQPaymentIOSSDKNative_Example-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		C83C761C674F1BEE7B59DBC0 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-GQPaymentIOSSDKNative_Example-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -439,6 +439,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_STRICT_CONCURRENCY = complete;
 			};
 			name = Debug;
 		};
@@ -484,13 +485,14 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_STRICT_CONCURRENCY = complete;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
 		607FACF01AFB9204008FA782 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = AD4D8CE58FE5DFE385058BFA /* Pods-GQPaymentIOSSDKNative_Example.debug.xcconfig */;
+			baseConfigurationReference = D62B1C6968D49527A107C6EE /* Pods-GQPaymentIOSSDKNative_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
@@ -502,6 +504,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MARKETING_VERSION = 0.1.8;
 				MODULE_NAME = ExampleApp;
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_STRICT_CONCURRENCY = complete;
@@ -512,7 +515,7 @@
 		};
 		607FACF11AFB9204008FA782 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E1E920E3B834A2705E481EBF /* Pods-GQPaymentIOSSDKNative_Example.release.xcconfig */;
+			baseConfigurationReference = 5333D243B086CDA51FAF7ED0 /* Pods-GQPaymentIOSSDKNative_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
@@ -534,7 +537,7 @@
 		};
 		607FACF31AFB9204008FA782 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7C40E12CA636DA5D8E5A1F31 /* Pods-GQPaymentIOSSDKNative_Tests.debug.xcconfig */;
+			baseConfigurationReference = 5271CFB557F7C49FE8BAFCAD /* Pods-GQPaymentIOSSDKNative_Tests.debug.xcconfig */;
 			buildSettings = {
 				DEVELOPMENT_TEAM = HWWL8VC89L;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -557,7 +560,7 @@
 		};
 		607FACF41AFB9204008FA782 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 86B5FB44D1F5E35102F0E2D1 /* Pods-GQPaymentIOSSDKNative_Tests.release.xcconfig */;
+			baseConfigurationReference = 9FA46EEEDC4463F82EE7937A /* Pods-GQPaymentIOSSDKNative_Tests.release.xcconfig */;
 			buildSettings = {
 				DEVELOPMENT_TEAM = HWWL8VC89L;
 				FRAMEWORK_SEARCH_PATHS = (
