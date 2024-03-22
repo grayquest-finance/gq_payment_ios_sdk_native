@@ -41,6 +41,10 @@ final public class GQPaymentSDK: UIViewController, GQLoadable {
         fatalError("init(coder:) has not been implemented")
     }
     
+    deinit {
+        self.close()
+    }
+    
 //        Loading Dependencies.
     private func loadDependencies() {
         UIFont.loadFonts()
@@ -69,20 +73,16 @@ final public class GQPaymentSDK: UIViewController, GQLoadable {
     
     override public func viewDidLoad() {
         super.viewDidLoad()
+        self.showLoader()
         loadDependencies()
         configureSessionRequest()
     }
     
-    public override func dismiss(animated flag: Bool, completion: (() -> Void)? = nil) {
-        super.dismiss(animated: flag) { [weak self] in
-            self?.close()
-            completion?()
-        }
-    }
-    
     private func configureSessionRequest() {
         guard let clientJSON = self.clientJSONObject else {
-            self.handleError(description: "Requires JSON Object to proceed")
+            Task {
+                await self.handleError(description: "Requires JSON Object to proceed")
+            }
             return
         }
         
@@ -154,7 +154,9 @@ final public class GQPaymentSDK: UIViewController, GQLoadable {
         environment.instituteLogo = "https://ezyschooling-1.s3.amazonaws.com/schools/logos/user_generic-school-user/VIBGYOR_High_School_2424_Logo_1.jpg"
         
         guard !isInValid else {
-            self.handleError(description: errorMessage.joined(separator: ", "))
+            Task {
+                await self.handleError(description: errorMessage.joined(separator: ", "))
+            }
             return
         }
         
@@ -211,27 +213,21 @@ final public class GQPaymentSDK: UIViewController, GQLoadable {
         
         Task(priority: .userInitiated) {
             do {
-                await MainActor.run {
-                    self.showLoader()
-                }
                 let response = try await GQNetworkService.shared.perform(networkType: .customerSession, parameters: data, responseType: CustomerSessionResponse.self)
                 self.handleAPIResult(response: response)
-                hideLoader()
+                self.hideLoader()
                 self.open()
             } catch (let error) {
-                self.handleError(description: error.localizedDescription)
+                await self.handleError(description: error.localizedDescription)
             }
         }
     }
     
-    private func handleError(description: String) {
-        GQLogger.shared.error(description)
-        Task {
-            await MainActor.run {
-                hideLoader()
-                self.dismiss(animated: true)
-            }
+    @MainActor private func handleError(description: String) async {
+        self.hideLoader()
+        self.dismiss(animated: true) {
             self.delegate?.gqFailureResponse(data: ["Error": description])
+            GQLogger.shared.error(description)
         }
     }
     

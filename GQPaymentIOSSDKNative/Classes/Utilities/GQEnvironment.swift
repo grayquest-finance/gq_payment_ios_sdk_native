@@ -41,7 +41,7 @@ class GQEnvironment {
     
     var themeColor: String? {
         didSet {
-            if let color = themeColor {
+            if let color = themeColor, !color.isEmpty {
                 GQPaymentSDK.themeColor = UIColor(hexString: color) ?? .red991F2C
             }
         }

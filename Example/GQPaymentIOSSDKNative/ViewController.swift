@@ -124,7 +124,8 @@ class ViewController: UIViewController {
         }
     }
     
-    private func configureCallBack(state: Bool) {
+    private func configureCallBack(title: String, state: Bool) {
+        self.callBackString = title
         Task { @MainActor in
             self.callBackButton.isHidden = state
         }
@@ -135,21 +136,18 @@ class ViewController: UIViewController {
 //MARK: GQPayment Delegate functions to receive payment status.
 extension ViewController: GQPaymentDelegate {
     func gqSuccessResponse(data: [String : Any]?) {
-        self.callBackString = "Success Callback"
         self.responseObject = data
-        configureCallBack(state: false)
+        configureCallBack(title: "Success Callback", state: false)
     }
     
     func gqFailureResponse(data: [String : Any]?) {
-        self.callBackString = "Failure Callback"
         self.responseObject = data
-        configureCallBack(state: false)
+        configureCallBack(title: "Failure Callback", state: false)
     }
     
     func gqCancelResponse(data: [String : Any]?) {
-        self.callBackString = "Cancel Callback"
         self.responseObject = data
-        configureCallBack(state: false)
+        configureCallBack(title: "Cancel Callback", state: false)
     }
     
 }
@@ -182,4 +180,5 @@ extension ViewController {
             scrollView.scrollIndicatorInsets = .zero
         }
     }
+    
 }
