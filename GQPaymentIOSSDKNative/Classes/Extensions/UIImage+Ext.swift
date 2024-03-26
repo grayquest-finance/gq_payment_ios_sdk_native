@@ -18,6 +18,8 @@ extension UIImage {
         case newWindowIcon
         case supportIcon
         case rightArrow
+        case incompleteCheckpointIcon
+        case completeCheckpointIcon
         
         var name: String {
             return self.rawValue
@@ -25,9 +27,6 @@ extension UIImage {
     }
     
     @nonobjc static func getImage(icon: GQImageIcons, renderingMode: RenderingMode = .automatic) -> UIImage? {
-//        return UIImage(resource: ImageResource(name: icon.name,
-//                                               bundle: GQPayment.bundle)
-//            ).withRenderingMode(renderingMode)
         return UIImage(named: icon.name,
                        in: GQPaymentSDK.bundle,
                        compatibleWith: .none

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -36,20 +36,27 @@
                     <rect key="frame" x="0.0" y="59" width="393" height="907"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hLL-WD-6ib" userLabel="contentView">
-                            <rect key="frame" x="0.0" y="0.0" width="393.33333333333331" height="878"/>
+                            <rect key="frame" x="0.0" y="0.0" width="393.33333333333331" height="911.33333333333337"/>
                             <subviews>
-                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="5YO-dU-TxX">
-                                    <rect key="frame" x="0.0" y="16" width="393.33333333333331" height="862"/>
+                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="5YO-dU-TxX">
+                                    <rect key="frame" x="0.0" y="16" width="393.33333333333331" height="895.33333333333337"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="73O-t4-tZh" userLabel="GILE View" customClass="GQGILEView" customModule="GQPaymentIOSSDKNative" customModuleProvider="target">
                                             <rect key="frame" x="15.666666666666657" y="0.0" width="362" height="170"/>
                                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         </view>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qxP-tv-Tvf" customClass="GQProgressBar" customModule="GQPaymentIOSSDKNative" customModuleProvider="target">
+                                            <rect key="frame" x="15.666666666666657" y="194" width="362" height="100"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="100" id="gMP-bV-oPH"/>
+                                            </constraints>
+                                        </view>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HHi-jB-CiY">
-                                            <rect key="frame" x="15.666666666666657" y="180" width="362" height="500"/>
+                                            <rect key="frame" x="15.666666666666657" y="318" width="362" height="381.33333333333326"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="42z-QX-QDe">
-                                                    <rect key="frame" x="0.0" y="111.99999999999997" width="362" height="349.33333333333326"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="362" height="349.33333333333331"/>
                                                     <subviews>
                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="fNo-BZ-HsM">
                                                             <rect key="frame" x="0.0" y="0.0" width="362" height="154.33333333333334"/>
@@ -140,14 +147,15 @@
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <constraints>
-                                                <constraint firstItem="42z-QX-QDe" firstAttribute="top" secondItem="HHi-jB-CiY" secondAttribute="top" constant="112" id="AtP-mf-xeB"/>
+                                                <constraint firstAttribute="height" priority="250" constant="285" id="0ja-Aq-kdC"/>
+                                                <constraint firstItem="42z-QX-QDe" firstAttribute="top" secondItem="HHi-jB-CiY" secondAttribute="top" id="AtP-mf-xeB"/>
                                                 <constraint firstItem="42z-QX-QDe" firstAttribute="leading" secondItem="HHi-jB-CiY" secondAttribute="leading" id="GpQ-Fq-Hf9"/>
                                                 <constraint firstAttribute="trailing" secondItem="42z-QX-QDe" secondAttribute="trailing" id="LTj-st-TjM"/>
                                                 <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="42z-QX-QDe" secondAttribute="bottom" constant="32" id="W2A-FX-fre"/>
                                             </constraints>
                                         </view>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ofi-BW-sSX" customClass="GQSupportFooterView" customModule="GQPaymentIOSSDKNative" customModuleProvider="target">
-                                            <rect key="frame" x="0.0" y="690" width="393.33333333333331" height="172"/>
+                                            <rect key="frame" x="0.0" y="723.33333333333337" width="393.33333333333331" height="172"/>
                                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="172" id="BEG-N0-zpD"/>
@@ -155,6 +163,7 @@
                                         </view>
                                     </subviews>
                                     <constraints>
+                                        <constraint firstItem="qxP-tv-Tvf" firstAttribute="width" secondItem="73O-t4-tZh" secondAttribute="width" id="5aB-j5-vkc"/>
                                         <constraint firstItem="HHi-jB-CiY" firstAttribute="width" secondItem="73O-t4-tZh" secondAttribute="width" id="ecc-gD-CNA"/>
                                     </constraints>
                                 </stackView>
@@ -184,7 +193,6 @@
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
-                <constraint firstItem="HHi-jB-CiY" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.5" priority="250" id="6bs-sP-C9W"/>
                 <constraint firstItem="oh5-lt-UC4" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="78c-Ep-BK2"/>
                 <constraint firstItem="oh5-lt-UC4" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="KRV-th-Gam"/>
                 <constraint firstItem="oh5-lt-UC4" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="tx6-bM-lgd"/>

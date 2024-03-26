@@ -256,6 +256,7 @@ final public class GQPaymentSDK: UIViewController, GQLoadable {
 //    Clearing all data used in SDK
     private func close() {
         ImageCache.shared.clearCache()
+        GQEnvironment.shared.clear()
     }
         
 }

@@ -24,6 +24,10 @@ enum GQStaticText {
     static let facingIssues = "Facing issues here?"
     static let contactSupport = "Please contact our support team by clicking here"
     static let somethingWrong = "Something Went Wrong"
+    static let yourProgress = "Your Progress"
+    static let fillBasicForm = "Fill in basic form"
+    static let acceptTermsnConditions = "Accept terms and conditions"
+    static let feePaidToInstitute = "✨Fee paid to institute✨"
     
 // Dynamic Values
     static let phoneCode = "+91 -"
