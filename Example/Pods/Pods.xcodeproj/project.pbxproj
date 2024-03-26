@@ -153,8 +153,7 @@
 		A380FE222BAC08C4003CFC66 /* GQLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A380FE212BAC08C4003CFC66 /* GQLoadable.swift */; };
 		A3A912902BAABFCC00C86E4E /* GQLoaderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3A9128E2BAABFCC00C86E4E /* GQLoaderViewController.swift */; };
 		A3A912912BAABFCC00C86E4E /* GQLoaderViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A3A9128F2BAABFCC00C86E4E /* GQLoaderViewController.xib */; };
-		A3DF51BA2BB29C8000F17577 /* GQProgressCheckpointView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3DF51B92BB29C8000F17577 /* GQProgressCheckpointView.swift */; };
-		A3DF51BC2BB29CE000F17577 /* GQProgressCheckpointView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A3DF51BB2BB29CE000F17577 /* GQProgressCheckpointView.xib */; };
+		A3DF51BE2BB2C26100F17577 /* GQProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3DF51BD2BB2C26100F17577 /* GQProgressView.swift */; };
 		A9CEDFFF45ED3146A7C1FF49FBAEF964 /* Pods-GQPaymentIOSSDKNative_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 7B9D5435220E6B3A6AD2F5DC7EF14B6B /* Pods-GQPaymentIOSSDKNative_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AADE8AD00F744FF0B3EF60F008B71842 /* GQSupportFooterView.xib in Sources */ = {isa = PBXBuildFile; fileRef = C93423BAA2B9646D0F0BEA235EDD3124 /* GQSupportFooterView.xib */; };
 		AAEAC8C1FE2CAC4BD652242FF7BF1765 /* GQNetworkEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = E66F936B455D880FAE249005BD136606 /* GQNetworkEnvironment.swift */; };
@@ -397,8 +396,7 @@
 		A380FE212BAC08C4003CFC66 /* GQLoadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GQLoadable.swift; sourceTree = "<group>"; };
 		A3A9128E2BAABFCC00C86E4E /* GQLoaderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GQLoaderViewController.swift; sourceTree = "<group>"; };
 		A3A9128F2BAABFCC00C86E4E /* GQLoaderViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GQLoaderViewController.xib; sourceTree = "<group>"; };
-		A3DF51B92BB29C8000F17577 /* GQProgressCheckpointView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GQProgressCheckpointView.swift; sourceTree = "<group>"; };
-		A3DF51BB2BB29CE000F17577 /* GQProgressCheckpointView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GQProgressCheckpointView.xib; sourceTree = "<group>"; };
+		A3DF51BD2BB2C26100F17577 /* GQProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GQProgressView.swift; sourceTree = "<group>"; };
 		A719508C6E19E20D9A13C80B98477DCE /* Pods-GQPaymentIOSSDKNative_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-GQPaymentIOSSDKNative_Example-frameworks.sh"; sourceTree = "<group>"; };
 		A7FBB2F070181FA6927DDFF4B16E0F38 /* CashfreePG.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CashfreePG.debug.xcconfig; sourceTree = "<group>"; };
 		AE3C4DC2AE607DCA00B7BE0DA9310205 /* Easebuzz-xcframeworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Easebuzz-xcframeworks.sh"; sourceTree = "<group>"; };
@@ -866,9 +864,9 @@
 		A36C477E2BAD81D000C22E3B /* GQProgressBar */ = {
 			isa = PBXGroup;
 			children = (
-				A3DF51B82BB29C5500F17577 /* GQProgressCheckpointView */,
 				A36C477F2BAD81F200C22E3B /* GQProgressBar.swift */,
 				A36C47812BAD820700C22E3B /* GQProgressBar.xib */,
+				A3DF51BD2BB2C26100F17577 /* GQProgressView.swift */,
 			);
 			path = GQProgressBar;
 			sourceTree = "<group>";
@@ -880,15 +878,6 @@
 				A3A9128F2BAABFCC00C86E4E /* GQLoaderViewController.xib */,
 			);
 			path = GQLoaderViewController;
-			sourceTree = "<group>";
-		};
-		A3DF51B82BB29C5500F17577 /* GQProgressCheckpointView */ = {
-			isa = PBXGroup;
-			children = (
-				A3DF51B92BB29C8000F17577 /* GQProgressCheckpointView.swift */,
-				A3DF51BB2BB29CE000F17577 /* GQProgressCheckpointView.xib */,
-			);
-			path = GQProgressCheckpointView;
 			sourceTree = "<group>";
 		};
 		A6B74DB813407816014FA1CC9812A6E8 /* GQTagView */ = {
@@ -1302,7 +1291,6 @@
 				7DFF2167CF515FBA375832DA8BEBC125 /* Poppins-Bold.ttf in Resources */,
 				6DDF1987E53A7F9FFBAECC52A46340F0 /* Poppins-Medium.ttf in Resources */,
 				A3723EAE2BA9C99D00F32380 /* PrivacyInfo.xcprivacy in Resources */,
-				A3DF51BC2BB29CE000F17577 /* GQProgressCheckpointView.xib in Resources */,
 				24D3161481A17F8F40E92A590084CDC8 /* Poppins-Regular.ttf in Resources */,
 				A3A912912BAABFCC00C86E4E /* GQLoaderViewController.xib in Resources */,
 			);
@@ -1460,7 +1448,6 @@
 				64A87DA9CF5490B35F3FF1D899053133 /* EnterMobileNumberViewController.swift in Sources */,
 				6FFE1F7E86C4A96944B3D32B1E3DBECD /* EnterMobileNumberViewController.xib in Sources */,
 				1A087EB174ED72DB11B7B4DB2A6B777D /* EnterMobileNumberViewModel.swift in Sources */,
-				A3DF51BA2BB29C8000F17577 /* GQProgressCheckpointView.swift in Sources */,
 				CB6A8241F6A2EBE71E68EB66258A0D86 /* GQBaseViewController.swift in Sources */,
 				281AD2D462528A03F0484B5E7AAA7CD3 /* GQButton.swift in Sources */,
 				C4E3178CC16E5DAEE8D27C523011703A /* GQEMIViewController.swift in Sources */,
@@ -1491,6 +1478,7 @@
 				8702155BC4FED5526F0F3581A1568255 /* GQTagView.swift in Sources */,
 				833539F85F0701BA90B4B66DDEF0947A /* GQTagView.xib in Sources */,
 				75562F8A539638BA288E4D89DAF74F1A /* GQTextField.swift in Sources */,
+				A3DF51BE2BB2C26100F17577 /* GQProgressView.swift in Sources */,
 				0ABBEB8A95A3B7D2154FD1167C901646 /* GQTextField.xib in Sources */,
 				6037AA94798B46A9DAD4B8BD06786F87 /* GQTextFieldDelegate.swift in Sources */,
 				2AD7ED65ED1C6F0C802F57C83822EF57 /* GQTimerLabel.swift in Sources */,

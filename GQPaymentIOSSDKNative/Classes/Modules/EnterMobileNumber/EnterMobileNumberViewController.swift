@@ -28,6 +28,8 @@ class EnterMobileNumberViewController: GQBaseViewController {
     
     @IBOutlet weak var verifyOTPButton: GQButton!
     
+    @IBOutlet weak var progressBar: GQProgressBar!
+    
 //  MARK: Variables
     private var viewModel: (any EnterMobileNumberViewModelType)?
     weak var gqPaymentSDK: GQPaymentSDK?

@@ -17,6 +17,7 @@
                 <outlet property="noteLabel" destination="HUp-Et-piq" id="5hs-A9-zjE"/>
                 <outlet property="noteOTPStackView" destination="fJ3-dN-Dby" id="Tpj-cr-X0S"/>
                 <outlet property="otpTextField" destination="HTx-OQ-u0y" id="SHw-Rr-bwj"/>
+                <outlet property="progressBar" destination="qxP-tv-Tvf" id="kbm-Vl-chr"/>
                 <outlet property="resendOTPLabel" destination="UvH-4y-cVt" id="twK-EO-LMe"/>
                 <outlet property="resentOTPStackView" destination="LCS-kW-4sn" id="sXD-em-tVH"/>
                 <outlet property="scrollView" destination="oh5-lt-UC4" id="afx-fA-fMr"/>

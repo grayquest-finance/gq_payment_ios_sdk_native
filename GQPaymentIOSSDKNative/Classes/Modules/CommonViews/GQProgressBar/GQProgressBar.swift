@@ -10,6 +10,9 @@ import UIKit
 class GQProgressBar: UIView {
     
     @IBOutlet var contentView: UIView!
+    @IBOutlet weak var progressContainerView: UIView!
+    
+    @IBOutlet weak var checkpointStackView: UIStackView!
     
     @IBOutlet weak var progressTitleLabel: UILabel!
     @IBOutlet weak var checkpointOneTitle: UILabel!
@@ -23,7 +26,7 @@ class GQProgressBar: UIView {
     @IBOutlet weak var checkpointTwoIcon: UIImageView!
     @IBOutlet weak var checkpointThreeIcon: UIImageView!
     
-    @IBOutlet weak var progressView: UIProgressView!
+    @IBOutlet weak var progressView: GQProgressView!
     
     internal var progress: Float {
         return progressView.progress
@@ -60,7 +63,6 @@ class GQProgressBar: UIView {
     private func setupProgressView() {
         progressView.trackTintColor = .grayDFDFE3
         progressView.tintColor = .green40850A
-        progressView.set(cornerRadius: progressView.frame.height / 2)
     }
     
     private func setupLabels() {
@@ -125,6 +127,25 @@ class GQProgressBar: UIView {
     
     @MainActor internal func set(progress: Float) {
         progressView.setProgress(progress, animated: true)
+        adjustProgressState()
+    }
+    
+    @MainActor private func adjustProgressState() {
+        let firstCheckpoint = progressContainerView.convert(checkpointOneIcon.frame, from: checkpointStackView).midX / progressView.frame.width
+        let secondCheckpoint = progressContainerView.convert(checkpointTwoIcon.frame, from: checkpointStackView).midX / progressView.frame.width
+        let thirdCheckpoint = progressContainerView.convert(checkpointThreeIcon.frame, from: checkpointStackView).midX / progressView.frame.width
+        
+        if self.progress >= Float(firstCheckpoint) {
+            checkpointOneIcon.image = .getImage(icon: .completeCheckpointIcon)
+        }
+        
+        if self.progress >= Float(secondCheckpoint) {
+            checkpointTwoIcon.image = .getImage(icon: .completeCheckpointIcon)
+        }
+        
+        if self.progress >= Float(thirdCheckpoint) {
+            checkpointThreeIcon.image = .getImage(icon: .completeCheckpointIcon)
+        }
     }
     
 }
