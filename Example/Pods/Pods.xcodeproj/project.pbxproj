@@ -100,7 +100,7 @@
 		148E8DB0E00703DEA69490B7C03A5300 /* GQEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14234D52027EAE3D4F1FD5727A4FE3E3 /* GQEnvironment.swift */; };
 		1784432230DEB6EAF92A72C14668E955 /* String+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13486323C56D38646CB0F1316F68871F /* String+Ext.swift */; };
 		1914560C28F229B5C87338EEE32A1FA3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
-		1A087EB174ED72DB11B7B4DB2A6B777D /* EnterMobileNumberViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1BBBBFE7550D770A7D1B9DD2B596F5E /* EnterMobileNumberViewModel.swift */; };
+		1A087EB174ED72DB11B7B4DB2A6B777D /* EMIOnboardingMobileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1BBBBFE7550D770A7D1B9DD2B596F5E /* EMIOnboardingMobileViewModel.swift */; };
 		22A90BF5C392C94D22882C4B70709EF3 /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE2388CDE7CF8295E7C9017478EC3D39 /* ImageCache.swift */; };
 		24D3161481A17F8F40E92A590084CDC8 /* Poppins-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B007C3D2D3BBADB8B075E5BBD3583984 /* Poppins-Regular.ttf */; };
 		2502FC1E5DE1F4A4838E9510CF341121 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 665FFC03E938777A08775965DB8F284D /* Assets.xcassets */; };
@@ -125,11 +125,11 @@
 		6037AA94798B46A9DAD4B8BD06786F87 /* GQTextFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26585A873D41209A1CDAF1AE0D4ADC79 /* GQTextFieldDelegate.swift */; };
 		62653FEE982E5DC98CCA71ABA6EB3D30 /* ProceedButtonCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EBCDB92CE5D8E2828039F8AB6DCF0FF /* ProceedButtonCollectionReusableView.swift */; };
 		63DE67BDBAD6CADC35E4ECFAABDE38B1 /* UIViewController+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71E062FE7E4F8862B0E76B1CD80C0478 /* UIViewController+Ext.swift */; };
-		64A87DA9CF5490B35F3FF1D899053133 /* EnterMobileNumberViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 644341F30E1CEAB0EF3B7BB0ACF156CF /* EnterMobileNumberViewController.swift */; };
+		64A87DA9CF5490B35F3FF1D899053133 /* EMIOnboardingMobileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 644341F30E1CEAB0EF3B7BB0ACF156CF /* EMIOnboardingMobileViewController.swift */; };
 		654AB49A897C19114864512255E20530 /* GQEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2FD0E90B57DF965E2266347F79A391 /* GQEncoder.swift */; };
 		6AE000DE0960CB3E6FC99046143866CE /* GQEMIViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1578EA48CE79550A84C6188698A540E7 /* GQEMIViewModel.swift */; };
 		6DDF1987E53A7F9FFBAECC52A46340F0 /* Poppins-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F73A74208ED9B3D6A6CFF6CEC9C196A8 /* Poppins-Medium.ttf */; };
-		6FFE1F7E86C4A96944B3D32B1E3DBECD /* EnterMobileNumberViewController.xib in Sources */ = {isa = PBXBuildFile; fileRef = EE5A9F1EC9E600F2A695BAB0C516F098 /* EnterMobileNumberViewController.xib */; };
+		6FFE1F7E86C4A96944B3D32B1E3DBECD /* EMIOnboardingMobileViewController.xib in Sources */ = {isa = PBXBuildFile; fileRef = EE5A9F1EC9E600F2A695BAB0C516F098 /* EMIOnboardingMobileViewController.xib */; };
 		7534FD828C3412A3DD82F42E26603D9A /* PaymentMethodsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5F942F86D3CB7CCDAFD5703CD6C762F /* PaymentMethodsCollectionViewCell.swift */; };
 		75562F8A539638BA288E4D89DAF74F1A /* GQTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E35C93DC1EA70B7F8AEE13EE1C5A2D4 /* GQTextField.swift */; };
 		7DFF2167CF515FBA375832DA8BEBC125 /* Poppins-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CEA24F6D0018B0E8B386863E1A529A81 /* Poppins-Bold.ttf */; };
@@ -143,7 +143,6 @@
 		8C8149F89C4CD841049DED809B94DDF7 /* GQValidationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707F4DCB9875EDF1A87707B6A6B8514C /* GQValidationService.swift */; };
 		8EFB584EF123CDC071F6167FEACE4128 /* PaymentMethodsViewController.xib in Sources */ = {isa = PBXBuildFile; fileRef = F544AAB7B666CD986534C09FAF1CCA61 /* PaymentMethodsViewController.xib */; };
 		901885F535AA51428F0CC615511A1826 /* GQNetworkErrorResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7613A25F119D20756F0DF0B3969959E /* GQNetworkErrorResponse.swift */; };
-		902350CC89D1203ED820F5E4DDB756BC /* AuthorizeToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA0B0B2049FEFC2DD9DAFECEE5D64473 /* AuthorizeToken.swift */; };
 		94F68DC8B168213F8902F4598125E168 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A5AFA35CF461D8C5FC1881ED1147FB6 /* HTTPMethod.swift */; };
 		952357CDAF9630EC18E7AFD3ABB50B96 /* GQPaymentIOSSDKNative-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 12370909D7DE069BD9C94B782C239A4C /* GQPaymentIOSSDKNative-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9B9F4BF7C80316A23A1D3DE0191A2AAD /* DMSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 13FA80481A775E99B4FC84AE3F73AFF4 /* DMSans-Bold.ttf */; };
@@ -151,9 +150,18 @@
 		A36C47822BAD820700C22E3B /* GQProgressBar.xib in Resources */ = {isa = PBXBuildFile; fileRef = A36C47812BAD820700C22E3B /* GQProgressBar.xib */; };
 		A3723EAE2BA9C99D00F32380 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = A3723EAD2BA9C99D00F32380 /* PrivacyInfo.xcprivacy */; };
 		A380FE222BAC08C4003CFC66 /* GQLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A380FE212BAC08C4003CFC66 /* GQLoadable.swift */; };
+		A38467312BB4238400F480AB /* GQConsentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A38467302BB4238400F480AB /* GQConsentView.swift */; };
+		A38467342BB426DD00F480AB /* GQConsentView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A38467332BB426DD00F480AB /* GQConsentView.xib */; };
 		A3A912902BAABFCC00C86E4E /* GQLoaderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3A9128E2BAABFCC00C86E4E /* GQLoaderViewController.swift */; };
 		A3A912912BAABFCC00C86E4E /* GQLoaderViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A3A9128F2BAABFCC00C86E4E /* GQLoaderViewController.xib */; };
 		A3DF51BE2BB2C26100F17577 /* GQProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3DF51BD2BB2C26100F17577 /* GQProgressView.swift */; };
+		A3DF51C22BB2D59E00F17577 /* EMIOnboardingNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3DF51C02BB2D59E00F17577 /* EMIOnboardingNameViewController.swift */; };
+		A3DF51C32BB2D59E00F17577 /* EMIOnboardingNameViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A3DF51C12BB2D59E00F17577 /* EMIOnboardingNameViewController.xib */; };
+		A3DF51C62BB2D93600F17577 /* EMIOnboardingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3DF51C52BB2D93600F17577 /* EMIOnboardingViewModel.swift */; };
+		A3DF51C82BB2DBCC00F17577 /* EMIOnboardingNameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3DF51C72BB2DBCC00F17577 /* EMIOnboardingNameViewModel.swift */; };
+		A3DF51CB2BB2E8EE00F17577 /* AuthorizeToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3DF51CA2BB2E8EE00F17577 /* AuthorizeToken.swift */; };
+		A3DF51CE2BB2F98800F17577 /* GQInformationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3DF51CD2BB2F98800F17577 /* GQInformationView.swift */; };
+		A3DF51D02BB2FA0200F17577 /* GQInformationView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A3DF51CF2BB2FA0200F17577 /* GQInformationView.xib */; };
 		A9CEDFFF45ED3146A7C1FF49FBAEF964 /* Pods-GQPaymentIOSSDKNative_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 7B9D5435220E6B3A6AD2F5DC7EF14B6B /* Pods-GQPaymentIOSSDKNative_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AADE8AD00F744FF0B3EF60F008B71842 /* GQSupportFooterView.xib in Sources */ = {isa = PBXBuildFile; fileRef = C93423BAA2B9646D0F0BEA235EDD3124 /* GQSupportFooterView.xib */; };
 		AAEAC8C1FE2CAC4BD652242FF7BF1765 /* GQNetworkEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = E66F936B455D880FAE249005BD136606 /* GQNetworkEnvironment.swift */; };
@@ -354,7 +362,7 @@
 		60E7929083D19845584F12C078AAF945 /* UIColor+Ext.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "UIColor+Ext.swift"; sourceTree = "<group>"; };
 		610870829F5742CC325AC225F6B66F9E /* CashfreePGCoreSDK.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = wrapper.xcframework; path = CashfreePGCoreSDK.xcframework; sourceTree = "<group>"; };
 		6161B207E6E064AF5E388EF916AE05F5 /* GQSupportFooterView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = GQSupportFooterView.swift; sourceTree = "<group>"; };
-		644341F30E1CEAB0EF3B7BB0ACF156CF /* EnterMobileNumberViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = EnterMobileNumberViewController.swift; sourceTree = "<group>"; };
+		644341F30E1CEAB0EF3B7BB0ACF156CF /* EMIOnboardingMobileViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = EMIOnboardingMobileViewController.swift; sourceTree = "<group>"; };
 		65C44D03CB3A393A71D02B7106B9D862 /* GQPaymentIOSSDKNative-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "GQPaymentIOSSDKNative-prefix.pch"; sourceTree = "<group>"; };
 		665FFC03E938777A08775965DB8F284D /* Assets.xcassets */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = GQPaymentIOSSDKNative/Assets/Assets.xcassets; sourceTree = "<group>"; };
 		6A067A221D31BEE945A111440B3965FB /* Pods-GQPaymentIOSSDKNative_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-GQPaymentIOSSDKNative_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
@@ -394,9 +402,18 @@
 		A36C47812BAD820700C22E3B /* GQProgressBar.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GQProgressBar.xib; sourceTree = "<group>"; };
 		A3723EAD2BA9C99D00F32380 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = PrivacyInfo.xcprivacy; path = "GQPaymentIOSSDKNative/Assets/Privacy Manifests/PrivacyInfo.xcprivacy"; sourceTree = "<group>"; };
 		A380FE212BAC08C4003CFC66 /* GQLoadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GQLoadable.swift; sourceTree = "<group>"; };
+		A38467302BB4238400F480AB /* GQConsentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GQConsentView.swift; sourceTree = "<group>"; };
+		A38467332BB426DD00F480AB /* GQConsentView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GQConsentView.xib; sourceTree = "<group>"; };
 		A3A9128E2BAABFCC00C86E4E /* GQLoaderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GQLoaderViewController.swift; sourceTree = "<group>"; };
 		A3A9128F2BAABFCC00C86E4E /* GQLoaderViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GQLoaderViewController.xib; sourceTree = "<group>"; };
 		A3DF51BD2BB2C26100F17577 /* GQProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GQProgressView.swift; sourceTree = "<group>"; };
+		A3DF51C02BB2D59E00F17577 /* EMIOnboardingNameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EMIOnboardingNameViewController.swift; sourceTree = "<group>"; };
+		A3DF51C12BB2D59E00F17577 /* EMIOnboardingNameViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EMIOnboardingNameViewController.xib; sourceTree = "<group>"; };
+		A3DF51C52BB2D93600F17577 /* EMIOnboardingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EMIOnboardingViewModel.swift; sourceTree = "<group>"; };
+		A3DF51C72BB2DBCC00F17577 /* EMIOnboardingNameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EMIOnboardingNameViewModel.swift; sourceTree = "<group>"; };
+		A3DF51CA2BB2E8EE00F17577 /* AuthorizeToken.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizeToken.swift; sourceTree = "<group>"; };
+		A3DF51CD2BB2F98800F17577 /* GQInformationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GQInformationView.swift; sourceTree = "<group>"; };
+		A3DF51CF2BB2FA0200F17577 /* GQInformationView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GQInformationView.xib; sourceTree = "<group>"; };
 		A719508C6E19E20D9A13C80B98477DCE /* Pods-GQPaymentIOSSDKNative_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-GQPaymentIOSSDKNative_Example-frameworks.sh"; sourceTree = "<group>"; };
 		A7FBB2F070181FA6927DDFF4B16E0F38 /* CashfreePG.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CashfreePG.debug.xcconfig; sourceTree = "<group>"; };
 		AE3C4DC2AE607DCA00B7BE0DA9310205 /* Easebuzz-xcframeworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Easebuzz-xcframeworks.sh"; sourceTree = "<group>"; };
@@ -414,7 +431,6 @@
 		C57E3584278260C6162DEBF63C18268E /* CashfreeAnalyticsSDK.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CashfreeAnalyticsSDK.release.xcconfig; sourceTree = "<group>"; };
 		C5F942F86D3CB7CCDAFD5703CD6C762F /* PaymentMethodsCollectionViewCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PaymentMethodsCollectionViewCell.swift; sourceTree = "<group>"; };
 		C93423BAA2B9646D0F0BEA235EDD3124 /* GQSupportFooterView.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; path = GQSupportFooterView.xib; sourceTree = "<group>"; };
-		CA0B0B2049FEFC2DD9DAFECEE5D64473 /* AuthorizeToken.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AuthorizeToken.swift; sourceTree = "<group>"; };
 		CC5847E3F30D1E4B5D25A3FE0627E94A /* PaymentMethodsViewModel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PaymentMethodsViewModel.swift; sourceTree = "<group>"; };
 		CEA24F6D0018B0E8B386863E1A529A81 /* Poppins-Bold.ttf */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file; path = "Poppins-Bold.ttf"; sourceTree = "<group>"; };
 		D0B7F240F8BA83A09CD94D2FDC4D2897 /* CashfreePGUISDK.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CashfreePGUISDK.release.xcconfig; sourceTree = "<group>"; };
@@ -428,11 +444,11 @@
 		E8AD444FD845280F87D5BE4887A41776 /* GQPaymentIOSSDKNative.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = GQPaymentIOSSDKNative.release.xcconfig; sourceTree = "<group>"; };
 		EB13DAA01B13B53C48E3F1E34B3DFA86 /* DMSans-Medium.ttf */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file; path = "DMSans-Medium.ttf"; sourceTree = "<group>"; };
 		EC6F2B88FCD4E1516DB712952BD2B01B /* GQStaticText.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = GQStaticText.swift; sourceTree = "<group>"; };
-		EE5A9F1EC9E600F2A695BAB0C516F098 /* EnterMobileNumberViewController.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; path = EnterMobileNumberViewController.xib; sourceTree = "<group>"; };
+		EE5A9F1EC9E600F2A695BAB0C516F098 /* EMIOnboardingMobileViewController.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; path = EMIOnboardingMobileViewController.xib; sourceTree = "<group>"; };
 		F0541088E724C55AFB5ADEA543BCD8A0 /* CashfreePG.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CashfreePG.release.xcconfig; sourceTree = "<group>"; };
 		F1651302DB2FB4607318B7ECF95D1474 /* MobileOTPView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MobileOTPView.swift; sourceTree = "<group>"; };
 		F1724F1A1C95CCA0EA521514773D7102 /* Pods-GQPaymentIOSSDKNative_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-GQPaymentIOSSDKNative_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		F1BBBBFE7550D770A7D1B9DD2B596F5E /* EnterMobileNumberViewModel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = EnterMobileNumberViewModel.swift; sourceTree = "<group>"; };
+		F1BBBBFE7550D770A7D1B9DD2B596F5E /* EMIOnboardingMobileViewModel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = EMIOnboardingMobileViewModel.swift; sourceTree = "<group>"; };
 		F33A82E6D0982A4603FC992BE39A4F47 /* Pods-GQPaymentIOSSDKNative_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-GQPaymentIOSSDKNative_Example-dummy.m"; sourceTree = "<group>"; };
 		F544AAB7B666CD986534C09FAF1CCA61 /* PaymentMethodsViewController.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; path = PaymentMethodsViewController.xib; sourceTree = "<group>"; };
 		F73A74208ED9B3D6A6CFF6CEC9C196A8 /* Poppins-Medium.ttf */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file; path = "Poppins-Medium.ttf"; sourceTree = "<group>"; };
@@ -871,6 +887,15 @@
 			path = GQProgressBar;
 			sourceTree = "<group>";
 		};
+		A38467322BB4269F00F480AB /* GQCheckBox */ = {
+			isa = PBXGroup;
+			children = (
+				A38467302BB4238400F480AB /* GQConsentView.swift */,
+				A38467332BB426DD00F480AB /* GQConsentView.xib */,
+			);
+			path = GQCheckBox;
+			sourceTree = "<group>";
+		};
 		A3A9128D2BAABF4200C86E4E /* GQLoaderViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -878,6 +903,42 @@
 				A3A9128F2BAABFCC00C86E4E /* GQLoaderViewController.xib */,
 			);
 			path = GQLoaderViewController;
+			sourceTree = "<group>";
+		};
+		A3DF51BF2BB2D57500F17577 /* EMIOnboardingNameViewController */ = {
+			isa = PBXGroup;
+			children = (
+				A3DF51C02BB2D59E00F17577 /* EMIOnboardingNameViewController.swift */,
+				A3DF51C12BB2D59E00F17577 /* EMIOnboardingNameViewController.xib */,
+				A3DF51C72BB2DBCC00F17577 /* EMIOnboardingNameViewModel.swift */,
+			);
+			path = EMIOnboardingNameViewController;
+			sourceTree = "<group>";
+		};
+		A3DF51C42BB2D91200F17577 /* CommonViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				A3DF51C92BB2E8DB00F17577 /* Models */,
+				A3DF51C52BB2D93600F17577 /* EMIOnboardingViewModel.swift */,
+			);
+			path = CommonViewModels;
+			sourceTree = "<group>";
+		};
+		A3DF51C92BB2E8DB00F17577 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				A3DF51CA2BB2E8EE00F17577 /* AuthorizeToken.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		A3DF51CC2BB2F97100F17577 /* GQInformationView */ = {
+			isa = PBXGroup;
+			children = (
+				A3DF51CD2BB2F98800F17577 /* GQInformationView.swift */,
+				A3DF51CF2BB2FA0200F17577 /* GQInformationView.xib */,
+			);
+			path = GQInformationView;
 			sourceTree = "<group>";
 		};
 		A6B74DB813407816014FA1CC9812A6E8 /* GQTagView */ = {
@@ -915,15 +976,14 @@
 			path = GQPaymentIOSSDKNative/Classes/Utilities;
 			sourceTree = "<group>";
 		};
-		B2A423CFA264EB1C08B3C08A09570478 /* EnterMobileNumber */ = {
+		B2A423CFA264EB1C08B3C08A09570478 /* EMIOnboardingMobile */ = {
 			isa = PBXGroup;
 			children = (
-				644341F30E1CEAB0EF3B7BB0ACF156CF /* EnterMobileNumberViewController.swift */,
-				EE5A9F1EC9E600F2A695BAB0C516F098 /* EnterMobileNumberViewController.xib */,
-				F1BBBBFE7550D770A7D1B9DD2B596F5E /* EnterMobileNumberViewModel.swift */,
-				BB8DB34AA0D4479BA9BD54F9D51DFE89 /* Models */,
+				644341F30E1CEAB0EF3B7BB0ACF156CF /* EMIOnboardingMobileViewController.swift */,
+				EE5A9F1EC9E600F2A695BAB0C516F098 /* EMIOnboardingMobileViewController.xib */,
+				F1BBBBFE7550D770A7D1B9DD2B596F5E /* EMIOnboardingMobileViewModel.swift */,
 			);
-			path = EnterMobileNumber;
+			path = EMIOnboardingMobile;
 			sourceTree = "<group>";
 		};
 		B2B68073FB6AF7786900F3542CDD2880 /* Pods */ = {
@@ -968,14 +1028,6 @@
 			path = CashfreeAnalyticsSDK;
 			sourceTree = "<group>";
 		};
-		BB8DB34AA0D4479BA9BD54F9D51DFE89 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				CA0B0B2049FEFC2DD9DAFECEE5D64473 /* AuthorizeToken.swift */,
-			);
-			path = Models;
-			sourceTree = "<group>";
-		};
 		BC1E4B8915C9EA706BBBD9E6BFF377E7 /* GQButton */ = {
 			isa = PBXGroup;
 			children = (
@@ -1006,8 +1058,10 @@
 		CAB3C70BA70A936DBBCC592BD28DDC21 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				A3DF51C42BB2D91200F17577 /* CommonViewModels */,
+				A3DF51BF2BB2D57500F17577 /* EMIOnboardingNameViewController */,
 				E8834730F45AA295473C5521EE693AE3 /* CommonViews */,
-				B2A423CFA264EB1C08B3C08A09570478 /* EnterMobileNumber */,
+				B2A423CFA264EB1C08B3C08A09570478 /* EMIOnboardingMobile */,
 				03A0BAF35576EB35A1EF29EE1C013DA3 /* GQEMI */,
 				16F7BF2ECE37A12D02303EFFF7B289FE /* PaymentMethods */,
 				377649251CC11F89C0E6982BBDE7882D /* VerifyOTPViewController */,
@@ -1089,6 +1143,8 @@
 		E8834730F45AA295473C5521EE693AE3 /* CommonViews */ = {
 			isa = PBXGroup;
 			children = (
+				A38467322BB4269F00F480AB /* GQCheckBox */,
+				A3DF51CC2BB2F97100F17577 /* GQInformationView */,
 				A36C477E2BAD81D000C22E3B /* GQProgressBar */,
 				A3A9128D2BAABF4200C86E4E /* GQLoaderViewController */,
 				BC1E4B8915C9EA706BBBD9E6BFF377E7 /* GQButton */,
@@ -1284,8 +1340,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				A36C47822BAD820700C22E3B /* GQProgressBar.xib in Resources */,
+				A3DF51C32BB2D59E00F17577 /* EMIOnboardingNameViewController.xib in Resources */,
 				2502FC1E5DE1F4A4838E9510CF341121 /* Assets.xcassets in Resources */,
 				9B9F4BF7C80316A23A1D3DE0191A2AAD /* DMSans-Bold.ttf in Resources */,
+				A38467342BB426DD00F480AB /* GQConsentView.xib in Resources */,
 				5558A8EE867D42FB0D58A8152BECB91B /* DMSans-Medium.ttf in Resources */,
 				370160793593D20703613A3BE33BCA90 /* DMSans-Regular.ttf in Resources */,
 				7DFF2167CF515FBA375832DA8BEBC125 /* Poppins-Bold.ttf in Resources */,
@@ -1293,6 +1351,7 @@
 				A3723EAE2BA9C99D00F32380 /* PrivacyInfo.xcprivacy in Resources */,
 				24D3161481A17F8F40E92A590084CDC8 /* Poppins-Regular.ttf in Resources */,
 				A3A912912BAABFCC00C86E4E /* GQLoaderViewController.xib in Resources */,
+				A3DF51D02BB2FA0200F17577 /* GQInformationView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1439,17 +1498,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				902350CC89D1203ED820F5E4DDB756BC /* AuthorizeToken.swift in Sources */,
 				F13FF63337BBBADFBDBEB71568F2BAAE /* CreateCustomerResponse.swift in Sources */,
 				3568EC47D9A7BD8013D219AF7CF351C5 /* CustomerSessionResponse.swift in Sources */,
 				E75F069A06DA31A0A1B9FFB1D2FAB3B1 /* Decoder.swift in Sources */,
 				CBDB9E55005A2D747C13EB3F97E7ED95 /* EMIApplicationCollectionViewCell.swift in Sources */,
 				C97D8C2669AB3A31676339D53C0D74A1 /* EMIApplicationCollectionViewCell.xib in Sources */,
-				64A87DA9CF5490B35F3FF1D899053133 /* EnterMobileNumberViewController.swift in Sources */,
-				6FFE1F7E86C4A96944B3D32B1E3DBECD /* EnterMobileNumberViewController.xib in Sources */,
-				1A087EB174ED72DB11B7B4DB2A6B777D /* EnterMobileNumberViewModel.swift in Sources */,
+				64A87DA9CF5490B35F3FF1D899053133 /* EMIOnboardingMobileViewController.swift in Sources */,
+				6FFE1F7E86C4A96944B3D32B1E3DBECD /* EMIOnboardingMobileViewController.xib in Sources */,
+				A3DF51CB2BB2E8EE00F17577 /* AuthorizeToken.swift in Sources */,
+				1A087EB174ED72DB11B7B4DB2A6B777D /* EMIOnboardingMobileViewModel.swift in Sources */,
 				CB6A8241F6A2EBE71E68EB66258A0D86 /* GQBaseViewController.swift in Sources */,
 				281AD2D462528A03F0484B5E7AAA7CD3 /* GQButton.swift in Sources */,
+				A3DF51C22BB2D59E00F17577 /* EMIOnboardingNameViewController.swift in Sources */,
 				C4E3178CC16E5DAEE8D27C523011703A /* GQEMIViewController.swift in Sources */,
 				8A7F2A0E3F3B680FF77F137D6CDB3CF4 /* GQEMIViewController.xib in Sources */,
 				6AE000DE0960CB3E6FC99046143866CE /* GQEMIViewModel.swift in Sources */,
@@ -1457,6 +1517,7 @@
 				148E8DB0E00703DEA69490B7C03A5300 /* GQEnvironment.swift in Sources */,
 				D093F81251CEDD03709861CA8ECA3ED8 /* GQGILEView.swift in Sources */,
 				BC6DEACEBF56C230524295B403278AF9 /* GQGILEView.xib in Sources */,
+				A3DF51CE2BB2F98800F17577 /* GQInformationView.swift in Sources */,
 				8B5F4A0481CCF9525C390D451827A83C /* GQLogger.swift in Sources */,
 				C1E822BF8CF1CFB5AFD6CDA47663E082 /* GQMobileTextField.swift in Sources */,
 				2A53CAA3979694BAC0460F8FB4C573A5 /* GQMobileTextField.xib in Sources */,
@@ -1477,6 +1538,7 @@
 				A380FE222BAC08C4003CFC66 /* GQLoadable.swift in Sources */,
 				8702155BC4FED5526F0F3581A1568255 /* GQTagView.swift in Sources */,
 				833539F85F0701BA90B4B66DDEF0947A /* GQTagView.xib in Sources */,
+				A3DF51C62BB2D93600F17577 /* EMIOnboardingViewModel.swift in Sources */,
 				75562F8A539638BA288E4D89DAF74F1A /* GQTextField.swift in Sources */,
 				A3DF51BE2BB2C26100F17577 /* GQProgressView.swift in Sources */,
 				0ABBEB8A95A3B7D2154FD1167C901646 /* GQTextField.xib in Sources */,
@@ -1498,6 +1560,8 @@
 				8EFB584EF123CDC071F6167FEACE4128 /* PaymentMethodsViewController.xib in Sources */,
 				D0AF67A0028131EF0DBC45570138C560 /* PaymentMethodsViewModel.swift in Sources */,
 				3EB97898795095583DCA437FBCB75979 /* PaymentTagCollectionViewCell.swift in Sources */,
+				A38467312BB4238400F480AB /* GQConsentView.swift in Sources */,
+				A3DF51C82BB2DBCC00F17577 /* EMIOnboardingNameViewModel.swift in Sources */,
 				3CB0DC7682ECED7354838C9A7BB8DCDF /* PaymentTagCollectionViewCell.xib in Sources */,
 				62653FEE982E5DC98CCA71ABA6EB3D30 /* ProceedButtonCollectionReusableView.swift in Sources */,
 				05065420CB74794E5302969D782D1024 /* ProceedButtonCollectionReusableView.xib in Sources */,

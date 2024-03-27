@@ -7,7 +7,7 @@
 
 import UIKit
 
-class EnterMobileNumberViewController: GQBaseViewController {
+class EMIOnboardingMobileViewController: GQBaseViewController {
     
 //   MARK: IBOutlets
     @IBOutlet weak var scrollView: UIScrollView!
@@ -31,11 +31,11 @@ class EnterMobileNumberViewController: GQBaseViewController {
     @IBOutlet weak var progressBar: GQProgressBar!
     
 //  MARK: Variables
-    private var viewModel: (any EnterMobileNumberViewModelType)?
+    private var viewModel: (any EMIOnboardingMobileViewModelType)?
     weak var gqPaymentSDK: GQPaymentSDK?
     
-    init(viewModel: some EnterMobileNumberViewModelType) {
-        super.init(nibName: "EnterMobileNumberViewController", bundle: GQPaymentSDK.bundle)
+    init(viewModel: some EMIOnboardingMobileViewModelType) {
+        super.init(nibName: "EMIOnboardingMobileViewController", bundle: GQPaymentSDK.bundle)
         self.viewModel = viewModel
     }
     
@@ -209,7 +209,7 @@ class EnterMobileNumberViewController: GQBaseViewController {
     
 }
 
-extension EnterMobileNumberViewController: GQMobileTextFieldDelegate {
+extension EMIOnboardingMobileViewController: GQMobileTextFieldDelegate {
     
     func textFieldDidClickSendOTP(_ textField: GQMobileTextField) {
         setOTPState(active: true)
@@ -221,7 +221,7 @@ extension EnterMobileNumberViewController: GQMobileTextFieldDelegate {
     
 }
 
-extension EnterMobileNumberViewController: GQTextFieldDelegate {
+extension EMIOnboardingMobileViewController: GQTextFieldDelegate {
     
     func textField(_ textField: GQTextField, didChange text: String?) {
         // Condition needs to be changed and OTP validity needs to be taken from API.
@@ -236,7 +236,7 @@ extension EnterMobileNumberViewController: GQTextFieldDelegate {
     
 }
 
-extension EnterMobileNumberViewController: GQTimerLabelDelegate {
+extension EMIOnboardingMobileViewController: GQTimerLabelDelegate {
     
     func timerCountdownCompleted(_ timer: GQTimerLabel) {
         GQLogger.shared.log("Time's Up!!!")

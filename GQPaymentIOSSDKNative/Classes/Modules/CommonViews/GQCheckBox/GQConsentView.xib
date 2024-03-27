@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="GQConsentView" customModule="GQPaymentIOSSDKNative" customModuleProvider="target">
+            <connections>
+                <outlet property="button" destination="uYg-Lh-MbP" id="ybU-xf-bsq"/>
+                <outlet property="consentLabel" destination="bns-sC-sGQ" id="75n-zF-5LI"/>
+                <outlet property="contentView" destination="iN0-l3-epB" id="eYu-uA-MR8"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="360" height="93"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="U92-x0-PJD">
+                    <rect key="frame" x="0.0" y="0.0" width="360" height="93"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uYg-Lh-MbP">
+                            <rect key="frame" x="0.0" y="0.0" width="24" height="24"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="uYg-Lh-MbP" secondAttribute="height" multiplier="1:1" id="4Z4-ut-hsy"/>
+                                <constraint firstAttribute="height" constant="24" id="HNW-6E-1RW"/>
+                            </constraints>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <state key="normal" image="checkbox"/>
+                            <connections>
+                                <action selector="didClickCheckBox:" destination="-1" eventType="touchUpInside" id="Gwm-XP-4Vt"/>
+                            </connections>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bns-sC-sGQ">
+                            <rect key="frame" x="36" y="0.0" width="324" height="20.333333333333332"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="U92-x0-PJD" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="6yb-7W-XfF"/>
+                <constraint firstItem="U92-x0-PJD" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="iw0-24-JZ9"/>
+                <constraint firstAttribute="bottom" secondItem="U92-x0-PJD" secondAttribute="bottom" id="rLM-1X-Uan"/>
+                <constraint firstAttribute="trailing" secondItem="U92-x0-PJD" secondAttribute="trailing" id="t8c-oT-tCi"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="221.37404580152671" y="17.253521126760564"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="checkbox" width="22" height="22"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

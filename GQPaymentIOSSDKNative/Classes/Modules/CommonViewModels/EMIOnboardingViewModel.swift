@@ -1,26 +1,21 @@
 //
-//  EnterMobileNumberViewModel.swift
-//  TestCases_Example
+//  EMIOnboardingViewModel.swift
+//  GQPaymentIOSSDKNative
 //
-//  Created by valentine on 16/02/24.
+//  Created by valentine on 26/03/24.
 //
 
 import Foundation
-import RegexBuilder
 
-protocol EnterMobileNumberViewModelType {
+protocol EMIOnboardingViewModelType {
     var gile: String? { get }
     
     func authorize() async throws
 }
 
-class EnterMobileNumberViewModel: EnterMobileNumberViewModelType {
+class EMIOnboardingViewModel: EMIOnboardingViewModelType {
     
     var gile: String? = "GITAM Institute of Management, Mumbai, CBSE"
-    
-    func beginSendOTPProcess() async throws {
-        try await authorize()
-    }
     
     func authorize() async throws {
         // Might be need to be called when SDK initialised, not dependant for now [Need to confirm]
@@ -29,10 +24,5 @@ class EnterMobileNumberViewModel: EnterMobileNumberViewModelType {
         let authorizeResponse = try await GQNetworkService.shared.perform(networkType: .authorize, data: authorizeTokenRequest, responseType: AuthorizeTokenResponse.self)
         GQEnvironment.shared.updateTokens(authorizeResponse: authorizeResponse)
     }
-    
-    func checkMobile() async throws {
-        
-    }
-
     
 }

@@ -232,11 +232,24 @@ final public class GQPaymentSDK: UIViewController, GQLoadable {
     }
     
      @MainActor private func open() {
-        let mobileNumberViewmodel = EnterMobileNumberViewModel()
-        let mobileNumberViewcontroller = EnterMobileNumberViewController(viewModel: mobileNumberViewmodel)
-        mobileNumberViewcontroller.gqPaymentSDK = self
+         
+         let hasMobileNumber: Bool = true
+         var onboardingViewController: GQBaseViewController?
+         
+         if !hasMobileNumber {
+             let onboardingMobileViewModel = EMIOnboardingMobileViewModel()
+             let onboardingMobileViewController = EMIOnboardingMobileViewController(viewModel: onboardingMobileViewModel)
+             onboardingMobileViewController.gqPaymentSDK = self
+             onboardingViewController = onboardingMobileViewController
+         } else {
+             let onboardingNameViewModel = EMIOnboardingNameViewModel()
+             let onboardingNameViewController = EMIOnboardingNameViewController(viewModel: onboardingNameViewModel)
+             onboardingNameViewController.gqPaymentSDK = self
+             onboardingViewController = onboardingNameViewController
+         }
         
-        let navigationController = UINavigationController(rootViewController: mobileNumberViewcontroller)
+        guard let onboardingViewController else { return }
+        let navigationController = UINavigationController(rootViewController: onboardingViewController)
         navigationController.modalPresentationStyle = self.presentationStyle
         navigationController.modalTransitionStyle = self.transitionStyle
         

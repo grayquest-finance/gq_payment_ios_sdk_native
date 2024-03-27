@@ -20,6 +20,8 @@ extension UIImage {
         case rightArrow
         case incompleteCheckpointIcon
         case completeCheckpointIcon
+        case informationIcon
+        case checkbox
         
         var name: String {
             return self.rawValue
